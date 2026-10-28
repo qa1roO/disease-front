@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROTOTYPE · Map layout</title>
+<!--
+  PROTOTYPE — throwaway, do not build on this file.
+  Question: can thousands of ICD-11 provinces be laid out as strategy-game regions,
+  nested territories sized by burden, with one clean front line per territory?
+  Three variants, switchable via ?variant=A|B|C or the bottom bar (← / → keys):
+    A  Organic drill-down   — Voronoi regions, one level at a time, click to zoom in
+    B  Rectangle drill-down — squarified treemap, same drill-down, the "safe" baseline
+    C  Continuous world     — the whole map at once, pan/zoom, labels by zoom level
+  Data is fake but shaped like the real thing (20 chapters, ~3000 leaves, skewed burden).
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #0e1621; color: #e6edf3;
+    font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden; }
+  svg { display: block; width: 100vw; height: 100vh; }
+  #panel { position: fixed; top: 12px; left: 12px; width: 300px; padding: 10px 12px;
+    background: rgba(14, 22, 33, .88); border: 1px solid #2b3a4d; border-radius: 8px; }
+  #panel h1 { font-size: 14px; margin: 0 0 4px; }
+  #panel .muted { color: #8b9bb0; }
+  #panel .crumbs a { color: #8fc1ff; cursor: pointer; text-decoration: underline; }
+  #panel .row { display: flex; gap: 6px; align-items: center; margin: 2px 0; }
+  #panel .sw { width: 12px; height: 12px; border-radius: 2px; flex: none; }
+  #panel hr { border: 0; border-top: 1px solid #2b3a4d; margin: 8px 0; }
+  #hover { min-height: 60px; }
+  #switcher { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 10px; padding: 6px 10px;
+    background: #fff; color: #111; border-radius: 999px; box-shadow: 0 4px 18px rgba(0,0,0,.5);
+    font-weight: 600; user-select: none; }
+  #switcher button { border: 0; background: #111; color: #fff; width: 28px; height: 28px;
+    border-radius: 50%; cursor: pointer; font-size: 16px; }
+  #loading { position: fixed; inset: 0; display: none; place-items: center;
+    background: rgba(14, 22, 33, .7); font-size: 16px; }
+  .label { pointer-events: none; fill: #fff; paint-order: stroke; stroke: rgba(0,0,0,.75);
+    stroke-width: 3px; stroke-linejoin: round; text-anchor: middle; dominant-baseline: middle; }
+  .cell { cursor: pointer; }
+  .cell:hover { filter: brightness(1.25); }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-weighted-voronoi@1.1.3/build/d3-weighted-voronoi.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-voronoi-map@2.1.1/build/d3-voronoi-map.js"></script>
+</head>
+<body>
+<svg id="map"></svg>
+<div id="panel"></div>
+<div id="loading">Laying out the map…</div>
+<div id="switcher"><button id="prev" title="Previous variant (←)">‹</button><span id="vlabel"></span><button id="next" title="Next variant (→)">›</button></div>
+<script>
+// ---------- fake data ----------
+function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const rng = mulberry32(42);
+const normal = () => { let u = 0; while (!u) u = rng(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rng()); };
+const hash = s => [...s].reduce((h, c) => Math.imul(h ^ c.charCodeAt(0), 16777619), 2166136261);
+
+// [ICD-11 chapter, burden scale, chance a diagnosed status is held]
+const CHAPTERS = [
+  ['Certain infectious or parasitic diseases', 9, .7], ['Neoplasms', 10, .35],
+  ['Diseases of the blood or blood-forming organs', 2, .5], ['Diseases of the immune system', 1.5, .4],
+  ['Endocrine, nutritional or metabolic diseases', 5, .6], ['Mental, behavioural or neurodevelopmental disorders', 6, .35],
+  ['Sleep-wake disorders', 1, .5], ['Diseases of the nervous system', 5, .2],
+  ['Diseases of the visual system', 2, .6], ['Diseases of the ear or mastoid process', 1, .55],
+  ['Diseases of the circulatory system', 12, .55], ['Diseases of the respiratory system', 6, .5],
+  ['Diseases of the digestive system', 4, .6], ['Diseases of the skin', 2, .55],
+  ['Diseases of the musculoskeletal system or connective tissue', 4, .3], ['Diseases of the genitourinary system', 3, .55],
+  ['Conditions related to sexual health', .5, .6], ['Pregnancy, childbirth or the puerperium', 3, .75],
+  ['Certain conditions originating in the perinatal period', 4, .5], ['Developmental anomalies', 2, .25],
+];
+const STATUS = { 1: 'Eradicated', 2: 'Curable', 3: 'Controlled', 4: 'Treatable', 5: 'Untreatable', 0: 'Fog (unassessed)' };
+const STATUS_COLOR = { 1: '#0f6b4b', 2: '#2e9e6a', 3: '#8fd1a8', 4: '#f2a65a', 5: '#d64545', 0: '#5d6673' };
+const AGG_COLOR = { held: '#3b9d6e', contested: '#d9644a', fog: '#5d6673' };
+const groupOf = s => s === 0 ? 'fog' : s <= 3 ? 'held' : 'contested';
+
+function pickStatus(heldP) {
+  if (rng() < .15) return 0;
+  if (rng() < heldP) { const r = rng(); return r < .05 ? 1 : r < .55 ? 2 : 3; }
+  return rng() < .65 ? 4 : 5;
+}
+const root = { name: 'All diseases', children: CHAPTERS.map(([name, scale, heldP], c) => ({
+  name, children: d3.range(4 + Math.floor(rng() * 11)).map(b => ({
+    name: `Block ${c + 1}.${b + 1}`, children: d3.range(5 + Math.floor(rng() * 36)).map(l => ({
+      name: `Condition ${c + 1}.${b + 1}.${l + 1}`,
+      burden: Math.max(.02, Math.exp(normal() * 1.6) * scale),
+      status: pickStatus(heldP),
+    })),
+  })),
+})) };
+(function aggregate(n, parent) {
+  n.parent = parent;
+  if (!n.children) { n.agg = { total: n.burden, held: 0, contested: 0, fog: 0 }; n.agg[groupOf(n.status)] = n.burden; return n.agg; }
+  n.agg = { total: 0, held: 0, contested: 0, fog: 0 };
+  for (const c of n.children) { const a = aggregate(c, n); for (const k in a) n.agg[k] += a[k]; }
+  return n.agg;
+})(root, null);
+const LEAF_COUNT = root.children.flatMap(c => c.children.flatMap(b => b.children)).length;
+const heldShare = n => n.agg.held / n.agg.total;
+
+// ---------- geometry ----------
+let D = [1, 0]; // direction from held (west) towards contested and fog (east)
+const proj = p => p[0] * D[0] + p[1] * D[1];
+const area = p => p.length < 3 ? 0 : Math.abs(d3.polygonArea(p));
+function clipHalf(poly, t, keepBelow) {
+  const out = [], inside = p => keepBelow ? proj(p) <= t : proj(p) >= t;
+  for (let i = 0; i < poly.length; i++) {
+    const a = poly[i], b = poly[(i + 1) % poly.length], ia = inside(a), ib = inside(b);
+    if (ia) out.push(a);
+    if (ia !== ib) { const s = (t - proj(a)) / (proj(b) - proj(a)); out.push([a[0] + s * (b[0] - a[0]), a[1] + s * (b[1] - a[1])]); }
+  }
+  return out;
+}
+function cutAt(poly, frac) {
+  const total = area(poly), ps = poly.map(proj);
+  let lo = Math.min(...ps), hi = Math.max(...ps);
+  for (let i = 0; i < 40; i++) { const mid = (lo + hi) / 2; if (area(clipHalf(poly, mid, true)) < frac * total) lo = mid; else hi = mid; }
+  return (lo + hi) / 2;
+}
+function segmentAt(poly, t) {
+  const pts = [];
+  for (let i = 0; i < poly.length; i++) {
+    const a = poly[i], b = poly[(i + 1) % poly.length], pa = proj(a) - t, pb = proj(b) - t;
+    if (pa * pb < 0) { const s = pa / (pa - pb); pts.push([a[0] + s * (b[0] - a[0]), a[1] + s * (b[1] - a[1])]); }
+  }
+  return pts.length >= 2 ? pts.slice(0, 2) : null;
+}
+// Split a polygon into bands across D by burden share: held | contested | fog.
+// Returns the pieces plus the border segments between them (the front line is held|contested).
+function bandSplit(poly, groups) {
+  groups = groups.filter(g => g.weight > 0);
+  const total = d3.sum(groups, g => g.weight), ts = [];
+  let cum = 0;
+  for (let i = 0; i < groups.length - 1; i++) { cum += groups[i].weight; ts.push(cutAt(poly, cum / total)); }
+  const pieces = groups.map((g, i) => {
+    let p = poly;
+    if (i > 0) p = clipHalf(p, ts[i - 1], false);
+    if (i < groups.length - 1) p = clipHalf(p, ts[i], true);
+    return { ...g, polygon: p };
+  });
+  const borders = ts.map((t, i) => ({
+    kind: groups[i].key === 'held' && groups[i + 1].key === 'contested' ? 'front' : 'edge',
+    seg: segmentAt(poly, t),
+  })).filter(b => b.seg);
+  return { pieces, borders };
+}
+const aggGroups = n => ['held', 'contested', 'fog'].map(key => ({ key, weight: n.agg[key] }));
+
+// Weighted Voronoi cells for items inside a convex polygon. orderFn places seeds west→east.
+function voronoiCells(poly, items, orderFn, seed) {
+  if (!items.length || area(poly) < 1) return [];
+  if (items.length === 1) return [{ item: items[0], polygon: poly }];
+  const clip = d3.polygonHull(poly), c = d3.polygonCentroid(clip), perp = [-D[1], D[0]];
+  const along = clip.map(proj), across = clip.map(p => p[0] * perp[0] + p[1] * perp[1]);
+  const spanA = d3.max(along) - d3.min(along), spanP = d3.max(across) - d3.min(across);
+  const r = mulberry32(seed);
+  const rank = new Map((orderFn ? items.slice().sort(orderFn) : items).map((d, i) => [d, i]));
+  const sim = d3.voronoiMapSimulation(items).weight(d => d.agg.total).clip(clip)
+    .prng(r).maxIterationCount(80).convergenceRatio(.02)
+    .initialPosition(d => {
+      const a = ((rank.get(d) + .5) / items.length - .5) * spanA * .8, p = (r() - .5) * spanP * .6;
+      return [c[0] + D[0] * a + perp[0] * p, c[1] + D[1] * a + perp[1] * p];
+    })
+    .stop();
+  let st = sim.state();
+  for (let i = 0; !st.ended && i < 200; i++) { sim.tick(); st = sim.state(); }
+  return st.polygons.map(p => ({ item: p.site.originalObject.data.originalData, polygon: Array.from(p) }));
+}
+const byHeldDesc = (a, b) => heldShare(b) - heldShare(a);
+const byStatus = (a, b) => (a.status || 9) - (b.status || 9) || b.burden - a.burden;
+
+// Leaves of one block: band split first (guarantees a clean front), then cells inside each band.
+function layoutLeavesOrganic(poly, block) {
+  const groups = ['held', 'contested', 'fog'].map(key => ({ key, items: block.children.filter(l => groupOf(l.status) === key) }))
+    .map(g => ({ ...g, weight: d3.sum(g.items, l => l.burden) }));
+  const { pieces, borders } = bandSplit(poly, groups);
+  const cells = pieces.flatMap(p => voronoiCells(p.polygon, p.items, byStatus, hash(block.name + p.key)));
+  return { cells, borders };
+}
+
+function continent(w, h) {
+  const r = mulberry32(3), cx = w / 2 + 120, cy = h / 2 - 10, rx = (w - 300) * .47, ry = (h - 90) * .48;
+  return d3.polygonHull(d3.range(72).map(i => {
+    const a = i / 72 * 2 * Math.PI, k = 1 + (r() - .5) * .08;
+    return [cx + Math.cos(a) * rx * k, cy + Math.sin(a) * ry * k];
+  }));
+}
+
+// ---------- rendering helpers ----------
+const svg = d3.select('#map');
+const W = () => innerWidth, H = () => innerHeight;
+const line = d3.line();
+const closed = p => line(p) + 'Z';
+const fmt = d3.format(',.1f'), pct = d3.format('.0%');
+
+function drawBorders(g, borders, width = 3) {
+  for (const b of borders) {
+    if (b.kind === 'front') {
+      g.append('path').attr('d', line(b.seg)).attr('stroke', '#1a0d00').attr('stroke-width', width + 2.5).attr('fill', 'none').attr('stroke-linecap', 'round');
+      g.append('path').attr('d', line(b.seg)).attr('stroke', '#ffe08a').attr('stroke-width', width).attr('fill', 'none').attr('stroke-linecap', 'round');
+    } else {
+      g.append('path').attr('d', line(b.seg)).attr('stroke', '#c9d1d9').attr('stroke-width', width / 2).attr('stroke-dasharray', '3 4').attr('fill', 'none');
+    }
+  }
+}
+function labelFor(g, polygon, text, size) {
+  const [x, y] = d3.polygonCentroid(polygon);
+  g.append('text').attr('class', 'label').attr('x', x).attr('y', y).attr('font-size', size).text(text);
+}
+const fitSize = (poly, text) => Math.min(16, Math.sqrt(area(poly)) / 7, Math.sqrt(area(poly)) * 1.6 / Math.max(6, text.length) * 1.6);
+
+function showHover(n) {
+  const el = document.getElementById('hover');
+  if (!n) { el.innerHTML = '<span class="muted">Hover a region…</span>'; return; }
+  const path = []; for (let p = n.parent; p && p.parent; p = p.parent) path.unshift(p.name);
+  el.innerHTML = `<b>${n.name}</b><div class="muted">${path.join(' › ') || 'Chapter'}</div>` +
+    (n.children
+      ? `Burden ${fmt(n.agg.total)} · ${n.children.length} children<br>held ${pct(n.agg.held / n.agg.total)} · contested ${pct(n.agg.contested / n.agg.total)} · fog ${pct(n.agg.fog / n.agg.total)}`
+      : `Burden ${fmt(n.burden)}<br>Status: <b style="color:${STATUS_COLOR[n.status]}">${STATUS[n.status]}</b>`);
+}
+function cellEvents(sel, onClick) {
+  sel.attr('class', 'cell').on('mouseenter', (e, d) => showHover(d)).on('mouseleave', () => showHover(null));
+  if (onClick) sel.on('click', (e, d) => onClick(d));
+}
+
+// ---------- variants ----------
+let path = [root];
+const stats = {};
+
+function drillRender(kind) {
+  const current = path[path.length - 1], g = svg.append('g');
+  const t0 = performance.now();
+  if (kind === 'A') {
+    D = [Math.cos(.21), Math.sin(.21)];
+    const outer = continent(W(), H());
+    if (current.children[0].children) {
+      const cells = voronoiCells(outer, current.children, byHeldDesc, hash(current.name));
+      for (const { item, polygon } of cells) {
+        const { pieces, borders } = bandSplit(polygon, aggGroups(item));
+        const cg = g.append('g');
+        for (const p of pieces) cg.append('path').attr('d', closed(p.polygon)).attr('fill', AGG_COLOR[p.key]);
+        drawBorders(cg, borders);
+        cg.append('path').attr('d', closed(polygon)).attr('fill', 'transparent').attr('stroke', '#05080c').attr('stroke-width', 2.5).datum(item).call(cellEvents, drill);
+        labelFor(g, polygon, item.name, fitSize(polygon, item.name));
+      }
+      stats.cells = cells.length;
+    } else {
+      const { cells, borders } = layoutLeavesOrganic(outer, current);
+      for (const { item, polygon } of cells) {
+        g.append('path').attr('d', closed(polygon)).attr('fill', STATUS_COLOR[item.status]).attr('stroke', '#0e1621').attr('stroke-width', 1.2).datum(item).call(cellEvents);
+        if (area(polygon) > 2500) labelFor(g, polygon, item.name.replace('Condition ', ''), 11);
+      }
+      drawBorders(g, borders, 4);
+      stats.cells = cells.length;
+    }
+  } else {
+    D = [1, 0];
+    const x0 = 330, y0 = 14, x1 = W() - 14, y1 = H() - 70;
+    const rect = r => [[r.x0, r.y0], [r.x1, r.y0], [r.x1, r.y1], [r.x0, r.y1]];
+    const treemap = (items, box, sort) => {
+      const h = d3.hierarchy({ kids: items.slice().sort(sort).map(ref => ({ ref })) }, d => d.kids).sum(d => d.ref ? d.ref.agg.total : 0);
+      d3.treemap().tile(d3.treemapSquarify).size([box.x1 - box.x0, box.y1 - box.y0]).paddingInner(2)(h);
+      return h.leaves().map(l => ({ item: l.data.ref, polygon: rect({ x0: l.x0 + box.x0, y0: l.y0 + box.y0, x1: l.x1 + box.x0, y1: l.y1 + box.y0 }) }));
+    };
+    if (current.children[0].children) {
+      const cells = treemap(current.children, { x0, y0, x1, y1 }, byHeldDesc);
+      for (const { item, polygon } of cells) {
+        const { pieces, borders } = bandSplit(polygon, aggGroups(item));
+        const cg = g.append('g');
+        for (const p of pieces) cg.append('path').attr('d', closed(p.polygon)).attr('fill', AGG_COLOR[p.key]);
+        drawBorders(cg, borders);
+        cg.append('path').attr('d', closed(polygon)).attr('fill', 'transparent').attr('stroke', '#05080c').attr('stroke-width', 2).datum(item).call(cellEvents, drill);
+        labelFor(g, polygon, item.name, fitSize(polygon, item.name));
+      }
+      stats.cells = cells.length;
+    } else {
+      const groups = ['held', 'contested', 'fog'].map(key => ({ key, items: current.children.filter(l => groupOf(l.status) === key) }))
+        .map(gr => ({ ...gr, weight: d3.sum(gr.items, l => l.burden) }));
+      const { pieces, borders } = bandSplit(rect({ x0, y0, x1, y1 }), groups);
+      let n = 0;
+      for (const p of pieces) {
+        const xs = p.polygon.map(q => q[0]), ys = p.polygon.map(q => q[1]);
+        for (const { item, polygon } of treemap(p.items, { x0: d3.min(xs), y0: d3.min(ys), x1: d3.max(xs), y1: d3.max(ys) }, byStatus)) {
+          g.append('path').attr('d', closed(polygon)).attr('fill', STATUS_COLOR[item.status]).datum(item).call(cellEvents);
+          if (area(polygon) > 2500) labelFor(g, polygon, item.name.replace('Condition ', ''), 11);
+          n++;
+        }
+      }
+      drawBorders(g, borders, 4);
+      stats.cells = n;
+    }
+  }
+  stats.ms = performance.now() - t0;
+}
+function drill(n) { if (n.children) { path.push(n); render(); } }
+
+let world = null; // variant C layout is computed once and cached
+function computeWorld() {
+  D = [Math.cos(.21), Math.sin(.21)];
+  const t0 = performance.now(), outer = continent(W(), H());
+  const chapters = voronoiCells(outer, root.children, byHeldDesc, 1);
+  const blocks = chapters.flatMap(c => voronoiCells(c.polygon, c.item.children, byHeldDesc, hash(c.item.name)));
+  const leaves = [], borders = [];
+  for (const b of blocks) { const r = layoutLeavesOrganic(b.polygon, b.item); leaves.push(...r.cells); borders.push(...r.borders); }
+  world = { chapters, blocks, leaves, borders, ms: performance.now() - t0 };
+}
+function worldRender() {
+  if (!world) computeWorld();
+  const g = svg.append('g');
+  g.append('g').selectAll('path').data(world.leaves).join('path')
+    .attr('d', d => closed(d.polygon)).attr('fill', d => STATUS_COLOR[d.item.status])
+    .attr('stroke', '#0e1621').attr('stroke-width', .3)
+    .each(function (d) { d3.select(this).datum(d.item); }).call(cellEvents);
+  const blockG = g.append('g').attr('fill', 'none').attr('stroke', '#05080c');
+  blockG.selectAll('path').data(world.blocks).join('path').attr('d', d => closed(d.polygon)).attr('stroke-width', 1);
+  const frontG = g.append('g');
+  drawBorders(frontG, world.borders, 1.6);
+  const chapG = g.append('g').attr('fill', 'none').attr('stroke', '#000');
+  chapG.selectAll('path').data(world.chapters).join('path').attr('d', d => closed(d.polygon)).attr('stroke-width', 3);
+  const labels = (data, cls, base) => g.append('g').attr('class', cls).selectAll('text').data(data).join('text')
+    .attr('class', 'label').attr('x', d => d3.polygonCentroid(d.polygon)[0]).attr('y', d => d3.polygonCentroid(d.polygon)[1])
+    .attr('data-base', d => typeof base === 'function' ? base(d) : base).text(d => d.item.name.replace('Condition ', ''));
+  const chapL = labels(world.chapters, 'l-chap', d => fitSize(d.polygon, d.item.name));
+  const blockL = labels(world.blocks, 'l-block', d => Math.min(12, Math.sqrt(area(d.polygon)) / 6));
+  const leafL = labels(world.leaves, 'l-leaf', d => Math.min(10, Math.sqrt(area(d.polygon)) / 5));
+  const zoomed = k => {
+    chapL.attr('font-size', function () { return this.dataset.base / Math.sqrt(k); }).attr('display', k < 3 ? null : 'none');
+    blockL.attr('font-size', function () { return this.dataset.base; }).attr('display', k >= 2.2 && k < 9 ? null : 'none');
+    leafL.attr('font-size', function () { return this.dataset.base; }).attr('display', k >= 7 ? null : 'none');
+    frontG.attr('opacity', 1);
+  };
+  zoomed(1);
+  svg.call(d3.zoom().scaleExtent([.8, 40]).on('zoom', e => { g.attr('transform', e.transform); zoomed(e.transform.k); stats.k = e.transform.k; renderPanel(); }));
+  stats.cells = world.leaves.length; stats.ms = world.ms;
+}
+
+// ---------- shell: panel + switcher ----------
+const VARIANTS = {
+  A: { name: 'Organic drill-down', desc: 'Voronoi regions, one level at a time. Click a region to zoom in.' },
+  B: { name: 'Rectangle drill-down', desc: 'Squarified treemap with the same drill-down. The plain baseline.' },
+  C: { name: 'Continuous world', desc: 'Every province at once. Scroll to zoom, drag to pan. Labels change with zoom.' },
+};
+let variant = new URLSearchParams(location.search).get('variant');
+if (!VARIANTS[variant]) variant = 'A';
+
+function renderPanel() {
+  const v = VARIANTS[variant];
+  const crumbs = variant === 'C' ? `<div class="muted">zoom ×${(stats.k || 1).toFixed(1)}</div>`
+    : `<div class="crumbs">${path.map((n, i) => i < path.length - 1 ? `<a data-i="${i}">${n.name}</a>` : `<b>${n.name}</b>`).join(' › ')}</div>`;
+  document.getElementById('panel').innerHTML =
+    `<h1>${variant} · ${v.name}</h1><div class="muted">${v.desc}</div>${crumbs}
+     <div class="muted">${stats.cells} cells drawn · layout ${Math.round(stats.ms)} ms · ${LEAF_COUNT} provinces in data</div><hr>
+     <div id="hover"></div><hr>
+     ${[1, 2, 3, 4, 5, 0].map(s => `<div class="row"><span class="sw" style="background:${STATUS_COLOR[s]}"></span>${STATUS[s]}</div>`).join('')}
+     <div class="row"><span class="sw" style="background:#ffe08a"></span>Front line (held | contested)</div>
+     <div class="row"><span class="sw" style="background:repeating-linear-gradient(90deg,#c9d1d9 0 3px,transparent 3px 6px)"></span>Edge of fog</div>
+     ${variant !== 'C' ? `<div class="muted" style="margin-top:6px">Above province level, regions show the burden share held / contested / fog.</div>` : ''}`;
+  document.querySelectorAll('#panel .crumbs a').forEach(a => a.onclick = () => { path = path.slice(0, +a.dataset.i + 1); render(); });
+  showHover(null);
+  document.getElementById('vlabel').textContent = `${variant} (${v.name})`;
+}
+function render() {
+  const loading = document.getElementById('loading');
+  loading.style.display = 'grid';
+  setTimeout(() => {
+    svg.selectAll('*').remove(); svg.on('.zoom', null); stats.k = 1;
+    if (variant === 'C') worldRender(); else drillRender(variant);
+    renderPanel();
+    loading.style.display = 'none';
+  }, 20);
+}
+function cycle(step) {
+  const keys = Object.keys(VARIANTS);
+  variant = keys[(keys.indexOf(variant) + step + keys.length) % keys.length];
+  const url = new URL(location.href); url.searchParams.set('variant', variant); history.replaceState(null, '', url);
+  render();
+}
+document.getElementById('prev').onclick = () => cycle(-1);
+document.getElementById('next').onclick = () => cycle(1);
+addEventListener('keydown', e => {
+  if (e.target.closest('input, textarea, [contenteditable]')) return;
+  if (e.key === 'ArrowLeft') cycle(-1);
+  if (e.key === 'ArrowRight') cycle(1);
+});
+render();
+</script>
+</body>
+</html>
