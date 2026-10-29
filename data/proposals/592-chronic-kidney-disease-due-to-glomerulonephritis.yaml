@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Chronic kidney disease due to glomerulonephritis
+gbd_cause_id: 592
+status: 4
+nuance: Immunosuppression puts some forms (e.g. minimal change, some membranous nephropathy) into remission; many
+  progress to kidney failure despite treatment.
+sources:
+- url: https://www.niddk.nih.gov/health-information/kidney-disease/glomerular-diseases
+  title: Glomerular Diseases, NIDDK
+mesh:
+  D005921: Glomerulonephritis
+  D005922: Glomerulonephritis, IGA
+  D015433: Glomerulonephritis, Membranous
+cross_check: ok
+approved: true
+fingerprint: 2bd561eb87562cac

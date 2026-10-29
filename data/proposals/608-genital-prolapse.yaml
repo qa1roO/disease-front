@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Genital prolapse
+gbd_cause_id: 608
+status: 2
+nuance: Pelvic floor exercises and pessaries manage mild prolapse; surgical repair corrects it, though it can recur.
+sources:
+- url: https://www.nhs.uk/conditions/pelvic-organ-prolapse/treatment/
+  title: 'Pelvic organ prolapse: Treatment, NHS'
+- url: https://medlineplus.gov/pelvicsupportproblems.html
+  title: Pelvic Support Problems, MedlinePlus
+mesh:
+  D056887: Pelvic Organ Prolapse
+  D014596: Uterine Prolapse
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D056887, D014596)'
+approved: true
+fingerprint: c55a4d32ff4a1150

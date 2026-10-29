@@ -70,6 +70,23 @@ class BuildMapTest(unittest.TestCase):
         self.assertIn("CC BY-ND 3.0 IGO", self.map["meta"]["icd11"]["citation"])
         self.assertEqual(self.map["meta"]["counts"], self.tree["counts"])
 
+    def test_provinces_under_an_approved_cause_inherit_its_status_as_provisional(self):
+        approved = {417: {"gbd_cause": "Liver cancer", "gbd_cause_id": 417, "status": 4, "nuance": "Curable if caught early.",
+                          "sources": [{"url": "https://example.org/hcc", "title": "HCC"}], "cross_check": "ok",
+                          "approved": True}}
+        built = site_data.build_map(self.tree, self.crosswalk, self.burden, approved)
+        by_uri = {n["uri"]: n for n in list(walk(built["root"]))[1:]}
+        self.assertEqual((by_uri[self.brain]["status"], by_uri[self.brain]["provisional"]), (4, True))
+        self.assertEqual(by_uri[self.cholera]["status"], None)
+        self.assertNotIn("provisional", by_uri[self.cholera])
+        self.assertEqual(built["meta"]["gbdCauses"]["417"]["assessment"], {
+            "status": 4, "nuance": "Curable if caught early.",
+            "sources": [{"url": "https://example.org/hcc", "title": "HCC"}], "crossCheck": "ok"})
+        self.assertNotIn("assessment", built["meta"]["gbdCauses"]["302"])
+
+    def test_without_approvals_every_province_is_fog(self):
+        self.assertTrue(all(n["status"] is None for n in provinces(self.map["root"])))
+
     def test_does_not_mutate_the_tree(self):
         self.assertNotIn("size", self.tree["chapters"][1]["children"][0])
 

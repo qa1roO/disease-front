@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Congenital heart anomalies
+gbd_cause_id: 643
+status: 3
+nuance: Most defects can be repaired surgically and over 90% of children born with them in high-income countries
+  reach adulthood, with lifelong follow-up; complex defects and lack of surgery in low-income countries keep mortality
+  high.
+sources:
+- url: https://www.cdc.gov/heart-defects/about/index.html
+  title: About Congenital Heart Defects, CDC
+- url: https://www.nhlbi.nih.gov/health/congenital-heart-defects/treatment
+  title: 'Congenital Heart Defects: Treatment, NHLBI'
+mesh:
+  D006330: Heart Defects, Congenital
+cross_check: ok
+approved: true
+fingerprint: 95206d066fca4530

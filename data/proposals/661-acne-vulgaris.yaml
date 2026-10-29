@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Acne vulgaris
+gbd_cause_id: 661
+status: 3
+nuance: Topical treatments and antibiotics control most acne, and isotretinoin gives long remission in severe cases;
+  most acne fades by adulthood.
+sources:
+- url: https://www.nhs.uk/conditions/acne/treatment/
+  title: 'Acne: Treatment, NHS'
+- url: https://www.niams.nih.gov/health-topics/acne
+  title: Acne, NIAMS
+mesh:
+  D000152: Acne Vulgaris
+cross_check: ok
+approved: true
+fingerprint: cde8178054a5ef73

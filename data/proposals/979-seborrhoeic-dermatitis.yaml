@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Seborrhoeic dermatitis
+gbd_cause_id: 979
+status: 3
+nuance: Antifungal shampoos and creams and mild steroids control it; it tends to come back.
+sources:
+- url: https://medlineplus.gov/ency/article/000963.htm
+  title: Seborrheic dermatitis, MedlinePlus
+mesh:
+  D012628: Dermatitis, Seborrheic
+cross_check: ok
+approved: true
+fingerprint: 96b7e4c0bf1f4e53

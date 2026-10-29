@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Bladder cancer
+gbd_cause_id: 474
+status: 4
+nuance: Most cases are non-muscle-invasive and removed endoscopically, but they recur often and need lifelong surveillance;
+  invasive disease needs cystectomy or chemoradiation. 5-year survival about 78%.
+sources:
+- url: https://www.cancer.gov/types/bladder/patient/bladder-treatment-pdq
+  title: Bladder Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/urinb.html
+  title: 'Cancer Stat Facts: Bladder Cancer, SEER'
+mesh:
+  D001749: Urinary Bladder Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 17efeca934be1f67

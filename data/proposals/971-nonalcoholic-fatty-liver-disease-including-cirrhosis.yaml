@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Nonalcoholic fatty liver disease including cirrhosis
+gbd_cause_id: 971
+status: 4
+nuance: Weight loss can reverse fatty liver; resmetirom and semaglutide are now approved for MASH with fibrosis,
+  but there is no cure for advanced fibrosis or cirrhosis other than transplant.
+sources:
+- url: https://www.niddk.nih.gov/health-information/liver-disease/nafld-nash/treatment
+  title: Treatment for Metabolic Dysfunction-Associated Steatotic Liver Disease, NIDDK
+mesh:
+  D065626: Non-alcoholic Fatty Liver Disease
+cross_check: ok
+approved: true
+fingerprint: 95109c8c23a30824

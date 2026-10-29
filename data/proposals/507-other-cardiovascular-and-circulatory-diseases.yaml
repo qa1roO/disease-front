@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other cardiovascular and circulatory diseases
+gbd_cause_id: 507
+status: 4
+nuance: A residual GBD group (e.g. venous and lymphatic disorders, conduction disorders, pericardial disease); outcomes
+  vary.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)
+  title: Cardiovascular diseases fact sheet, WHO
+mesh:
+  D002318: Cardiovascular Diseases
+cross_check: ok
+approved: true
+fingerprint: c8cda950965a1fe4

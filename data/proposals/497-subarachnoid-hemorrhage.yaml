@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Subarachnoid hemorrhage
+gbd_cause_id: 497
+status: 4
+nuance: Aneurysm coiling or clipping prevents re-bleeding, but about a third of patients die and many survivors
+  have lasting deficits.
+sources:
+- url: https://www.nhs.uk/conditions/subarachnoid-haemorrhage/
+  title: Subarachnoid haemorrhage, NHS
+mesh:
+  D013345: Subarachnoid Hemorrhage
+  D002532: Intracranial Aneurysm
+cross_check: ok
+approved: true
+fingerprint: 60a824539423a3a6

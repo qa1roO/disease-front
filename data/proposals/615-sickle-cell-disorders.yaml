@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Sickle cell disorders
+gbd_cause_id: 615
+status: 4
+nuance: Hydroxyurea, transfusions and newer drugs reduce crises and organ damage; stem-cell transplant and gene
+  therapy can cure but reach very few patients. Most patients live in sub-Saharan Africa, where many children die
+  young.
+sources:
+- url: https://www.nhlbi.nih.gov/health/sickle-cell-disease/treatment
+  title: 'Sickle Cell Disease: Treatment, NHLBI'
+- url: https://www.nhs.uk/conditions/sickle-cell-disease/
+  title: Sickle cell disease, NHS
+mesh:
+  D000755: Anemia, Sickle Cell
+cross_check: ok
+approved: true
+fingerprint: dfd637205cc44519

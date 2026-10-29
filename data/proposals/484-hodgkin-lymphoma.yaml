@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Hodgkin lymphoma
+gbd_cause_id: 484
+status: 2
+nuance: Cured in most patients with chemotherapy with or without radiotherapy; SEER 5-year survival about 89%.
+sources:
+- url: https://www.cancer.gov/types/lymphoma/patient/adult-hodgkin-treatment-pdq
+  title: Adult Hodgkin Lymphoma Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/hodg.html
+  title: 'Cancer Stat Facts: Hodgkin Lymphoma, SEER'
+mesh:
+  D006689: Hodgkin Disease
+cross_check: ok
+approved: true
+fingerprint: 50c582a807b51529

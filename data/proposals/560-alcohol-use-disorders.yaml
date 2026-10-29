@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Alcohol use disorders
+gbd_cause_id: 560
+status: 4
+nuance: Medicines (naltrexone, acamprosate) and psychosocial treatment help many people stop or cut down, but relapse
+  is common and few receive treatment.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/alcohol
+  title: Alcohol fact sheet, WHO
+- url: https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/treatment-alcohol-problems-finding-and-getting-help
+  title: Treatment for Alcohol Problems, NIAAA
+mesh:
+  D000437: Alcoholism
+cross_check: ok
+approved: true
+fingerprint: 1c5b6e30ac484618

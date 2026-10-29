@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Uterine fibroids
+gbd_cause_id: 604
+status: 2
+nuance: Many fibroids need no treatment; troublesome ones are removed by myomectomy, embolisation or hysterectomy,
+  and they shrink after menopause.
+sources:
+- url: https://www.nhs.uk/conditions/fibroids/treatment/
+  title: 'Fibroids: Treatment, NHS'
+- url: https://medlineplus.gov/uterinefibroids.html
+  title: Uterine Fibroids, MedlinePlus
+mesh:
+  D007889: Leiomyoma
+cross_check: ok
+approved: true
+fingerprint: f8b2c4318c53a6bf

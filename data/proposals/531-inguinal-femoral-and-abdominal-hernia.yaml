@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Inguinal, femoral, and abdominal hernia
+gbd_cause_id: 531
+status: 2
+nuance: Surgical repair, open or laparoscopic, cures the hernia; recurrence is uncommon.
+sources:
+- url: https://www.nhs.uk/conditions/inguinal-hernia-repair/
+  title: Inguinal hernia repair, NHS
+- url: https://medlineplus.gov/hernia.html
+  title: Hernia, MedlinePlus
+mesh:
+  D006552: Hernia, Inguinal
+  D006550: Hernia, Femoral
+  D046449: Hernia, Abdominal
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D006552, D006550, D046449)'
+approved: true
+fingerprint: 374d2ba95aaca30e

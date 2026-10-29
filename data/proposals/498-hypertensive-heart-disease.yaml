@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Hypertensive heart disease
+gbd_cause_id: 498
+status: 3
+nuance: Controlling blood pressure with cheap, effective drugs prevents and partly reverses hypertensive heart damage;
+  once heart failure develops it is treatable, not curable.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/hypertension
+  title: Hypertension fact sheet, WHO
+- url: https://medlineplus.gov/ency/article/000163.htm
+  title: Hypertensive heart disease, MedlinePlus
+mesh:
+  D006973: Hypertension
+  D006333: Heart Failure
+cross_check: ok
+approved: true
+fingerprint: 0397eb60474b678a

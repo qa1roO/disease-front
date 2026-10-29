@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Lip and oral cavity cancer
+gbd_cause_id: 444
+status: 4
+nuance: Curable by surgery and radiotherapy when small; many patients, especially in South Asia, present late. 5-year
+  survival about 69% (oral cavity and pharynx).
+sources:
+- url: https://www.cancer.gov/types/head-and-neck/patient/adult/lip-mouth-treatment-pdq
+  title: Lip and Oral Cavity Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/oralcav.html
+  title: 'Cancer Stat Facts: Oral Cavity and Pharynx Cancer, SEER'
+mesh:
+  D009062: Mouth Neoplasms
+  D008048: Lip Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 61d62d73ca231b77

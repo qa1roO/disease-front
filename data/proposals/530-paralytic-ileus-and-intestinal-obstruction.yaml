@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Paralytic ileus and intestinal obstruction
+gbd_cause_id: 530
+status: 2
+nuance: Most bowel obstructions resolve with bowel rest or are relieved by surgery; outcomes depend on the cause
+  and on prompt access to surgery.
+sources:
+- url: https://medlineplus.gov/ency/article/000260.htm
+  title: Intestinal obstruction and Ileus, MedlinePlus
+mesh:
+  D007415: Intestinal Obstruction
+  D007418: Intestinal Pseudo-Obstruction
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D007415, D007418)'
+approved: true
+fingerprint: d71b0349dc73b8bb

@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Ulcerative colitis
+gbd_cause_id: 1024
+status: 3
+nuance: Aminosalicylates, steroids, immunosuppressants and biologics keep most patients in remission; colectomy
+  removes the disease when drugs fail.
+sources:
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases/ulcerative-colitis/treatment
+  title: Treatment for Ulcerative Colitis, NIDDK
+- url: https://www.nhs.uk/conditions/ulcerative-colitis/treatment/
+  title: 'Ulcerative colitis: Treatment, NHS'
+mesh:
+  D003093: Colitis, Ulcerative
+cross_check: ok
+approved: true
+fingerprint: c563565e6b9006f3

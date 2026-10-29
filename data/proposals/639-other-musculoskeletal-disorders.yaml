@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other musculoskeletal disorders
+gbd_cause_id: 639
+status: 4
+nuance: A residual GBD group (e.g. lupus, other connective-tissue and soft-tissue disorders); most are managed with
+  anti-inflammatory and immunosuppressive drugs rather than cured.
+sources:
+- url: https://www.niams.nih.gov/health-topics
+  title: Health Topics, NIAMS
+mesh:
+  D009140: Musculoskeletal Diseases
+  D008180: Lupus Erythematosus, Systemic
+cross_check: ok
+approved: true
+fingerprint: 07e218f1340946ba

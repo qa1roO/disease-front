@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Parkinson's disease
+gbd_cause_id: 544
+status: 4
+nuance: Levodopa and other drugs, plus deep-brain stimulation, control symptoms for years; nothing slows the underlying
+  neurodegeneration.
+sources:
+- url: https://www.ninds.nih.gov/health-information/disorders/parkinsons-disease
+  title: Parkinson's Disease, NINDS
+- url: https://www.nhs.uk/conditions/parkinsons-disease/treatment/
+  title: 'Parkinson''s disease: Treatment, NHS'
+mesh:
+  D010300: Parkinson Disease
+cross_check: ok
+approved: true
+fingerprint: 64a308fc810c3bcc

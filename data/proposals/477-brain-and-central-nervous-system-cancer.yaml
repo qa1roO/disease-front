@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Brain and central nervous system cancer
+gbd_cause_id: 477
+status: 4
+nuance: Covers many tumour types. The commonest malignant one in adults, glioblastoma, is treated with surgery,
+  radiotherapy and temozolomide but rarely cured; some low-grade and childhood tumours are curable.
+sources:
+- url: https://www.cancer.gov/types/brain/patient/adult-brain-treatment-pdq
+  title: Adult Central Nervous System Tumors Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/brain.html
+  title: 'Cancer Stat Facts: Brain and Other Nervous System Cancer, SEER'
+mesh:
+  D001932: Brain Neoplasms
+  D005909: Glioblastoma
+  D016543: Central Nervous System Neoplasms
+cross_check: ok
+approved: true
+fingerprint: ded82adb17ca753b

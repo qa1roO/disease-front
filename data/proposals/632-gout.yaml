@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Gout
+gbd_cause_id: 632
+status: 3
+nuance: Long-term urate-lowering treatment (allopurinol, febuxostat) to target prevents attacks and dissolves tophi;
+  flares are treated with anti-inflammatories.
+sources:
+- url: https://www.nhs.uk/conditions/gout/treatment/
+  title: 'Gout: Treatment, NHS'
+- url: https://www.niams.nih.gov/health-topics/gout
+  title: Gout, NIAMS
+mesh:
+  D006073: Gout
+cross_check: ok
+approved: true
+fingerprint: da32e5b0d51a1d4a

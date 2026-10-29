@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Acute myeloid leukemia
+gbd_cause_id: 847
+status: 4
+nuance: Intensive chemotherapy and stem-cell transplant cure some younger patients, but most patients are older;
+  5-year survival about 33%.
+sources:
+- url: https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq
+  title: Adult Acute Myeloid Leukemia Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/amyl.html
+  title: 'Cancer Stat Facts: Acute Myeloid Leukemia, SEER'
+mesh:
+  D015470: Leukemia, Myeloid, Acute
+cross_check: ok
+approved: true
+fingerprint: 654cfc067881d852

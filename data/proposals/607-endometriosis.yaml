@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Endometriosis
+gbd_cause_id: 607
+status: 4
+nuance: Painkillers, hormone treatment and surgery to remove lesions ease pain and help fertility, but endometriosis
+  often comes back.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/endometriosis
+  title: Endometriosis fact sheet, WHO
+- url: https://www.nhs.uk/conditions/endometriosis/treatment/
+  title: 'Endometriosis: Treatment, NHS'
+mesh:
+  D004715: Endometriosis
+cross_check: ok
+approved: true
+fingerprint: f6a368bc32e9f9e2

@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Mesothelioma
+gbd_cause_id: 483
+status: 4
+nuance: Rarely curable; chemotherapy and immunotherapy extend survival, which is usually 1-2 years from diagnosis.
+sources:
+- url: https://www.cancer.gov/types/mesothelioma/patient/mesothelioma-treatment-pdq
+  title: Malignant Mesothelioma Treatment (PDQ), NCI
+mesh:
+  D000086002: Mesothelioma, Malignant
+  D008654: Mesothelioma
+  D010997: Pleural Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 945ba1b41089cd37

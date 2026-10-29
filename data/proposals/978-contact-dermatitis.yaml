@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Contact dermatitis
+gbd_cause_id: 978
+status: 2
+nuance: Avoiding the irritant or allergen with short courses of topical steroids clears it; it returns on re-exposure.
+sources:
+- url: https://www.nhs.uk/conditions/contact-dermatitis/
+  title: Contact dermatitis, NHS
+- url: https://medlineplus.gov/ency/article/000869.htm
+  title: Contact dermatitis, MedlinePlus
+mesh:
+  D003877: Dermatitis, Contact
+  D017449: Dermatitis, Allergic Contact
+cross_check: ok
+approved: true
+fingerprint: b54f2f43753250ab

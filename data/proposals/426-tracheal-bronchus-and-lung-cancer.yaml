@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Tracheal, bronchus, and lung cancer
+gbd_cause_id: 426
+status: 4
+nuance: Curable by surgery or radiotherapy when found at stage I, but most patients are diagnosed with advanced
+  disease; targeted and immune therapies extend survival. SEER 5-year relative survival about 27%.
+sources:
+- url: https://www.cancer.gov/types/lung/patient/non-small-cell-lung-treatment-pdq
+  title: Non-Small Cell Lung Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/lungb.html
+  title: 'Cancer Stat Facts: Lung and Bronchus Cancer, SEER'
+mesh:
+  D008175: Lung Neoplasms
+  D002289: Carcinoma, Non-Small-Cell Lung
+  D055752: Small Cell Lung Carcinoma
+cross_check: ok
+approved: true
+fingerprint: 93f298691345aa98

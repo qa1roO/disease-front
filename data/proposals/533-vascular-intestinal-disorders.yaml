@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Vascular intestinal disorders
+gbd_cause_id: 533
+status: 4
+nuance: Acute mesenteric ischaemia needs emergency revascularisation or bowel resection and is often fatal; chronic
+  forms can be relieved by stenting.
+sources:
+- url: https://medlineplus.gov/ency/article/001156.htm
+  title: Mesenteric artery ischemia, MedlinePlus
+mesh:
+  D065666: Mesenteric Ischemia
+  D017091: Colitis, Ischemic
+cross_check: ok
+approved: true
+fingerprint: 33cb271fd9457e3f

@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Peptic ulcer disease
+gbd_cause_id: 527
+status: 2
+nuance: Eradicating H. pylori and stopping NSAIDs, with acid-suppressing drugs, heals most ulcers and prevents recurrence.
+sources:
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers
+  title: Peptic Ulcers (Stomach and Duodenal Ulcers), NIDDK
+- url: https://www.nhs.uk/conditions/stomach-ulcer/treatment/
+  title: 'Stomach ulcer: Treatment, NHS'
+mesh:
+  D010437: Peptic Ulcer
+  D013276: Stomach Ulcer
+  D004381: Duodenal Ulcer
+cross_check: ok
+approved: true
+fingerprint: 146fc95cace9af48

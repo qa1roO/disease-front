@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Diabetes mellitus type 1
+gbd_cause_id: 975
+status: 3
+nuance: Lifelong insulin lets patients live near-normal lives where insulin, testing and care are available; teplizumab
+  can delay onset. Lack of insulin access remains deadly in low-income settings.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/diabetes
+  title: Diabetes fact sheet, WHO
+- url: https://www.nhs.uk/conditions/type-1-diabetes/
+  title: Type 1 diabetes, NHS
+mesh:
+  D003922: Diabetes Mellitus, Type 1
+cross_check: ok
+approved: true
+fingerprint: 2e38ce54e672b457

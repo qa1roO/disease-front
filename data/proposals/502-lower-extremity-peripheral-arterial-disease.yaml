@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Lower extremity peripheral arterial disease
+gbd_cause_id: 502
+status: 3
+nuance: Exercise, smoking cessation, statins, antiplatelets and revascularisation relieve symptoms and lower cardiovascular
+  risk; the disease itself is not reversed.
+sources:
+- url: https://www.nhlbi.nih.gov/health/peripheral-artery-disease/treatment
+  title: 'Peripheral Artery Disease: Treatment, NHLBI'
+- url: https://www.nhs.uk/conditions/peripheral-arterial-disease-pad/treatment/
+  title: 'Peripheral arterial disease: Treatment, NHS'
+mesh:
+  D058729: Peripheral Arterial Disease
+  D007383: Intermittent Claudication
+cross_check: ok
+approved: true
+fingerprint: 40cb53c453594ae4

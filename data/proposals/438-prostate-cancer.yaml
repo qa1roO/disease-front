@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Prostate cancer
+gbd_cause_id: 438
+status: 2
+nuance: Most cases are found localized and are cured by surgery or radiotherapy, or need no treatment at all (active
+  surveillance). SEER 5-year survival about 98%. Metastatic disease is controlled for years by hormone therapy but
+  not cured.
+sources:
+- url: https://www.cancer.gov/types/prostate/patient/prostate-treatment-pdq
+  title: Prostate Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/prost.html
+  title: 'Cancer Stat Facts: Prostate Cancer, SEER'
+mesh:
+  D011471: Prostatic Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 90b5ea98ff30f471

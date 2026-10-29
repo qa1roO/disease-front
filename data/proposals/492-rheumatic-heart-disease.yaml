@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Rheumatic heart disease
+gbd_cause_id: 492
+status: 4
+nuance: Penicillin prophylaxis stops progression and valve surgery can restore function, but established valve damage
+  is permanent and most patients live where surgery is out of reach.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/rheumatic-heart-disease
+  title: Rheumatic heart disease fact sheet, WHO
+mesh:
+  D012214: Rheumatic Heart Disease
+cross_check: ok
+approved: true
+fingerprint: 80fdfb979d44faad

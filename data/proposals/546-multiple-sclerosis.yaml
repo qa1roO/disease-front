@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Multiple sclerosis
+gbd_cause_id: 546
+status: 4
+nuance: Disease-modifying therapies, especially high-efficacy ones started early, greatly reduce relapses and slow
+  disability; progressive forms respond poorly and there is no cure.
+sources:
+- url: https://www.ninds.nih.gov/health-information/disorders/multiple-sclerosis
+  title: Multiple Sclerosis, NINDS
+- url: https://www.nhs.uk/conditions/multiple-sclerosis/treatment/
+  title: 'Multiple sclerosis: Treatment, NHS'
+mesh:
+  D009103: Multiple Sclerosis
+cross_check: ok
+approved: true
+fingerprint: fbca27f2347904dc

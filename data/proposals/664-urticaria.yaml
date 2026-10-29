@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Urticaria
+gbd_cause_id: 664
+status: 3
+nuance: Most acute hives clear within weeks; chronic urticaria is controlled with antihistamines and, if needed,
+  omalizumab, and usually resolves within a few years.
+sources:
+- url: https://www.nhs.uk/conditions/hives/
+  title: Hives, NHS
+- url: https://medlineplus.gov/hives.html
+  title: Hives, MedlinePlus
+mesh:
+  D014581: Urticaria
+  D000080223: Chronic Urticaria
+cross_check: ok
+approved: true
+fingerprint: 8ee0650d37972641

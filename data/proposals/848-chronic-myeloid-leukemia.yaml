@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Chronic myeloid leukemia
+gbd_cause_id: 848
+status: 3
+nuance: Tyrosine-kinase inhibitors (imatinib and successors) give most patients a near-normal life expectancy on
+  daily treatment; some can stop treatment after deep remission.
+sources:
+- url: https://www.cancer.gov/types/leukemia/patient/cml-treatment-pdq
+  title: Chronic Myelogenous Leukemia Treatment (PDQ), NCI
+mesh:
+  D015464: Leukemia, Myelogenous, Chronic, BCR-ABL Positive
+cross_check: ok
+approved: true
+fingerprint: 257372ea37e0ca59

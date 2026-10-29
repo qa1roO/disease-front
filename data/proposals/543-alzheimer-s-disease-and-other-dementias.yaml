@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Alzheimer's disease and other dementias
+gbd_cause_id: 543
+status: 4
+nuance: Cholinesterase inhibitors ease symptoms, and the anti-amyloid antibodies lecanemab and donanemab modestly
+  slow early Alzheimer's; nothing stops or reverses dementia.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/dementia
+  title: Dementia fact sheet, WHO
+- url: https://medlineplus.gov/alzheimersdisease.html
+  title: Alzheimer's Disease, MedlinePlus
+mesh:
+  D000544: Alzheimer Disease
+  D003704: Dementia
+cross_check: ok
+approved: true
+fingerprint: 809aaca15588783e

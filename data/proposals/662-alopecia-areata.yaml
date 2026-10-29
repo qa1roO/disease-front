@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Alopecia areata
+gbd_cause_id: 662
+status: 4
+nuance: Hair often regrows on its own; steroids and, for severe disease, JAK inhibitors (baricitinib, ritlecitinib)
+  regrow hair in many, but relapse is common.
+sources:
+- url: https://www.niams.nih.gov/health-topics/alopecia-areata
+  title: Alopecia Areata, NIAMS
+mesh:
+  D000506: Alopecia Areata
+cross_check: ok
+approved: true
+fingerprint: e8113ec460a75705

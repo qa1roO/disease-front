@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Kidney cancer
+gbd_cause_id: 471
+status: 4
+nuance: Localized tumours (most cases) are often cured by nephrectomy; advanced disease is treated with immunotherapy
+  and targeted drugs. 5-year survival about 78%.
+sources:
+- url: https://www.cancer.gov/types/kidney/patient/kidney-treatment-pdq
+  title: Renal Cell Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/kidrp.html
+  title: 'Cancer Stat Facts: Kidney and Renal Pelvis Cancer, SEER'
+mesh:
+  D007680: Kidney Neoplasms
+  D002292: Carcinoma, Renal Cell
+cross_check: ok
+approved: true
+fingerprint: d467aaca54b01698

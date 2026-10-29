@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other neurological disorders
+gbd_cause_id: 557
+status: 4
+nuance: A residual GBD group of neurological disorders (e.g. neuropathies, other neurodegenerative diseases); mostly
+  managed rather than cured.
+sources:
+- url: https://www.ninds.nih.gov/health-information/disorders
+  title: Disorders A-Z, NINDS
+mesh:
+  D009422: Nervous System Diseases
+cross_check: ok
+approved: true
+fingerprint: afffc4360f221ee7

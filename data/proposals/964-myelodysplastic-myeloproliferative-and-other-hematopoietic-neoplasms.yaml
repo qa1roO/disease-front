@@ -1,0 +1,21 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms
+gbd_cause_id: 964
+status: 4
+nuance: Myeloproliferative neoplasms (polycythaemia vera, essential thrombocythaemia) are often controlled for decades;
+  myelodysplastic syndromes are mostly treatable but not curable without a stem-cell transplant.
+sources:
+- url: https://www.cancer.gov/types/myeloproliferative/patient/chronic-treatment-pdq
+  title: Chronic Myeloproliferative Neoplasms Treatment (PDQ), NCI
+- url: https://www.cancer.gov/types/myeloproliferative/patient/myelodysplastic-treatment-pdq
+  title: Myelodysplastic Syndromes Treatment (PDQ), NCI
+mesh:
+  D009190: Myelodysplastic Syndromes
+  D009196: Myeloproliferative Disorders
+  D011087: Polycythemia Vera
+  D013920: Thrombocythemia, Essential
+  D055728: Primary Myelofibrosis
+cross_check: ok
+approved: true
+fingerprint: cf9a31111dbfc309

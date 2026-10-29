@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Neural tube defects
+gbd_cause_id: 642
+status: 4
+nuance: Surgery closes spina bifida and shunts treat hydrocephalus, but nerve damage is permanent; anencephaly is
+  fatal. Folic acid fortification prevents most cases.
+sources:
+- url: https://www.cdc.gov/spina-bifida/about/index.html
+  title: About Spina Bifida, CDC
+- url: https://www.nhs.uk/conditions/spina-bifida/
+  title: Spina bifida, NHS
+mesh:
+  D009436: Neural Tube Defects
+  D016135: Spinal Dysraphism
+  D000757: Anencephaly
+cross_check: ok
+approved: true
+fingerprint: aaf73effdd024e3f

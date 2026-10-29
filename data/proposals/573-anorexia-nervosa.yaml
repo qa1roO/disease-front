@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Anorexia nervosa
+gbd_cause_id: 573
+status: 4
+nuance: Specialist psychological treatment and nutritional rehabilitation lead to recovery in about half of patients,
+  but the illness is often long and has the highest mortality of any mental disorder.
+sources:
+- url: https://www.nhs.uk/mental-health/conditions/anorexia/overview/
+  title: Anorexia nervosa, NHS
+- url: https://www.nimh.nih.gov/health/topics/eating-disorders
+  title: Eating Disorders, NIMH
+mesh:
+  D000856: Anorexia Nervosa
+cross_check: ok
+approved: true
+fingerprint: 82fff9aeddeb68b0

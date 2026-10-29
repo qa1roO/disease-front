@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Glaucoma
+gbd_cause_id: 670
+status: 3
+nuance: Lost vision cannot be restored, but eye drops, laser or surgery lower eye pressure and stop further loss
+  in most people diagnosed in time.
+sources:
+- url: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/glaucoma
+  title: Glaucoma, National Eye Institute
+- url: https://www.nhs.uk/conditions/glaucoma/
+  title: Glaucoma, NHS
+mesh:
+  D005901: Glaucoma
+  D005902: Glaucoma, Open-Angle
+cross_check: ok
+approved: true
+fingerprint: 98d0c886271f59a4

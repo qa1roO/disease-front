@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cervical cancer
+gbd_cause_id: 432
+status: 4
+nuance: Curable when found early through screening (surgery or chemoradiation); globally most deaths are in women
+  diagnosed late. SEER 5-year survival about 67%. Largely preventable by HPV vaccination and screening.
+sources:
+- url: https://www.cancer.gov/types/cervical/patient/cervical-treatment-pdq
+  title: Cervical Cancer Treatment (PDQ), NCI
+- url: https://www.who.int/news-room/fact-sheets/detail/cervical-cancer
+  title: Cervical cancer fact sheet, WHO
+mesh:
+  D002583: Uterine Cervical Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 9fefb1a326c1e48f

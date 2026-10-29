@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Stomach cancer
+gbd_cause_id: 414
+status: 4
+nuance: Gastrectomy cures early gastric cancer, but most cases are found late; 5-year survival is about 36%.
+sources:
+- url: https://www.cancer.gov/types/stomach/patient/stomach-treatment-pdq
+  title: Gastric Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/stomach.html
+  title: 'Cancer Stat Facts: Stomach Cancer, SEER'
+mesh:
+  D013274: Stomach Neoplasms
+cross_check: ok
+approved: true
+fingerprint: a134984421f1e48c

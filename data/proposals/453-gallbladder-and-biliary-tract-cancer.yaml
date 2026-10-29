@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Gallbladder and biliary tract cancer
+gbd_cause_id: 453
+status: 4
+nuance: Usually found late; surgery cures only early cases (often found incidentally at gallbladder removal).
+sources:
+- url: https://www.cancer.gov/types/gallbladder/patient/gallbladder-treatment-pdq
+  title: Gallbladder Cancer Treatment (PDQ), NCI
+- url: https://www.cancer.gov/types/liver/patient/about-bile-duct-cancer-pdq
+  title: Bile Duct Cancer (Cholangiocarcinoma), NCI
+mesh:
+  D005706: Gallbladder Neoplasms
+  D001661: Biliary Tract Neoplasms
+  D018281: Cholangiocarcinoma
+cross_check: ok
+approved: true
+fingerprint: 72c070d4d0102b28

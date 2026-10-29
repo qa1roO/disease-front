@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other gynecological diseases
+gbd_cause_id: 612
+status: 4
+nuance: A residual GBD group of gynaecological conditions (e.g. menstrual disorders, ovarian cysts); most are managed
+  with hormonal or surgical treatment.
+sources:
+- url: https://medlineplus.gov/womenshealth.html
+  title: Women's Health, MedlinePlus
+mesh:
+  D005831: Genital Diseases, Female
+  D008599: Menstruation Disturbances
+cross_check: ok
+approved: true
+fingerprint: 91556018fd6a73cc

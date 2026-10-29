@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Pyoderma
+gbd_cause_id: 657
+status: 2
+nuance: Impetigo and other bacterial skin infections are cured by topical or oral antibiotics.
+sources:
+- url: https://www.nhs.uk/conditions/impetigo/
+  title: Impetigo, NHS
+- url: https://medlineplus.gov/impetigo.html
+  title: Impetigo, MedlinePlus
+mesh:
+  D011711: Pyoderma
+  D007169: Impetigo
+cross_check: ok
+approved: true
+fingerprint: 732065ae8bbe62b9

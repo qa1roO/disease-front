@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Testicular cancer
+gbd_cause_id: 468
+status: 2
+nuance: Cured in more than 95% of patients with orchiectomy and, when needed, platinum chemotherapy, even when it
+  has spread.
+sources:
+- url: https://www.cancer.gov/types/testicular/patient/testicular-treatment-pdq
+  title: Testicular Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/testis.html
+  title: 'Cancer Stat Facts: Testicular Cancer, SEER'
+mesh:
+  D013736: Testicular Neoplasms
+  D009373: Neoplasms, Germ Cell and Embryonal
+cross_check: ok
+approved: true
+fingerprint: 0eb97440a73bf6b3

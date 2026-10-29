@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Fungal skin diseases
+gbd_cause_id: 659
+status: 2
+nuance: Topical or oral antifungals cure ringworm, athlete's foot and similar infections; nail infections take months
+  and often recur.
+sources:
+- url: https://www.nhs.uk/conditions/ringworm/
+  title: Ringworm, NHS
+- url: https://medlineplus.gov/fungalinfections.html
+  title: Fungal Infections, MedlinePlus
+mesh:
+  D003881: Dermatomycoses
+  D014005: Tinea
+cross_check: ok
+approved: true
+fingerprint: a1455ddec27226f0

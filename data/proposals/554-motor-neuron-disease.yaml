@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Motor neuron disease
+gbd_cause_id: 554
+status: 5
+nuance: No treatment stops ALS. Riluzole and edaravone slow progression modestly, and tofersen helps the rare SOD1
+  form; care is supportive (breathing and feeding support).
+sources:
+- url: https://www.ninds.nih.gov/health-information/disorders/amyotrophic-lateral-sclerosis-als
+  title: Amyotrophic Lateral Sclerosis (ALS), NINDS
+- url: https://www.nhs.uk/conditions/motor-neurone-disease/
+  title: Motor neurone disease, NHS
+mesh:
+  D016472: Motor Neuron Disease
+  D000690: Amyotrophic Lateral Sclerosis
+cross_check: 'flag: claims Untreatable but ChEMBL has 3 approved drugs for D000690'
+approved: true
+fingerprint: c316031d6439d741

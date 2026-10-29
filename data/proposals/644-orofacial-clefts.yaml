@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Orofacial clefts
+gbd_cause_id: 644
+status: 2
+nuance: Surgical repair in infancy, with speech therapy and dental care, gives most children normal appearance and
+  speech; many in low-income countries still go unrepaired.
+sources:
+- url: https://www.nhs.uk/conditions/cleft-lip-and-palate/
+  title: Cleft lip and palate, NHS
+- url: https://www.cdc.gov/birth-defects/about/cleft-lip-cleft-palate.html
+  title: About Cleft Lip and Cleft Palate, CDC
+mesh:
+  D002971: Cleft Lip
+  D002972: Cleft Palate
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D002971, D002972)'
+approved: true
+fingerprint: 5b47c257d9418c94

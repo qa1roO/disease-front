@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Atrial fibrillation and flutter
+gbd_cause_id: 500
+status: 3
+nuance: Anticoagulation prevents most strokes and rate or rhythm control relieves symptoms; catheter ablation cures
+  some patients. Most live near-normal lives on treatment.
+sources:
+- url: https://www.nhlbi.nih.gov/health/atrial-fibrillation/treatment
+  title: 'Atrial Fibrillation: Treatment, NHLBI'
+- url: https://www.nhs.uk/conditions/atrial-fibrillation/treatment/
+  title: 'Atrial fibrillation: Treatment, NHS'
+mesh:
+  D001281: Atrial Fibrillation
+  D001282: Atrial Flutter
+cross_check: ok
+approved: true
+fingerprint: e3765ce4b9d7dea4

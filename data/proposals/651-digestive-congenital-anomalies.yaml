@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Digestive congenital anomalies
+gbd_cause_id: 651
+status: 2
+nuance: Most digestive anomalies (e.g. oesophageal atresia, pyloric stenosis, Hirschsprung disease, anorectal malformations)
+  are corrected by surgery in infancy; survival depends on access to neonatal surgery.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/birth-defects
+  title: Congenital disorders fact sheet, WHO
+- url: https://www.nhs.uk/conditions/hirschsprungs-disease/
+  title: Hirschsprung's disease, NHS
+mesh:
+  D004065: Digestive System Abnormalities
+  D004933: Esophageal Atresia
+  D006627: Hirschsprung Disease
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D004065, D004933, D006627)'
+approved: true
+fingerprint: 41808828aa29a211

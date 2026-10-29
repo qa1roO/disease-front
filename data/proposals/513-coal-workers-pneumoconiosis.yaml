@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Coal workers pneumoconiosis
+gbd_cause_id: 513
+status: 5
+nuance: Black lung is irreversible and progressive massive fibrosis can worsen after exposure ends; care is supportive.
+sources:
+- url: https://medlineplus.gov/ency/article/000130.htm
+  title: Coal worker's pneumoconiosis, MedlinePlus
+mesh:
+  D055008: Anthracosis
+cross_check: ok
+approved: true
+fingerprint: 46182c4fccf5d67d

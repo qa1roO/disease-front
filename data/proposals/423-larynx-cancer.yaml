@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Larynx cancer
+gbd_cause_id: 423
+status: 4
+nuance: Early laryngeal cancer is often cured by radiotherapy or surgery with the voice preserved; advanced cases
+  need laryngectomy. 5-year survival about 62%.
+sources:
+- url: https://www.cancer.gov/types/head-and-neck/patient/adult/laryngeal-treatment-pdq
+  title: Laryngeal Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/laryn.html
+  title: 'Cancer Stat Facts: Laryngeal Cancer, SEER'
+mesh:
+  D007822: Laryngeal Neoplasms
+cross_check: ok
+approved: true
+fingerprint: cccddbcc4f415612

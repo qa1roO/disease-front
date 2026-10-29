@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other chromosomal abnormalities
+gbd_cause_id: 648
+status: 5
+nuance: Other chromosomal abnormalities (e.g. trisomy 13 and 18, deletions) have no treatment for the underlying
+  cause; care is supportive, and some are fatal in infancy.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/birth-defects
+  title: Congenital disorders fact sheet, WHO
+- url: https://medlineplus.gov/geneticdisorders.html
+  title: Genetic Disorders, MedlinePlus
+mesh:
+  D025063: Chromosome Disorders
+  D000073842: Trisomy 18 Syndrome
+  D000073839: Trisomy 13 Syndrome
+cross_check: ok
+approved: true
+fingerprint: c96a247070d85e94

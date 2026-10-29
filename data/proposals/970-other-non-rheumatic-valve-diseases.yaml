@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other non-rheumatic valve diseases
+gbd_cause_id: 970
+status: 3
+nuance: 'Mainly tricuspid and pulmonary valve disease: watched, treated with diuretics, and repaired or replaced
+  when needed.'
+sources:
+- url: https://www.nhlbi.nih.gov/health/heart-valve-diseases/treatment
+  title: 'Heart Valve Diseases: Treatment, NHLBI'
+mesh:
+  D006349: Heart Valve Diseases
+  D014262: Tricuspid Valve Insufficiency
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D006349, D014262)'
+approved: true
+fingerprint: 5156409ee82e041e

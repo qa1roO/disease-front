@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Chronic kidney disease due to other and unspecified causes
+gbd_cause_id: 593
+status: 4
+nuance: ACE inhibitors or ARBs and SGLT2 inhibitors slow progression; kidney failure needs dialysis or transplant.
+sources:
+- url: https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/managing
+  title: Managing Chronic Kidney Disease, NIDDK
+- url: https://www.nhs.uk/conditions/kidney-disease/treatment/
+  title: 'Chronic kidney disease: Treatment, NHS'
+mesh:
+  D051436: Renal Insufficiency, Chronic
+cross_check: ok
+approved: true
+fingerprint: ce2860c73d44a2f8

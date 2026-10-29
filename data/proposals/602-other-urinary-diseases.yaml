@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other urinary diseases
+gbd_cause_id: 602
+status: 4
+nuance: A residual GBD group of urinary disorders (e.g. incontinence, bladder dysfunction); mostly managed rather
+  than cured.
+sources:
+- url: https://www.niddk.nih.gov/health-information/urologic-diseases
+  title: Urologic Diseases, NIDDK
+mesh:
+  D014570: Urologic Diseases
+  D014549: Urinary Incontinence
+cross_check: ok
+approved: true
+fingerprint: b5339da0eb9af558

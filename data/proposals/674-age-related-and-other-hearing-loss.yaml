@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Age-related and other hearing loss
+gbd_cause_id: 674
+status: 3
+nuance: Hearing loss itself is mostly permanent, but hearing aids and cochlear implants restore near-normal function;
+  only about one in five people who need a hearing aid has one.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss
+  title: Deafness and hearing loss fact sheet, WHO
+- url: https://www.nidcd.nih.gov/health/age-related-hearing-loss
+  title: Age-Related Hearing Loss (Presbycusis), NIDCD
+mesh:
+  D034381: Hearing Loss
+  D011304: Presbycusis
+  D006319: Hearing Loss, Sensorineural
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D034381, D011304, D006319)'
+approved: true
+fingerprint: 366a5da995695371

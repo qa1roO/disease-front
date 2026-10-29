@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Turner syndrome
+gbd_cause_id: 646
+status: 3
+nuance: Growth hormone and oestrogen replacement, with heart and kidney monitoring, let most women with Turner syndrome
+  lead near-normal lives; most are infertile.
+sources:
+- url: https://medlineplus.gov/genetics/condition/turner-syndrome/
+  title: Turner syndrome, MedlinePlus Genetics
+- url: https://www.nhs.uk/conditions/turner-syndrome/
+  title: Turner syndrome, NHS
+mesh:
+  D014424: Turner Syndrome
+cross_check: ok
+approved: true
+fingerprint: 06d6dd7e05ef6479

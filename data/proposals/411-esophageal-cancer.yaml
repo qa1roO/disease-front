@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Esophageal cancer
+gbd_cause_id: 411
+status: 4
+nuance: Usually diagnosed late; chemoradiotherapy and surgery cure a minority. 5-year survival about 22%.
+sources:
+- url: https://www.cancer.gov/types/esophageal/patient/esophageal-treatment-pdq
+  title: Esophageal Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/esoph.html
+  title: 'Cancer Stat Facts: Esophageal Cancer, SEER'
+mesh:
+  D004938: Esophageal Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 536dbe2b05f9467a

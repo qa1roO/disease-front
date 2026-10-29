@@ -12,6 +12,8 @@ export interface MapNode {
   /** Provinces only: size in DALYs (0 without a GBD cause: the layout gives it the minimum size) and status. */
   size?: number;
   status?: Status;
+  /** True when the status is inherited from the province's GBD cause rather than assessed for it. */
+  provisional?: boolean;
   /** Provinces only, absent when no GBD cause covers the province. */
   burden?: Burden;
 }
@@ -37,6 +39,17 @@ export interface GbdCause {
   provinces: number;
   /** For a GBD parent standing in for sub-causes that have no ICD-10 codes of their own. */
   members?: string[];
+  /** The owner-approved stage-6 proposal for this cause; its provinces inherit the status as provisional. */
+  assessment?: Assessment;
+}
+
+export interface Assessment {
+  status: 1 | 2 | 3 | 4 | 5;
+  /** Typical-patient caveat, e.g. "curable if caught early"; may be empty. */
+  nuance: string;
+  sources: { url: string; title: string }[];
+  /** "ok", or "flag: …" when the status disagrees with ChEMBL's approved-drug data. */
+  crossCheck: string;
 }
 
 export interface MapData {

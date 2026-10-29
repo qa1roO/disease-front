@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Female infertility
+gbd_cause_id: 606
+status: 4
+nuance: Treatment depends on the cause; ovulation induction, surgery and IVF help many couples conceive, but success
+  falls with age and access is very unequal.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/infertility
+  title: Infertility fact sheet, WHO
+- url: https://www.nhs.uk/conditions/infertility/treatment/
+  title: 'Infertility: Treatment, NHS'
+mesh:
+  D007247: Infertility, Female
+cross_check: ok
+approved: true
+fingerprint: c823979860630b3e

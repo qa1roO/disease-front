@@ -1,11 +1,14 @@
 """Stage 8: build site/public/map.json, everything the front end needs, from the earlier stages.
 
 A province's size is its burden in DALYs (stage 4), 0 when no GBD cause covers it (the front end then gives it
-the minimum size). Statuses come with ticket 04: every province is fog (status null) for now.
+the minimum size). A province under a GBD cause with an approved stage-6 proposal inherits its status as
+provisional; every other province is fog (status null). The cause's assessment (status, nuance, sources,
+cross-check) sits once in meta.gbdCauses.
 """
 
 
-def build_map(tree, crosswalk, burden):
+def build_map(tree, crosswalk, burden, approved=None):
+    approved = approved or {}
     table, sizes = crosswalk["provinces"], burden["provinces"]
     on_map = {str(b["cause"]) for b in sizes.values()}
 
@@ -16,6 +19,10 @@ def build_map(tree, crosswalk, burden):
             out["members"] = [burden["causes"][str(m)]["name"] for m in v["members"]]
         return out
 
+    def assessment(p):
+        return {"status": p["status"], "nuance": p.get("nuance") or "", "sources": p["sources"],
+                "crossCheck": p.get("cross_check", "ok")}
+
     def node(n):
         out = {"kind": n["kind"], "code": n["code"], "title": n["title"], "uri": n["uri"]}
         if "children" in n:
@@ -24,6 +31,8 @@ def build_map(tree, crosswalk, burden):
         b = sizes.get(n["uri"])
         out["size"] = round(b["dalys"], 1) if b else 0
         out["status"] = None
+        if b and b["cause"] in approved:
+            out["status"], out["provisional"] = approved[b["cause"]]["status"], True
         if b:
             entry = table[n["uri"]]
             out["burden"] = {"dalys": round(b["dalys"], 1), "estimated": b["estimated"], "cause": b["cause"],
@@ -38,7 +47,8 @@ def build_map(tree, crosswalk, burden):
             "counts": tree["counts"],
             "gbd": burden["gbd"],
             "crosswalk": crosswalk["note"],
-            "gbdCauses": {c: cause(v) for c, v in burden["causes"].items() if c in on_map},
+            "gbdCauses": {c: {**cause(v), **({"assessment": assessment(approved[int(c)])} if int(c) in approved else {})}
+                          for c, v in burden["causes"].items() if c in on_map},
         },
         "root": {"kind": "root", "title": "All diseases", "children": [node(c) for c in tree["chapters"]]},
     }

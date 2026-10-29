@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Non-rheumatic calcific aortic valve disease
+gbd_cause_id: 968
+status: 3
+nuance: No drug slows it, but surgical or transcatheter valve replacement restores near-normal life expectancy once
+  symptoms appear.
+sources:
+- url: https://www.nhs.uk/conditions/aortic-valve-replacement/
+  title: Aortic valve replacement, NHS
+- url: https://www.nhlbi.nih.gov/health/heart-valve-diseases/treatment
+  title: 'Heart Valve Diseases: Treatment, NHLBI'
+mesh:
+  D001024: Aortic Valve Stenosis
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D001024)'
+approved: true
+fingerprint: ed6b5a817ed18019

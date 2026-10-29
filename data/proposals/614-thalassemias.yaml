@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Thalassemias
+gbd_cause_id: 614
+status: 4
+nuance: Severe thalassaemia needs lifelong transfusions and iron chelation; stem-cell transplant and gene therapy
+  can cure, but few patients get them.
+sources:
+- url: https://www.nhlbi.nih.gov/health/thalassemia/treatment
+  title: 'Thalassemia: Treatment, NHLBI'
+- url: https://www.nhs.uk/conditions/thalassaemia/treatment/
+  title: 'Thalassaemia: Treatment, NHS'
+mesh:
+  D013789: Thalassemia
+  D017086: beta-Thalassemia
+cross_check: ok
+approved: true
+fingerprint: bf15ea1b2b7810cf

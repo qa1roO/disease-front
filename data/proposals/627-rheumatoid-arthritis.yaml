@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Rheumatoid arthritis
+gbd_cause_id: 627
+status: 3
+nuance: Early treatment with methotrexate and, if needed, biologic or JAK-inhibitor drugs brings most patients to
+  remission or low disease activity, preventing joint damage.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/rheumatoid-arthritis
+  title: Rheumatoid arthritis fact sheet, WHO
+- url: https://www.nhs.uk/conditions/rheumatoid-arthritis/treatment/
+  title: 'Rheumatoid arthritis: Treatment, NHS'
+mesh:
+  D001172: Arthritis, Rheumatoid
+cross_check: ok
+approved: true
+fingerprint: 75cd221ce9c7695f

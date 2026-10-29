@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Thyroid cancer
+gbd_cause_id: 480
+status: 2
+nuance: Mostly differentiated thyroid cancer, cured by surgery with or without radioiodine; SEER 5-year survival
+  about 98%. Anaplastic thyroid cancer is rare and rarely curable.
+sources:
+- url: https://www.cancer.gov/types/thyroid/patient/thyroid-treatment-pdq
+  title: Thyroid Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/thyro.html
+  title: 'Cancer Stat Facts: Thyroid Cancer, SEER'
+mesh:
+  D013964: Thyroid Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 0bc34d221abcc377

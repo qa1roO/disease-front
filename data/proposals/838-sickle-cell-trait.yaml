@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Sickle cell trait
+gbd_cause_id: 838
+status: 3
+nuance: Carriers of one sickle gene usually have no symptoms and live normal lives without treatment; rare complications
+  include problems under extreme exertion or dehydration.
+sources:
+- url: https://medlineplus.gov/genetics/condition/sickle-cell-disease/
+  title: 'Sickle cell disease (carriers: sickle cell trait), MedlinePlus Genetics'
+mesh:
+  D012805: Sickle Cell Trait
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D012805)'
+approved: true
+fingerprint: e0c8eece01504600

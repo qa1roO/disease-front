@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other benign and in situ neoplasms
+gbd_cause_id: 1164
+status: 2
+nuance: Benign and in situ tumours are usually cured by removal when they need treatment at all.
+sources:
+- url: https://medlineplus.gov/benigntumors.html
+  title: Benign Tumors, MedlinePlus
+mesh:
+  D009369: Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 9138d1d5747cdb55

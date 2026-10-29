@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Polycystic ovarian syndrome
+gbd_cause_id: 605
+status: 3
+nuance: Not curable, but weight management, hormonal contraception, metformin and fertility treatment control symptoms
+  and help most women conceive.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome
+  title: Polycystic ovary syndrome fact sheet, WHO
+- url: https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/treatment/
+  title: 'PCOS: Treatment, NHS'
+mesh:
+  D011085: Polycystic Ovary Syndrome
+cross_check: ok
+approved: true
+fingerprint: 0d29101f96bad8b3

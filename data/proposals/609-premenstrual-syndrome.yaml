@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Premenstrual syndrome
+gbd_cause_id: 609
+status: 4
+nuance: Lifestyle measures, SSRIs and hormonal contraception ease symptoms; they return each cycle until menopause.
+sources:
+- url: https://www.nhs.uk/conditions/pre-menstrual-syndrome/
+  title: PMS (premenstrual syndrome), NHS
+- url: https://medlineplus.gov/premenstrualsyndrome.html
+  title: Premenstrual Syndrome, MedlinePlus
+mesh:
+  D011293: Premenstrual Syndrome
+cross_check: ok
+approved: true
+fingerprint: ceab98f97be8a271

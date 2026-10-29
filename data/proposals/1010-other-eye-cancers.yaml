@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other eye cancers
+gbd_cause_id: 1010
+status: 4
+nuance: 'Mostly uveal melanoma in adults: radiotherapy or enucleation controls the eye tumour, but about half of
+  patients later develop liver metastases.'
+sources:
+- url: https://www.cancer.gov/types/eye/patient/intraocular-melanoma-treatment-pdq
+  title: Intraocular (Uveal) Melanoma Treatment (PDQ), NCI
+mesh:
+  D005134: Eye Neoplasms
+  D014604: Uveal Neoplasms
+cross_check: ok
+approved: true
+fingerprint: eee0abaf72705d5d

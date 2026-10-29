@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Urolithiasis
+gbd_cause_id: 596
+status: 2
+nuance: Most stones pass on their own or are removed by lithotripsy or ureteroscopy; recurrence is common and partly
+  preventable.
+sources:
+- url: https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-stones/treatment
+  title: Treatment for Kidney Stones, NIDDK
+- url: https://www.nhs.uk/conditions/kidney-stones/treatment/
+  title: 'Kidney stones: Treatment, NHS'
+mesh:
+  D052878: Urolithiasis
+  D007669: Kidney Calculi
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D052878, D007669)'
+approved: true
+fingerprint: f8f5a3a8a34ff9a4

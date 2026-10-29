@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Colon and rectum cancer
+gbd_cause_id: 441
+status: 4
+nuance: Curable when caught early (surgery for localized disease, 5-year survival about 90%); about 65% survive
+  5 years overall, and metastatic disease is treated, not cured.
+sources:
+- url: https://www.cancer.gov/types/colorectal/patient/colon-treatment-pdq
+  title: Colon Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/colorect.html
+  title: 'Cancer Stat Facts: Colorectal Cancer, SEER'
+mesh:
+  D015179: Colorectal Neoplasms
+  D003110: Colonic Neoplasms
+  D012004: Rectal Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 7b36b30706d226b2

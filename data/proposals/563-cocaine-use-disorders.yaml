@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cocaine use disorders
+gbd_cause_id: 563
+status: 4
+nuance: No medicine is approved; behavioural therapies help some people stop. Relapse is common.
+sources:
+- url: https://nida.nih.gov/research-topics/cocaine
+  title: Cocaine, NIDA
+mesh:
+  D019970: Cocaine-Related Disorders
+cross_check: ok
+approved: true
+fingerprint: 0646092869c9e50a

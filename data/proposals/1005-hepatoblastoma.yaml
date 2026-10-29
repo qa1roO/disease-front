@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Hepatoblastoma
+gbd_cause_id: 1005
+status: 2
+nuance: Chemotherapy plus complete resection or liver transplant cures about 80% of children.
+sources:
+- url: https://www.cancer.gov/types/liver/patient/child-liver-treatment-pdq
+  title: Childhood Liver Cancer Treatment (PDQ), NCI
+mesh:
+  D018197: Hepatoblastoma
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D018197)'
+approved: true
+fingerprint: 989cba4c19c839db

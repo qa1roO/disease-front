@@ -1,0 +1,21 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Ischemic heart disease
+gbd_cause_id: 493
+status: 3
+nuance: Statins, antiplatelets, blood-pressure control and stenting or bypass let most patients live near-normal
+  lives, but it remains the world's leading cause of death, much of it where care is not reached in time.
+sources:
+- url: https://www.nhlbi.nih.gov/health/coronary-heart-disease/treatment
+  title: 'Coronary Heart Disease: Treatment, NHLBI'
+- url: https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)
+  title: Cardiovascular diseases fact sheet, WHO
+mesh:
+  D017202: Myocardial Ischemia
+  D003324: Coronary Artery Disease
+  D003327: Coronary Disease
+  D009203: Myocardial Infarction
+  D000787: Angina Pectoris
+cross_check: ok
+approved: true
+fingerprint: 841b420d6493ce81

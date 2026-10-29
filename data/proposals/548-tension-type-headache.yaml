@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Tension-type headache
+gbd_cause_id: 548
+status: 4
+nuance: Episodes respond to simple painkillers; chronic tension-type headache can be eased by amitriptyline and
+  avoiding medication overuse.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/headache-disorders
+  title: Migraine and other headache disorders fact sheet, WHO
+- url: https://www.nhs.uk/conditions/tension-headaches/
+  title: Tension headaches, NHS
+mesh:
+  D018781: Tension-Type Headache
+cross_check: ok
+approved: true
+fingerprint: 9ca67d2f4ec7736e

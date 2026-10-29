@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Appendicitis
+gbd_cause_id: 529
+status: 2
+nuance: Appendicectomy (or antibiotics for uncomplicated cases) cures it; delayed treatment risks perforation.
+sources:
+- url: https://www.nhs.uk/conditions/appendicitis/
+  title: Appendicitis, NHS
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases/appendicitis/treatment
+  title: Treatment of Appendicitis, NIDDK
+mesh:
+  D001064: Appendicitis
+cross_check: ok
+approved: true
+fingerprint: ff3d3b978b116d67

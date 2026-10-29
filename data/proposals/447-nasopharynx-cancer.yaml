@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Nasopharynx cancer
+gbd_cause_id: 447
+status: 4
+nuance: 'Chemoradiotherapy cures many patients with early or locoregional disease (it is highly radiosensitive),
+  but overall 5-year survival is roughly 60-70%, below the bar used for Curable cancers; distant metastases are
+  treatable, not curable. Changed from Curable after the blind second opinion (SECOND-OPINION.md).'
+sources:
+- url: https://www.cancer.gov/types/head-and-neck/patient/adult/nasopharyngeal-treatment-pdq
+  title: Nasopharyngeal Cancer Treatment (PDQ), NCI
+mesh:
+  D000077274: Nasopharyngeal Carcinoma
+  D009303: Nasopharyngeal Neoplasms
+cross_check: ok
+approved: true
+fingerprint: 8151d174de6f5a0f
