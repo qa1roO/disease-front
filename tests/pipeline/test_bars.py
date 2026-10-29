@@ -32,10 +32,10 @@ class QueryTest(unittest.TestCase):
         self.assertEqual(bars.condition(MND), 'AREA[ConditionMeshTerm]"Amyotrophic Lateral Sclerosis" OR '
                                               'AREA[ConditionMeshTerm]"Motor Neuron Disease"')
 
-    def test_params_ask_for_interventional_active_or_completed_trials_registered_since(self):
+    def test_params_ask_for_interventional_trials_still_running_registered_since(self):
         p = bars.params(ALS, SINCE, "PHASE2")
         self.assertEqual(p["query.cond"], 'AREA[ConditionMeshTerm]"Amyotrophic Lateral Sclerosis"')
-        self.assertEqual(p["filter.overallStatus"], "RECRUITING|ENROLLING_BY_INVITATION|ACTIVE_NOT_RECRUITING|COMPLETED")
+        self.assertEqual(p["filter.overallStatus"], "RECRUITING|NOT_YET_RECRUITING|ENROLLING_BY_INVITATION|ACTIVE_NOT_RECRUITING")
         self.assertEqual(p["filter.advanced"], "AREA[StudyType]INTERVENTIONAL AND "
                                                "AREA[StudyFirstPostDate]RANGE[2016-10-29,MAX] AND AREA[Phase]PHASE2")
         self.assertEqual((p["countTotal"], p["pageSize"]), ("true", "1"))
@@ -47,38 +47,36 @@ class QueryTest(unittest.TestCase):
         self.assertEqual(base, "https://clinicaltrials.gov/search")
         self.assertEqual(dict(urllib.parse.parse_qsl(query)), {
             "cond": 'AREA[ConditionMeshTerm]"Amyotrophic Lateral Sclerosis"',
-            "aggFilters": "status:rec enr act com,studyType:int", "firstPost": "2016-10-29_"})
+            "aggFilters": "status:rec not enr act,studyType:int", "firstPost": "2016-10-29_"})
 
 
 class BarTest(unittest.TestCase):
     def test_the_bar_is_the_furthest_phase_with_a_trial(self):
         count = counter({"": 40, "(PHASE3 OR PHASE4)": 0, "PHASE2": 12, "(PHASE1 OR EARLY_PHASE1)": 9})
-        self.assertEqual(bars.bar(ALS, count, {}, SINCE),
+        self.assertEqual(bars.bar(ALS, count, SINCE),
                          {"phase": "phase2", "trials": 40, "url": bars.search_url(ALS, SINCE)})
 
     def test_it_stops_asking_once_a_phase_has_trials(self):
         count = counter({"": 40, "(PHASE3 OR PHASE4)": 3, "PHASE2": 12})
-        self.assertEqual(bars.bar(ALS, count, {}, SINCE)["phase"], "phase3")
+        self.assertEqual(bars.bar(ALS, count, SINCE)["phase"], "phase3")
         self.assertEqual(len(count.calls), 2)
 
     def test_phase_4_counts_as_phase_3_and_early_phase_1_as_phase_1(self):
-        self.assertEqual(bars.bar(ALS, counter({"": 2, "(PHASE3 OR PHASE4)": 2}), {}, SINCE)["phase"], "phase3")
-        self.assertEqual(bars.bar(ALS, counter({"": 2, "(PHASE1 OR EARLY_PHASE1)": 1}), {}, SINCE)["phase"], "phase1")
+        self.assertEqual(bars.bar(ALS, counter({"": 2, "(PHASE3 OR PHASE4)": 2}), SINCE)["phase"], "phase3")
+        self.assertEqual(bars.bar(ALS, counter({"": 2, "(PHASE1 OR EARLY_PHASE1)": 1}), SINCE)["phase"], "phase1")
 
     def test_trials_without_a_phase_or_no_trials_read_no_registered_trial(self):
         count = counter({"": 5})
-        self.assertEqual(bars.bar(ALS, count, {}, SINCE)["phase"], "none")
+        self.assertEqual(bars.bar(ALS, count, SINCE)["phase"], "none")
         empty = counter({})
-        self.assertEqual(bars.bar(ALS, empty, {}, SINCE), {"phase": "none", "trials": 0,
+        self.assertEqual(bars.bar(ALS, empty, SINCE), {"phase": "none", "trials": 0,
                                                            "url": bars.search_url(ALS, SINCE)})
         self.assertEqual(len(empty.calls), 1)
 
-    def test_an_approved_chembl_indication_for_a_term_makes_it_approved(self):
+    def test_the_bar_is_never_approved_only_held_provinces_are_in_stage_8(self):
         count = counter({"": 40, "(PHASE3 OR PHASE4)": 3})
-        out = bars.bar(MND, count, {"D000690": ["CHEMBL744", "CHEMBL1301"]}, SINCE)
-        self.assertEqual(out, {"phase": "approved", "trials": 40, "url": bars.search_url(MND, SINCE),
-                               "approved": {"D000690": ["CHEMBL1301", "CHEMBL744"]}})
-        self.assertEqual(len(count.calls), 1)
+        self.assertEqual(bars.bar(MND, count, SINCE)["phase"], "phase3")
+        self.assertNotIn("COMPLETED", count.calls[0]["filter.overallStatus"])
 
 
 class FakeClock:
@@ -160,7 +158,7 @@ class CacheTest(unittest.TestCase):
 
 class RunTest(unittest.TestCase):
     def test_only_causes_with_reviewed_terms_get_a_bar(self):
-        out = bars.run({554: ALS}, counter({"": 3, "PHASE2": 1}), {}, SINCE)
+        out = bars.run({554: ALS}, counter({"": 3, "PHASE2": 1}), SINCE)
         self.assertEqual(out, {"554": {"phase": "phase2", "trials": 3, "url": bars.search_url(ALS, SINCE)}})
 
 

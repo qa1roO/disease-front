@@ -33,8 +33,8 @@ Every GBD cause in `data/burden.json`: 281 in GBD 2023. That includes groups and
 
 For each reviewed cause, stage 7 counts the matching interventional trials on ClinicalTrials.gov:
 
-- **Filters:** status recruiting, enrolling by invitation, active or completed, and first posted within 10 years of the API's `dataTimestamp`.
+- **Filters:** trials still running (recruiting, not yet recruiting, enrolling by invitation, or active and not recruiting), first posted within 10 years of the API's `dataTimestamp`. Completed trials don't count.
 - **Phase:** it asks Phase 3 (or 4), then Phase 2, then Phase 1 (or Early Phase 1), and stops at the first phase with trials.
-- **Approved:** set when ChEMBL has an approved indication for one of the terms.
+- **Approved:** never set here. Held provinces show it, from stage 8.
 - **Rate:** about 1 request a second, backing off on HTTP 429 and 5xx.
 - **Re-runs:** counts are cached per `dataTimestamp` in `data/raw/ctgov-counts.json`. An interrupted run resumes, and a re-run on the same day's data makes no requests. `--force` rebuilds `data/bars.json` from the cache.

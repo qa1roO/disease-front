@@ -23,7 +23,7 @@ Inspiration: [changelog.earth](https://github.com/byalex33/changelog.earth). Rea
 - **Fog**: provinces with no status at all, neither assessed nor provisional (e.g. no GBD cause covers them). Shown honestly as unknown rather than hidden, at the minimum province size.
 - **Burden**: disability-adjusted life years (DALYs) from the Global Burden of Disease study. Sets a province's size.
 - **Progress bars**: three per province, each from its own source:
-  - **Pipeline**: how far the most advanced candidate therapy has got (no registered trial → Phase 1 → 2 → 3 → approved). From ClinicalTrials.gov, with "approved" from ChEMBL.
+  - **Pipeline**: for a held disease, "approved". For any other disease, how far the most advanced candidate therapy still in trials has got (no registered trial → Phase 1 → 2 → 3), counting only trials still running (recruiting or active). From ClinicalTrials.gov.
   - **Activity**: how much research is happening (active trials, publications).
   - **Access**: share of patients who actually receive the available treatment. Data is patchy.
 

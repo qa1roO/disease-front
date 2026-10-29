@@ -6,11 +6,9 @@ const meta = {
   gbdCauses: {
     '554': { name: 'Motor neuron disease', dalys: 1, provinces: 1,
              bar: { phase: 'phase3', trials: 297, url: 'https://clinicaltrials.gov/search?cond=als' } },
-    '302': { name: 'Diarrheal diseases', dalys: 1, provinces: 1,
-             bar: { phase: 'approved', trials: 40, url: 'https://clinicaltrials.gov/search?cond=d', approved: { D003967: ['CHEMBL1'] } } },
     '999': { name: 'No terms reviewed yet', dalys: 1, provinces: 1 },
   },
-  clinicaltrials: { apiVersion: '2.0.5', dataTimestamp: '2026-10-29T09:00:05', registeredSince: '2016-10-29', chembl: 'ChEMBL_37' },
+  clinicaltrials: { apiVersion: '2.0.5', dataTimestamp: '2026-10-29T09:00:05', registeredSince: '2016-10-29' },
 } as unknown as MapData['meta'];
 
 const province = (cause: number | null, extra: Partial<MapNode> = {}): MapNode => ({
@@ -20,17 +18,11 @@ const province = (cause: number | null, extra: Partial<MapNode> = {}): MapNode =
 });
 
 describe('pipelineView', () => {
-  it("shows the cause's furthest phase, its trial count and search link", () => {
-    expect(pipelineView(province(554, { pipeline: 'phase3' }), meta)).toEqual({
+  it("shows a contested cause's furthest phase among running trials, with their count and search link", () => {
+    expect(pipelineView(province(554, { pipeline: 'phase3', status: 5 }), meta)).toEqual({
       step: 3, label: 'Phase 3', trials: 297, url: 'https://clinicaltrials.gov/search?cond=als',
-      note: 'furthest phase among 297 interventional trials first posted since 2016-10-29',
+      note: 'furthest phase among 297 interventional trials still running (recruiting or active), first posted since 2016-10-29',
     });
-  });
-
-  it('says why a cause is Approved: ChEMBL has an approved drug', () => {
-    const v = pipelineView(province(302, { pipeline: 'approved' }), meta)!;
-    expect([v.step, v.label, v.trials]).toEqual([4, 'Approved', 40]);
-    expect(v.note).toBe('ChEMBL (ChEMBL_37) lists an approved drug for this cause');
   });
 
   it('shows Approved for a held province even when its cause has only reached a trial phase', () => {
@@ -55,7 +47,7 @@ describe('pipelineView', () => {
     const m = { ...meta, gbdCauses: { '1': { name: 'x', dalys: 1, provinces: 1, bar: { phase: 'none', trials: 1, url: 'u' } } } } as unknown as MapData['meta'];
     expect(pipelineView(province(1, { pipeline: 'none' }), m)).toEqual({
       step: 0, label: 'No phased trial', trials: 1, url: 'u',
-      note: '1 interventional trial first posted since 2016-10-29, none in Phase 1-4 (e.g. device or behavioural studies)',
+      note: '1 interventional trial still running (recruiting or active), first posted since 2016-10-29, none in Phase 1-4 (e.g. device or behavioural studies)',
     });
   });
 
