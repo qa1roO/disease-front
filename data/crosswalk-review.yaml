@@ -14,7 +14,8 @@
     name: Other intestinal infectious diseases
     votes: 1
   resolution: 302
-  reviewed: false
+  reviewed: true
+  note: protozoal diarrhoea; GBD's diarrhoeal etiologies include intestinal protozoa
 - uri: http://id.who.int/icd/release/11/mms/433310499
   code: 1A31
   title: Giardiasis
@@ -27,7 +28,8 @@
     name: Other intestinal infectious diseases
     votes: 1
   resolution: 302
-  reviewed: false
+  reviewed: true
+  note: giardiasis is a diarrhoeal disease
 - uri: http://id.who.int/icd/release/11/mms/261748740
   code: 1A34
   title: Sarcocystosis
@@ -40,7 +42,8 @@
     name: Other intestinal infectious diseases
     votes: 1
   resolution: 302
-  reviewed: false
+  reviewed: true
+  note: intestinal protozoal infection
 - uri: http://id.who.int/icd/release/11/mms/1184241320
   code: 1A35
   title: Blastocystosis
@@ -53,7 +56,8 @@
     name: Other intestinal infectious diseases
     votes: 1
   resolution: 302
-  reviewed: false
+  reviewed: true
+  note: intestinal protozoal infection
 - uri: http://id.who.int/icd/release/11/mms/1132542967
   code: 1C21
   title: Chlamydial peritonitis
@@ -66,7 +70,8 @@
     name: Other digestive diseases
     votes: 1
   resolution: 395
-  reviewed: false
+  reviewed: true
+  note: a chlamydial infection
 - uri: http://id.who.int/icd/release/11/mms/680322043
   code: 2C34
   title: Cutaneous neuroendocrine carcinoma
@@ -78,8 +83,9 @@
   - cause_id: 849
     name: Non-melanoma skin cancer (squamous-cell carcinoma)
     votes: 10
-  resolution: 459
-  reviewed: false
+  resolution: 489
+  reviewed: true
+  note: 'Merkel cell carcinoma: neither melanoma nor squamous-cell'
 - uri: http://id.who.int/icd/release/11/mms/1827459816
   code: 2E92.0
   title: Benign neoplasm of oesophagus
@@ -91,8 +97,9 @@
   - cause_id: 489
     name: Other malignant neoplasms
     votes: 2
-  resolution: 456
-  reviewed: false
+  resolution: 1164
+  reviewed: true
+  note: benign neoplasm; neither candidate (pancreatic, other malignant) fits
 - uri: http://id.who.int/icd/release/11/mms/1225291595
   code: 2E92.3
   title: Benign neoplasm of other or unspecified parts of small intestine
@@ -104,8 +111,9 @@
   - cause_id: 489
     name: Other malignant neoplasms
     votes: 2
-  resolution: 456
-  reviewed: false
+  resolution: 965
+  reviewed: true
+  note: 'benign intestinal neoplasm (GBD gives no DALYs: minimum size)'
 - uri: http://id.who.int/icd/release/11/mms/1878422439
   code: 2F31.0
   title: Benign non-mesenchymal neoplasm of uterus, cervix uteri
@@ -117,8 +125,9 @@
   - cause_id: 604
     name: Uterine fibroids
     votes: 1
-  resolution: 432
-  reviewed: false
+  resolution: 966
+  reviewed: true
+  note: benign cervical neoplasm; non-mesenchymal, so not a fibroid (GBD gives no DALYs)
 - uri: http://id.who.int/icd/release/11/mms/180207155
   code: 2F31.1
   title: Benign non-mesenchymal neoplasm of uterus, corpus uteri
@@ -130,8 +139,9 @@
   - cause_id: 604
     name: Uterine fibroids
     votes: 1
-  resolution: 435
-  reviewed: false
+  resolution: 966
+  reviewed: true
+  note: benign uterine neoplasm; non-mesenchymal, so not a fibroid (GBD gives no DALYs)
 - uri: http://id.who.int/icd/release/11/mms/471392307
   code: 2F31.2
   title: Benign non-mesenchymal neoplasms of uterus, other parts
@@ -143,8 +153,9 @@
   - cause_id: 604
     name: Uterine fibroids
     votes: 1
-  resolution: 435
-  reviewed: false
+  resolution: 966
+  reviewed: true
+  note: benign uterine neoplasm; non-mesenchymal, so not a fibroid (GBD gives no DALYs)
 - uri: http://id.who.int/icd/release/11/mms/1969025922
   code: 2F96
   title: Neoplasms of unknown behaviour of female genital organs
@@ -159,8 +170,9 @@
   - cause_id: 966
     name: Benign and in situ cervical and uterine neoplasms
     votes: 1
-  resolution: 465
-  reviewed: false
+  resolution: 1164
+  reviewed: true
+  note: uncertain behaviour, not malignant
 - uri: http://id.who.int/icd/release/11/mms/1722667805
   code: 2F98
   title: Neoplasms of unknown behaviour of urinary organs
@@ -175,8 +187,9 @@
   - cause_id: 489
     name: Other malignant neoplasms
     votes: 2
-  resolution: 471
-  reviewed: false
+  resolution: 1164
+  reviewed: true
+  note: uncertain behaviour, not malignant
 - uri: http://id.who.int/icd/release/11/mms/1213145383
   code: 4A85.20
   title: Food-induced gastrointestinal hypersensitivity
@@ -188,8 +201,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: 'allergic gut disorder: not infectious diarrhoea, not ulcerative colitis'
 - uri: http://id.who.int/icd/release/11/mms/922786718
   code: 5A04
   title: Hypersecretion of calcitonin
@@ -202,7 +216,8 @@
     name: Other endocrine, metabolic, blood, and immune disorders
     votes: 1
   resolution: 1032
-  reviewed: false
+  reviewed: true
+  note: thyroid C-cell disorder
 - uri: http://id.who.int/icd/release/11/mms/1457254664
   code: 5B60
   title: Sequelae of protein-energy malnutrition
@@ -215,7 +230,8 @@
     name: Other nutritional deficiencies
     votes: 1
   resolution: 387
-  reviewed: false
+  reviewed: true
+  note: sequela of protein-energy malnutrition
 - uri: http://id.who.int/icd/release/11/mms/257205019
   code: 8A81.1
   title: Frequent episodic tension-type headache
@@ -227,8 +243,9 @@
   - cause_id: 548
     name: Tension-type headache
     votes: 1
-  resolution: 547
-  reviewed: false
+  resolution: 548
+  reviewed: true
+  note: tension-type headache
 - uri: http://id.who.int/icd/release/11/mms/107534985
   code: 8A81.2
   title: Chronic tension-type headache
@@ -240,8 +257,9 @@
   - cause_id: 548
     name: Tension-type headache
     votes: 1
-  resolution: 547
-  reviewed: false
+  resolution: 548
+  reviewed: true
+  note: tension-type headache
 - uri: http://id.who.int/icd/release/11/mms/1376522306
   code: 8B02
   title: Nontraumatic subdural haemorrhage
@@ -254,7 +272,8 @@
     name: Subarachnoid hemorrhage
     votes: 1
   resolution: 496
-  reviewed: false
+  reviewed: true
+  note: non-traumatic intracranial bleed into tissue-adjacent space; closer to intracerebral than subarachnoid
 - uri: http://id.who.int/icd/release/11/mms/1231916211
   code: 8B81.0
   title: Brainstem lesion
@@ -266,8 +285,9 @@
   - cause_id: 631
     name: Neck pain
     votes: 1
-  resolution: 630
-  reviewed: false
+  resolution: 557
+  reviewed: true
+  note: cranial/nerve lesion, not back or neck pain
 - uri: http://id.who.int/icd/release/11/mms/377921406
   code: 8B83
   title: Disorders of spinal accessory nerve
@@ -279,8 +299,9 @@
   - cause_id: 631
     name: Neck pain
     votes: 1
-  resolution: 630
-  reviewed: false
+  resolution: 557
+  reviewed: true
+  note: cranial nerve disorder, not neck pain
 - uri: http://id.who.int/icd/release/11/mms/1770509481
   code: 8B95
   title: Secondary brachial plexus lesion due to certain specified disorders
@@ -292,8 +313,9 @@
   - cause_id: 631
     name: Neck pain
     votes: 1
-  resolution: 630
-  reviewed: false
+  resolution: 557
+  reviewed: true
+  note: plexus lesion, not back or neck pain
 - uri: http://id.who.int/icd/release/11/mms/864064554
   code: 8D44.1
   title: Alcoholic myopathy
@@ -305,8 +327,9 @@
   - cause_id: 560
     name: Alcohol use disorders
     votes: 1
-  resolution: 557
-  reviewed: false
+  resolution: 560
+  reviewed: true
+  note: alcohol-induced condition
 - uri: http://id.who.int/icd/release/11/mms/1255239964
   code: BD92.0
   title: Intestinal lymphangiectasia
@@ -319,7 +342,8 @@
     name: Pyoderma
     votes: 2
   resolution: 507
-  reviewed: false
+  reviewed: true
+  note: lymphatic vessel disorder
 - uri: http://id.who.int/icd/release/11/mms/1069506161
   code: BD92.1
   title: Cutaneous lymphangiectasia
@@ -332,7 +356,8 @@
     name: Pyoderma
     votes: 2
   resolution: 507
-  reviewed: false
+  reviewed: true
+  note: lymphatic vessel disorder
 - uri: http://id.who.int/icd/release/11/mms/1834558189
   code: DA0A.0
   title: Exfoliation of teeth due to systemic causes
@@ -345,7 +370,8 @@
     name: Other oral disorders
     votes: 1
   resolution: 684
-  reviewed: false
+  reviewed: true
+  note: tooth loss
 - uri: http://id.who.int/icd/release/11/mms/135458681
   code: DA0A.1
   title: Loss of teeth due to accident, extraction or local periodontal disease
@@ -358,7 +384,8 @@
     name: Other oral disorders
     votes: 1
   resolution: 684
-  reviewed: false
+  reviewed: true
+  note: tooth loss
 - uri: http://id.who.int/icd/release/11/mms/556031133
   code: DA42.40
   title: Allergic gastritis due to IgE-mediated hypersensitivity
@@ -370,8 +397,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: allergic gut disorder
 - uri: http://id.who.int/icd/release/11/mms/1097625254
   code: DA42.41
   title: Allergic gastritis due to non-IgE-mediated hypersensitivity
@@ -383,8 +411,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: allergic gut disorder
 - uri: http://id.who.int/icd/release/11/mms/1479046314
   code: DA51.3
   title: Allergic duodenitis
@@ -396,8 +425,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: allergic gut disorder
 - uri: http://id.who.int/icd/release/11/mms/1591489352
   code: DA94.20
   title: IgE mediated allergic enteritis of small intestine
@@ -409,8 +439,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: allergic gut disorder
 - uri: http://id.who.int/icd/release/11/mms/448959702
   code: DA94.21
   title: Eosinophilic enteritis
@@ -422,8 +453,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: eosinophilic gut disorder
 - uri: http://id.who.int/icd/release/11/mms/1729235847
   code: DA94.22
   title: Food protein-induced enterocolitis syndrome
@@ -435,8 +467,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: food-protein enterocolitis, not infectious
 - uri: http://id.who.int/icd/release/11/mms/2479635
   code: DB33.40
   title: Chemical colitis or proctitis
@@ -448,8 +481,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: toxic colitis, not infectious or IBD
 - uri: http://id.who.int/icd/release/11/mms/102113205
   code: DB33.43
   title: Drug-induced colitis
@@ -461,8 +495,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: drug-induced colitis, not infectious or IBD
 - uri: http://id.who.int/icd/release/11/mms/1343127319
   code: DC50.10
   title: Eosinophilic peritonitis
@@ -474,8 +509,9 @@
   - cause_id: 1161
     name: Other digestive diseases
     votes: 1
-  resolution: 408
-  reviewed: false
+  resolution: 1161
+  reviewed: true
+  note: non-infectious peritonitis
 - uri: http://id.who.int/icd/release/11/mms/669087597
   code: DC50.13
   title: Peritonitis due to Streptococcus pneumoniae
@@ -488,7 +524,8 @@
     name: Other digestive diseases
     votes: 1
   resolution: 408
-  reviewed: false
+  reviewed: true
+  note: bacterial peritonitis
 - uri: http://id.who.int/icd/release/11/mms/553916326
   code: DD72
   title: Indeterminate colitis
@@ -500,8 +537,9 @@
   - cause_id: 1024
     name: Ulcerative colitis
     votes: 1
-  resolution: 302
-  reviewed: false
+  resolution: 1024
+  reviewed: true
+  note: inflammatory bowel disease, unclassified; closest IBD cause
 - uri: http://id.who.int/icd/release/11/mms/504387587
   code: FA24.4
   title: Juvenile systemic arthritis
@@ -513,8 +551,9 @@
   - cause_id: 639
     name: Other musculoskeletal disorders
     votes: 1
-  resolution: 627
-  reviewed: false
+  resolution: 639
+  reviewed: true
+  note: juvenile arthritis; GBD rheumatoid arthritis is adult-onset
 - uri: http://id.who.int/icd/release/11/mms/1222070715
   code: FB52
   title: Soft tissue disorders in diseases classified elsewhere
@@ -529,8 +568,9 @@
   - cause_id: 639
     name: Other musculoskeletal disorders
     votes: 1
-  resolution: 394
-  reviewed: false
+  resolution: 639
+  reviewed: true
+  note: soft tissue disorder
 - uri: http://id.who.int/icd/release/11/mms/18497836
   code: GB55.0
   title: Balkan nephropathy
@@ -543,7 +583,8 @@
     name: Urinary tract infections and interstitial nephritis
     votes: 1
   resolution: 593
-  reviewed: false
+  reviewed: true
+  note: chronic kidney disease of other cause
 - uri: http://id.who.int/icd/release/11/mms/595260591
   code: JB09.0
   title: First degree perineal laceration during delivery
@@ -555,8 +596,9 @@
   - cause_id: 1160
     name: Other direct maternal disorders
     votes: 1
-  resolution: 367
-  reviewed: false
+  resolution: 1160
+  reviewed: true
+  note: obstetric laceration, not haemorrhage
 - uri: http://id.who.int/icd/release/11/mms/1177631035
   code: JB09.1
   title: Second degree perineal laceration during delivery
@@ -568,8 +610,9 @@
   - cause_id: 1160
     name: Other direct maternal disorders
     votes: 1
-  resolution: 367
-  reviewed: false
+  resolution: 1160
+  reviewed: true
+  note: obstetric laceration, not haemorrhage
 - uri: http://id.who.int/icd/release/11/mms/849111492
   code: JB09.2
   title: Third degree perineal laceration during delivery
@@ -581,8 +624,9 @@
   - cause_id: 1160
     name: Other direct maternal disorders
     votes: 1
-  resolution: 367
-  reviewed: false
+  resolution: 1160
+  reviewed: true
+  note: obstetric laceration, not haemorrhage
 - uri: http://id.who.int/icd/release/11/mms/1473750098
   code: JB09.3
   title: Fourth degree perineal laceration during delivery
@@ -594,8 +638,9 @@
   - cause_id: 1160
     name: Other direct maternal disorders
     votes: 1
-  resolution: 367
-  reviewed: false
+  resolution: 1160
+  reviewed: true
+  note: obstetric laceration, not haemorrhage
 - uri: http://id.who.int/icd/release/11/mms/902780087
   code: KA01.0
   title: Fetus or newborn affected by incompetence of cervix uteri
@@ -608,7 +653,8 @@
     name: Other neonatal disorders
     votes: 1
   resolution: 381
-  reviewed: false
+  reviewed: true
+  note: cervical incompetence leads to preterm birth
 - uri: http://id.who.int/icd/release/11/mms/1350867235
   code: KA01.1
   title: Fetus or newborn affected by premature rupture of membranes
@@ -621,7 +667,8 @@
     name: Other neonatal disorders
     votes: 1
   resolution: 381
-  reviewed: false
+  reviewed: true
+  note: premature rupture of membranes leads to preterm birth
 - uri: http://id.who.int/icd/release/11/mms/1176618787
   code: KA01.7
   title: Fetus or newborn affected by malpresentation before labour
@@ -633,8 +680,9 @@
   - cause_id: 385
     name: Other neonatal disorders
     votes: 1
-  resolution: 382
-  reviewed: false
+  resolution: 385
+  reviewed: true
+  note: neonatal condition
 - uri: http://id.who.int/icd/release/11/mms/1734614455
   code: KA06.2
   title: Fetus or newborn affected by maternal use of alcohol
@@ -647,7 +695,8 @@
     name: Alcohol use disorders
     votes: 1
   resolution: 385
-  reviewed: false
+  reviewed: true
+  note: neonatal condition
 - uri: http://id.who.int/icd/release/11/mms/344624675
   code: KA06.3
   title: Fetus or newborn affected by maternal use of drugs of addiction
@@ -660,7 +709,8 @@
     name: Other drug use disorders
     votes: 1
   resolution: 385
-  reviewed: false
+  reviewed: true
+  note: neonatal condition
 - uri: http://id.who.int/icd/release/11/mms/576751653
   code: KA61.0
   title: Congenital tuberculosis
@@ -673,7 +723,8 @@
     name: Other unspecified infectious diseases
     votes: 1
   resolution: 934
-  reviewed: false
+  reviewed: true
+  note: tuberculosis
 - uri: http://id.who.int/icd/release/11/mms/864425294
   code: KA61.1
   title: Neonatal listeriosis
@@ -685,8 +736,9 @@
   - cause_id: 383
     name: Neonatal sepsis and other neonatal infections
     votes: 1
-  resolution: 408
-  reviewed: false
+  resolution: 383
+  reviewed: true
+  note: neonatal infection
 - uri: http://id.who.int/icd/release/11/mms/1456330972
   code: KA64.20
   title: Congenital falciparum malaria
@@ -699,7 +751,8 @@
     name: Other unspecified infectious diseases
     votes: 1
   resolution: 345
-  reviewed: false
+  reviewed: true
+  note: malaria
 - uri: http://id.who.int/icd/release/11/mms/623070032
   code: KA64.21
   title: Congenital non-falciparum malaria
@@ -712,7 +765,8 @@
     name: Other unspecified infectious diseases
     votes: 1
   resolution: 345
-  reviewed: false
+  reviewed: true
+  note: malaria
 - uri: http://id.who.int/icd/release/11/mms/2096990223
   code: KB08.0
   title: Transient neonatal myasthenia gravis
@@ -725,7 +779,8 @@
     name: Other neurological disorders
     votes: 1
   resolution: 385
-  reviewed: false
+  reviewed: true
+  note: transient neonatal condition
 - uri: http://id.who.int/icd/release/11/mms/1635967154
   code: KC01
   title: Congenital renal failure
@@ -738,7 +793,8 @@
     name: Urogenital congenital anomalies
     votes: 1
   resolution: 385
-  reviewed: false
+  reviewed: true
+  note: neonatal condition, not a structural anomaly
 - uri: http://id.who.int/icd/release/11/mms/80293156
   code: KD35
   title: Neonatal withdrawal syndrome from maternal use of drugs of addiction
@@ -751,7 +807,8 @@
     name: Opioid use disorders
     votes: 1
   resolution: 385
-  reviewed: false
+  reviewed: true
+  note: neonatal condition
 - uri: http://id.who.int/icd/release/11/mms/362980699
   code: LD2F.00
   title: Fetal alcohol syndrome
@@ -763,8 +820,9 @@
   - cause_id: 652
     name: Other congenital birth defects
     votes: 1
-  resolution: 560
-  reviewed: false
+  resolution: 652
+  reviewed: true
+  note: congenital syndrome
 - uri: http://id.who.int/icd/release/11/mms/95979116
   code: LD50.00
   title: Karyotype 45, X
@@ -777,7 +835,8 @@
     name: Other chromosomal abnormalities
     votes: 1
   resolution: 646
-  reviewed: false
+  reviewed: true
+  note: Turner karyotype
 - uri: http://id.who.int/icd/release/11/mms/1626557438
   code: LD50.01
   title: Karyotype 46, X iso Xq
@@ -790,7 +849,8 @@
     name: Other chromosomal abnormalities
     votes: 1
   resolution: 646
-  reviewed: false
+  reviewed: true
+  note: Turner karyotype
 - uri: http://id.who.int/icd/release/11/mms/341711617
   code: LD50.02
   title: Karyotype 46, X with abnormal sex chromosome, except iso Xq
@@ -803,7 +863,8 @@
     name: Other chromosomal abnormalities
     votes: 1
   resolution: 646
-  reviewed: false
+  reviewed: true
+  note: Turner karyotype
 - uri: http://id.who.int/icd/release/11/mms/1897256597
   code: LD50.03
   title: Mosaicism, 45, X, 46, XX or XY
@@ -816,7 +877,8 @@
     name: Other chromosomal abnormalities
     votes: 1
   resolution: 646
-  reviewed: false
+  reviewed: true
+  note: Turner mosaicism
 - uri: http://id.who.int/icd/release/11/mms/50021633
   code: LD50.04
   title: Mosaicism, 45, X or other cell line with abnormal sex chromosome
@@ -829,7 +891,8 @@
     name: Other chromosomal abnormalities
     votes: 1
   resolution: 646
-  reviewed: false
+  reviewed: true
+  note: Turner mosaicism
 - uri: http://id.who.int/icd/release/11/mms/1472503127
   code: LD50.30
   title: Klinefelter syndrome with karyotype 47,XXY, regular
@@ -842,7 +905,8 @@
     name: Other chromosomal abnormalities
     votes: 1
   resolution: 647
-  reviewed: false
+  reviewed: true
+  note: Klinefelter syndrome
 - uri: http://id.who.int/icd/release/11/mms/848253123
   code: LD50.31
   title: Klinefelter syndrome, male with more than two X chromosomes
@@ -855,7 +919,8 @@
     name: Other chromosomal abnormalities
     votes: 1
   resolution: 647
-  reviewed: false
+  reviewed: true
+  note: Klinefelter variant
 - uri: http://id.who.int/icd/release/11/mms/902599592
   code: LD52.1
   title: Male with double or multiple Y
@@ -867,8 +932,9 @@
   - cause_id: 648
     name: Other chromosomal abnormalities
     votes: 1
-  resolution: 647
-  reviewed: false
+  resolution: 648
+  reviewed: true
+  note: 47,XYY is not Klinefelter
 - uri: http://id.who.int/icd/release/11/mms/1096926039
   code: LD53
   title: Structural anomalies of chromosome Y
@@ -880,8 +946,9 @@
   - cause_id: 648
     name: Other chromosomal abnormalities
     votes: 1
-  resolution: 647
-  reviewed: false
+  resolution: 648
+  reviewed: true
+  note: not Klinefelter
 - uri: http://id.who.int/icd/release/11/mms/606736067
   code: LD54
   title: Male with sex chromosome mosaicism
@@ -893,5 +960,6 @@
   - cause_id: 648
     name: Other chromosomal abnormalities
     votes: 1
-  resolution: 647
-  reviewed: false
+  resolution: 648
+  reviewed: true
+  note: not Klinefelter

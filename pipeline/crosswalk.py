@@ -147,6 +147,7 @@ def build(provinces, who, universe, index, causes, dalys, review):
                                for c in result["candidates"]],
                 "resolution": resolution,
                 "reviewed": bool(prior.get("reviewed", False)),
+                **({"note": prior["note"]} if prior.get("note") else {}),
             })
             entry.update(cause=resolution, method="review", reviewed=ties[-1]["reviewed"])
         table[p["uri"]] = entry

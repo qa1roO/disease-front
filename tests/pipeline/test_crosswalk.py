@@ -151,10 +151,11 @@ class BuildTest(unittest.TestCase):
         self.assertFalse(result["crosswalk"]["u4"]["reviewed"])
 
     def test_an_edited_resolution_is_kept_and_applied(self):
-        edited = [{"uri": "u4", "resolution": 648, "reviewed": True}]
+        edited = [{"uri": "u4", "resolution": 648, "reviewed": True, "note": "why"}]
         result = self.build(edited)
         self.assertEqual(result["crosswalk"]["u4"]["cause"], 648)
         self.assertEqual((result["review"][0]["resolution"], result["review"][0]["reviewed"]), (648, True))
+        self.assertEqual(result["review"][0]["note"], "why")
 
     def test_a_null_resolution_leaves_the_province_in_fog(self):
         result = self.build([{"uri": "u4", "resolution": None, "reviewed": True}])

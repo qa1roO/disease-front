@@ -251,7 +251,7 @@
     "321": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/433310499": {
    "code": "1A31",
@@ -267,7 +267,7 @@
     "321": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1837013982": {
    "code": "1A32",
@@ -313,7 +313,7 @@
     "321": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1184241320": {
    "code": "1A35",
@@ -329,7 +329,7 @@
     "321": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1616956984": {
    "code": "1A36.00",
@@ -1980,7 +1980,7 @@
     "1161": 1,
     "395": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1937339080": {
    "code": "1C22",
@@ -9355,7 +9355,7 @@
    "code": "2C34",
    "title": "Cutaneous neuroendocrine carcinoma",
    "icd10": "C43-C44",
-   "cause": 459,
+   "cause": 489,
    "method": "review",
    "candidates": [
     459,
@@ -9365,7 +9365,7 @@
     "459": 10,
     "849": 10
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1833969739": {
    "code": "2C35",
@@ -11631,7 +11631,7 @@
    "code": "2E92.0",
    "title": "Benign neoplasm of oesophagus",
    "icd10": "D13",
-   "cause": 456,
+   "cause": 1164,
    "method": "review",
    "candidates": [
     456,
@@ -11646,7 +11646,7 @@
     "456": 2,
     "965": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/479576735": {
    "code": "2E92.1",
@@ -11672,7 +11672,7 @@
    "code": "2E92.3",
    "title": "Benign neoplasm of other or unspecified parts of small intestine",
    "icd10": "D13",
-   "cause": 456,
+   "cause": 965,
    "method": "review",
    "candidates": [
     456,
@@ -11687,7 +11687,7 @@
     "456": 2,
     "965": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/790871642": {
    "code": "2E92.40",
@@ -11984,7 +11984,7 @@
    "code": "2F31.0",
    "title": "Benign non-mesenchymal neoplasm of uterus, cervix uteri",
    "icd10": "D26.0",
-   "cause": 432,
+   "cause": 966,
    "method": "review",
    "candidates": [
     432,
@@ -11994,13 +11994,13 @@
     "432": 1,
     "604": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/180207155": {
    "code": "2F31.1",
    "title": "Benign non-mesenchymal neoplasm of uterus, corpus uteri",
    "icd10": "D26.1",
-   "cause": 435,
+   "cause": 966,
    "method": "review",
    "candidates": [
     435,
@@ -12010,13 +12010,13 @@
     "435": 1,
     "604": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/471392307": {
    "code": "2F31.2",
    "title": "Benign non-mesenchymal neoplasms of uterus, other parts",
    "icd10": "D26.7",
-   "cause": 435,
+   "cause": 966,
    "method": "review",
    "candidates": [
     435,
@@ -12026,7 +12026,7 @@
     "435": 1,
     "604": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/882254343": {
    "code": "2F32.0",
@@ -12539,7 +12539,7 @@
    "code": "2F96",
    "title": "Neoplasms of unknown behaviour of female genital organs",
    "icd10": "D39",
-   "cause": 465,
+   "cause": 1164,
    "method": "review",
    "candidates": [
     465,
@@ -12551,7 +12551,7 @@
     "465": 1,
     "489": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1860378384": {
    "code": "2F97",
@@ -12568,7 +12568,7 @@
    "code": "2F98",
    "title": "Neoplasms of unknown behaviour of urinary organs",
    "icd10": "D41",
-   "cause": 471,
+   "cause": 1164,
    "method": "review",
    "candidates": [
     471,
@@ -12580,7 +12580,7 @@
     "489": 2,
     "474": 2
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1067236131": {
    "code": "2F99",
@@ -14872,7 +14872,7 @@
    "code": "4A85.20",
    "title": "Food-induced gastrointestinal hypersensitivity",
    "icd10": "K52.2",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -14882,7 +14882,7 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/773407463": {
    "code": "4A85.21",
@@ -15484,7 +15484,7 @@
     "1032": 1,
     "625": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1074212276": {
    "code": "5A05",
@@ -16750,7 +16750,7 @@
     "387": 1,
     "391": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/865090706": {
    "code": "5B61",
@@ -25310,7 +25310,7 @@
    "code": "8A81.1",
    "title": "Frequent episodic tension-type headache",
    "icd10": "G44",
-   "cause": 547,
+   "cause": 548,
    "method": "review",
    "candidates": [
     547,
@@ -25320,13 +25320,13 @@
     "548": 1,
     "547": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/107534985": {
    "code": "8A81.2",
    "title": "Chronic tension-type headache",
    "icd10": "G44",
-   "cause": 547,
+   "cause": 548,
    "method": "review",
    "candidates": [
     547,
@@ -25336,7 +25336,7 @@
     "548": 1,
     "547": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/607078588": {
    "code": "8A82",
@@ -25484,7 +25484,7 @@
     "496": 1,
     "497": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/927456728": {
    "code": "8B03",
@@ -26225,7 +26225,7 @@
    "code": "8B81.0",
    "title": "Brainstem lesion",
    "icd10": "G50-G59",
-   "cause": 630,
+   "cause": 557,
    "method": "review",
    "candidates": [
     630,
@@ -26235,7 +26235,7 @@
     "631": 1,
     "630": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1803581281": {
    "code": "8B82.0",
@@ -26249,7 +26249,7 @@
    "code": "8B83",
    "title": "Disorders of spinal accessory nerve",
    "icd10": "G50-G59",
-   "cause": 630,
+   "cause": 557,
    "method": "review",
    "candidates": [
     630,
@@ -26259,7 +26259,7 @@
     "631": 1,
     "630": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/38948641": {
    "code": "8B84",
@@ -26465,7 +26465,7 @@
    "code": "8B95",
    "title": "Secondary brachial plexus lesion due to certain specified disorders",
    "icd10": "G54",
-   "cause": 630,
+   "cause": 557,
    "method": "review",
    "candidates": [
     630,
@@ -26475,7 +26475,7 @@
     "631": 1,
     "630": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/788742861": {
    "code": "8C00",
@@ -27374,7 +27374,7 @@
    "code": "8D44.1",
    "title": "Alcoholic myopathy",
    "icd10": "G72.1",
-   "cause": 557,
+   "cause": 560,
    "method": "review",
    "candidates": [
     557,
@@ -27384,7 +27384,7 @@
     "560": 1,
     "557": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/906840560": {
    "code": "8D60.0",
@@ -35883,7 +35883,7 @@
     "507": 2,
     "657": 2
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1069506161": {
    "code": "BD92.1",
@@ -35899,7 +35899,7 @@
     "507": 2,
     "657": 2
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/794588197": {
    "code": "BD93.0",
@@ -38926,7 +38926,7 @@
     "684": 1,
     "685": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/135458681": {
    "code": "DA0A.1",
@@ -38942,7 +38942,7 @@
     "684": 1,
     "685": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/2092941190": {
    "code": "DA0A.2",
@@ -39759,7 +39759,7 @@
    "code": "DA42.40",
    "title": "Allergic gastritis due to IgE-mediated hypersensitivity",
    "icd10": "K52.2",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -39769,13 +39769,13 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1097625254": {
    "code": "DA42.41",
    "title": "Allergic gastritis due to non-IgE-mediated hypersensitivity",
    "icd10": "K52.2",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -39785,7 +39785,7 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/356971565": {
    "code": "DA42.5",
@@ -40083,7 +40083,7 @@
    "code": "DA51.3",
    "title": "Allergic duodenitis",
    "icd10": "K52.2",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -40093,7 +40093,7 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/429127802": {
    "code": "DA51.40",
@@ -40638,7 +40638,7 @@
    "code": "DA94.20",
    "title": "IgE mediated allergic enteritis of small intestine",
    "icd10": "K52.2",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -40648,13 +40648,13 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/448959702": {
    "code": "DA94.21",
    "title": "Eosinophilic enteritis",
    "icd10": "K52.2",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -40664,13 +40664,13 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1729235847": {
    "code": "DA94.22",
    "title": "Food protein-induced enterocolitis syndrome",
    "icd10": "K52.2",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -40680,7 +40680,7 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/950625791": {
    "code": "DA94.30",
@@ -41208,7 +41208,7 @@
    "code": "DB33.40",
    "title": "Chemical colitis or proctitis",
    "icd10": "K52.1",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -41218,7 +41218,7 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1915478117": {
    "code": "DB33.41",
@@ -41242,7 +41242,7 @@
    "code": "DB33.43",
    "title": "Drug-induced colitis",
    "icd10": "K52.1",
-   "cause": 302,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     302,
@@ -41252,7 +41252,7 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/2134289266": {
    "code": "DB34.0",
@@ -42566,7 +42566,7 @@
    "code": "DC50.10",
    "title": "Eosinophilic peritonitis",
    "icd10": "K67.8",
-   "cause": 408,
+   "cause": 1161,
    "method": "review",
    "candidates": [
     408,
@@ -42576,7 +42576,7 @@
     "408": 1,
     "1161": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/509052904": {
    "code": "DC50.11",
@@ -42608,7 +42608,7 @@
     "408": 1,
     "1161": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1159629836": {
    "code": "DC50.2",
@@ -43092,7 +43092,7 @@
    "code": "DD72",
    "title": "Indeterminate colitis",
    "icd10": "K52.3",
-   "cause": 302,
+   "cause": 1024,
    "method": "review",
    "candidates": [
     302,
@@ -43102,7 +43102,7 @@
     "1024": 1,
     "302": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1685012958": {
    "code": "DD90.0",
@@ -48035,7 +48035,7 @@
    "code": "FA24.4",
    "title": "Juvenile systemic arthritis",
    "icd10": "M08.2",
-   "cause": 627,
+   "cause": 639,
    "method": "review",
    "candidates": [
     627,
@@ -48045,7 +48045,7 @@
     "627": 1,
     "639": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1957497923": {
    "code": "FA25.0",
@@ -49221,7 +49221,7 @@
    "code": "FB52",
    "title": "Soft tissue disorders in diseases classified elsewhere",
    "icd10": "M73",
-   "cause": 394,
+   "cause": 639,
    "method": "review",
    "candidates": [
     394,
@@ -49233,7 +49233,7 @@
     "394": 1,
     "639": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/855105308": {
    "code": "FB53.0",
@@ -51815,7 +51815,7 @@
     "593": 1,
     "595": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1766840660": {
    "code": "GB55.1",
@@ -55478,7 +55478,7 @@
    "code": "JB09.0",
    "title": "First degree perineal laceration during delivery",
    "icd10": "O70.0",
-   "cause": 367,
+   "cause": 1160,
    "method": "review",
    "candidates": [
     367,
@@ -55488,13 +55488,13 @@
     "1160": 1,
     "367": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1177631035": {
    "code": "JB09.1",
    "title": "Second degree perineal laceration during delivery",
    "icd10": "O70.1",
-   "cause": 367,
+   "cause": 1160,
    "method": "review",
    "candidates": [
     367,
@@ -55504,13 +55504,13 @@
     "1160": 1,
     "367": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/849111492": {
    "code": "JB09.2",
    "title": "Third degree perineal laceration during delivery",
    "icd10": "O70.2",
-   "cause": 367,
+   "cause": 1160,
    "method": "review",
    "candidates": [
     367,
@@ -55520,13 +55520,13 @@
     "1160": 1,
     "367": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1473750098": {
    "code": "JB09.3",
    "title": "Fourth degree perineal laceration during delivery",
    "icd10": "O70.3",
-   "cause": 367,
+   "cause": 1160,
    "method": "review",
    "candidates": [
     367,
@@ -55536,7 +55536,7 @@
     "1160": 1,
     "367": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1065499694": {
    "code": "JB0A.0",
@@ -56742,7 +56742,7 @@
     "385": 1,
     "381": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1350867235": {
    "code": "KA01.1",
@@ -56758,7 +56758,7 @@
     "385": 1,
     "381": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/606718428": {
    "code": "KA01.2",
@@ -56814,7 +56814,7 @@
    "code": "KA01.7",
    "title": "Fetus or newborn affected by malpresentation before labour",
    "icd10": "P01.7",
-   "cause": 382,
+   "cause": 385,
    "method": "review",
    "candidates": [
     382,
@@ -56824,7 +56824,7 @@
     "385": 1,
     "382": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/126200292": {
    "code": "KA01.8",
@@ -57102,7 +57102,7 @@
     "560": 1,
     "385": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/344624675": {
    "code": "KA06.3",
@@ -57118,7 +57118,7 @@
     "385": 1,
     "566": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1908491191": {
    "code": "KA06.4",
@@ -57902,13 +57902,13 @@
     "408": 1,
     "934": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/864425294": {
    "code": "KA61.1",
    "title": "Neonatal listeriosis",
    "icd10": "P37.2",
-   "cause": 408,
+   "cause": 383,
    "method": "review",
    "candidates": [
     408,
@@ -57918,7 +57918,7 @@
     "408": 1,
     "383": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/755611612": {
    "code": "KA62.0",
@@ -58114,7 +58114,7 @@
     "408": 1,
     "345": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/623070032": {
    "code": "KA64.21",
@@ -58130,7 +58130,7 @@
     "408": 1,
     "345": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/358047372": {
    "code": "KA65.0",
@@ -58810,7 +58810,7 @@
     "385": 1,
     "557": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/431375771": {
    "code": "KB08.1",
@@ -59894,7 +59894,7 @@
     "385": 1,
     "650": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1842405627": {
    "code": "KC20.0",
@@ -60218,7 +60218,7 @@
     "385": 1,
     "562": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1885634011": {
    "code": "KD36",
@@ -66045,7 +66045,7 @@
    "code": "LD2F.00",
    "title": "Fetal alcohol syndrome",
    "icd10": "Q86.0",
-   "cause": 560,
+   "cause": 652,
    "method": "review",
    "candidates": [
     560,
@@ -66055,7 +66055,7 @@
     "560": 1,
     "652": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1894344911": {
    "code": "LD2F.01",
@@ -67235,7 +67235,7 @@
     "648": 1,
     "646": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1626557438": {
    "code": "LD50.01",
@@ -67251,7 +67251,7 @@
     "648": 1,
     "646": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/341711617": {
    "code": "LD50.02",
@@ -67267,7 +67267,7 @@
     "648": 1,
     "646": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1897256597": {
    "code": "LD50.03",
@@ -67283,7 +67283,7 @@
     "648": 1,
     "646": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/50021633": {
    "code": "LD50.04",
@@ -67299,7 +67299,7 @@
     "648": 1,
     "646": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/423644907": {
    "code": "LD50.1",
@@ -67335,7 +67335,7 @@
     "648": 1,
     "647": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/848253123": {
    "code": "LD50.31",
@@ -67351,7 +67351,7 @@
     "648": 1,
     "647": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/2055488559": {
    "code": "LD51",
@@ -67383,7 +67383,7 @@
    "code": "LD52.1",
    "title": "Male with double or multiple Y",
    "icd10": "Q98.5",
-   "cause": 647,
+   "cause": 648,
    "method": "review",
    "candidates": [
     647,
@@ -67393,13 +67393,13 @@
     "648": 1,
     "647": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1096926039": {
    "code": "LD53",
    "title": "Structural anomalies of chromosome Y",
    "icd10": "Q98.6",
-   "cause": 647,
+   "cause": 648,
    "method": "review",
    "candidates": [
     647,
@@ -67409,13 +67409,13 @@
     "648": 1,
     "647": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/606736067": {
    "code": "LD54",
    "title": "Male with sex chromosome mosaicism",
    "icd10": "Q98.7",
-   "cause": 647,
+   "cause": 648,
    "method": "review",
    "candidates": [
     647,
@@ -67425,7 +67425,7 @@
     "648": 1,
     "647": 1
    },
-   "reviewed": false
+   "reviewed": true
   },
   "http://id.who.int/icd/release/11/mms/1524287677": {
    "code": "LD55",
