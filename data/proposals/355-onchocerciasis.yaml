@@ -11,5 +11,5 @@ sources:
 mesh:
   D009855: Onchocerciasis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 4012f9e30fa0eb8b

@@ -11,5 +11,5 @@ sources:
 mesh:
   D012552: Schistosomiasis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 2a838e24509cca42

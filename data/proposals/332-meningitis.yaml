@@ -13,5 +13,5 @@ mesh:
   D016920: Meningitis, Bacterial
   D008585: Meningitis, Meningococcal
 cross_check: ok
-approved: false
+approved: true
 fingerprint: fa68347f3da1d5ec

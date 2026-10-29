@@ -14,5 +14,5 @@ mesh:
   D002644: Chickenpox
   D006562: Herpes Zoster
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b65046da6f24b7fd

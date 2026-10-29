@@ -11,5 +11,5 @@ mesh:
   D015658: HIV Infections
   D011251: Pregnancy Complications, Infectious
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a83f44fdd6134e78

@@ -11,5 +11,5 @@ sources:
 mesh:
   D014141: Trachoma
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D014141)'
-approved: false
+approved: true
 fingerprint: 614d7b1955902817

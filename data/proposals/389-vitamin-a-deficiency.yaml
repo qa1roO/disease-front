@@ -11,5 +11,5 @@ mesh:
   D014802: Vitamin A Deficiency
   D014985: Xerophthalmia
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D014802, D014985)'
-approved: false
+approved: true
 fingerprint: f3118067382c663e

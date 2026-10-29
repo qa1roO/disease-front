@@ -12,5 +12,5 @@ mesh:
   D014355: Chagas Disease
   D002598: Chagas Cardiomyopathy
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b672a115c513694b

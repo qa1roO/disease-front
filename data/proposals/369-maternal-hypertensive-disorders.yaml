@@ -13,5 +13,5 @@ mesh:
   D046110: Hypertension, Pregnancy-Induced
   D004461: Eclampsia
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 0fff1f36220937e3

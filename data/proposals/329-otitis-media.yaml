@@ -11,5 +11,5 @@ sources:
 mesh:
   D010033: Otitis Media
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 4711cba766a5c72e

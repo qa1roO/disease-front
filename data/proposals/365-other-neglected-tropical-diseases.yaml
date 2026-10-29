@@ -12,5 +12,5 @@ mesh:
   D058069: Neglected Diseases
   D014330: Tropical Medicine
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D058069, D014330)'
-approved: false
+approved: true
 fingerprint: fd8b85b0b539a965

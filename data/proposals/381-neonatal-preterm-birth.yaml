@@ -13,5 +13,5 @@ mesh:
   D047928: Premature Birth
   D012127: Respiratory Distress Syndrome, Newborn
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 41ec3c27f563eeed

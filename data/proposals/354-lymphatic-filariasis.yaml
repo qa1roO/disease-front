@@ -11,5 +11,5 @@ sources:
 mesh:
   D004605: Elephantiasis, Filarial
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 6c8dcf7b9d7ecec1

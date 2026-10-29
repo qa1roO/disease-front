@@ -24,6 +24,8 @@ The drafts go to `data/raw/stage6-drafts/` (git-ignored). `python -m pipeline 6`
 
    - **Status** is for a typical patient at diagnosis (ADR 0001): 2 Curable when standard treatment removes the disease. 3 Controlled when patients live near-normal lives on ongoing treatment. 4 Treatable when treatment slows the disease or eases symptoms. 5 Untreatable when nothing changes its course.
    - For cancers, the 2026-10-29 run used **Curable when SEER 5-year relative survival is about 80% or more** and most cases are found localized. Chronic cancers kept in check on long-term therapy (CML, CLL) are Controlled.
+   - For acute infections, the owner decided (2026-10-29) that **Curable means a treatment cures it**, even where many patients still die or are harmed for lack of timely care (meningitis, diphtheria). Infections with no specific treatment are Treatable, even when most patients recover on their own (measles, Zika). The nuance carries the mortality.
+   - **Controlled** keeps ADR 0001's strict reading (decided 2026-10-29): near-normal lives on ongoing treatment, not just symptoms managed.
    - **Sources** must be pages that answer HTTP 200 to a script. These work: WHO fact sheets, NHS, MedlinePlus, NCI PDQ, SEER Stat Facts, NHLBI, NIDDK, NIMH, NINDS, NEI, NIAMS, NIDA and NIAAA.
    - Avoid sites that block scripts: NIA, Mayo Clinic, Cleveland Clinic, and some CDC pages.
    - Also avoid NCBI Bookshelf. It answers 200 with a CAPTCHA page for any `NBK` id, so the check can't catch a wrong id.

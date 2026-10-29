@@ -12,5 +12,5 @@ sources:
 mesh:
   D012899: Smallpox
 cross_check: ok
-approved: false
+approved: true
 fingerprint: c30af3cff9397a99

@@ -12,5 +12,5 @@ mesh:
   D000071074: Neonatal Sepsis
   D018805: Sepsis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: df0e9d6c28cffb3b

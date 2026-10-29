@@ -12,5 +12,5 @@ mesh:
   D020019: Neurocysticercosis
   D003551: Cysticercosis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 3124f2803eb0b543

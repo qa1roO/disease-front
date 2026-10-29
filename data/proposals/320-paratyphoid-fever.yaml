@@ -10,5 +10,5 @@ sources:
 mesh:
   D010284: Paratyphoid Fever
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D010284)'
-approved: false
+approved: true
 fingerprint: 9c104c8402032179

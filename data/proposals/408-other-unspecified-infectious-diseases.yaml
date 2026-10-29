@@ -11,5 +11,5 @@ mesh:
   D007239: Infections
   D003141: Communicable Diseases
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 419861e5eafa296e

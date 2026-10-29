@@ -12,5 +12,5 @@ mesh:
   D003139: Common Cold
   D010612: Pharyngitis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 32ffdc43c675fabb

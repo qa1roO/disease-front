@@ -12,5 +12,5 @@ mesh:
   D013587: Syphilis
   D013590: Syphilis, Congenital
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D013587, D013590)'
-approved: false
+approved: true
 fingerprint: 6f8de1b9a0accbb8

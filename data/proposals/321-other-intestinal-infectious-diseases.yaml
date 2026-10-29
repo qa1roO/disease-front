@@ -11,5 +11,5 @@ mesh:
   D007411: Intestinal Diseases, Parasitic
   D005759: Gastroenteritis
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D007411, D005759)'
-approved: false
+approved: true
 fingerprint: 523d7b8b62c33d6c

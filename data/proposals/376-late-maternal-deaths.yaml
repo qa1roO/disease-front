@@ -12,5 +12,5 @@ mesh:
   D011248: Pregnancy Complications
   D011644: Puerperal Disorders
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 83574af9473222db

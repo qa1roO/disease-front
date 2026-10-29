@@ -11,5 +11,5 @@ sources:
 mesh:
   D014435: Typhoid Fever
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 214d40a2a0aad021

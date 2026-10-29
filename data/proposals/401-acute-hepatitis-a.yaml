@@ -10,5 +10,5 @@ sources:
 mesh:
   D006506: Hepatitis A
 cross_check: ok
-approved: false
+approved: true
 fingerprint: bf3a8898f935ac3a

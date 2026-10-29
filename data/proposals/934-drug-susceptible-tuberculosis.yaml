@@ -12,5 +12,5 @@ mesh:
   D014376: Tuberculosis
   D014397: Tuberculosis, Pulmonary
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 9d406d484ad6e032

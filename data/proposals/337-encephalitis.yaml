@@ -14,5 +14,5 @@ mesh:
   D004660: Encephalitis
   D018792: Encephalitis, Viral
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 2c72d234752ffaec

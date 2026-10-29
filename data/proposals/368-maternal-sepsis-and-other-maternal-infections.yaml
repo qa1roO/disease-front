@@ -12,5 +12,5 @@ mesh:
   D011645: Puerperal Infection
   D011251: Pregnancy Complications, Infectious
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D011645, D011251)'
-approved: false
+approved: true
 fingerprint: a85567f2156f5039

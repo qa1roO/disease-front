@@ -11,5 +11,5 @@ sources:
 mesh:
   D019142: Hemorrhagic Fever, Ebola
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 93cbf31281d7b87e

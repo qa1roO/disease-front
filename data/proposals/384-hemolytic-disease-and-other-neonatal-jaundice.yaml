@@ -12,5 +12,5 @@ mesh:
   D007567: Jaundice, Neonatal
   D004899: Erythroblastosis, Fetal
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D007567, D004899)'
-approved: false
+approved: true
 fingerprint: 05d5211ffca10f46

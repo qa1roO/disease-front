@@ -11,5 +11,5 @@ sources:
 mesh:
   D015004: Yellow Fever
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 246ece2dd58e8e1c

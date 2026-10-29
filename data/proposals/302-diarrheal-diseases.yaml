@@ -14,5 +14,5 @@ mesh:
   D002771: Cholera
   D012400: Rotavirus Infections
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 9b2f5db90f094829

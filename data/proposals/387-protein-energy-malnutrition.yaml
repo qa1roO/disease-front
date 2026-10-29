@@ -12,5 +12,5 @@ mesh:
   D011502: Protein-Energy Malnutrition
   D000067011: Severe Acute Malnutrition
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D011502, D000067011)'
-approved: false
+approved: true
 fingerprint: 0af1c737e86360c3

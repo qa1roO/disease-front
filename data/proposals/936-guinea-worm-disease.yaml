@@ -11,5 +11,5 @@ sources:
 mesh:
   D004320: Dracunculiasis
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D004320)'
-approved: false
+approved: true
 fingerprint: 6d8b875b6293c8a5

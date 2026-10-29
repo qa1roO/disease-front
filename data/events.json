@@ -1209,5 +1209,495 @@
   "name": "Other benign and in situ neoplasms",
   "from": null,
   "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 300,
+  "name": "HIV/AIDS resulting in other diseases",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 302,
+  "name": "Diarrheal diseases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 319,
+  "name": "Typhoid fever",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 320,
+  "name": "Paratyphoid fever",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 321,
+  "name": "Other intestinal infectious diseases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 322,
+  "name": "Lower respiratory infections",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 328,
+  "name": "Upper respiratory infections",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 329,
+  "name": "Otitis media",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 332,
+  "name": "Meningitis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 337,
+  "name": "Encephalitis",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 338,
+  "name": "Diphtheria",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 339,
+  "name": "Pertussis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 340,
+  "name": "Tetanus",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 341,
+  "name": "Measles",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 342,
+  "name": "Varicella and herpes zoster",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 345,
+  "name": "Malaria",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 346,
+  "name": "Chagas disease",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 348,
+  "name": "Visceral leishmaniasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 349,
+  "name": "Cutaneous and mucocutaneous leishmaniasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 350,
+  "name": "African trypanosomiasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 351,
+  "name": "Schistosomiasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 352,
+  "name": "Cysticercosis",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 353,
+  "name": "Cystic echinococcosis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 354,
+  "name": "Lymphatic filariasis",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 355,
+  "name": "Onchocerciasis",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 356,
+  "name": "Trachoma",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 358,
+  "name": "Yellow fever",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 359,
+  "name": "Rabies",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 361,
+  "name": "Ascariasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 362,
+  "name": "Trichuriasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 363,
+  "name": "Hookworm disease",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 364,
+  "name": "Food-borne trematodiases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 365,
+  "name": "Other neglected tropical diseases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 367,
+  "name": "Maternal hemorrhage",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 368,
+  "name": "Maternal sepsis and other maternal infections",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 369,
+  "name": "Maternal hypertensive disorders",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 370,
+  "name": "Maternal obstructed labor and uterine rupture",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 374,
+  "name": "Ectopic pregnancy",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 375,
+  "name": "Indirect maternal deaths",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 376,
+  "name": "Late maternal deaths",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 381,
+  "name": "Neonatal preterm birth",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 382,
+  "name": "Neonatal encephalopathy due to birth asphyxia and trauma",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 383,
+  "name": "Neonatal sepsis and other neonatal infections",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 384,
+  "name": "Hemolytic disease and other neonatal jaundice",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 385,
+  "name": "Other neonatal disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 387,
+  "name": "Protein-energy malnutrition",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 389,
+  "name": "Vitamin A deficiency",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 390,
+  "name": "Dietary iron deficiency",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 391,
+  "name": "Other nutritional deficiencies",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 394,
+  "name": "Syphilis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 395,
+  "name": "Chlamydial infection",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 396,
+  "name": "Gonococcal infection",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 397,
+  "name": "Trichomoniasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 398,
+  "name": "Genital herpes",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 399,
+  "name": "Other sexually transmitted infections",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 401,
+  "name": "Acute hepatitis A",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 402,
+  "name": "Acute hepatitis B",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 403,
+  "name": "Acute hepatitis C",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 404,
+  "name": "Acute hepatitis E",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 405,
+  "name": "Leprosy",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 408,
+  "name": "Other unspecified infectious diseases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 741,
+  "name": "Maternal deaths aggravated by HIV/AIDS",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 843,
+  "name": "Ebola",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 934,
+  "name": "Drug-susceptible tuberculosis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 935,
+  "name": "Zika virus",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 936,
+  "name": "Guinea worm disease",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 995,
+  "name": "Maternal abortion and miscarriage",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1048,
+  "name": "COVID-19",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1160,
+  "name": "Other direct maternal disorders",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "icd11": "1E70",
+  "name": "Smallpox",
+  "from": null,
+  "to": 1
  }
 ]

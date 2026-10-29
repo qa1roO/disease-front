@@ -13,5 +13,5 @@ mesh:
   D014597: Uterine Rupture
   D007744: Obstetric Labor Complications
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D004420, D014597, D007744)'
-approved: false
+approved: true
 fingerprint: 8e2e91993a579d24

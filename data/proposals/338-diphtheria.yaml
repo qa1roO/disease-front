@@ -11,5 +11,5 @@ sources:
 mesh:
   D004165: Diphtheria
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 66dad073b0a2c481

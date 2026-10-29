@@ -10,5 +10,5 @@ sources:
 mesh:
   D001196: Ascariasis
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D001196)'
-approved: false
+approved: true
 fingerprint: 114021639ec2f0e8

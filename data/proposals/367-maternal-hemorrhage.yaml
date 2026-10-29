@@ -12,5 +12,5 @@ mesh:
   D006473: Postpartum Hemorrhage
   D007744: Obstetric Labor Complications
 cross_check: ok
-approved: false
+approved: true
 fingerprint: fcd0e261cd34cc5a

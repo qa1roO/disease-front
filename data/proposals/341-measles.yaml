@@ -11,5 +11,5 @@ sources:
 mesh:
   D008457: Measles
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 0fdf8b0fda9b90df

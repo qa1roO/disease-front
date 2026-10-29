@@ -11,5 +11,5 @@ sources:
 mesh:
   D000086382: COVID-19
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 4e991b7c25413ba4

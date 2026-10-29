@@ -12,5 +12,5 @@ mesh:
   D018798: Anemia, Iron-Deficiency
   D000090463: Iron Deficiencies
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 4b8ecee2b6394a0e

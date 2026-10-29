@@ -11,5 +11,5 @@ sources:
 mesh:
   D000022: Abortion, Spontaneous
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D000022)'
-approved: false
+approved: true
 fingerprint: 3ee9b815c4085c66

@@ -12,5 +12,5 @@ mesh:
   D015658: HIV Infections
   D000163: Acquired Immunodeficiency Syndrome
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 17622ebc058fa3c5

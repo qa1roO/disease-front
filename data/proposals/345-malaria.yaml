@@ -13,5 +13,5 @@ mesh:
   D016778: Malaria, Falciparum
   D016780: Malaria, Vivax
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b8436d49648fbbba

@@ -10,5 +10,5 @@ sources:
 mesh:
   D006526: Hepatitis C
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 7c3332c95b706683

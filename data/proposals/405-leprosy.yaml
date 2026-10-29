@@ -10,5 +10,5 @@ sources:
 mesh:
   D007918: Leprosy
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 92e9109ad1670da8

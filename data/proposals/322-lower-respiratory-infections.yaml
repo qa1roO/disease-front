@@ -13,5 +13,5 @@ mesh:
   D011014: Pneumonia
   D001988: Bronchiolitis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: ebb4271fc6abbb90

@@ -12,5 +12,5 @@ mesh:
   D016773: Leishmaniasis, Cutaneous
   D007897: Leishmaniasis, Mucocutaneous
 cross_check: ok
-approved: false
+approved: true
 fingerprint: def2b745c2bd4b59

@@ -11,5 +11,5 @@ sources:
 mesh:
   D011271: Pregnancy, Ectopic
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D011271)'
-approved: false
+approved: true
 fingerprint: 22b7e5eb7ee412cc
