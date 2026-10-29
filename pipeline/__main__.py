@@ -1,8 +1,9 @@
 """Run pipeline stages: python -m pipeline <stage> [--force]
 
 Stages: 1 (fetch ICD-11), 2 (check the GBD files; fetched from a Claude session, see pipeline/STAGE2.md),
-3 (build data/tree.json), 4 (cross-walk and burden), 6 (status proposals from a Claude session's drafts, see
-pipeline/STAGE6.md), 8 (build site/public/map.json), or all.
+3 (build data/tree.json), 4 (cross-walk and burden), 5 (MeSH terms from a Claude session's drafts, see
+pipeline/STAGE5.md), 6 (status proposals from a Claude session's drafts, see pipeline/STAGE6.md), 7 (pipeline bars
+from ClinicalTrials.gov), 8 (build site/public/map.json), or all.
 Each stage skips itself when its outputs are newer than its inputs.
 """
 import argparse
@@ -14,7 +15,7 @@ from pathlib import Path
 
 import yaml
 
-from pipeline import chembl, crosswalk, fetch_icd11, gbd, icd11, proposals, site_data, tree
+from pipeline import bars, chembl, crosswalk, fetch_icd11, gbd, icd11, mesh, proposals, site_data, tree
 from pipeline.freshness import is_up_to_date
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -33,6 +34,10 @@ RAW_CHEMBL = ROOT / "data" / "raw" / "chembl"
 INDICATIONS = RAW_CHEMBL / "drug_indication.json"
 DRAFTS = ROOT / "data" / "raw" / "stage6-drafts"
 MESH_CACHE = ROOT / "data" / "raw" / "mesh-lookup.json"
+MESH_DRAFTS = ROOT / "data" / "raw" / "stage5-drafts"
+MESH = ROOT / "data" / "mesh.yaml"
+CTGOV_CACHE = ROOT / "data" / "raw" / "ctgov-counts.json"
+BARS = ROOT / "data" / "bars.json"
 PROPOSALS = ROOT / "data" / "proposals"
 ASSESSMENTS = ROOT / "data" / "assessments"
 EVENTS = ROOT / "data" / "events.json"
@@ -124,6 +129,46 @@ def stage4():
         print("  " + line)
 
 
+def stage5():
+    drafts = mesh.read_drafts(MESH_DRAFTS) if MESH_DRAFTS.exists() else {}
+    causes = mesh.causes(json.loads(read(BURDEN)))
+    resolve = mesh.first_found(proposals.MeshLookup(MESH_CACHE),
+                               proposals.MeshLookup(MESH_CACHE.with_name(f"mesh-lookup-{bars.CTGOV_MESH_YEAR}.json"),
+                                                    year=bars.CTGOV_MESH_YEAR))
+    entries, problems = mesh.build(causes, drafts, mesh.read(MESH), resolve)
+    mesh.write(MESH, entries)
+    names = {c["id"]: c["name"] for c in causes}
+    for cid, reasons in problems.items():
+        print(f"  {cid} {names[cid]}: rejected: {'; '.join(reasons)}")
+    reviewed = len(mesh.reviewed_terms(entries))
+    print(f"  {len(causes)} GBD causes: {len(entries)} entries in data/mesh.yaml ({reviewed} reviewed), "
+          f"{len(problems)} rejected")
+
+
+def stage7():
+    terms = mesh.reviewed_terms(mesh.read(MESH))
+    if not INDICATIONS.exists():
+        chembl.fetch(RAW_CHEMBL)
+    indications = json.loads(read(INDICATIONS))
+    get = bars.Polite(bars.get_json)
+    version = get(bars.API + "version")
+    since = bars.since(version["dataTimestamp"])
+    cached = json.loads(read(CTGOV_CACHE)) if CTGOV_CACHE.exists() else {}
+    count = bars.CountCache(cached, version["dataTimestamp"], bars.api_counter(get),
+                            save=lambda data: write_json(CTGOV_CACHE, data))
+    print(f"  {len(terms)} GBD causes with reviewed MeSH terms; ClinicalTrials.gov data as of "
+          f"{version['dataTimestamp']}, trials first posted since {since}")
+    causes = bars.run(terms, count, proposals.approved_drugs(indications["rows"]), since, log=print)
+    write_json(BARS, {"note": bars.NOTE,
+                      "source": {"apiVersion": version["apiVersion"], "dataTimestamp": version["dataTimestamp"],
+                                 "registeredSince": since, "chembl": indications["release"]},
+                      "causes": causes}, indent=1)
+    phases = {}
+    for b in causes.values():
+        phases[b["phase"]] = phases.get(b["phase"], 0) + 1
+    print(f"  bars: {phases}")
+
+
 def diseases_to_assess(drafts):
     """Direct-assessment subjects: the ICD-11 provinces whose codes appear as draft keys."""
     codes = {k for k in drafts if isinstance(k, str)}
@@ -169,8 +214,9 @@ def stage8():
         print(f"  {len(updated) - len(events)} status changes appended to data/events.json")
     print(f"  {len(approved)} approved GBD causes (their provinces are provisional), "
           f"{len(assessed)} diseases assessed directly")
+    bar_data = json.loads(read(BARS)) if BARS.exists() else None
     write_json(MAP, site_data.build_map(json.loads(read(TREE)), json.loads(read(CROSSWALK)), json.loads(read(BURDEN)),
-                                        approved, assessed))
+                                        approved, assessed, bar_data))
 
 
 # number -> (name, run, inputs, outputs). A stage's own code counts as an input.
@@ -181,10 +227,12 @@ STAGES = {
     "4": ("cross-walk and burden", stage4,
           [TREE, MAPPING, ICD10_CODES, *GBD_FILES, EXTRA_CODES, REVIEW, PKG / "crosswalk.py", PKG / "gbd.py"],
           [CROSSWALK, BURDEN]),
+    "5": ("MeSH terms", stage5, [BURDEN, MESH_DRAFTS, *sorted(MESH_DRAFTS.glob("*.yaml")), PKG / "mesh.py"], [MESH]),
     "6": ("status proposals", stage6, [BURDEN, INDICATIONS, DRAFTS, *sorted(DRAFTS.glob("*.yaml")),
                                         PKG / "proposals.py"], [PROPOSALS / "INDEX.md", ASSESSMENTS / "INDEX.md"]),
+    "7": ("pipeline bars", stage7, [MESH, INDICATIONS, PKG / "bars.py"], [BARS]),
     "8": ("build site data", stage8,
-          [TREE, CROSSWALK, BURDEN, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), *sorted(ASSESSMENTS.glob("*.yaml")),
+          [TREE, CROSSWALK, BURDEN, BARS, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), *sorted(ASSESSMENTS.glob("*.yaml")),
            PKG / "site_data.py",
            PKG / "proposals.py"], [MAP]),
 }

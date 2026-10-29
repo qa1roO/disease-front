@@ -124,6 +124,12 @@ async function main() {
   document.getElementById('gbd-citation')!.textContent =
     `Province sizes: ${data.meta.gbd.round} DALYs (${data.meta.gbd.estimateYear}). ${data.meta.gbd.citation}`;
   document.getElementById('crosswalk-note')!.textContent = data.meta.crosswalk;
+  const ct = data.meta.clinicaltrials;
+  if (ct) {
+    document.getElementById('trials-citation')!.textContent =
+      `Pipeline bars: ClinicalTrials.gov (data processed ${ct.dataTimestamp.slice(0, 10)}; counted and phase-ranked by this project) ` +
+      `and ${ct.chembl.replace('_', ' ')} (Mendez D et al., Nucleic Acids Res. 2019, doi:10.1093/nar/gky1075; CC BY-SA 3.0).`;
+  }
   Object.assign(window, { diseaseMap: { layout, labels, layoutMs, labelsMs, expected } });
   console.info(`layout: ${drawn} provinces, ${layout.territories.length} territories, ${Math.round(layoutMs)} ms; labels ${Math.round(labelsMs)} ms`);
 }

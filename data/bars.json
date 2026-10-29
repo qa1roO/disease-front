@@ -1,0 +1,10 @@
+{
+ "note": "Pipeline bar per GBD cause: the furthest phase among interventional ClinicalTrials.gov trials (recruiting, enrolling by invitation, active or completed, first posted since registeredSince) whose conditions include one of the cause's reviewed MeSH terms (data/mesh.yaml); Approved when ChEMBL has an approved indication for one of the terms. Derived from ClinicalTrials.gov and ChEMBL (CC BY-SA 3.0).",
+ "source": {
+  "apiVersion": "2.0.5",
+  "dataTimestamp": "2026-10-29T09:00:05",
+  "registeredSince": "2016-10-29",
+  "chembl": "ChEMBL_37"
+ },
+ "causes": {}
+}
