@@ -13,8 +13,21 @@ import { area, bandSplit, EAST, hash, NORTH, prng, type Point, type Polygon, typ
 import { sideOf, type MapNode, type Side } from './types';
 
 export const WORLD = { width: 2000, height: 1250 };
-/** Every province is at least this size, so rare diseases stay clickable. */
-export const MIN_SIZE = 1;
+/**
+ * Every province is at least this share of the mean province burden, so rare diseases and fog (size 0) stay
+ * clickable when zoomed in.
+ */
+export const MIN_SHARE = 0.02;
+
+/** The minimum size, in the same unit as `size` (DALYs): MIN_SHARE of the mean province size. */
+export function minimumSize(root: MapNode): number {
+  let total = 0, count = 0;
+  (function walk(n: MapNode) {
+    if (n.children) n.children.forEach(walk);
+    else { total += n.size ?? 0; count++; }
+  })(root);
+  return total > 0 ? (MIN_SHARE * total) / count : 1;
+}
 
 export interface Region {
   node: MapNode;
@@ -53,6 +66,7 @@ export function continent(): Polygon {
 }
 
 export function layoutMap(root: MapNode): Layout {
+  const minSize = minimumSize(root);
   const totals = new Map<MapNode, Totals>();
   let order = 0;
   (function sum(n: MapNode): Totals {
@@ -63,7 +77,7 @@ export function layoutMap(root: MapNode): Layout {
         t.weight += ct.weight; t.held += ct.held; t.contested += ct.contested; t.fog += ct.fog;
       }
     } else {
-      t.weight = Math.max(n.size ?? 0, MIN_SIZE);
+      t.weight = Math.max(n.size ?? 0, minSize);
       t[sideOf(n.status)] = t.weight;
     }
     totals.set(n, t);

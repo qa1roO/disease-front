@@ -1,0 +1,33 @@
+# ICD-10 codes for GBD causes in scope that GBD's own cause -> ICD map (data/raw/gbd/icd_codes.csv) gives no
+# codes for. GBD estimates these from surveys or splits them out of a parent by modelling, so its map leaves
+# them blank. Without codes, every ICD-11 disease under them would be fog.
+#
+# This list is the project's own work, not IHME's: one plain ICD-10 match per condition, chosen by name.
+# Stage 4 uses it only after GBD's own lists, so GBD's assignments always win. Review and edit freely.
+#
+# Left out on purpose, because no clean ICD-10 match exists: latent TB (954), HIV/AIDS-TB splits (949, 950),
+# extensively drug-resistant TB (947), the liver cancer and cirrhosis etiology splits (418-421, 996, 522-525),
+# other mental disorders (585), other vision loss (1162), G6PD trait (839), caries of deciduous teeth (681,
+# shares K02 with permanent teeth). Stage 4 folds those into their nearest GBD parent that has codes.
+- {cause_id: 355, cause: Onchocerciasis, icd10: "B73"}
+- {cause_id: 362, cause: Trichuriasis, icd10: "B79"}
+- {cause_id: 363, cause: Hookworm disease, icd10: "B76-B76.9"}
+- {cause_id: 364, cause: Food-borne trematodiases, icd10: "B66.0-B66.1, B66.3-B66.5"}
+- {cause_id: 936, cause: Guinea worm disease, icd10: "B72"}
+- {cause_id: 403, cause: Acute hepatitis C, icd10: "B17.1"}
+- {cause_id: 741, cause: Maternal deaths aggravated by HIV/AIDS, icd10: "O98.7"}
+- {cause_id: 389, cause: Vitamin A deficiency, icd10: "E50-E50.9"}
+- {cause_id: 390, cause: Dietary iron deficiency, icd10: "D50-D50.9"}
+- {cause_id: 846, cause: Chronic lymphoid leukemia, icd10: "C91.1"}
+- {cause_id: 536, cause: Gastroesophageal reflux disease, icd10: "K21-K21.9"}
+- {cause_id: 568, cause: Major depressive disorder, icd10: "F32-F33.9"}
+- {cause_id: 569, cause: Dysthymia, icd10: "F34.1"}
+- {cause_id: 575, cause: Autism spectrum disorders, icd10: "F84-F84.9"}
+- {cause_id: 582, cause: Idiopathic developmental intellectual disability, icd10: "F70-F79.9"}
+- {cause_id: 670, cause: Glaucoma, icd10: "H40-H42.8"}
+- {cause_id: 671, cause: Cataract, icd10: "H25-H26.9, H28"}
+- {cause_id: 672, cause: Age-related macular degeneration, icd10: "H35.3"}
+- {cause_id: 999, cause: Refraction disorders, icd10: "H52.0-H52.3"}
+- {cause_id: 1000, cause: Near vision loss, icd10: "H52.4"}
+- {cause_id: 598, cause: Male infertility, icd10: "N46"}
+- {cause_id: 606, cause: Female infertility, icd10: "N97-N97.9"}

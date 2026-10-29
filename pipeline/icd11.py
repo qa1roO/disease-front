@@ -44,3 +44,25 @@ def tabulation_version(text):
     header = text.lstrip("﻿").split("\n", 1)[0]
     match = VERSION.search(header)
     return match.group(1).strip() if match else None
+
+
+# The mapping tables' URIs carry the release ('/11/2026-01/mms/'); the tabulation's, and so the tree's, don't.
+RELEASE_IN_URI = re.compile(r"/release/11/[^/]+/mms/")
+
+
+def tsv_rows(text):
+    lines = [line for line in re.split(r"\r?\n", text.lstrip("﻿")) if line]
+    header = lines[0].split("\t")
+    return [dict(zip(header, line.split("\t"))) for line in lines[1:]]
+
+
+def parse_11_to_10(text):
+    """WHO 11To10MapToOneCategory: ICD-11 linearization URI (as in the tree) -> its one ICD-10 code."""
+    return {RELEASE_IN_URI.sub("/release/11/mms/", r["Linearization (release) URI"]): r["icd10Code"]
+            for r in tsv_rows(text)}
+
+
+def parse_icd10_codes(text):
+    """Every ICD-10 category in WHO 10To11MapToOneCategory, as (code, chapter), in table order."""
+    return [(r["icd10Code"], r["icd10Chapter"]) for r in tsv_rows(text)
+            if r["10ClassKind"] in ("category", "modifiedcategory")]

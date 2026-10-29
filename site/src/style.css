@@ -54,6 +54,7 @@ html, body {
 #panel dd { margin: 0; overflow-wrap: anywhere; }
 #panel a { color: var(--link); }
 .no-data { color: var(--muted); font-style: italic; }
+#panel .note { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
 .bar { display: grid; grid-template-columns: 96px 1fr auto; gap: 8px; align-items: center; margin: 4px 0; }
 .bar .track { height: 6px; border-radius: 3px; background: #2b3440; }
 

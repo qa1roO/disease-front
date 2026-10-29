@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { area, bandSplit, type Polygon } from './geometry';
-import { continent, layoutMap } from './layout';
+import { continent, layoutMap, MIN_SHARE, minimumSize } from './layout';
 import type { MapData, MapNode } from './types';
 
 const square: Polygon = [[0, 0], [100, 0], [100, 100], [0, 100]];
@@ -46,6 +46,19 @@ describe('layoutMap', () => {
 
   it('draws a front line between held and contested provinces', () => {
     expect(layoutMap(root).borders.map(b => b.kind)).toContain('front');
+  });
+
+  it('gives a province with no burden the minimum size, a share of the mean', () => {
+    const sized = (code: string, size: number): MapNode => ({ ...province(code), size });
+    const small: MapNode = { kind: 'root', title: 'All', children: [
+      { kind: 'chapter', code: '01', title: 'One', uri: '1', children: [sized('big', 100), sized('mid', 50), sized('fog', 0)] },
+    ] };
+    expect(minimumSize(small)).toBeCloseTo((MIN_SHARE * 150) / 3);
+    const layout = layoutMap(small);
+    const share = (code: string) => area(layout.provinces.find(p => p.node.code === code)!.polygon) / area(continent());
+    expect(share('fog')).toBeGreaterThan(0);
+    expect(share('fog')).toBeCloseTo(1 / 151, 2);
+    expect(share('big') / share('mid')).toBeCloseTo(2, 0);
   });
 
   it('is deterministic', () => {

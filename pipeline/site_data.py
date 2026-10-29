@@ -1,20 +1,44 @@
 """Stage 8: build site/public/map.json, everything the front end needs, from the earlier stages.
 
-For now (ticket 02) only the tree exists: every province has the same size and is fog (status null).
+A province's size is its burden in DALYs (stage 4), 0 when no GBD cause covers it (the front end then gives it
+the minimum size). Statuses come with ticket 04: every province is fog (status null) for now.
 """
 
 
-def build_map(tree):
+def build_map(tree, crosswalk, burden):
+    table, sizes = crosswalk["provinces"], burden["provinces"]
+    on_map = {str(b["cause"]) for b in sizes.values()}
+
+    def cause(v):
+        # A group (a GBD parent standing in for sub-causes with no ICD-10 codes) names its members.
+        out = {k: v[k] for k in ("name", "dalys", "provinces")}
+        if "members" in v:
+            out["members"] = [burden["causes"][str(m)]["name"] for m in v["members"]]
+        return out
+
     def node(n):
         out = {"kind": n["kind"], "code": n["code"], "title": n["title"], "uri": n["uri"]}
         if "children" in n:
             out["children"] = [node(c) for c in n["children"]]
-        else:
-            out["size"] = 1
-            out["status"] = None
+            return out
+        b = sizes.get(n["uri"])
+        out["size"] = round(b["dalys"], 1) if b else 0
+        out["status"] = None
+        if b:
+            entry = table[n["uri"]]
+            out["burden"] = {"dalys": round(b["dalys"], 1), "estimated": b["estimated"], "cause": b["cause"],
+                             "method": entry["method"], "icd10": entry["icd10"]}
+            if entry["method"] == "review":
+                out["burden"]["reviewed"] = entry["reviewed"]
         return out
 
     return {
-        "meta": {"icd11": tree["icd11"], "counts": tree["counts"]},
+        "meta": {
+            "icd11": tree["icd11"],
+            "counts": tree["counts"],
+            "gbd": burden["gbd"],
+            "crosswalk": crosswalk["note"],
+            "gbdCauses": {c: cause(v) for c, v in burden["causes"].items() if c in on_map},
+        },
         "root": {"kind": "root", "title": "All diseases", "children": [node(c) for c in tree["chapters"]]},
     }

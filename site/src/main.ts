@@ -92,7 +92,7 @@ async function main() {
 
   function show(region: Region) {
     selection.attr('d', closed(region.polygon));
-    renderPanel(panel, region, data.meta.icd11.release, show);
+    renderPanel(panel, region, data.meta, show);
   }
 
   const expected = data.meta.counts.provinces;
@@ -103,6 +103,9 @@ async function main() {
     ` · layout ${Math.round(layoutMs)} ms · labels ${Math.round(labelsMs)} ms` +
     (layout.fallbacks ? ` · ${layout.fallbacks} stripe fallbacks` : '');
   document.getElementById('citation')!.textContent = data.meta.icd11.citation;
+  document.getElementById('gbd-citation')!.textContent =
+    `Province sizes: ${data.meta.gbd.round} DALYs (${data.meta.gbd.estimateYear}). ${data.meta.gbd.citation}`;
+  document.getElementById('crosswalk-note')!.textContent = data.meta.crosswalk;
   Object.assign(window, { diseaseMap: { layout, labels, layoutMs, labelsMs, expected } });
   console.info(`layout: ${drawn} provinces, ${layout.territories.length} territories, ${Math.round(layoutMs)} ms; labels ${Math.round(labelsMs)} ms`);
 }
