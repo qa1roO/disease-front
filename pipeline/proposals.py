@@ -1,9 +1,11 @@
 """Stage 6: status proposals for the non-communicable GBD causes (docs/spec/v1.md, "Status proposals and review").
 
-A proposer (Claude with web search) drafts a status 1-5 per cause, with a nuance note, sources and the MeSH
-descriptors the cross-check uses. Each proposal is checked before it's written to data/proposals/:
+A Claude session with web search drafts a status 1-5 per cause, with a nuance note, sources and the MeSH headings
+the cross-check uses, into git-ignored data/raw/stage6-drafts/ (runbook: pipeline/STAGE6.md). This stage resolves
+the headings to MeSH descriptor IDs and checks each draft before it's written to data/proposals/:
 
-- every source URL must resolve (HTTP 200), or the proposal is rejected and the proposer retried with the reason;
+- every source URL must resolve (HTTP 200) and every MeSH heading must exist, or the draft is rejected with the
+  reason, to be fixed in the session and re-run;
 - the ChEMBL cross-check flags a status that disagrees with the approved-drug data (Curable or Controlled with no
   approved drug, Untreatable with one). Flags are for the owner's review; they don't block the file.
 
@@ -15,8 +17,11 @@ data/events.json.
 Cross-check flags derive from ChEMBL (CC BY-SA 3.0), so the proposal files are share-alike too.
 """
 import hashlib
+import json
 import re
+import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 import yaml
@@ -66,18 +71,24 @@ def cross_check(proposal, approved):
     return "ok"
 
 
-def resolves(url, opener=None):
-    """True when the URL answers HTTP 200 (after redirects). Servers that refuse HEAD get a GET."""
+def resolves(url, opener=None, pause=3.0):
+    """True when the URL answers HTTP 200 (after redirects). Servers that refuse HEAD get a GET. Network errors,
+    403, 429 and 5xx get one more try after a pause, since busy government sites drop the odd request."""
     if not re.match(r"https?://", url or ""):
         return False
     opener = opener or http_status
-    try:
-        status = opener(url, "HEAD")
-        if status != 200:
-            status = opener(url, "GET")
-        return status == 200
-    except Exception:
-        return False
+    for attempt in range(2):
+        try:
+            status = opener(url, "HEAD")
+            if status != 200:
+                status = opener(url, "GET")
+        except Exception:
+            status = None
+        if status == 200 or status not in (None, 403, 429) and status < 500:
+            return status == 200
+        if attempt == 0:
+            time.sleep(pause)
+    return False
 
 
 def http_status(url, method):
@@ -96,6 +107,7 @@ def problems(proposal, check_url):
     status = proposal.get("status")
     if not isinstance(status, int) or isinstance(status, bool) or not 1 <= status <= 5:
         out.append(f"status must be an integer 1-5, got {status!r}")
+    out += [f"MeSH heading not found: {h}" for h in proposal.get("unresolved_mesh", [])]
     sources = proposal.get("sources") or []
     if not sources:
         out.append("needs at least one source")
@@ -134,8 +146,50 @@ def build(cause, draft, approved):
     return out
 
 
-def run(causes, folder, propose, check_url, approved, refresh=False, log=print):
-    """Propose a status for each cause. propose(cause, feedback) returns {status, nuance, sources, mesh}."""
+def read_drafts(folder):
+    """cause_id -> draft {status, nuance, sources, mesh: [MeSH headings]}, from every YAML file in the folder."""
+    out = {}
+    for path in sorted(folder.glob("*.yaml")):
+        out.update({int(k): v for k, v in (read(path) or {}).items()})
+    return out
+
+
+def draft_proposer(drafts, mesh_id):
+    """A propose(cause, feedback) over session-written drafts. mesh_id(heading) -> descriptor ID or None."""
+    def propose(cause, feedback):
+        if cause["id"] not in drafts:
+            return None
+        draft = dict(drafts[cause["id"]])
+        headings = draft.get("mesh") or []
+        ids = {h: mesh_id(h) for h in headings}
+        draft["mesh"] = {i: h for h, i in ids.items() if i}
+        draft["unresolved_mesh"] = [h for h, i in ids.items() if not i]
+        return draft
+    return propose
+
+
+class MeshLookup:
+    """MeSH heading -> descriptor ID via NLM's lookup API (exact label match), cached in a JSON file."""
+
+    def __init__(self, cache_path):
+        self.path = cache_path
+        self.cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
+
+    def __call__(self, heading):
+        if heading not in self.cache:
+            url = ("https://id.nlm.nih.gov/mesh/lookup/descriptor?match=exact&limit=1&label="
+                   + urllib.parse.quote(heading))
+            with urllib.request.urlopen(url, timeout=30) as r:
+                hits = json.load(r)
+            self.cache[heading] = hits[0]["resource"].rsplit("/", 1)[1] if hits else None
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            self.path.write_text(json.dumps(self.cache, indent=0, sort_keys=True), encoding="utf-8")
+        return self.cache[heading]
+
+
+def run(causes, folder, propose, check_url, approved, refresh=False, tries=TRIES, log=print):
+    """Propose a status for each cause. propose(cause, feedback) returns {status, nuance, sources, mesh}, or None
+    when it has nothing for the cause."""
     folder.mkdir(parents=True, exist_ok=True)
     result = {"written": [], "kept": [], "failed": {}, "flagged": {}}
     for cause in causes:
@@ -144,17 +198,19 @@ def run(causes, folder, propose, check_url, approved, refresh=False, log=print):
             result["kept"].append(cause["id"])
             continue
         feedback = []
-        for _ in range(TRIES):
+        for _ in range(tries):
             draft = propose(cause, feedback)
-            feedback = problems(draft, check_url)
+            feedback = ["no draft"] if draft is None else problems(draft, check_url)
             if not feedback:
                 write(path, build(cause, draft, approved))
                 result["written"].append(cause["id"])
                 log(f"  {cause['id']} {cause['name']}: {STATUS_NAME[draft['status']]}")
                 break
-        else:
+            if draft is None:
+                break
+        if feedback:
             result["failed"][cause["id"]] = feedback
-            log(f"  {cause['id']} {cause['name']}: rejected after {TRIES} tries: {'; '.join(feedback)}")
+            log(f"  {cause['id']} {cause['name']}: rejected: {'; '.join(feedback)}")
     for cause in causes:
         path = folder / file_name(cause)
         if path.exists() and (p := read(path))["cross_check"] != "ok":

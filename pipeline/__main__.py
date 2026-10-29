@@ -1,13 +1,15 @@
 """Run pipeline stages: python -m pipeline <stage> [--force]
 
 Stages: 1 (fetch ICD-11), 2 (check the GBD files; fetched from a Claude session, see pipeline/STAGE2.md),
-3 (build data/tree.json), 4 (cross-walk and burden), 8 (build site/public/map.json), or all.
+3 (build data/tree.json), 4 (cross-walk and burden), 6 (status proposals from a Claude session's drafts, see
+pipeline/STAGE6.md), 8 (build site/public/map.json), or all.
 Each stage skips itself when its outputs are newer than its inputs.
 """
 import argparse
 import datetime
 import json
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import yaml
@@ -29,6 +31,8 @@ EXTRA_CODES = ROOT / "data" / "gbd-extra-codes.yaml"
 BURDEN = ROOT / "data" / "burden.json"
 RAW_CHEMBL = ROOT / "data" / "raw" / "chembl"
 INDICATIONS = RAW_CHEMBL / "drug_indication.json"
+DRAFTS = ROOT / "data" / "raw" / "stage6-drafts"
+MESH_CACHE = ROOT / "data" / "raw" / "mesh-lookup.json"
 PROPOSALS = ROOT / "data" / "proposals"
 EVENTS = ROOT / "data" / "events.json"
 MAP = ROOT / "site" / "public" / "map.json"
@@ -119,6 +123,24 @@ def stage4():
         print("  " + line)
 
 
+def stage6(refresh=False):
+    if not INDICATIONS.exists():
+        chembl.fetch(RAW_CHEMBL)
+    indications = json.loads(read(INDICATIONS))
+    approved_drugs = proposals.approved_drugs(indications["rows"])
+    causes = proposals.ncd_causes(json.loads(read(BURDEN)))
+    drafts = proposals.read_drafts(DRAFTS) if DRAFTS.exists() else {}
+    urls = sorted({s["url"] for d in drafts.values() for s in d.get("sources") or [] if s.get("url")})
+    with ThreadPoolExecutor(8) as pool:
+        ok = dict(zip(urls, pool.map(proposals.resolves, urls)))
+    propose = proposals.draft_proposer(drafts, proposals.MeshLookup(MESH_CACHE))
+    result = proposals.run(causes, PROPOSALS, propose, lambda url: ok.get(url, False), approved_drugs,
+                           refresh=refresh, tries=1)
+    print(f"  {len(causes)} non-communicable causes on the map ({indications['release']}): "
+          f"{len(result['written'])} written, {len(result['kept'])} kept, {len(result['failed'])} rejected, "
+          f"{len(result['flagged'])} flagged by the ChEMBL cross-check (see data/proposals/INDEX.md)")
+
+
 def stage8():
     approved = proposals.load_approved(PROPOSALS) if PROPOSALS.exists() else {}
     events = json.loads(read(EVENTS)) if EVENTS.exists() else []
@@ -139,6 +161,8 @@ STAGES = {
     "4": ("cross-walk and burden", stage4,
           [TREE, MAPPING, ICD10_CODES, *GBD_FILES, EXTRA_CODES, REVIEW, PKG / "crosswalk.py", PKG / "gbd.py"],
           [CROSSWALK, BURDEN]),
+    "6": ("status proposals", stage6, [BURDEN, INDICATIONS, DRAFTS, *sorted(DRAFTS.glob("*.yaml")),
+                                        PKG / "proposals.py"], [PROPOSALS / "INDEX.md"]),
     "8": ("build site data", stage8,
           [TREE, CROSSWALK, BURDEN, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), PKG / "site_data.py",
            PKG / "proposals.py"], [MAP]),
@@ -149,6 +173,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(prog="python -m pipeline", description=__doc__.splitlines()[0])
     parser.add_argument("stage", choices=[*STAGES, "all"])
     parser.add_argument("--force", action="store_true", help="run even if the outputs are up to date")
+    parser.add_argument("--refresh", action="store_true",
+                        help="stage 6: rewrite proposals that are neither approved nor edited from the current drafts")
     args = parser.parse_args(argv)
     for number in STAGES if args.stage == "all" else [args.stage]:
         name, run, inputs, outputs = STAGES[number]
@@ -156,7 +182,7 @@ def main(argv=None):
             print(f"stage {number} ({name}): up to date, skipped")
             continue
         print(f"stage {number} ({name})")
-        run()
+        run(refresh=True) if number == "6" and args.refresh else run()
     return 0
 
 

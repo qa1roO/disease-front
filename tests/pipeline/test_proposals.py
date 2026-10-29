@@ -100,7 +100,18 @@ class ResolvesTest(unittest.TestCase):
         def opener(url, method):
             raise OSError("no route")
 
-        self.assertFalse(proposals.resolves("https://x", opener))
+        self.assertFalse(proposals.resolves("https://x", opener, pause=0))
+
+    def test_a_dropped_request_gets_a_second_try(self):
+        answers = iter([OSError("reset"), 200])
+
+        def opener(url, method):
+            answer = next(answers)
+            if isinstance(answer, Exception):
+                raise answer
+            return answer
+
+        self.assertTrue(proposals.resolves("https://x", opener, pause=0))
 
     def test_only_http_urls(self):
         self.assertFalse(proposals.resolves("ftp://x", lambda u, m: 200))
@@ -178,6 +189,37 @@ class RunTest(unittest.TestCase):
         index = (self.tmp / "INDEX.md").read_text(encoding="utf-8")
         self.assertIn("FLAG", index)
         self.assertIn("493-ischemic-heart-disease.yaml", index)
+
+
+class SessionDraftsTest(unittest.TestCase):
+    """Stage 6 runs from a Claude session: drafts in a YAML file, MeSH headings resolved to descriptor IDs."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        (self.tmp / "batch-1.yaml").write_text(yaml.safe_dump({493: {
+            "status": 3, "nuance": "n", "sources": GOOD["sources"],
+            "mesh": ["Coronary Artery Disease", "Not A Heading"]}}), encoding="utf-8")
+        self.lookup = {"Coronary Artery Disease": "D003324"}.get
+
+    def test_reads_every_draft_file_keyed_by_cause_id(self):
+        self.assertEqual(list(proposals.read_drafts(self.tmp)), [493])
+
+    def test_proposer_resolves_mesh_headings_and_reports_unknown_ones(self):
+        propose = proposals.draft_proposer(proposals.read_drafts(self.tmp), self.lookup)
+        draft = propose({"id": 493}, [])
+        self.assertEqual(draft["mesh"], {"D003324": "Coronary Artery Disease"})
+        self.assertEqual(proposals.problems(draft, lambda url: True), ["MeSH heading not found: Not A Heading"])
+
+    def test_a_cause_without_a_draft_fails_with_no_draft(self):
+        propose = proposals.draft_proposer({}, self.lookup)
+        out = Path(tempfile.mkdtemp())
+        result = proposals.run([{"id": 554, "name": "Motor neuron disease", "dalys": 1, "members": []}], out, propose,
+                               lambda url: True, {}, tries=1, log=lambda line: None)
+        self.assertEqual(result["failed"], {554: ["no draft"]})
+
+    def test_mesh_as_id_to_heading_mapping_feeds_the_cross_check(self):
+        self.assertEqual(proposals.cross_check({"status": 3, "mesh": {"D003324": "Coronary Artery Disease"}},
+                                               {"D003324": ["CHEMBL25"]}), "ok")
 
 
 class ApprovedTest(unittest.TestCase):
