@@ -1,1 +1,5 @@
 data/raw/
+__pycache__/
+site/node_modules/
+site/dist/
+.claude/launch.json
