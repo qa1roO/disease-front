@@ -34,6 +34,7 @@ EXTRA_CODES = ROOT / "data" / "gbd-extra-codes.yaml"
 BURDEN = ROOT / "data" / "burden.json"
 RAW_CHEMBL = ROOT / "data" / "raw" / "chembl"
 INDICATIONS = RAW_CHEMBL / "drug_indication.json"
+CHEMBL_RELEASE = ROOT / "data" / "chembl-release.json"
 DRAFTS = ROOT / "data" / "raw" / "stage6-drafts"
 MESH_CACHE = ROOT / "data" / "raw" / "mesh-lookup.json"
 MESH_DRAFTS = ROOT / "data" / "raw" / "stage5-drafts"
@@ -190,6 +191,8 @@ def stage6(refresh=False):
     if not INDICATIONS.exists():
         chembl.fetch(RAW_CHEMBL)
     indications = json.loads(read(INDICATIONS))
+    write_json(CHEMBL_RELEASE, {"release": indications["release"], "releaseDate": indications["release_date"],
+                                "fetched": indications["fetched"], "citation": chembl.CITATION}, indent=1)
     approved_drugs = proposals.approved_drugs(indications["rows"])
     drafts = proposals.read_drafts(DRAFTS) if DRAFTS.exists() else {}
     urls = sorted({s["url"] for d in drafts.values() for s in d.get("sources") or [] if s.get("url")})
@@ -219,8 +222,9 @@ def stage8():
     print(f"  {len(approved)} approved GBD causes (their provinces are provisional), "
           f"{len(assessed)} diseases assessed directly")
     bar_data = json.loads(read(BARS)) if BARS.exists() else None
+    release = json.loads(read(CHEMBL_RELEASE)) if CHEMBL_RELEASE.exists() else None
     write_json(MAP, site_data.build_map(json.loads(read(TREE)), json.loads(read(CROSSWALK)), json.loads(read(BURDEN)),
-                                        approved, assessed, bar_data))
+                                        approved, assessed, bar_data, release))
 
 
 # number -> (name, run, inputs, outputs). A stage's own code counts as an input.
@@ -233,16 +237,17 @@ STAGES = {
           [CROSSWALK, BURDEN]),
     "5": ("MeSH terms", stage5, [BURDEN, MESH_DRAFTS, *sorted(MESH_DRAFTS.glob("*.yaml")), PKG / "mesh.py"], [MESH]),
     "6": ("status proposals", stage6, [BURDEN, INDICATIONS, DRAFTS, *sorted(DRAFTS.glob("*.yaml")),
-                                        PKG / "proposals.py"], [PROPOSALS / "INDEX.md", ASSESSMENTS / "INDEX.md"]),
+                                        PKG / "proposals.py"],
+          [PROPOSALS / "INDEX.md", ASSESSMENTS / "INDEX.md", CHEMBL_RELEASE]),
     "7": ("pipeline bars", stage7, [MESH, PKG / "bars.py"], [BARS]),
     "8": ("build site data", stage8,
-          [TREE, CROSSWALK, BURDEN, BARS, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), *sorted(ASSESSMENTS.glob("*.yaml")),
+          [TREE, CROSSWALK, BURDEN, BARS, CHEMBL_RELEASE, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), *sorted(ASSESSMENTS.glob("*.yaml")),
            PKG / "site_data.py",
            PKG / "proposals.py"], [MAP]),
 }
 # Stages whose git-ignored inputs come from a Claude session (pipeline/STAGE<n>.md) and that a fresh clone may lack.
 # Without them the stage skips itself and its committed outputs stand.
-SESSION_INPUTS = {"4": (GBD_FILES, "the IHME GBD files", "pipeline/STAGE2.md"),
+SESSION_INPUTS = {"4": (GBD_FILES, "IHME GBD files in data/raw/gbd/", "pipeline/STAGE2.md"),
                   "5": ([MESH_DRAFTS], "data/raw/stage5-drafts/", "pipeline/STAGE5.md"),
                   "6": ([DRAFTS], "data/raw/stage6-drafts/", "pipeline/STAGE6.md")}
 

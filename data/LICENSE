@@ -1,0 +1,38 @@
+Data licences for this folder and site/public/map.json
+=====================================================
+
+This is a licensing note, not a grant of anyone else's rights. The files here mix four sources and this
+project's own work; each part keeps its own terms. This is a non-commercial project. No permission has been
+asked of WHO or IHME (see docs/research/data-sources.md, "Licence decisions").
+
+1. ICD-11 content (WHO): codes, titles and URIs in tree.json, crosswalk.json, burden.json and map.json.
+   International Classification of Diseases, Eleventh Revision (ICD-11), World Health Organization (WHO) 2019
+   https://icd.who.int/browse11. Licensed under the Creative Commons Attribution-NoDerivatives 3.0 IGO licence
+   (CC BY-ND 3.0 IGO). Release used: ICD-11 MMS 2026-01. Every entry keeps its ICD-11 code, title and URI.
+
+2. GBD results (IHME): the DALY figures in burden.json and map.json, and GBD cause names and ids.
+   Source: Institute for Health Metrics and Evaluation. Used with permission. All rights reserved.
+   GBD 2023, global DALYs for 2023, used under the IHME Free-of-Charge Non-Commercial User Agreement
+   (https://www.healthdata.org/data-tools-practices/data-practices/ihme-free-charge-non-commercial-user-agreement).
+   They are not licensed for commercial use by anyone, and raw GBD files are not in this repository.
+
+3. ChEMBL (EMBL-EBI): the cross_check fields in proposals/ and assessments/, chembl-release.json, and the
+   crossCheck fields in map.json are derived from ChEMBL 37 approved-drug indications. ChEMBL is licensed under
+   CC BY-SA 3.0 Unported; cite Mendez D et al., Nucleic Acids Res. 2019;47(D1):D930-D940,
+   doi:10.1093/nar/gky1075. These files are shared alike under CC BY-SA 3.0.
+
+4. ClinicalTrials.gov (U.S. National Library of Medicine): trial counts and phases in bars.json and map.json,
+   derived from the ClinicalTrials.gov API v2, data processed on the date in bars.json ("dataTimestamp").
+   This project counted running interventional trials per GBD cause and ranked them by phase; see
+   docs/spec/v1.md, "Pipeline bar (stage 7)".
+
+5. This project's own work, licensed CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/) so that it
+   can be combined with the ChEMBL-derived parts:
+   - the ICD-11 -> GBD cause cross-walk (crosswalk.json, crosswalk-review.yaml, gbd-extra-codes.yaml). It is
+     built from WHO's ICD-11 -> ICD-10 table and IHME's cause -> ICD-10 lists, and is not a WHO or IHME product;
+   - MeSH search terms (mesh.yaml, MESH-SECOND-OPINION.md);
+   - statuses, nuance notes and source lists (proposals/, assessments/, events.json). They were proposed by AI
+     (Claude) from the cited sources and approved by the project owner, but have not been reviewed by a
+     clinician. They are not medical advice;
+   - pipeline bookkeeping (stamps.json).
+   Attribution: "Disease Map, https://github.com/qa1roO/disease-front".

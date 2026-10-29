@@ -49,14 +49,25 @@ function pipelineBar(node: MapNode, meta: MapData['meta']): string {
     <span class="note bar-note">${trials}${trials ? '<br>' : ''}${esc(v.note)}${v.url && asOf ? `<br>${esc(asOf)}` : ''}</span>`;
 }
 
+/** "Data as of" for every source the panel draws on; a source that hasn't been fetched reads "no data". */
+export function dataAsOf(meta: MapData['meta']): string {
+  const ct = meta.clinicaltrials;
+  const rows: [string, string][] = [
+    ['ICD-11', esc(`MMS ${meta.icd11.release}`)],
+    ['GBD', esc(`${meta.gbd.round} (released ${month(meta.gbd.released)}), ${meta.gbd.estimateYear} estimates`)],
+    ['ClinicalTrials.gov', ct ? esc(`data processed ${ct.dataTimestamp.slice(0, 10)}`) : NO_DATA],
+    ['ChEMBL', meta.chembl ? esc(`${meta.chembl.release.replace('_', ' ')} (${meta.chembl.releaseDate})`) : NO_DATA],
+  ];
+  return `
+      <dt>Data as of</dt><dd class="as-of">${rows.map(([k, v]) => `<span>${k}: ${v}</span>`).join('')}</dd>`;
+}
+
 function provinceBurden(node: MapNode, meta: MapData['meta']): string {
   const b = node.burden;
-  const asOf = `${meta.gbd.round} (released ${month(meta.gbd.released)}), ${meta.gbd.estimateYear} estimates`;
   if (!b) {
     return `
       <dt>Burden</dt><dd>${NO_DATA} <span class="note">minimum size: no GBD cause covers this disease</span></dd>
-      <dt>GBD cause</dt><dd>${NO_DATA}</dd>
-      <dt>GBD data</dt><dd>${esc(asOf)}</dd>`;
+      <dt>GBD cause</dt><dd>${NO_DATA}</dd>`;
   }
   const cause = meta.gbdCauses[String(b.cause)];
   const dalys = b.dalys > 0 ? `${formatDalys(b.dalys)} DALYs` : `${NO_DATA} <span class="note">GBD gives this cause no DALYs; minimum size</span>`;
@@ -69,15 +80,15 @@ function provinceBurden(node: MapNode, meta: MapData['meta']): string {
   return `
       <dt>Burden</dt><dd>${dalys} ${estimated}</dd>
       <dt>GBD cause</dt><dd>${esc(cause?.name ?? String(b.cause))} ${members}
-        <span class="note">via ICD-10 ${esc(b.icd10)}: ${METHOD[b.method] ?? b.method}${b.method === 'review' && !b.reviewed ? ' (placeholder, not yet reviewed)' : ''}</span></dd>
-      <dt>GBD data</dt><dd>${esc(asOf)}</dd>`;
+        <span class="note">via ICD-10 ${esc(b.icd10)}: ${METHOD[b.method] ?? b.method}${b.method === 'review' && !b.reviewed ? ' (placeholder, not yet reviewed)' : ''}</span></dd>`;
 }
 
 function provinceStatus(node: MapNode, meta: MapData['meta']): string {
   const status = node.status;
   if (status == null) {
     const why = node.burden ? 'its GBD cause has no approved assessment yet' : 'no GBD cause covers this disease';
-    return `<dt>Status</dt><dd>Fog (not assessed) <span class="note">${why}</span></dd>`;
+    return `<dt>Status</dt><dd>Fog (not assessed) <span class="note">${why}</span></dd>
+      <dt>Sources</dt><dd>${NO_DATA}</dd>`;
   }
   // A disease assessed directly carries its own assessment; otherwise it inherits its GBD cause's.
   const a = node.assessment ?? (node.burden ? meta.gbdCauses[String(node.burden.cause)]?.assessment : undefined);
@@ -116,6 +127,7 @@ export function renderPanel(el: HTMLElement, region: Region, meta: MapData['meta
     body = `
       ${provinceStatus(node, meta)}
       ${provinceBurden(node, meta)}
+      ${dataAsOf(meta)}
     </dl>
     ${pipelineBar(node, meta)}${bar('Activity')}${bar('Access')}`;
   } else {
@@ -132,6 +144,7 @@ export function renderPanel(el: HTMLElement, region: Region, meta: MapData['meta
       <dt>Provinces</dt><dd>${provinces.length.toLocaleString('en')}${unsized ? ` <span class="note">${unsized.toLocaleString('en')} with no GBD cause</span>` : ''}</dd>
       <dt>Burden</dt><dd>${total > 0 ? `${formatDalys(total)} DALYs` : NO_DATA}</dd>
       <dt>Held · contested · fog</dt><dd>${pct(share('held'))} · ${pct(share('contested'))} · ${pct(share('fog'))} <span class="note">${total > 0 ? 'by burden' : 'by count'}</span></dd>
+      ${dataAsOf(meta)}
     </dl>`;
   }
   el.innerHTML = head + body;

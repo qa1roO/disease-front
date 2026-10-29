@@ -114,6 +114,12 @@ class BuildMapTest(unittest.TestCase):
                                                            "registeredSince": "2016-10-29", "chembl": "ChEMBL_37"})
         self.assertEqual((by_uri[self.cholera]["pipeline"], by_uri[self.brain]["pipeline"]), ("phase2", "phase3"))
 
+    def test_the_chembl_release_reaches_meta(self):
+        release = {"release": "ChEMBL_37", "releaseDate": "2026-05-01"}
+        built = site_data.build_map(self.tree, self.crosswalk, self.burden, chembl=release)
+        self.assertEqual(built["meta"]["chembl"], release)
+        self.assertNotIn("chembl", self.map["meta"])
+
     def test_a_held_province_shows_approved(self):
         cause = {302: {"gbd_cause": "Diarrheal diseases", "status": 2, "nuance": "", "sources": [], "approved": True}}
         own = {self.quoted: {"icd11_code": "y", "status": 1, "nuance": "", "sources": [], "cross_check": "ok"}}

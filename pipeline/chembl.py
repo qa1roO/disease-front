@@ -9,6 +9,8 @@ import urllib.request
 
 API = "https://www.ebi.ac.uk/chembl/api/data/"
 FIELDS = "mesh_id,mesh_heading,max_phase_for_ind,parent_molecule_chembl_id"
+CITATION = ("ChEMBL (EMBL-EBI), CC BY-SA 3.0: Mendez D et al., ChEMBL: towards direct deposition of bioassay data. "
+            "Nucleic Acids Res. 2019;47(D1):D930-D940, doi:10.1093/nar/gky1075.")
 
 
 def get(url):

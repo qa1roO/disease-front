@@ -8,10 +8,12 @@ own status instead, not provisional, with its assessment inline; that works for 
 
 The pipeline bar (stage 7) sits once per cause in meta.gbdCauses[cause].bar; each province carries its phase as
 `pipeline`, inherited from its cause, or "approved" when the province is held (status 1-3).
+
+meta.chembl names the ChEMBL release the stage-6 cross-check used (CC BY-SA 3.0 asks for it to be shown).
 """
 
 
-def build_map(tree, crosswalk, burden, approved=None, assessed=None, bars=None):
+def build_map(tree, crosswalk, burden, approved=None, assessed=None, bars=None, chembl=None):
     approved, assessed = approved or {}, assessed or {}
     cause_bars = (bars or {}).get("causes", {})
     table, sizes = crosswalk["provinces"], burden["provinces"]
@@ -64,6 +66,7 @@ def build_map(tree, crosswalk, burden, approved=None, assessed=None, bars=None):
                               **({"bar": cause_bars[c]} if c in cause_bars else {})}
                           for c, v in burden["causes"].items() if c in on_map},
             **meta_bars,
+            **({"chembl": chembl} if chembl else {}),
         },
         "root": {"kind": "root", "title": "All diseases", "children": [node(c) for c in tree["chapters"]]},
     }

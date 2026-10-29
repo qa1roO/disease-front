@@ -21,11 +21,12 @@ def is_up_to_date(outputs, inputs):
 
 
 def content_hash(path):
-    """A file's hash with line endings normalised (git may check text out as CRLF), a folder's sorted file names,
-    or None when the path is missing."""
+    """A file's hash with line endings normalised (git may check text out as CRLF), a hash of a folder's sorted
+    file names, or None when the path is missing."""
     path = Path(path)
     if path.is_dir():
-        return "dir:" + ",".join(sorted(p.name for p in path.iterdir()))
+        names = "\n".join(sorted(p.name for p in path.iterdir())).encode()
+        return "dir:" + hashlib.sha256(names).hexdigest()[:16]
     if not path.exists():
         return None
     return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()[:16]
