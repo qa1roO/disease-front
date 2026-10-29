@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Drug-susceptible tuberculosis
+gbd_cause_id: 934
+status: 2
+nuance: A 4-6 month course of standard drugs cures about 85% of patients; most deaths are in people never diagnosed
+  or treated.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/tuberculosis
+  title: Tuberculosis fact sheet, WHO
+mesh:
+  D014376: Tuberculosis
+  D014397: Tuberculosis, Pulmonary
+cross_check: ok
+approved: true
+fingerprint: 9d406d484ad6e032

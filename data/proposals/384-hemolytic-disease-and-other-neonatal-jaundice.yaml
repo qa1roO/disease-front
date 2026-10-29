@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Hemolytic disease and other neonatal jaundice
+gbd_cause_id: 384
+status: 2
+nuance: Phototherapy, and exchange transfusion in severe cases, clear newborn jaundice; untreated severe jaundice
+  causes permanent brain damage (kernicterus).
+sources:
+- url: https://www.nhs.uk/conditions/jaundice-newborn/
+  title: Newborn jaundice, NHS
+mesh:
+  D007567: Jaundice, Neonatal
+  D004899: Erythroblastosis, Fetal
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D007567, D004899)'
+approved: true
+fingerprint: 05d5211ffca10f46

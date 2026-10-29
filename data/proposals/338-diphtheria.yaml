@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Diphtheria
+gbd_cause_id: 338
+status: 2
+nuance: Diphtheria antitoxin and antibiotics cure most patients, though up to 10% die and antitoxin is in short
+  supply. Vaccination prevents it.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/diphtheria
+  title: Diphtheria fact sheet, WHO
+mesh:
+  D004165: Diphtheria
+cross_check: ok
+approved: true
+fingerprint: 66dad073b0a2c481

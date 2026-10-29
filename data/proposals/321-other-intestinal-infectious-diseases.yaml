@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other intestinal infectious diseases
+gbd_cause_id: 321
+status: 2
+nuance: A residual GBD group of other intestinal infections; most resolve with rehydration or antimicrobials.
+sources:
+- url: https://medlineplus.gov/foodborneillness.html
+  title: Foodborne Illness, MedlinePlus
+mesh:
+  D007411: Intestinal Diseases, Parasitic
+  D005759: Gastroenteritis
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D007411, D005759)'
+approved: true
+fingerprint: 523d7b8b62c33d6c

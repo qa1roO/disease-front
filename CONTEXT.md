@@ -32,7 +32,7 @@ Inspiration: [changelog.earth](https://github.com/byalex33/changelog.earth). Rea
 - **Taxonomy**: ICD-11 is the map. Its chapters and blocks are territories and its diseases are provinces, down to the deepest level (see [ADR 0002](docs/adr/0002-icd11-is-the-map.md)). Provinces are assessed in burden order, biggest first; unassessed ones stay in fog.
 - **Scope**: diseases only. Left out: GBD's injuries group, and the ICD-11 chapters that aren't diseases (symptoms and signs, injuries and external causes, factors influencing health, special purposes, traditional medicine, functioning, extension codes). Pregnancy-related conditions stay.
 - **Residual entries**: ICD-11 "other specified" and "unspecified" entries are not provinces. Their parent's burden is split among the real diseases only.
-- **Assessment level**: statuses are assessed per GBD cause and inherited as provisional by every province under it. Assessing individual provinces is a possible refinement after v1.
+- **Assessment level**: statuses are assessed per GBD cause and inherited as provisional by every province under it. A disease can also be assessed directly (e.g. smallpox, which no GBD cause covers); that status overrides the inherited one and is not provisional.
 - **Province size below GBD level**: GBD reports burden for ~370 causes. Every ICD-11 disease traces back to exactly one GBD cause (via its ICD-10 codes), and provinces under the same cause split its burden equally. Such sizes are marked "size estimated".
 - **Straddling diseases**: a province gets the status of a typical patient at diagnosis; the nuance (e.g. "curable if caught early") goes in its info panel.
 - **Bars and missing data**: every province shows all three bars; a bar with no data is greyed out as "no data". Activity is shown as a percentile across all diseases.
@@ -41,7 +41,7 @@ Inspiration: [changelog.earth](https://github.com/byalex33/changelog.earth). Rea
 - **Disease → trials mapping**: the LLM drafts a list of MeSH terms per GBD cause once; the owner reviews it; it's stored in the repo and reused by every run.
 - **LLM**: Claude with its web search tool, so every proposed status cites a real source.
 - **Visual style**: modern strategy-game map, with clean flat colours by status. Other themes may come later.
-- **v1 scope**: the full ICD-11 map (minus exclusions) drawn and sized, provisional statuses for the non-communicable GBD causes, the pipeline bar only, no automation.
+- **v1 scope**: the full ICD-11 map (minus exclusions) drawn and sized, provisional statuses for every GBD cause on the map plus a few direct assessments, the pipeline bar only, no automation.
 - **Map layout**: a continuous world, with every province on one pannable, zoomable map; each block is cut into held | contested | fog bands before its provinces are laid out (see [ADR 0003](docs/adr/0003-continuous-world-layout.md)).
 - **Zoomed-out front line**: a territory's front line sits at the share of its burden held (statuses 1–3). The same geometry applies at every zoom level.
 - **Hosting**: GitHub Pages, published by the same job that commits the data.

@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Ebola
+gbd_cause_id: 843
+status: 4
+nuance: Monoclonal antibodies (for Zaire ebolavirus) and early supportive care have cut mortality, but outbreaks
+  still kill around a third or more of patients; a vaccine prevents it.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/ebola-disease
+  title: Ebola disease fact sheet, WHO
+mesh:
+  D019142: Hemorrhagic Fever, Ebola
+cross_check: ok
+approved: true
+fingerprint: 93cbf31281d7b87e

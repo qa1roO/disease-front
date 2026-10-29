@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other neglected tropical diseases
+gbd_cause_id: 365
+status: 2
+nuance: A residual GBD group of other neglected tropical diseases; most are curable with antiparasitic or antibiotic
+  drugs, though some chronic damage is permanent.
+sources:
+- url: https://www.who.int/health-topics/neglected-tropical-diseases
+  title: Neglected tropical diseases, WHO
+mesh:
+  D058069: Neglected Diseases
+  D014330: Tropical Medicine
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D058069, D014330)'
+approved: true
+fingerprint: fd8b85b0b539a965

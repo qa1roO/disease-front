@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Chagas disease
+gbd_cause_id: 346
+status: 4
+nuance: Benznidazole or nifurtimox cures the infection when given early, but most patients are diagnosed in the
+  chronic phase, when heart and gut damage can only be managed.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/chagas-disease-(american-trypanosomiasis)
+  title: Chagas disease fact sheet, WHO
+mesh:
+  D014355: Chagas Disease
+  D002598: Chagas Cardiomyopathy
+cross_check: ok
+approved: true
+fingerprint: b672a115c513694b

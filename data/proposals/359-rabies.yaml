@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Rabies
+gbd_cause_id: 359
+status: 5
+nuance: Almost always fatal once symptoms appear; prompt post-exposure vaccination after a bite prevents it completely.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/rabies
+  title: Rabies fact sheet, WHO
+mesh:
+  D011818: Rabies
+cross_check: ok
+approved: true
+fingerprint: 390f025d8469ca25

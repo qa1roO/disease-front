@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Pertussis
+gbd_cause_id: 339
+status: 2
+nuance: Antibiotics clear the infection, especially early; the cough lasts weeks, and infants can die. Vaccination
+  prevents it.
+sources:
+- url: https://www.who.int/health-topics/pertussis
+  title: Pertussis, WHO
+- url: https://www.nhs.uk/conditions/whooping-cough/
+  title: Whooping cough, NHS
+mesh:
+  D014917: Whooping Cough
+cross_check: ok
+approved: true
+fingerprint: e6a97680502eea8d

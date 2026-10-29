@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Maternal hypertensive disorders
+gbd_cause_id: 369
+status: 2
+nuance: Delivery ends pre-eclampsia; blood-pressure drugs and magnesium sulfate prevent seizures and death until
+  then.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/pre-eclampsia
+  title: Pre-eclampsia fact sheet, WHO
+mesh:
+  D011225: Pre-Eclampsia
+  D046110: Hypertension, Pregnancy-Induced
+  D004461: Eclampsia
+cross_check: ok
+approved: true
+fingerprint: 0fff1f36220937e3

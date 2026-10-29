@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Leprosy
+gbd_cause_id: 405
+status: 2
+nuance: Multidrug therapy, free through WHO, cures leprosy; nerve damage and disability already present are permanent.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/leprosy
+  title: Leprosy fact sheet, WHO
+mesh:
+  D007918: Leprosy
+cross_check: ok
+approved: true
+fingerprint: 92e9109ad1670da8

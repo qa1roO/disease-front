@@ -22,11 +22,11 @@ GOOD = {"status": 3, "nuance": "Most patients live near-normal lives on statins,
 
 
 class CausesTest(unittest.TestCase):
-    def test_non_communicable_causes_on_the_map_biggest_first(self):
-        self.assertEqual([c["id"] for c in proposals.ncd_causes(BURDEN)], [493, 417, 554])
+    def test_every_gbd_cause_on_the_map_biggest_first(self):
+        self.assertEqual([c["id"] for c in proposals.causes_on_map(BURDEN)], [493, 417, 554, 298])
 
     def test_a_group_lists_its_members_for_the_proposer(self):
-        liver = next(c for c in proposals.ncd_causes(BURDEN) if c["id"] == 417)
+        liver = next(c for c in proposals.causes_on_map(BURDEN) if c["id"] == 417)
         self.assertEqual(liver["members"], ["Liver cancer due to hepatitis B"])
 
     def test_file_name_is_id_and_slug(self):
@@ -220,6 +220,41 @@ class SessionDraftsTest(unittest.TestCase):
     def test_mesh_as_id_to_heading_mapping_feeds_the_cross_check(self):
         self.assertEqual(proposals.cross_check({"status": 3, "mesh": {"D003324": "Coronary Artery Disease"}},
                                                {"D003324": ["CHEMBL25"]}), "ok")
+
+
+class ProvinceAssessmentTest(unittest.TestCase):
+    """A single ICD-11 disease can be assessed directly (e.g. smallpox, which has no GBD cause)."""
+
+    SMALLPOX = {"id": "1E70", "name": "Smallpox", "dalys": 0, "members": [],
+                "identity": {"icd11_code": "1E70", "icd11_title": "Smallpox",
+                             "icd11_uri": "http://id.who.int/icd/release/11/mms/2054716425"}}
+
+    def test_writes_the_icd11_identity_instead_of_the_gbd_cause(self):
+        tmp = Path(tempfile.mkdtemp())
+        draft = {"status": 1, "nuance": "Eradicated in 1980.", "sources": GOOD["sources"], "mesh": {}}
+        proposals.run([self.SMALLPOX], tmp, lambda subject, feedback: draft, lambda url: True, {},
+                      tries=1, log=lambda line: None)
+        p = yaml.safe_load((tmp / "1E70-smallpox.yaml").read_text(encoding="utf-8"))
+        self.assertEqual(list(p)[:4], ["icd11_code", "icd11_title", "icd11_uri", "status"])
+        self.assertEqual((p["status"], p["cross_check"]), (1, "ok"))
+        self.assertIn("Smallpox", (tmp / "INDEX.md").read_text(encoding="utf-8"))
+
+    def test_draft_keys_that_are_icd11_codes_stay_strings(self):
+        tmp = Path(tempfile.mkdtemp())
+        (tmp / "d.yaml").write_text("1E70: {status: 1}" + chr(10) + "493: {status: 3}" + chr(10), encoding="utf-8")
+        self.assertEqual(set(proposals.read_drafts(tmp)), {493, "1E70"})
+
+    def test_approved_assessments_load_by_uri_and_log_events_by_code(self):
+        tmp = Path(tempfile.mkdtemp())
+        (tmp / "1E70-smallpox.yaml").write_text(yaml.safe_dump(
+            {**self.SMALLPOX["identity"], "status": 1, "nuance": "", "sources": GOOD["sources"],
+             "cross_check": "ok", "approved": True}), encoding="utf-8")
+        approved = proposals.load_approved(tmp, key="icd11_uri")
+        self.assertEqual(list(approved), ["http://id.who.int/icd/release/11/mms/2054716425"])
+        events = proposals.record_events({"1E70": approved[self.SMALLPOX["identity"]["icd11_uri"]]},
+                                         [{"date": "d", "cause": 493, "name": "IHD", "from": None, "to": 3}],
+                                         "2026-10-30", field="icd11", name_field="icd11_title")
+        self.assertEqual(events[-1], {"date": "2026-10-30", "icd11": "1E70", "name": "Smallpox", "from": None, "to": 1})
 
 
 class ApprovedTest(unittest.TestCase):

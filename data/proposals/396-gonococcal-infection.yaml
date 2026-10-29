@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Gonococcal infection
+gbd_cause_id: 396
+status: 2
+nuance: Antibiotics cure gonorrhoea, but resistance is rising and few effective drugs remain.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/gonorrhoea-(neisseria-gonorrhoeae-infection)
+  title: Gonorrhoea fact sheet, WHO
+mesh:
+  D006069: Gonorrhea
+cross_check: ok
+approved: true
+fingerprint: d63253578c9e5615

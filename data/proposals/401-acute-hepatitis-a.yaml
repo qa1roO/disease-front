@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Acute hepatitis A
+gbd_cause_id: 401
+status: 2
+nuance: 'Self-limiting: almost everyone recovers fully with supportive care; vaccination prevents it.'
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/hepatitis-a
+  title: Hepatitis A fact sheet, WHO
+mesh:
+  D006506: Hepatitis A
+cross_check: ok
+approved: true
+fingerprint: bf3a8898f935ac3a

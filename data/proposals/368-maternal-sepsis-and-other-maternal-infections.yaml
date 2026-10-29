@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Maternal sepsis and other maternal infections
+gbd_cause_id: 368
+status: 2
+nuance: Antibiotics cure most maternal infections when given promptly; sepsis is still a leading cause of maternal
+  death where care is delayed.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/sepsis
+  title: Sepsis fact sheet, WHO
+mesh:
+  D011645: Puerperal Infection
+  D011251: Pregnancy Complications, Infectious
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D011645, D011251)'
+approved: true
+fingerprint: a85567f2156f5039

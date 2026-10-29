@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Protein-energy malnutrition
+gbd_cause_id: 387
+status: 2
+nuance: Ready-to-use therapeutic food cures most children with severe acute malnutrition, but few who need it receive
+  it; stunting from chronic undernutrition is largely irreversible.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/malnutrition
+  title: Malnutrition fact sheet, WHO
+mesh:
+  D011502: Protein-Energy Malnutrition
+  D000067011: Severe Acute Malnutrition
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D011502, D000067011)'
+approved: true
+fingerprint: 0af1c737e86360c3

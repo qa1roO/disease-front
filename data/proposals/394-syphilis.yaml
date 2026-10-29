@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Syphilis
+gbd_cause_id: 394
+status: 2
+nuance: Penicillin cures syphilis at every stage, though damage from late syphilis is permanent; congenital syphilis
+  is preventable by testing in pregnancy.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/syphilis
+  title: Syphilis fact sheet, WHO
+mesh:
+  D013587: Syphilis
+  D013590: Syphilis, Congenital
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D013587, D013590)'
+approved: true
+fingerprint: 6f8de1b9a0accbb8

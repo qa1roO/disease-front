@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Tetanus
+gbd_cause_id: 340
+status: 4
+nuance: Antitoxin, wound care, muscle relaxants and intensive care save many, but tetanus is often fatal where ventilation
+  is unavailable. Vaccination prevents it.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/tetanus
+  title: Tetanus fact sheet, WHO
+mesh:
+  D013742: Tetanus
+cross_check: ok
+approved: true
+fingerprint: 3a2ac461bb400c18

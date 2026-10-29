@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Maternal hemorrhage
+gbd_cause_id: 367
+status: 2
+nuance: Uterotonic drugs, tranexamic acid, transfusion and surgery stop most postpartum bleeding; it is still the
+  leading cause of maternal death where emergency care is lacking.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/maternal-mortality
+  title: Maternal mortality fact sheet, WHO
+mesh:
+  D006473: Postpartum Hemorrhage
+  D007744: Obstetric Labor Complications
+cross_check: ok
+approved: true
+fingerprint: fcd0e261cd34cc5a

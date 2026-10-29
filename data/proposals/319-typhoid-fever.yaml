@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Typhoid fever
+gbd_cause_id: 319
+status: 2
+nuance: Antibiotics cure typhoid, but extensively drug-resistant strains are spreading in South Asia. Vaccines prevent
+  it.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/typhoid
+  title: Typhoid fact sheet, WHO
+mesh:
+  D014435: Typhoid Fever
+cross_check: ok
+approved: true
+fingerprint: 214d40a2a0aad021

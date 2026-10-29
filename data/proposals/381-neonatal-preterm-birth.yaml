@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Neonatal preterm birth
+gbd_cause_id: 381
+status: 4
+nuance: Neonatal care (warmth, kangaroo care, steroids before birth, breathing support) saves most preterm babies
+  where it exists, but complications cause lasting disability in some, and survival is far lower in low-income countries.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/preterm-birth
+  title: Preterm birth fact sheet, WHO
+mesh:
+  D007235: Infant, Premature, Diseases
+  D047928: Premature Birth
+  D012127: Respiratory Distress Syndrome, Newborn
+cross_check: ok
+approved: true
+fingerprint: 41ec3c27f563eeed

@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Chlamydial infection
+gbd_cause_id: 395
+status: 2
+nuance: Antibiotics cure it; untreated infection can cause infertility.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/chlamydia
+  title: Chlamydia fact sheet, WHO
+mesh:
+  D002690: Chlamydia Infections
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D002690)'
+approved: true
+fingerprint: ce2238db3d115367

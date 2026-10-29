@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Guinea worm disease
+gbd_cause_id: 936
+status: 2
+nuance: No drug or vaccine exists, but the worm is removed by slowly winding it out; the disease is close to eradication,
+  with only a handful of human cases a year.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/dracunculiasis-(guinea-worm-disease)
+  title: Dracunculiasis (guinea-worm disease) fact sheet, WHO
+mesh:
+  D004320: Dracunculiasis
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D004320)'
+approved: true
+fingerprint: 6d8b875b6293c8a5

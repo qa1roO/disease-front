@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Food-borne trematodiases
+gbd_cause_id: 364
+status: 2
+nuance: Praziquantel or triclabendazole cures liver, lung and intestinal fluke infections.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/foodborne-trematode-infections
+  title: Foodborne trematode infections fact sheet, WHO
+mesh:
+  D014201: Trematode Infections
+  D005211: Fascioliasis
+  D003003: Clonorchiasis
+  D009889: Opisthorchiasis
+cross_check: ok
+approved: true
+fingerprint: 9a9f09e29c7cf5c0

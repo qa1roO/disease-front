@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Indirect maternal deaths
+gbd_cause_id: 375
+status: 4
+nuance: Deaths from pre-existing conditions made worse by pregnancy; outcomes depend on the underlying disease.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/maternal-mortality
+  title: Maternal mortality fact sheet, WHO
+mesh:
+  D011248: Pregnancy Complications
+cross_check: ok
+approved: true
+fingerprint: 72e1316b480a3f59

@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Genital herpes
+gbd_cause_id: 398
+status: 3
+nuance: Lifelong infection; antivirals shorten outbreaks and suppressive treatment prevents most recurrences.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/herpes-simplex-virus
+  title: Herpes simplex virus fact sheet, WHO
+mesh:
+  D006558: Herpes Genitalis
+cross_check: ok
+approved: true
+fingerprint: eb19f547043392cc

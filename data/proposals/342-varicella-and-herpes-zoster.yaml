@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Varicella and herpes zoster
+gbd_cause_id: 342
+status: 2
+nuance: Chickenpox resolves on its own and antivirals help high-risk patients; shingles resolves too, but post-herpetic
+  nerve pain can last.
+sources:
+- url: https://www.nhs.uk/conditions/chickenpox/
+  title: Chickenpox, NHS
+- url: https://www.nhs.uk/conditions/shingles/
+  title: Shingles, NHS
+mesh:
+  D002644: Chickenpox
+  D006562: Herpes Zoster
+cross_check: ok
+approved: true
+fingerprint: b65046da6f24b7fd

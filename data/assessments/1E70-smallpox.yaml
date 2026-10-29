@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+icd11_code: 1E70
+icd11_title: Smallpox
+icd11_uri: http://id.who.int/icd/release/11/mms/2054716425
+status: 1
+nuance: Declared eradicated by the World Health Assembly in 1980, the first human disease to be eradicated; the
+  virus survives only in two laboratories.
+sources:
+- url: https://www.who.int/health-topics/smallpox
+  title: Smallpox, WHO
+mesh:
+  D012899: Smallpox
+cross_check: ok
+approved: true
+fingerprint: c30af3cff9397a99

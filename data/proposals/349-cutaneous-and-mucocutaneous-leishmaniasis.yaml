@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cutaneous and mucocutaneous leishmaniasis
+gbd_cause_id: 349
+status: 2
+nuance: Skin sores often heal on their own within months, leaving scars; antimony drugs and other treatments speed
+  healing. Mucosal forms are harder to treat.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/leishmaniasis
+  title: Leishmaniasis fact sheet, WHO
+mesh:
+  D016773: Leishmaniasis, Cutaneous
+  D007897: Leishmaniasis, Mucocutaneous
+cross_check: ok
+approved: true
+fingerprint: def2b745c2bd4b59

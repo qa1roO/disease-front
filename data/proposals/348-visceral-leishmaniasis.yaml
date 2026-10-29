@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Visceral leishmaniasis
+gbd_cause_id: 348
+status: 2
+nuance: Kala-azar is fatal untreated, but liposomal amphotericin B or other drugs cure over 90% of patients.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/leishmaniasis
+  title: Leishmaniasis fact sheet, WHO
+mesh:
+  D007898: Leishmaniasis, Visceral
+cross_check: ok
+approved: true
+fingerprint: cddb9ba9a413d322
