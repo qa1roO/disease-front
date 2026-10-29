@@ -3,12 +3,13 @@
 A province's size is its burden in DALYs (stage 4), 0 when no GBD cause covers it (the front end then gives it
 the minimum size). A province under a GBD cause with an approved stage-6 proposal inherits its status as
 provisional; every other province is fog (status null). The cause's assessment (status, nuance, sources,
-cross-check) sits once in meta.gbdCauses.
+cross-check) sits once in meta.gbdCauses. A directly assessed province (approved, keyed by ICD-11 URI) takes its
+own status instead, not provisional, with its assessment inline; that works for provinces with no GBD cause too.
 """
 
 
-def build_map(tree, crosswalk, burden, approved=None):
-    approved = approved or {}
+def build_map(tree, crosswalk, burden, approved=None, assessed=None):
+    approved, assessed = approved or {}, assessed or {}
     table, sizes = crosswalk["provinces"], burden["provinces"]
     on_map = {str(b["cause"]) for b in sizes.values()}
 
@@ -31,7 +32,10 @@ def build_map(tree, crosswalk, burden, approved=None):
         b = sizes.get(n["uri"])
         out["size"] = round(b["dalys"], 1) if b else 0
         out["status"] = None
-        if b and b["cause"] in approved:
+        if n["uri"] in assessed:
+            own = assessed[n["uri"]]
+            out["status"], out["provisional"], out["assessment"] = own["status"], False, assessment(own)
+        elif b and b["cause"] in approved:
             out["status"], out["provisional"] = approved[b["cause"]]["status"], True
         if b:
             entry = table[n["uri"]]

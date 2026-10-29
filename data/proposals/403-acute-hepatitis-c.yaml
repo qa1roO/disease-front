@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Acute hepatitis C
+gbd_cause_id: 403
+status: 2
+nuance: Direct-acting antivirals cure over 95% of hepatitis C infections in 8-12 weeks; most infections are undiagnosed.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/hepatitis-c
+  title: Hepatitis C fact sheet, WHO
+mesh:
+  D006526: Hepatitis C
+cross_check: ok
+approved: false
+fingerprint: 7c3332c95b706683

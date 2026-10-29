@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other nutritional deficiencies
+gbd_cause_id: 391
+status: 2
+nuance: A residual GBD group of nutritional deficiencies (e.g. iodine, vitamins); supplementation corrects most
+  of them.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/malnutrition
+  title: Malnutrition fact sheet, WHO
+mesh:
+  D003677: Deficiency Diseases
+  D018977: Micronutrients
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D003677, D018977)'
+approved: false
+fingerprint: 01a0530f3d70abfa

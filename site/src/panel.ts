@@ -63,7 +63,8 @@ function provinceStatus(node: MapNode, meta: MapData['meta']): string {
     const why = node.burden ? 'its GBD cause has no approved assessment yet' : 'no GBD cause covers this disease';
     return `<dt>Status</dt><dd>Fog (not assessed) <span class="note">${why}</span></dd>`;
   }
-  const a = node.burden ? meta.gbdCauses[String(node.burden.cause)]?.assessment : undefined;
+  // A disease assessed directly carries its own assessment; otherwise it inherits its GBD cause's.
+  const a = node.assessment ?? (node.burden ? meta.gbdCauses[String(node.burden.cause)]?.assessment : undefined);
   const tag = node.provisional
     ? ` <span class="tag" title="Inherited from the province's GBD cause, not assessed for this disease itself">provisional</span>`
     : '';

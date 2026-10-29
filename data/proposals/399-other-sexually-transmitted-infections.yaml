@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other sexually transmitted infections
+gbd_cause_id: 399
+status: 2
+nuance: A residual GBD group of other sexually transmitted infections; most bacterial and parasitic ones are curable
+  with antimicrobials.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)
+  title: Sexually transmitted infections fact sheet, WHO
+mesh:
+  D012749: Sexually Transmitted Diseases
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D012749)'
+approved: false
+fingerprint: 7abda8c5c6430de3

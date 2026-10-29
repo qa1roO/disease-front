@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other unspecified infectious diseases
+gbd_cause_id: 408
+status: 2
+nuance: A residual GBD group of other infectious diseases; most are curable with antimicrobials, outcomes vary.
+sources:
+- url: https://medlineplus.gov/infections.html
+  title: Infections, MedlinePlus
+mesh:
+  D007239: Infections
+  D003141: Communicable Diseases
+cross_check: ok
+approved: false
+fingerprint: 419861e5eafa296e

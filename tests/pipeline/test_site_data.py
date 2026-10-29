@@ -84,6 +84,21 @@ class BuildMapTest(unittest.TestCase):
             "sources": [{"url": "https://example.org/hcc", "title": "HCC"}], "crossCheck": "ok"})
         self.assertNotIn("assessment", built["meta"]["gbdCauses"]["302"])
 
+    def test_a_directly_assessed_province_overrides_its_cause_and_is_not_provisional(self):
+        cause = {417: {"gbd_cause": "Liver cancer", "status": 4, "nuance": "", "sources": [], "approved": True}}
+        own = {self.brain: {"icd11_code": "x", "status": 2, "nuance": "Own note.",
+                            "sources": [{"url": "https://example.org/own", "title": "Own"}], "cross_check": "ok"},
+               self.quoted: {"icd11_code": "y", "status": 1, "nuance": "", "sources": [], "cross_check": "ok"}}
+        built = site_data.build_map(self.tree, self.crosswalk, self.burden, cause, own)
+        by_uri = {n["uri"]: n for n in list(walk(built["root"]))[1:]}
+        brain, quoted = by_uri[self.brain], by_uri[self.quoted]
+        self.assertEqual((brain["status"], brain["provisional"]), (2, False))
+        self.assertEqual(brain["assessment"], {"status": 2, "nuance": "Own note.",
+                                               "sources": [{"url": "https://example.org/own", "title": "Own"}],
+                                               "crossCheck": "ok"})
+        # A province with no GBD cause can still be assessed.
+        self.assertEqual((quoted["status"], quoted["provisional"], quoted["size"]), (1, False, 0))
+
     def test_without_approvals_every_province_is_fog(self):
         self.assertTrue(all(n["status"] is None for n in provinces(self.map["root"])))
 

@@ -14,6 +14,8 @@ export interface MapNode {
   status?: Status;
   /** True when the status is inherited from the province's GBD cause rather than assessed for it. */
   provisional?: boolean;
+  /** Provinces assessed directly (not inherited from a GBD cause): the approved assessment itself. */
+  assessment?: Assessment;
   /** Provinces only, absent when no GBD cause covers the province. */
   burden?: Burden;
 }

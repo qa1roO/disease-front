@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cysticercosis
+gbd_cause_id: 352
+status: 3
+nuance: Neurocysticercosis is treated with antiparasitic drugs, steroids and antiseizure medicines, which control
+  seizures in most patients; some need surgery.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/taeniasis-cysticercosis
+  title: Taeniasis/cysticercosis fact sheet, WHO
+mesh:
+  D020019: Neurocysticercosis
+  D003551: Cysticercosis
+cross_check: ok
+approved: false
+fingerprint: 3124f2803eb0b543

@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Trichuriasis
+gbd_cause_id: 362
+status: 2
+nuance: Albendazole or mebendazole treats it, though cure rates are lower than for other worms; reinfection is common.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/soil-transmitted-helminth-infections
+  title: Soil-transmitted helminth infections fact sheet, WHO
+mesh:
+  D014257: Trichuriasis
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D014257)'
+approved: false
+fingerprint: f5442aa736c3d744

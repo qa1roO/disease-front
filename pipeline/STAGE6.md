@@ -6,11 +6,12 @@ The drafts go to `data/raw/stage6-drafts/` (git-ignored). `python -m pipeline 6`
 
 ## Which causes
 
-Every non-communicable GBD cause with at least one province on the map, biggest burden first. That's 173 in GBD 2023 (`proposals.ncd_causes`). Non-communicable causes with no provinces are left out (28 in GBD 2023): 10 are sub-causes counted under a GBD group, and 18 have no ICD-11 province. If a new cross-walk puts one of them on the map, the next run lists it as `no draft`.
+- **GBD causes:** every GBD cause with at least one province on the map, in every group, biggest burden first: 242 in GBD 2023 (`proposals.causes_on_map`). That's 173 non-communicable, plus 69 communicable, maternal, neonatal and nutritional causes added on 2026-10-29. Causes with no provinces are left out (39): 16 are sub-causes counted under a GBD group, and the rest have no ICD-11 province. If a new cross-walk puts one of them on the map, the next run lists it as `no draft`.
+- **Diseases assessed directly:** any draft keyed by an ICD-11 code (e.g. `1E70` for smallpox) instead of a GBD cause id. These go to `data/assessments/`, override the GBD cause's status on that one province, and are shown as assessed, not provisional. Use them for diseases no GBD cause covers, or where one disease differs from its cause.
 
 ## Ask Claude to
 
-1. **Draft** one YAML entry per cause into `data/raw/stage6-drafts/*.yaml` (any file names; entries are keyed by GBD cause id):
+1. **Draft** one YAML entry per cause into `data/raw/stage6-drafts/*.yaml` (any file names; entries are keyed by GBD cause id, or by ICD-11 code for a direct assessment):
 
    ```yaml
    493:
@@ -51,6 +52,7 @@ On 2026-10-29 the two agreed on 138 of 173 causes (79% of the burden). This is a
 
 - Start with the **FLAG** rows in `data/proposals/INDEX.md`. The cross-check flags a status that disagrees with ChEMBL's approved-drug data: Curable or Controlled with no approved drug, or Untreatable with one.
 - Many flags are expected: conditions cured by surgery (hernia, cataract, aneurysm repair) or corrected by devices (glasses, hearing aids). They still deserve a look.
+- For infections, ChEMBL often files antibiotics and antiparasitics under broad headings (e.g. "Bacterial Infections") rather than the specific disease. So many Curable infections are flagged too: 22 of the 69 communicable causes on 2026-10-29, such as syphilis and ascariasis.
 - Edit any field you disagree with, then set `approved: true`.
 - `python -m pipeline 8` puts approved statuses on the map as provisional. For each approval that changes a cause's status, it appends `{date, cause, name, from, to}` to `data/events.json`.
 

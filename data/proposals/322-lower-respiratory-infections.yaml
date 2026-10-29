@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Lower respiratory infections
+gbd_cause_id: 322
+status: 2
+nuance: Most pneumonia is cured by antibiotics (bacterial) or resolves with supportive care (viral); it is still
+  the leading infectious killer of young children where oxygen and antibiotics are out of reach.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/pneumonia
+  title: Pneumonia in children fact sheet, WHO
+mesh:
+  D012141: Respiratory Tract Infections
+  D011014: Pneumonia
+  D001988: Bronchiolitis
+cross_check: ok
+approved: false
+fingerprint: ebb4271fc6abbb90

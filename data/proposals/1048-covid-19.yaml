@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: COVID-19
+gbd_cause_id: 1048
+status: 2
+nuance: Most people recover fully; antivirals and steroids reduce severe disease and death in high-risk patients.
+  Some develop long COVID.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/coronavirus-disease-(covid-19)
+  title: Coronavirus disease (COVID-19) fact sheet, WHO
+mesh:
+  D000086382: COVID-19
+cross_check: ok
+approved: false
+fingerprint: 4e991b7c25413ba4

@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Acute hepatitis E
+gbd_cause_id: 404
+status: 2
+nuance: Usually self-limiting with full recovery; it is dangerous in pregnancy, and can become chronic in immunosuppressed
+  people.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/hepatitis-e
+  title: Hepatitis E fact sheet, WHO
+mesh:
+  D016751: Hepatitis E
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D016751)'
+approved: false
+fingerprint: 4c2f65785ef34e17

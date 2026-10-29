@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Malaria
+gbd_cause_id: 345
+status: 2
+nuance: Artemisinin-based combination therapy cures uncomplicated malaria; severe malaria needs injectable artesunate.
+  Partial artemisinin resistance is spreading in Africa.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/malaria
+  title: Malaria fact sheet, WHO
+mesh:
+  D008288: Malaria
+  D016778: Malaria, Falciparum
+  D016780: Malaria, Vivax
+cross_check: ok
+approved: false
+fingerprint: b8436d49648fbbba

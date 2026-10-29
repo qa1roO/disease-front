@@ -46,3 +46,29 @@ Sorted by burden (bigger first = more map area). ⇄ = crosses the front line.
 |  | [Genital prolapse](608-genital-prolapse.yaml) | 0.0% | 2 Curable | 3 Controlled (medium) | Pessaries or surgery restore support; recurrence occurs |
 | ⇄ | [Male infertility](598-male-infertility.yaml) | 0.0% | 4 Treatable | 3 Controlled (low) | Treatments help some; underlying cause persists |
 |  | [Uterine fibroids](604-uterine-fibroids.yaml) | 0.0% | 2 Curable | 3 Controlled (medium) | Medication or procedures ease symptoms; recurrence possible |
+
+## Batch 2: communicable, maternal, neonatal and nutritional causes, and smallpox
+
+Same blind method (2026-10-29), over the 69 causes added to stage 6 and smallpox, the first disease assessed directly.
+
+- **Agree: 58 of 70**, including smallpox as Eradicated.
+- **Disagree: 12**, **11** across the front line.
+- **Pattern:** acute infections that kill or harm many patients despite treatment.
+  - Haiku says Treatable where the proposals say Curable, because antibiotics cure the infection: meningitis, pertussis, diphtheria, maternal sepsis.
+  - The reverse for measles and Zika: the proposals say Treatable (no specific treatment), while Haiku says Curable (most patients recover on their own).
+  - Choosing one rule for acute infections (does Curable mean "a treatment cures it" or "the typical patient recovers fully"?) settles most of the list.
+
+| | Subject | Share of burden | Proposal | Haiku (confidence) | Haiku's reason |
+|---|---|---|---|---|---|
+| ⇄ | [Meningitis](332-meningitis.yaml) | 0.7% | 2 Curable | 4 Treatable (medium) | Bacterial cases are treated, but viral cases lack cure and sequelae are common |
+| ⇄ | [Measles](341-measles.yaml) | 0.5% | 4 Treatable | 2 Curable (medium) | Self-limiting infection; supportive care lets most patients recover |
+| ⇄ | [Pertussis](339-pertussis.yaml) | 0.4% | 2 Curable | 4 Treatable (medium) | Antibiotics shorten illness but do not reverse course; infant deaths common |
+| ⇄ | [Other unspecified infectious diseases](408-other-unspecified-infectious-diseases.yaml) | 0.4% | 2 Curable | 4 Treatable (low) | Mixed residual group of unspecified infections; treatment often limited |
+| ⇄ | [Other neglected tropical diseases](365-other-neglected-tropical-diseases.yaml) | 0.2% | 2 Curable | 4 Treatable (low) | Mixed residual neglected tropical diseases; treatment varies by disease |
+| ⇄ | [Other direct maternal disorders](1160-other-direct-maternal-disorders.yaml) | 0.1% | 2 Curable | 4 Treatable (low) | Mixed residual direct maternal disorders; outcomes vary widely |
+| ⇄ | [Maternal sepsis and other maternal infections](368-maternal-sepsis-and-other-maternal-infections.yaml) | 0.1% | 2 Curable | 4 Treatable (medium) | Antibiotics treat maternal sepsis, but it often kills or causes lasting harm |
+|  | [Cysticercosis](352-cysticercosis.yaml) | 0.0% | 3 Controlled | 2 Curable (low) | Albendazole or praziquantel often clears cysticercosis; seizures may persist |
+| ⇄ | [Onchocerciasis](355-onchocerciasis.yaml) | 0.0% | 3 Controlled | 4 Treatable (low) | Ivermectin controls microfilariae but adult worms and blindness persist |
+| ⇄ | [Diphtheria](338-diphtheria.yaml) | 0.0% | 2 Curable | 4 Treatable (medium) | Antitoxin and antibiotics treat diphtheria, but mortality and damage are common |
+| ⇄ | [Maternal deaths aggravated by HIV/AIDS](741-maternal-deaths-aggravated-by-hiv-aids.yaml) | 0.0% | 3 Controlled | 4 Treatable (low) | Residual group; HIV is controlled but deaths remain common |
+| ⇄ | [Zika virus](935-zika-virus.yaml) | 0.0% | 4 Treatable | 2 Curable (medium) | Usually self-limiting; supportive care only, but most recover fully |

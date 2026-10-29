@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Neonatal sepsis and other neonatal infections
+gbd_cause_id: 383
+status: 2
+nuance: Prompt antibiotics cure most newborn infections, but mortality is high where diagnosis is late, and antibiotic
+  resistance is rising.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/sepsis
+  title: Sepsis fact sheet, WHO
+mesh:
+  D000071074: Neonatal Sepsis
+  D018805: Sepsis
+cross_check: ok
+approved: false
+fingerprint: df0e9d6c28cffb3b

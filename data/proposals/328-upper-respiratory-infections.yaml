@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Upper respiratory infections
+gbd_cause_id: 328
+status: 2
+nuance: Colds and sore throats resolve on their own within days; antibiotics cure strep throat.
+sources:
+- url: https://www.nhs.uk/conditions/common-cold/
+  title: Common cold, NHS
+mesh:
+  D012141: Respiratory Tract Infections
+  D003139: Common Cold
+  D010612: Pharyngitis
+cross_check: ok
+approved: false
+fingerprint: 32ffdc43c675fabb

@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Meningitis
+gbd_cause_id: 332
+status: 2
+nuance: Bacterial meningitis is curable with prompt antibiotics, but about one in six patients dies and one in five
+  survivors has lasting effects; viral meningitis usually resolves on its own.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/meningitis
+  title: Meningitis fact sheet, WHO
+mesh:
+  D008581: Meningitis
+  D016920: Meningitis, Bacterial
+  D008585: Meningitis, Meningococcal
+cross_check: ok
+approved: false
+fingerprint: fa68347f3da1d5ec

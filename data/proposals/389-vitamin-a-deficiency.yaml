@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Vitamin A deficiency
+gbd_cause_id: 389
+status: 2
+nuance: Vitamin A supplements correct the deficiency; blindness from corneal damage is permanent.
+sources:
+- url: https://www.who.int/data/nutrition/nlis/info/vitamin-a-deficiency
+  title: Vitamin A deficiency, WHO Nutrition Landscape Information System
+mesh:
+  D014802: Vitamin A Deficiency
+  D014985: Xerophthalmia
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D014802, D014985)'
+approved: false
+fingerprint: f3118067382c663e

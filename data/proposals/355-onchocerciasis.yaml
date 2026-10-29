@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Onchocerciasis
+gbd_cause_id: 355
+status: 3
+nuance: Yearly or twice-yearly ivermectin kills the microfilariae and stops progression, and has eliminated transmission
+  in some countries; it does not kill adult worms, and blindness already caused is permanent.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/onchocerciasis
+  title: Onchocerciasis fact sheet, WHO
+mesh:
+  D009855: Onchocerciasis
+cross_check: ok
+approved: false
+fingerprint: 4012f9e30fa0eb8b

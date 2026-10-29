@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Maternal obstructed labor and uterine rupture
+gbd_cause_id: 370
+status: 2
+nuance: Caesarean section resolves obstructed labour; where it is unavailable, it causes uterine rupture, fistula
+  and death.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/maternal-mortality
+  title: Maternal mortality fact sheet, WHO
+mesh:
+  D004420: Dystocia
+  D014597: Uterine Rupture
+  D007744: Obstetric Labor Complications
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D004420, D014597, D007744)'
+approved: false
+fingerprint: 8e2e91993a579d24

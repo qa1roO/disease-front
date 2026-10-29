@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Trachoma
+gbd_cause_id: 356
+status: 2
+nuance: Azithromycin cures the infection and surgery corrects in-turned eyelashes; blindness already caused is permanent.
+  Trachoma has been eliminated in over 20 countries.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/trachoma
+  title: Trachoma fact sheet, WHO
+mesh:
+  D014141: Trachoma
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D014141)'
+approved: false
+fingerprint: 614d7b1955902817

@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Maternal deaths aggravated by HIV/AIDS
+gbd_cause_id: 741
+status: 3
+nuance: Antiretroviral therapy in pregnancy controls HIV and prevents transmission to the baby.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/hiv-aids
+  title: HIV and AIDS fact sheet, WHO
+mesh:
+  D015658: HIV Infections
+  D011251: Pregnancy Complications, Infectious
+cross_check: ok
+approved: false
+fingerprint: a83f44fdd6134e78

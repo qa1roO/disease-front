@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Schistosomiasis
+gbd_cause_id: 351
+status: 2
+nuance: Praziquantel cures the infection and mass treatment controls it; reinfection is common and long-term organ
+  damage may persist.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/schistosomiasis
+  title: Schistosomiasis fact sheet, WHO
+mesh:
+  D012552: Schistosomiasis
+cross_check: ok
+approved: false
+fingerprint: 2a838e24509cca42

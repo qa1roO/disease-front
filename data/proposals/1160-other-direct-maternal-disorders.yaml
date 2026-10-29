@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other direct maternal disorders
+gbd_cause_id: 1160
+status: 2
+nuance: A residual GBD group of other direct obstetric complications; most resolve with obstetric care.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/maternal-mortality
+  title: Maternal mortality fact sheet, WHO
+mesh:
+  D011248: Pregnancy Complications
+  D007744: Obstetric Labor Complications
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D011248, D007744)'
+approved: false
+fingerprint: 955e271c35c7e7c2

@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Maternal abortion and miscarriage
+gbd_cause_id: 995
+status: 2
+nuance: Complications of miscarriage and abortion are treated with medicines or minor procedures; unsafe abortion
+  still causes many maternal deaths.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/abortion
+  title: Abortion fact sheet, WHO
+mesh:
+  D000022: Abortion, Spontaneous
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D000022)'
+approved: false
+fingerprint: 3ee9b815c4085c66

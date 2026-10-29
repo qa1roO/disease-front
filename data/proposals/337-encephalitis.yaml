@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Encephalitis
+gbd_cause_id: 337
+status: 4
+nuance: Aciclovir treats herpes encephalitis, but most viral encephalitis has no specific treatment; many survivors
+  have lasting brain damage.
+sources:
+- url: https://www.nhs.uk/conditions/encephalitis/
+  title: Encephalitis, NHS
+- url: https://www.ninds.nih.gov/health-information/disorders/meningitis-and-encephalitis
+  title: Meningitis and Encephalitis, NINDS
+mesh:
+  D004660: Encephalitis
+  D018792: Encephalitis, Viral
+cross_check: ok
+approved: false
+fingerprint: 2c72d234752ffaec

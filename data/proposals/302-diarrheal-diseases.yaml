@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Diarrheal diseases
+gbd_cause_id: 302
+status: 2
+nuance: Oral rehydration solution and zinc cure most diarrhoea; deaths come from dehydration where these simple
+  treatments do not reach.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease
+  title: Diarrhoeal disease fact sheet, WHO
+mesh:
+  D003967: Diarrhea
+  D004403: Dysentery
+  D002771: Cholera
+  D012400: Rotavirus Infections
+cross_check: ok
+approved: false
+fingerprint: 9b2f5db90f094829

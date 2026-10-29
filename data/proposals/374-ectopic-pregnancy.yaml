@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Ectopic pregnancy
+gbd_cause_id: 374
+status: 2
+nuance: Methotrexate or surgery treats it; a ruptured ectopic pregnancy is an emergency and can be fatal without
+  surgery.
+sources:
+- url: https://www.nhs.uk/conditions/ectopic-pregnancy/
+  title: Ectopic pregnancy, NHS
+mesh:
+  D011271: Pregnancy, Ectopic
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D011271)'
+approved: false
+fingerprint: 22b7e5eb7ee412cc

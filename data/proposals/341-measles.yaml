@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Measles
+gbd_cause_id: 341
+status: 4
+nuance: No antiviral treats measles; supportive care and vitamin A reduce deaths, and most children recover, but
+  it kills and disables where care is poor. Vaccination prevents it.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/measles
+  title: Measles fact sheet, WHO
+mesh:
+  D008457: Measles
+cross_check: ok
+approved: false
+fingerprint: 0fdf8b0fda9b90df

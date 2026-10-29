@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: HIV/AIDS resulting in other diseases
+gbd_cause_id: 300
+status: 3
+nuance: Lifelong antiretroviral therapy gives near-normal life expectancy and stops transmission; about a quarter
+  of people with HIV are still not on treatment.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/hiv-aids
+  title: HIV and AIDS fact sheet, WHO
+mesh:
+  D015658: HIV Infections
+  D000163: Acquired Immunodeficiency Syndrome
+cross_check: ok
+approved: false
+fingerprint: 17622ebc058fa3c5

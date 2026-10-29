@@ -34,6 +34,7 @@ INDICATIONS = RAW_CHEMBL / "drug_indication.json"
 DRAFTS = ROOT / "data" / "raw" / "stage6-drafts"
 MESH_CACHE = ROOT / "data" / "raw" / "mesh-lookup.json"
 PROPOSALS = ROOT / "data" / "proposals"
+ASSESSMENTS = ROOT / "data" / "assessments"
 EVENTS = ROOT / "data" / "events.json"
 MAP = ROOT / "site" / "public" / "map.json"
 PKG = Path(__file__).resolve().parent
@@ -123,34 +124,53 @@ def stage4():
         print("  " + line)
 
 
+def diseases_to_assess(drafts):
+    """Direct-assessment subjects: the ICD-11 provinces whose codes appear as draft keys."""
+    codes = {k for k in drafts if isinstance(k, str)}
+    tree_data = json.loads(read(TREE))
+    found = {p["code"]: p for chapter in tree_data["chapters"] for p in leaves(chapter) if p["code"] in codes}
+    missing = codes - set(found)
+    if missing:
+        sys.exit(f"  drafts name ICD-11 codes that are not provinces: {', '.join(sorted(missing))}")
+    return [{"id": code, "name": p["title"], "dalys": 0, "members": [],
+             "identity": {"icd11_code": code, "icd11_title": p["title"], "icd11_uri": p["uri"]}}
+            for code, p in sorted(found.items())]
+
+
 def stage6(refresh=False):
     if not INDICATIONS.exists():
         chembl.fetch(RAW_CHEMBL)
     indications = json.loads(read(INDICATIONS))
     approved_drugs = proposals.approved_drugs(indications["rows"])
-    causes = proposals.ncd_causes(json.loads(read(BURDEN)))
     drafts = proposals.read_drafts(DRAFTS) if DRAFTS.exists() else {}
     urls = sorted({s["url"] for d in drafts.values() for s in d.get("sources") or [] if s.get("url")})
     with ThreadPoolExecutor(8) as pool:
         ok = dict(zip(urls, pool.map(proposals.resolves, urls)))
     propose = proposals.draft_proposer(drafts, proposals.MeshLookup(MESH_CACHE))
-    result = proposals.run(causes, PROPOSALS, propose, lambda url: ok.get(url, False), approved_drugs,
-                           refresh=refresh, tries=1)
-    print(f"  {len(causes)} non-communicable causes on the map ({indications['release']}): "
-          f"{len(result['written'])} written, {len(result['kept'])} kept, {len(result['failed'])} rejected, "
-          f"{len(result['flagged'])} flagged by the ChEMBL cross-check (see data/proposals/INDEX.md)")
+    for label, subjects, folder in (("GBD causes on the map", proposals.causes_on_map(json.loads(read(BURDEN))), PROPOSALS),
+                                    ("diseases assessed directly", diseases_to_assess(drafts), ASSESSMENTS)):
+        result = proposals.run(subjects, folder, propose, lambda url: ok.get(url, False), approved_drugs,
+                               refresh=refresh, tries=1)
+        print(f"  {len(subjects)} {label} ({indications['release']}): "
+              f"{len(result['written'])} written, {len(result['kept'])} kept, {len(result['failed'])} rejected, "
+              f"{len(result['flagged'])} flagged by the ChEMBL cross-check (see {folder.relative_to(ROOT).as_posix()}/INDEX.md)")
 
 
 def stage8():
     approved = proposals.load_approved(PROPOSALS) if PROPOSALS.exists() else {}
+    assessed = proposals.load_approved(ASSESSMENTS, key="icd11_uri") if ASSESSMENTS.exists() else {}
     events = json.loads(read(EVENTS)) if EVENTS.exists() else []
-    updated = proposals.record_events(approved, events, datetime.date.today().isoformat())
+    today = datetime.date.today().isoformat()
+    updated = proposals.record_events(approved, events, today)
+    updated = proposals.record_events({p["icd11_code"]: p for p in assessed.values()}, updated, today,
+                                      field="icd11", name_field="icd11_title")
     if updated != events or not EVENTS.exists():
         write_json(EVENTS, updated, indent=1)
         print(f"  {len(updated) - len(events)} status changes appended to data/events.json")
-    print(f"  {len(approved)} approved GBD causes; their provinces are provisional")
+    print(f"  {len(approved)} approved GBD causes (their provinces are provisional), "
+          f"{len(assessed)} diseases assessed directly")
     write_json(MAP, site_data.build_map(json.loads(read(TREE)), json.loads(read(CROSSWALK)), json.loads(read(BURDEN)),
-                                        approved))
+                                        approved, assessed))
 
 
 # number -> (name, run, inputs, outputs). A stage's own code counts as an input.
@@ -162,9 +182,10 @@ STAGES = {
           [TREE, MAPPING, ICD10_CODES, *GBD_FILES, EXTRA_CODES, REVIEW, PKG / "crosswalk.py", PKG / "gbd.py"],
           [CROSSWALK, BURDEN]),
     "6": ("status proposals", stage6, [BURDEN, INDICATIONS, DRAFTS, *sorted(DRAFTS.glob("*.yaml")),
-                                        PKG / "proposals.py"], [PROPOSALS / "INDEX.md"]),
+                                        PKG / "proposals.py"], [PROPOSALS / "INDEX.md", ASSESSMENTS / "INDEX.md"]),
     "8": ("build site data", stage8,
-          [TREE, CROSSWALK, BURDEN, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), PKG / "site_data.py",
+          [TREE, CROSSWALK, BURDEN, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), *sorted(ASSESSMENTS.glob("*.yaml")),
+           PKG / "site_data.py",
            PKG / "proposals.py"], [MAP]),
 }
 

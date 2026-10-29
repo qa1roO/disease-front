@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Late maternal deaths
+gbd_cause_id: 376
+status: 4
+nuance: Deaths from obstetric causes more than six weeks after the end of pregnancy; outcomes depend on the underlying
+  condition.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/maternal-mortality
+  title: Maternal mortality fact sheet, WHO
+mesh:
+  D011248: Pregnancy Complications
+  D011644: Puerperal Disorders
+cross_check: ok
+approved: false
+fingerprint: 83574af9473222db
