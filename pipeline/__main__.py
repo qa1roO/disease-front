@@ -4,7 +4,9 @@ Stages: 1 (fetch ICD-11), 2 (check the GBD files; fetched from a Claude session,
 3 (build data/tree.json), 4 (cross-walk and burden), 5 (MeSH terms from a Claude session's drafts, see
 pipeline/STAGE5.md), 6 (status proposals from a Claude session's drafts, see pipeline/STAGE6.md), 7 (pipeline bars
 from ClinicalTrials.gov), 8 (build site/public/map.json), or all.
-Each stage skips itself when its outputs are newer than its inputs.
+Each stage skips itself when its inputs and outputs still match the stamp it recorded in data/stamps.json (or,
+with no stamp yet, when its outputs are newer than its inputs). Stages 4, 5 and 6 skip themselves when their
+Claude-session inputs (GBD files, drafts) are missing, as in a fresh clone, and the committed outputs stand.
 """
 import argparse
 import datetime
@@ -16,7 +18,7 @@ from pathlib import Path
 import yaml
 
 from pipeline import bars, chembl, crosswalk, fetch_icd11, gbd, icd11, mesh, proposals, site_data, tree
-from pipeline.freshness import is_up_to_date
+from pipeline.freshness import Stamps
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW_ICD11 = ROOT / "data" / "raw" / "icd11"
@@ -42,6 +44,7 @@ PROPOSALS = ROOT / "data" / "proposals"
 ASSESSMENTS = ROOT / "data" / "assessments"
 EVENTS = ROOT / "data" / "events.json"
 MAP = ROOT / "site" / "public" / "map.json"
+STAMPS = ROOT / "data" / "stamps.json"
 PKG = Path(__file__).resolve().parent
 
 
@@ -58,9 +61,12 @@ def stage1():
 
 def stage2():
     missing = [p.name for p in GBD_FILES if not p.exists()]
-    if missing:
+    if missing and not (CROSSWALK.exists() and BURDEN.exists()):
         sys.exit(f"  missing in data/raw/gbd/: {', '.join(missing)}. Stage 2 runs from a Claude session with "
                  "the IHME GBD connector: follow pipeline/STAGE2.md.")
+    if missing:
+        print(f"  missing in data/raw/gbd/: {', '.join(missing)}. Stage 4 keeps the committed data/crosswalk.json and "
+              "data/burden.json; to rebuild them, follow pipeline/STAGE2.md.")
 
 
 def stage3():
@@ -167,8 +173,9 @@ def stage7():
 
 
 def diseases_to_assess(drafts):
-    """Direct-assessment subjects: the ICD-11 provinces whose codes appear as draft keys."""
+    """Direct-assessment subjects: the ICD-11 provinces whose codes appear as draft keys or already have a file."""
     codes = {k for k in drafts if isinstance(k, str)}
+    codes |= {proposals.read(p)["icd11_code"] for p in ASSESSMENTS.glob("*.yaml")}
     tree_data = json.loads(read(TREE))
     found = {p["code"]: p for chapter in tree_data["chapters"] for p in leaves(chapter) if p["code"] in codes}
     missing = codes - set(found)
@@ -233,6 +240,11 @@ STAGES = {
            PKG / "site_data.py",
            PKG / "proposals.py"], [MAP]),
 }
+# Stages whose git-ignored inputs come from a Claude session (pipeline/STAGE<n>.md) and that a fresh clone may lack.
+# Without them the stage skips itself and its committed outputs stand.
+SESSION_INPUTS = {"4": (GBD_FILES, "the IHME GBD files", "pipeline/STAGE2.md"),
+                  "5": ([MESH_DRAFTS], "data/raw/stage5-drafts/", "pipeline/STAGE5.md"),
+                  "6": ([DRAFTS], "data/raw/stage6-drafts/", "pipeline/STAGE6.md")}
 
 
 def main(argv=None):
@@ -242,13 +254,21 @@ def main(argv=None):
     parser.add_argument("--refresh", action="store_true",
                         help="stage 6: rewrite proposals that are neither approved nor edited from the current drafts")
     args = parser.parse_args(argv)
+    stamps = Stamps(STAMPS, ROOT)
     for number in STAGES if args.stage == "all" else [args.stage]:
         name, run, inputs, outputs = STAGES[number]
-        if not args.force and is_up_to_date(outputs, inputs):
+        needed, label, runbook = SESSION_INPUTS.get(number, ([], "", ""))
+        if not all(p.exists() for p in needed) and all(p.exists() for p in outputs):
+            print(f"stage {number} ({name}): no {label}, skipped; the committed outputs stand "
+                  f"(they come from a Claude session, see {runbook})")
+            continue
+        if not args.force and stamps.is_up_to_date(number, outputs, inputs):
             print(f"stage {number} ({name}): up to date, skipped")
             continue
         print(f"stage {number} ({name})")
         run(refresh=True) if number == "6" and args.refresh else run()
+        if inputs:
+            stamps.record(number, outputs, inputs)
     return 0
 
 
