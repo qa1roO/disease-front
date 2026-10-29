@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Interstitial lung disease and pulmonary sarcoidosis
+gbd_cause_id: 516
+status: 4
+nuance: Idiopathic pulmonary fibrosis is slowed by antifibrotic drugs but not stopped; sarcoidosis often resolves
+  on its own or with steroids.
+sources:
+- url: https://www.nhlbi.nih.gov/health/idiopathic-pulmonary-fibrosis/treatment
+  title: 'Idiopathic Pulmonary Fibrosis: Treatment, NHLBI'
+- url: https://www.nhlbi.nih.gov/health/sarcoidosis/treatment
+  title: 'Sarcoidosis: Treatment, NHLBI'
+mesh:
+  D017563: Lung Diseases, Interstitial
+  D054990: Idiopathic Pulmonary Fibrosis
+  D017565: Sarcoidosis, Pulmonary
+cross_check: ok
+approved: false
+fingerprint: 996fabe893f5934f

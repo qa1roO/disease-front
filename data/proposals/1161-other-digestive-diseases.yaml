@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other digestive diseases
+gbd_cause_id: 1161
+status: 4
+nuance: A residual GBD group of digestive diseases (e.g. diverticular and functional bowel disorders); outcomes
+  vary.
+sources:
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases
+  title: Digestive Diseases, NIDDK
+mesh:
+  D004066: Digestive System Diseases
+  D004238: Diverticulitis
+  D043183: Irritable Bowel Syndrome
+cross_check: ok
+approved: false
+fingerprint: 798b1b31b0aa54ed

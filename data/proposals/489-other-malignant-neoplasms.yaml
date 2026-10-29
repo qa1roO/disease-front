@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other malignant neoplasms
+gbd_cause_id: 489
+status: 4
+nuance: A residual GBD group of cancers not listed elsewhere; outcomes vary widely by site.
+sources:
+- url: https://www.cancer.gov/about-cancer/treatment/types
+  title: Types of Cancer Treatment, NCI
+mesh:
+  D009369: Neoplasms
+cross_check: ok
+approved: false
+fingerprint: ed1965cfc8a50d83

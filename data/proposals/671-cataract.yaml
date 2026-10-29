@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cataract
+gbd_cause_id: 671
+status: 2
+nuance: A short, cheap operation replaces the clouded lens and restores sight; cataract is still the leading cause
+  of blindness where surgery is out of reach.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment
+  title: Blindness and vision impairment fact sheet, WHO
+- url: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/cataracts
+  title: Cataracts, National Eye Institute
+mesh:
+  D002386: Cataract
+cross_check: ok
+approved: false
+fingerprint: 5efe9da6bad19225

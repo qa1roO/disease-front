@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Gastroesophageal reflux disease
+gbd_cause_id: 536
+status: 3
+nuance: Proton-pump inhibitors and lifestyle changes control symptoms and heal oesophagitis in most patients; anti-reflux
+  surgery is an option for some.
+sources:
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/treatment
+  title: Treatment for GER and GERD, NIDDK
+- url: https://www.nhs.uk/conditions/heartburn-and-acid-reflux/
+  title: Heartburn and acid reflux, NHS
+mesh:
+  D005764: Gastroesophageal Reflux
+cross_check: ok
+approved: false
+fingerprint: 81addd0ad8ddd4de

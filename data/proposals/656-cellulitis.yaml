@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cellulitis
+gbd_cause_id: 656
+status: 2
+nuance: Antibiotics cure cellulitis in most patients; it recurs in some, and severe infection needs hospital treatment.
+sources:
+- url: https://www.nhs.uk/conditions/cellulitis/
+  title: Cellulitis, NHS
+- url: https://medlineplus.gov/cellulitis.html
+  title: Cellulitis, MedlinePlus
+mesh:
+  D002481: Cellulitis
+cross_check: ok
+approved: false
+fingerprint: caf8776411f7f8f3

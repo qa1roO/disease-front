@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Silicosis
+gbd_cause_id: 511
+status: 5
+nuance: Lung scarring from silica dust is permanent and can progress after exposure stops; care is supportive (oxygen,
+  rehabilitation), with lung transplant for a few.
+sources:
+- url: https://www.cdc.gov/niosh/silica/about/index.html
+  title: About Silica and Worker Health, NIOSH/CDC
+- url: https://medlineplus.gov/ency/article/000134.htm
+  title: Silicosis, MedlinePlus
+mesh:
+  D012829: Silicosis
+cross_check: 'flag: claims Untreatable but ChEMBL has 1 approved drug for D012829'
+approved: false
+fingerprint: 2468d38bb7cf1ae9

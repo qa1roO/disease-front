@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Pancreatic cancer
+gbd_cause_id: 456
+status: 4
+nuance: Only about one in five patients can have surgery; chemotherapy extends life modestly. 5-year survival about
+  13%.
+sources:
+- url: https://www.cancer.gov/types/pancreatic/patient/pancreatic-treatment-pdq
+  title: Pancreatic Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/pancreas.html
+  title: 'Cancer Stat Facts: Pancreatic Cancer, SEER'
+mesh:
+  D010190: Pancreatic Neoplasms
+cross_check: ok
+approved: false
+fingerprint: 920a6a36c5e7c003

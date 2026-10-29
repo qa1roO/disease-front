@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Acute lymphoid leukemia
+gbd_cause_id: 845
+status: 2
+nuance: Curable in about 90% of children, the majority of patients; adults fare worse (around 40% long-term survival).
+sources:
+- url: https://www.cancer.gov/types/leukemia/patient/child-all-treatment-pdq
+  title: Childhood Acute Lymphoblastic Leukemia Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/alyl.html
+  title: 'Cancer Stat Facts: Acute Lymphocytic Leukemia, SEER'
+mesh:
+  D054198: Precursor Cell Lymphoblastic Leukemia-Lymphoma
+cross_check: ok
+approved: false
+fingerprint: b7a73db57423d948

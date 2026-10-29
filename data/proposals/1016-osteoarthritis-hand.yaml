@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Osteoarthritis hand
+gbd_cause_id: 1016
+status: 4
+nuance: Hand osteoarthritis is managed with exercises, splints and painkillers; no treatment slows it.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/osteoarthritis
+  title: Osteoarthritis fact sheet, WHO
+- url: https://www.nhs.uk/conditions/osteoarthritis/treatment/
+  title: 'Osteoarthritis: Treatment, NHS'
+mesh:
+  D010003: Osteoarthritis
+cross_check: ok
+approved: false
+fingerprint: 5cb1ba361e4929e2

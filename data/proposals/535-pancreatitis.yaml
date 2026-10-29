@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Pancreatitis
+gbd_cause_id: 535
+status: 2
+nuance: Most acute pancreatitis is mild and resolves with supportive hospital care and treatment of the cause (gallstones,
+  alcohol); severe attacks can be fatal, and chronic pancreatitis is managed, not cured.
+sources:
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases/pancreatitis/treatment
+  title: Treatment of Pancreatitis, NIDDK
+- url: https://www.nhs.uk/conditions/acute-pancreatitis/
+  title: Acute pancreatitis, NHS
+mesh:
+  D010195: Pancreatitis
+  D050500: Pancreatitis, Chronic
+cross_check: ok
+approved: false
+fingerprint: a795672ae2d9cccf

@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Soft tissue and other extraosseous sarcomas
+gbd_cause_id: 1011
+status: 4
+nuance: Wide surgical excision with radiotherapy cures many localized sarcomas; metastatic disease is rarely curable.
+  5-year survival about 66%.
+sources:
+- url: https://www.cancer.gov/types/soft-tissue-sarcoma/patient/adult-soft-tissue-treatment-pdq
+  title: Adult Soft Tissue Sarcoma Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/soft.html
+  title: 'Cancer Stat Facts: Soft Tissue including Heart Cancer, SEER'
+mesh:
+  D012509: Sarcoma
+  D012983: Soft Tissue Neoplasms
+cross_check: ok
+approved: false
+fingerprint: 1625baed30c23c5f

@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Endocarditis
+gbd_cause_id: 503
+status: 2
+nuance: Weeks of intravenous antibiotics, with valve surgery in about half of cases, cure most patients, but in-hospital
+  mortality is still around 15-20%.
+sources:
+- url: https://www.nhs.uk/conditions/endocarditis/
+  title: Endocarditis, NHS
+- url: https://www.nhlbi.nih.gov/health/heart-inflammation/treatment
+  title: 'Heart Inflammation: Treatment, NHLBI'
+mesh:
+  D004696: Endocarditis
+  D004697: Endocarditis, Bacterial
+cross_check: ok
+approved: false
+fingerprint: c785b0ff6b0139b0

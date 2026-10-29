@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Anxiety disorders
+gbd_cause_id: 571
+status: 4
+nuance: Cognitive behavioural therapy and SSRIs help most people and many reach remission, but anxiety disorders
+  are often chronic or relapsing, and most people worldwide get no treatment.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders
+  title: Anxiety disorders fact sheet, WHO
+- url: https://www.nimh.nih.gov/health/topics/anxiety-disorders
+  title: Anxiety Disorders, NIMH
+mesh:
+  D001008: Anxiety Disorders
+  D016584: Panic Disorder
+  D001007: Anxiety
+cross_check: ok
+approved: false
+fingerprint: ae859f35010a2f4a

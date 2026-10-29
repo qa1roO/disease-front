@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Myocarditis
+gbd_cause_id: 942
+status: 2
+nuance: Most viral myocarditis resolves with supportive and heart-failure treatment; a minority progresses to dilated
+  cardiomyopathy or needs a transplant.
+sources:
+- url: https://medlineplus.gov/ency/article/000149.htm
+  title: Myocarditis, MedlinePlus
+mesh:
+  D009205: Myocarditis
+cross_check: ok
+approved: false
+fingerprint: 1a9ba7b1b7d67e24

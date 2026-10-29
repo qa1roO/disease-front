@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Neck pain
+gbd_cause_id: 631
+status: 4
+nuance: Most episodes ease with exercise and pain relief within weeks; chronic neck pain is managed rather than
+  cured.
+sources:
+- url: https://www.nhs.uk/conditions/neck-pain/
+  title: Neck pain, NHS
+- url: https://medlineplus.gov/neckinjuriesanddisorders.html
+  title: Neck Injuries and Disorders, MedlinePlus
+mesh:
+  D019547: Neck Pain
+cross_check: ok
+approved: false
+fingerprint: f1305550f86d618a

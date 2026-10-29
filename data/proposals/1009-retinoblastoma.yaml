@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Retinoblastoma
+gbd_cause_id: 1009
+status: 2
+nuance: Cured in over 95% of children in high-income countries, usually with sight preserved; survival is far lower
+  in low-income countries because of late diagnosis.
+sources:
+- url: https://www.cancer.gov/types/retinoblastoma/patient/retinoblastoma-treatment-pdq
+  title: Retinoblastoma Treatment (PDQ), NCI
+mesh:
+  D012175: Retinoblastoma
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D012175)'
+approved: false
+fingerprint: 70250592a66271fd

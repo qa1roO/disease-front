@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other oral disorders
+gbd_cause_id: 685
+status: 4
+nuance: A residual GBD group of oral conditions; treatment varies.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/oral-health
+  title: Oral health fact sheet, WHO
+mesh:
+  D009059: Mouth Diseases
+  D009057: Stomatognathic Diseases
+cross_check: ok
+approved: false
+fingerprint: b7cb51b90387f446

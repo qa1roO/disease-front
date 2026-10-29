@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other chronic respiratory diseases
+gbd_cause_id: 520
+status: 4
+nuance: A residual GBD group of chronic respiratory diseases; most are managed rather than cured.
+sources:
+- url: https://www.who.int/health-topics/chronic-respiratory-diseases
+  title: Chronic respiratory diseases, WHO
+mesh:
+  D012140: Respiratory Tract Diseases
+  D008171: Lung Diseases
+cross_check: ok
+approved: false
+fingerprint: 28da9e7c23c6b1f4

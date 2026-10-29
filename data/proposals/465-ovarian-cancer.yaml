@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Ovarian cancer
+gbd_cause_id: 465
+status: 4
+nuance: Most cases are found at an advanced stage; surgery and platinum chemotherapy (plus PARP inhibitors) give
+  long remissions, but most relapse. 5-year survival about 52%.
+sources:
+- url: https://www.cancer.gov/types/ovarian/patient/ovarian-epithelial-treatment-pdq
+  title: Ovarian Epithelial, Fallopian Tube, and Primary Peritoneal Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/ovary.html
+  title: 'Cancer Stat Facts: Ovarian Cancer, SEER'
+mesh:
+  D010051: Ovarian Neoplasms
+cross_check: ok
+approved: false
+fingerprint: 5462960d4e470736

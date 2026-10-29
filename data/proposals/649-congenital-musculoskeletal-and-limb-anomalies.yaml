@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Congenital musculoskeletal and limb anomalies
+gbd_cause_id: 649
+status: 4
+nuance: Clubfoot and hip dysplasia are corrected by casting, bracing or surgery; limb reduction defects are managed
+  with prostheses and therapy.
+sources:
+- url: https://www.nhs.uk/conditions/club-foot/
+  title: Club foot, NHS
+- url: https://www.who.int/news-room/fact-sheets/detail/birth-defects
+  title: Congenital disorders fact sheet, WHO
+mesh:
+  D009139: Musculoskeletal Abnormalities
+  D003025: Clubfoot
+  D017880: Limb Deformities, Congenital
+cross_check: ok
+approved: false
+fingerprint: a7a0fd7ae188c602

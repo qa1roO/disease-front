@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other cardiomyopathy
+gbd_cause_id: 944
+status: 4
+nuance: Heart-failure drugs and devices improve survival substantially, but most cardiomyopathies progress; heart
+  transplant is the only cure.
+sources:
+- url: https://www.nhlbi.nih.gov/health/cardiomyopathy/treatment
+  title: 'Cardiomyopathy: Treatment, NHLBI'
+mesh:
+  D009202: Cardiomyopathies
+  D002311: Cardiomyopathy, Dilated
+  D006333: Heart Failure
+cross_check: ok
+approved: false
+fingerprint: 39adf9f44e41525b

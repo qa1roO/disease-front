@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Chronic lymphoid leukemia
+gbd_cause_id: 846
+status: 3
+nuance: Often needs no treatment for years; when it does, BTK and BCL-2 inhibitors keep most patients in long remission.
+  Not curable, but many live a near-normal lifespan. SEER 5-year survival about 89%.
+sources:
+- url: https://www.cancer.gov/types/leukemia/patient/cll-treatment-pdq
+  title: Chronic Lymphocytic Leukemia Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/clyl.html
+  title: 'Cancer Stat Facts: Chronic Lymphocytic Leukemia, SEER'
+mesh:
+  D015451: Leukemia, Lymphocytic, Chronic, B-Cell
+cross_check: ok
+approved: false
+fingerprint: a1e3feab6eb1a97a

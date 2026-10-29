@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Benign prostatic hyperplasia
+gbd_cause_id: 597
+status: 3
+nuance: Alpha-blockers and 5-alpha-reductase inhibitors control symptoms; surgery (TURP and newer procedures) relieves
+  obstruction when drugs are not enough.
+sources:
+- url: https://www.niddk.nih.gov/health-information/urologic-diseases/prostate-problems/prostate-enlargement-benign-prostatic-hyperplasia
+  title: Prostate Enlargement (Benign Prostatic Hyperplasia), NIDDK
+- url: https://www.nhs.uk/conditions/prostate-enlargement/
+  title: Benign prostate enlargement, NHS
+mesh:
+  D011470: Prostatic Hyperplasia
+cross_check: ok
+approved: false
+fingerprint: a6a3fb71d5a70612

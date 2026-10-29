@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Urinary tract infections and interstitial nephritis
+gbd_cause_id: 595
+status: 2
+nuance: Antibiotics cure urinary tract infections; interstitial nephritis usually resolves once the offending drug
+  is stopped. Rising antibiotic resistance is eroding this.
+sources:
+- url: https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-infection-uti-in-adults/treatment
+  title: Treatment for Bladder Infection (UTI) in Adults, NIDDK
+- url: https://www.nhs.uk/conditions/urinary-tract-infections-utis/
+  title: Urinary tract infections (UTIs), NHS
+mesh:
+  D014552: Urinary Tract Infections
+  D009395: Nephritis, Interstitial
+  D011704: Pyelonephritis
+cross_check: ok
+approved: false
+fingerprint: 96337f93e7fba4cf

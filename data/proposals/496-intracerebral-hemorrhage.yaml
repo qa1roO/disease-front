@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Intracerebral hemorrhage
+gbd_cause_id: 496
+status: 4
+nuance: No treatment reverses the bleed itself; acute blood-pressure control, reversal of anticoagulants, sometimes
+  surgery, and rehabilitation limit harm. About 40% die within a month and many survivors are left disabled.
+sources:
+- url: https://www.nhs.uk/conditions/stroke/treatment/
+  title: 'Stroke: Treatment, NHS'
+mesh:
+  D002543: Cerebral Hemorrhage
+  D020300: Intracranial Hemorrhages
+cross_check: ok
+approved: false
+fingerprint: 716242c35f7a4bec

@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Refraction disorders
+gbd_cause_id: 999
+status: 3
+nuance: Glasses or contact lenses correct refractive errors fully, and laser surgery can correct them permanently;
+  uncorrected refractive error is a leading cause of vision impairment because many lack glasses.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment
+  title: Blindness and vision impairment fact sheet, WHO
+- url: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/refractive-errors
+  title: Refractive Errors, National Eye Institute
+mesh:
+  D012030: Refractive Errors
+  D009216: Myopia
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D012030, D009216)'
+approved: false
+fingerprint: fb04f0e43f87cc49

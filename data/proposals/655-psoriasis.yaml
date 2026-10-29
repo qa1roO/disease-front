@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Psoriasis
+gbd_cause_id: 655
+status: 3
+nuance: Not curable, but topical treatments, phototherapy and biologics clear or nearly clear the skin in most patients.
+sources:
+- url: https://www.nhs.uk/conditions/psoriasis/
+  title: Psoriasis, NHS
+- url: https://www.niams.nih.gov/health-topics/psoriasis
+  title: Psoriasis, NIAMS
+mesh:
+  D011565: Psoriasis
+cross_check: ok
+approved: false
+fingerprint: 7afa4e416f4f496f

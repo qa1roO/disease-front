@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Chronic kidney disease due to hypertension
+gbd_cause_id: 591
+status: 4
+nuance: Tight blood-pressure control and SGLT2 inhibitors slow the loss of kidney function; it does not recover,
+  and kidney failure needs dialysis or transplant.
+sources:
+- url: https://www.niddk.nih.gov/health-information/kidney-disease/high-blood-pressure
+  title: High Blood Pressure & Kidney Disease, NIDDK
+mesh:
+  D006977: Hypertension, Renal
+  D051436: Renal Insufficiency, Chronic
+cross_check: ok
+approved: false
+fingerprint: 5bd5d295294ab148

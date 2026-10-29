@@ -1,0 +1,20 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Breast cancer
+gbd_cause_id: 429
+status: 2
+nuance: Most patients are diagnosed with localized or regional disease and are cured by surgery with radiotherapy
+  and systemic therapy (SEER 5-year survival about 91%). Metastatic breast cancer is treatable, not curable; outcomes
+  are much worse where screening and treatment are scarce.
+sources:
+- url: https://www.cancer.gov/types/breast/patient/breast-treatment-pdq
+  title: Breast Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/breast.html
+  title: 'Cancer Stat Facts: Female Breast Cancer, SEER'
+- url: https://www.who.int/news-room/fact-sheets/detail/breast-cancer
+  title: Breast cancer fact sheet, WHO
+mesh:
+  D001943: Breast Neoplasms
+cross_check: ok
+approved: false
+fingerprint: a74e7109d296a4ef

@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Age-related macular degeneration
+gbd_cause_id: 672
+status: 4
+nuance: Regular anti-VEGF injections preserve sight in wet AMD; the more common dry form can only be slowed modestly
+  (complement inhibitors for geographic atrophy).
+sources:
+- url: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration
+  title: Age-Related Macular Degeneration, National Eye Institute
+- url: https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/
+  title: Age-related macular degeneration (AMD), NHS
+mesh:
+  D008268: Macular Degeneration
+  D057135: Wet Macular Degeneration
+  D057092: Geographic Atrophy
+cross_check: ok
+approved: false
+fingerprint: c76f1ff04de1583b

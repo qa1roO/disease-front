@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other non-Hodgkin lymphoma
+gbd_cause_id: 1007
+status: 4
+nuance: A mixed group. The commonest aggressive type (diffuse large B-cell) is cured in about 60-70% of patients;
+  indolent types such as follicular lymphoma are controlled for years but relapse. SEER 5-year survival about 74%.
+sources:
+- url: https://www.cancer.gov/types/lymphoma/patient/adult-nhl-treatment-pdq
+  title: Adult Non-Hodgkin Lymphoma Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/nhl.html
+  title: 'Cancer Stat Facts: Non-Hodgkin Lymphoma, SEER'
+mesh:
+  D008228: Lymphoma, Non-Hodgkin
+  D016403: Lymphoma, Large B-Cell, Diffuse
+  D008224: Lymphoma, Follicular
+cross_check: ok
+approved: false
+fingerprint: b3e49aaa0b806a80

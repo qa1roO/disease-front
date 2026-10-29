@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Uterine cancer
+gbd_cause_id: 435
+status: 2
+nuance: Most endometrial cancers are found at stage I because of early bleeding and are cured by hysterectomy. SEER
+  5-year survival about 81%.
+sources:
+- url: https://www.cancer.gov/types/uterine/patient/endometrial-treatment-pdq
+  title: Endometrial Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/corp.html
+  title: 'Cancer Stat Facts: Uterine Cancer, SEER'
+mesh:
+  D016889: Endometrial Neoplasms
+  D014594: Uterine Neoplasms
+cross_check: ok
+approved: false
+fingerprint: 9bdff5407f47ec85

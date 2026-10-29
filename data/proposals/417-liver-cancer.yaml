@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Liver cancer
+gbd_cause_id: 417
+status: 4
+nuance: Resection, ablation or transplant can cure early liver cancer, but most patients present with advanced disease;
+  systemic therapy extends survival. 5-year survival about 22%.
+sources:
+- url: https://www.cancer.gov/types/liver/patient/adult-liver-treatment-pdq
+  title: Liver (Hepatocellular) Cancer Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/livibd.html
+  title: 'Cancer Stat Facts: Liver and Intrahepatic Bile Duct Cancer, SEER'
+mesh:
+  D008113: Liver Neoplasms
+  D006528: Carcinoma, Hepatocellular
+cross_check: ok
+approved: false
+fingerprint: bf84d4838d0c0cb3

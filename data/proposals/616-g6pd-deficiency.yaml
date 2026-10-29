@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: G6PD deficiency
+gbd_cause_id: 616
+status: 3
+nuance: Most people never have symptoms if they avoid triggers (fava beans, certain drugs, some infections); haemolytic
+  episodes resolve once the trigger is removed.
+sources:
+- url: https://medlineplus.gov/genetics/condition/glucose-6-phosphate-dehydrogenase-deficiency/
+  title: Glucose-6-phosphate dehydrogenase deficiency, MedlinePlus Genetics
+mesh:
+  D005955: Glucosephosphate Dehydrogenase Deficiency
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D005955)'
+approved: false
+fingerprint: 4ab33f0a8857d876

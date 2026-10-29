@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { area, bandSplit, type Polygon } from './geometry';
-import { continent, layoutMap, MIN_SHARE, minimumSize } from './layout';
-import type { MapData, MapNode } from './types';
+import { chapterSummaries, continent, layoutMap, MIN_SHARE, minimumSize } from './layout';
+import { sideOf, type MapData, type MapNode } from './types';
 
 const square: Polygon = [[0, 0], [100, 0], [100, 100], [0, 100]];
 
@@ -48,6 +48,37 @@ describe('layoutMap', () => {
     expect(layoutMap(root).borders.map(b => b.kind)).toContain('front');
   });
 
+  it('draws exactly one straight front line per territory, between its held and contested bands', () => {
+    const statuses: MapNode['status'][] = [5, 2, null, 4, 3, 1, 4, null, 5, 2, 3, 4];
+    const mixed: MapNode = { kind: 'root', title: 'All', children: [
+      { kind: 'chapter', code: '01', title: 'One', uri: '1', children: statuses.map((s, i) => province(`p${i}`, s)) },
+      { kind: 'chapter', code: '02', title: 'Two', uri: '2', children: [province('h', 2), province('f')] },
+    ] };
+    const kinds = layoutMap(mixed).borders.map(b => b.kind);
+    expect(kinds.filter(k => k === 'front')).toHaveLength(1);
+    // Chapter one's contested | fog edge and chapter two's held | fog edge.
+    expect(kinds.filter(k => k === 'fog-edge')).toHaveLength(2);
+  });
+
+  it('summarises each chapter zoomed out as held | contested | fog bands by burden, one front line each', () => {
+    const sized = (code: string, size: number, status: MapNode['status']): MapNode => ({ ...province(code, status), size });
+    const two: MapNode = { kind: 'root', title: 'All', children: [
+      { kind: 'chapter', code: '01', title: 'One', uri: '1', children: [
+        { kind: 'block', code: 'B', title: 'B', uri: 'b', children: [sized('a', 30, 2), sized('b', 10, 5)] },
+        { kind: 'block', code: 'C', title: 'C', uri: 'c', children: [sized('c', 30, 3), sized('d', 30, null)] },
+      ] },
+      { kind: 'chapter', code: '02', title: 'Two', uri: '2', children: [sized('e', 100, 4)] },
+    ] };
+    const layout = layoutMap(two);
+    const summaries = chapterSummaries(layout, two);
+    const one = summaries.find(s => s.region.node.code === '01')!, other = summaries.find(s => s.region.node.code === '02')!;
+    expect(one.pieces.map(p => p.key)).toEqual(['held', 'contested', 'fog']);
+    expect(area(one.pieces[0].polygon) / area(one.region.polygon)).toBeCloseTo(0.6, 2);
+    expect(one.borders.map(b => b.kind)).toEqual(['front', 'fog-edge']);
+    expect(other.pieces.map(p => p.key)).toEqual(['contested']);
+    expect(other.borders).toHaveLength(0);
+  });
+
   it('gives a province with no burden the minimum size, a share of the mean', () => {
     const sized = (code: string, size: number): MapNode => ({ ...province(code), size });
     const small: MapNode = { kind: 'root', title: 'All', children: [
@@ -79,5 +110,16 @@ describe('layoutMap on the real map.json', () => {
     expect(first.territories).toHaveLength(data.meta.counts.chapters + data.meta.counts.territories);
     const second = layoutMap(data.root);
     expect(second.provinces.map(p => p.polygon)).toEqual(first.provinces.map(p => p.polygon));
+
+    // One front line for every set of sibling provinces (a territory's direct provinces) holding both sides.
+    let contestedSets = 0;
+    (function walk(n: MapNode) {
+      if (!n.children) return;
+      const sides = new Set(n.children.filter(c => !c.children).map(c => sideOf(c.status)));
+      if (sides.has('held') && sides.has('contested')) contestedSets++;
+      n.children.forEach(walk);
+    })(data.root);
+    console.log(`front lines: ${contestedSets} territories hold both held and contested provinces`);
+    expect(first.borders.filter(b => b.kind === 'front')).toHaveLength(contestedSets);
   }, 60_000);
 });

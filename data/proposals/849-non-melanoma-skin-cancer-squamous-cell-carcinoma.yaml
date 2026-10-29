@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Non-melanoma skin cancer (squamous-cell carcinoma)
+gbd_cause_id: 849
+status: 2
+nuance: Cutaneous squamous-cell carcinoma is cured by excision or other local treatment in the vast majority of
+  cases; a small share spreads, mainly in immunosuppressed patients.
+sources:
+- url: https://www.cancer.gov/types/skin/patient/skin-treatment-pdq
+  title: Skin Cancer Treatment (PDQ), NCI
+mesh:
+  D002294: Carcinoma, Squamous Cell
+  D012878: Skin Neoplasms
+cross_check: ok
+approved: false
+fingerprint: 0b696f2930a7c6c6

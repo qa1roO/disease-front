@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other leukemia
+gbd_cause_id: 943
+status: 4
+nuance: A residual GBD group of leukaemias not listed separately; outcomes vary by type.
+sources:
+- url: https://www.cancer.gov/types/leukemia
+  title: Leukemia, NCI
+mesh:
+  D007938: Leukemia
+cross_check: ok
+approved: false
+fingerprint: a7ac0ee945d534c2

@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Thyroid diseases
+gbd_cause_id: 1032
+status: 3
+nuance: Hypothyroidism is controlled by daily levothyroxine; hyperthyroidism is treated with drugs, radioiodine
+  or surgery, and goitre from iodine deficiency is prevented by iodised salt.
+sources:
+- url: https://www.niddk.nih.gov/health-information/endocrine-diseases/hypothyroidism
+  title: Hypothyroidism (Underactive Thyroid), NIDDK
+- url: https://www.niddk.nih.gov/health-information/endocrine-diseases/hyperthyroidism
+  title: Hyperthyroidism (Overactive Thyroid), NIDDK
+mesh:
+  D013959: Thyroid Diseases
+  D007037: Hypothyroidism
+  D006980: Hyperthyroidism
+cross_check: ok
+approved: false
+fingerprint: 40b4c619c988b653

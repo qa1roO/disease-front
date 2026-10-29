@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Pruritus
+gbd_cause_id: 663
+status: 4
+nuance: Chronic itch is eased by emollients, antihistamines and treating the underlying cause; it is often persistent.
+sources:
+- url: https://www.nhs.uk/conditions/itchy-skin/
+  title: Itchy skin, NHS
+- url: https://medlineplus.gov/itching.html
+  title: Itching, MedlinePlus
+mesh:
+  D011537: Pruritus
+cross_check: ok
+approved: false
+fingerprint: 567129179b35af9e

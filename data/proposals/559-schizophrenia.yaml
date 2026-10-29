@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Schizophrenia
+gbd_cause_id: 559
+status: 4
+nuance: Antipsychotics and psychosocial care reduce psychosis and relapse, and some patients recover well, but many
+  have lasting symptoms; life expectancy is 10-20 years shorter.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/schizophrenia
+  title: Schizophrenia fact sheet, WHO
+- url: https://www.nimh.nih.gov/health/topics/schizophrenia
+  title: Schizophrenia, NIMH
+mesh:
+  D012559: Schizophrenia
+cross_check: ok
+approved: false
+fingerprint: 3ff63cce730d8f01

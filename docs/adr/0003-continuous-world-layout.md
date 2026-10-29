@@ -24,7 +24,7 @@ Inside each block, the polygon is first cut into held | contested | fog bands by
 
 - It's the most strategy-game-like option and shows the whole war at once.
 - Full layout of ~4,100 provinces took ~0.8 s in the browser. That's fine, and the real pipeline could precompute it.
-- Zoomed out, the front line is many short segments, one per block, not one line per chapter. If that reads badly on real data, a fix is to switch zoomed-out territories to a two-band summary view (as in variant A).
+- Zoomed out, the front line is many short segments, one per block, not one line per chapter. If that reads badly on real data, a fix is to switch zoomed-out territories to a two-band summary view (as in variant A). It did (2026-10-29, ticket 04), so zoomed out each chapter now shows as one held | contested | fog summary with a single front line, fading into the detail as you zoom in.
 - Within a band, status shades are not yet graded smoothly west → east.
 
 ## Alternatives explored: one shared front line

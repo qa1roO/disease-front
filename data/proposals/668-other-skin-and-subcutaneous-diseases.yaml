@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other skin and subcutaneous diseases
+gbd_cause_id: 668
+status: 4
+nuance: A residual GBD group of skin and subcutaneous diseases; outcomes vary.
+sources:
+- url: https://www.niams.nih.gov/health-topics/skin-diseases
+  title: Skin Diseases, NIAMS
+mesh:
+  D012871: Skin Diseases
+cross_check: ok
+approved: false
+fingerprint: a510ee5a57559381

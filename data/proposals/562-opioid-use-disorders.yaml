@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Opioid use disorders
+gbd_cause_id: 562
+status: 4
+nuance: Methadone or buprenorphine maintenance halves mortality and lets many patients stabilise, but relapse is
+  frequent, and most people with opioid dependence worldwide get no treatment.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/opioid-overdose
+  title: Opioid overdose fact sheet, WHO
+- url: https://nida.nih.gov/research-topics/medications-opioid-use-disorder
+  title: Medications for Opioid Use Disorder, NIDA
+mesh:
+  D009293: Opioid-Related Disorders
+cross_check: ok
+approved: false
+fingerprint: 41fccc8153167a34

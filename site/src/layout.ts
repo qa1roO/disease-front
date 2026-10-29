@@ -192,6 +192,36 @@ function stripes(poly: Polygon, ranked: Item[]) {
   return pieces.map(p => ({ item: p.items[0], polygon: p.polygon }));
 }
 
+/** A chapter drawn as one held | contested | fog summary, for the zoomed-out view (ADR 0003's fallback). */
+export interface Summary {
+  region: Region;
+  pieces: { key: Side; polygon: Polygon }[];
+  borders: Border[];
+}
+
+/**
+ * Zoomed out, a front line per territory is dozens of short ticks. Instead each chapter is cut west → east into
+ * bands by the burden share of its held, contested and fog provinces (minimum sizes included, as in the layout),
+ * giving one front line per chapter at the territory's held share.
+ */
+export function chapterSummaries(layout: Layout, root: MapNode): Summary[] {
+  const minSize = minimumSize(root);
+  return layout.territories.filter(t => t.depth === 0).map(region => {
+    const weight: Record<Side, number> = { held: 0, contested: 0, fog: 0 };
+    (function walk(n: MapNode) {
+      if (n.children) n.children.forEach(walk);
+      else weight[sideOf(n.status)] += Math.max(n.size ?? 0, minSize);
+    })(region.node);
+    const sides: Side[] = ['held', 'contested', 'fog'];
+    const { pieces, borders } = bandSplit(region.polygon, sides.map(key => ({ key, weight: weight[key], items: [] })));
+    return {
+      region,
+      pieces: pieces.map(p => ({ key: p.key as Side, polygon: p.polygon })),
+      borders: borders.map(b => ({ kind: b.between[0] === 'held' && b.between[1] === 'contested' ? 'front' : 'fog-edge', segment: b.segment }) as Border),
+    };
+  });
+}
+
 /** Chapter › … › parent territory, for the info panel. */
 export function ancestry(region: Region): Region[] {
   const path: Region[] = [];

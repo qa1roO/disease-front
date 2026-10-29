@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Male infertility
+gbd_cause_id: 598
+status: 4
+nuance: Some causes are correctable (varicocele, hormone problems); otherwise assisted reproduction such as ICSI
+  lets many men father children.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/infertility
+  title: Infertility fact sheet, WHO
+- url: https://www.nhs.uk/conditions/infertility/treatment/
+  title: 'Infertility: Treatment, NHS'
+mesh:
+  D007248: Infertility, Male
+cross_check: ok
+approved: false
+fingerprint: 38fafb5b3d463f54

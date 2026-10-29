@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Scabies
+gbd_cause_id: 658
+status: 2
+nuance: Permethrin cream or oral ivermectin, for the patient and close contacts, cures it; mass drug administration
+  is used in endemic communities.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/scabies
+  title: Scabies fact sheet, WHO
+- url: https://www.nhs.uk/conditions/scabies/
+  title: Scabies, NHS
+mesh:
+  D012532: Scabies
+cross_check: ok
+approved: false
+fingerprint: d018ad8edd96013f

@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Gastritis and duodenitis
+gbd_cause_id: 528
+status: 2
+nuance: Treating the cause (H. pylori eradication, stopping NSAIDs or alcohol) with acid suppression heals most
+  gastritis and duodenitis.
+sources:
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/treatment
+  title: Treatment for Gastritis and Gastropathy, NIDDK
+mesh:
+  D005756: Gastritis
+  D004382: Duodenitis
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D005756, D004382)'
+approved: false
+fingerprint: a3806f361d4b8eb7

@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Benign and in situ intestinal neoplasms
+gbd_cause_id: 965
+status: 2
+nuance: Colorectal polyps and in situ tumours are cured by removal at colonoscopy; that is the point of screening.
+sources:
+- url: https://medlineplus.gov/colonicpolyps.html
+  title: Colonic Polyps, MedlinePlus
+mesh:
+  D003111: Colonic Polyps
+  D007417: Intestinal Polyps
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D003111, D007417)'
+approved: false
+fingerprint: 4bb5af9c128cf324

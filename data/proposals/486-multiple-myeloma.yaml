@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Multiple myeloma
+gbd_cause_id: 486
+status: 4
+nuance: Not curable; modern combinations (proteasome inhibitors, immunomodulators, anti-CD38 antibodies, CAR-T)
+  give years of remission. 5-year survival about 62%.
+sources:
+- url: https://www.cancer.gov/types/myeloma/patient/myeloma-treatment-pdq
+  title: Plasma Cell Neoplasms (Including Multiple Myeloma) Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/mulmy.html
+  title: 'Cancer Stat Facts: Myeloma, SEER'
+mesh:
+  D009101: Multiple Myeloma
+cross_check: ok
+approved: false
+fingerprint: 9ae50f5d88596353

@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Asbestosis
+gbd_cause_id: 512
+status: 5
+nuance: Asbestos-caused lung fibrosis is permanent and often progressive; treatment is supportive.
+sources:
+- url: https://medlineplus.gov/ency/article/000118.htm
+  title: Asbestosis, MedlinePlus
+- url: https://www.nhs.uk/conditions/asbestosis/
+  title: Asbestosis, NHS
+mesh:
+  D001195: Asbestosis
+cross_check: ok
+approved: false
+fingerprint: 0b524aee81ca9199

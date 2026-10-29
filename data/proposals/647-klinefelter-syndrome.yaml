@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Klinefelter syndrome
+gbd_cause_id: 647
+status: 3
+nuance: Testosterone replacement and support let men with Klinefelter syndrome lead normal lives; most are infertile,
+  though sperm retrieval and IVF help some.
+sources:
+- url: https://medlineplus.gov/genetics/condition/klinefelter-syndrome/
+  title: Klinefelter syndrome, MedlinePlus Genetics
+- url: https://www.nhs.uk/conditions/klinefelters-syndrome/
+  title: Klinefelter syndrome, NHS
+mesh:
+  D007713: Klinefelter Syndrome
+cross_check: ok
+approved: false
+fingerprint: ab0eba2d180a50ac

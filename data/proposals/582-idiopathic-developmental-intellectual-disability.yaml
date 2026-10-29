@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Idiopathic developmental intellectual disability
+gbd_cause_id: 582
+status: 5
+nuance: The underlying impairment is lifelong and no therapy changes it; education and support make a large difference
+  to quality of life and independence.
+sources:
+- url: https://medlineplus.gov/ency/article/001523.htm
+  title: Intellectual disability, MedlinePlus
+mesh:
+  D008607: Intellectual Disability
+cross_check: ok
+approved: false
+fingerprint: 80af9a506fce6924

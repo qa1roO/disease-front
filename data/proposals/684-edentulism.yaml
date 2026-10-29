@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Edentulism
+gbd_cause_id: 684
+status: 3
+nuance: Lost teeth do not grow back, but dentures or implants restore chewing and appearance.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/oral-health
+  title: Oral health fact sheet, WHO
+mesh:
+  D009066: Mouth, Edentulous
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D009066)'
+approved: false
+fingerprint: cbd3c246a5dd4dae

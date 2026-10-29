@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Osteoarthritis hip
+gbd_cause_id: 1014
+status: 4
+nuance: Symptoms are managed with exercise and painkillers; hip replacement, one of the most successful operations,
+  restores function in advanced disease.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/osteoarthritis
+  title: Osteoarthritis fact sheet, WHO
+- url: https://www.nhs.uk/conditions/hip-replacement/
+  title: Hip replacement, NHS
+mesh:
+  D015207: Osteoarthritis, Hip
+cross_check: ok
+approved: false
+fingerprint: 2835e95b2bf57f34

@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Decubitus ulcer
+gbd_cause_id: 665
+status: 4
+nuance: Pressure relief, wound care and nutrition heal early pressure ulcers; deep ulcers in frail, immobile patients
+  often never heal fully. Prevention is the main tool.
+sources:
+- url: https://www.nhs.uk/conditions/pressure-sores/
+  title: Pressure ulcers (pressure sores), NHS
+- url: https://medlineplus.gov/pressuresores.html
+  title: Pressure Sores, MedlinePlus
+mesh:
+  D003668: Pressure Ulcer
+cross_check: ok
+approved: false
+fingerprint: 8831dbd780532172

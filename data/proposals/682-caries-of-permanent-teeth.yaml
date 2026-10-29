@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Caries of permanent teeth
+gbd_cause_id: 682
+status: 2
+nuance: Fillings remove the decay; early lesions can be reversed with fluoride. Untreated caries of permanent teeth
+  is the most common health condition in the world.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/oral-health
+  title: Oral health fact sheet, WHO
+- url: https://www.nidcr.nih.gov/health-info/tooth-decay
+  title: Tooth Decay, NIDCR
+mesh:
+  D003731: Dental Caries
+cross_check: ok
+approved: false
+fingerprint: 87400de880718c4b

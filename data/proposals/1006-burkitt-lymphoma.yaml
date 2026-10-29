@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Burkitt lymphoma
+gbd_cause_id: 1006
+status: 2
+nuance: Intensive chemotherapy cures about 90% of children and most adults in high-income settings; survival is
+  much lower in sub-Saharan Africa, where most cases occur.
+sources:
+- url: https://www.cancer.gov/types/lymphoma/patient/child-nhl-treatment-pdq
+  title: Childhood Non-Hodgkin Lymphoma Treatment (PDQ), NCI
+mesh:
+  D002051: Burkitt Lymphoma
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D002051)'
+approved: false
+fingerprint: f199da55a7be8241

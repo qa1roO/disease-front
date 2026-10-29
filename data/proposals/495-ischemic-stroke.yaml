@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Ischemic stroke
+gbd_cause_id: 495
+status: 4
+nuance: Clot-busting drugs and thrombectomy can reverse a stroke if given within hours, but most patients worldwide
+  do not reach them in time; rehabilitation and secondary prevention limit disability and recurrence.
+sources:
+- url: https://www.nhs.uk/conditions/stroke/treatment/
+  title: 'Stroke: Treatment, NHS'
+- url: https://www.nhlbi.nih.gov/health/stroke/treatment
+  title: 'Stroke: Treatment, NHLBI'
+mesh:
+  D000083242: Ischemic Stroke
+  D020521: Stroke
+  D002545: Brain Ischemia
+cross_check: ok
+approved: false
+fingerprint: a641776205c62086

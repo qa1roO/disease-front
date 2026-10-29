@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Low back pain
+gbd_cause_id: 630
+status: 4
+nuance: Most acute episodes settle within weeks with activity, exercise therapy and pain relief, but no treatment
+  reliably cures chronic low back pain, which recurs in many.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/low-back-pain
+  title: Low back pain fact sheet, WHO
+- url: https://www.nhs.uk/conditions/back-pain/
+  title: Back pain, NHS
+mesh:
+  D017116: Low Back Pain
+cross_check: ok
+approved: false
+fingerprint: 4243e22dbbefdba8

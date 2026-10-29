@@ -1,0 +1,19 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Urogenital congenital anomalies
+gbd_cause_id: 650
+status: 2
+nuance: Most urogenital anomalies (e.g. hypospadias, undescended testes, urinary tract obstructions) are corrected
+  surgically; some severe kidney malformations lead to kidney failure.
+sources:
+- url: https://medlineplus.gov/ency/article/001286.htm
+  title: Hypospadias, MedlinePlus
+- url: https://www.nhs.uk/conditions/undescended-testicles/
+  title: Undescended testicles, NHS
+mesh:
+  D014564: Urogenital Abnormalities
+  D007021: Hypospadias
+  D003456: Cryptorchidism
+cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D014564, D007021, D003456)'
+approved: false
+fingerprint: 9950c4bc7482d072

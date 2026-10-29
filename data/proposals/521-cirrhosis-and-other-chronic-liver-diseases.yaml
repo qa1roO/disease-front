@@ -1,0 +1,21 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cirrhosis and other chronic liver diseases
+gbd_cause_id: 521
+status: 4
+nuance: Treating the cause (hepatitis C is curable, hepatitis B suppressible, alcohol stopped) can halt and partly
+  reverse fibrosis; established cirrhosis is managed, and transplant is the only cure for end-stage disease.
+sources:
+- url: https://www.niddk.nih.gov/health-information/liver-disease/cirrhosis/treatment
+  title: Treatment for Cirrhosis, NIDDK
+- url: https://www.nhs.uk/conditions/cirrhosis/treatment/
+  title: 'Cirrhosis: Treatment, NHS'
+mesh:
+  D008103: Liver Cirrhosis
+  D008107: Liver Diseases
+  D019694: Hepatitis B, Chronic
+  D019698: Hepatitis C, Chronic
+  D008104: Liver Cirrhosis, Alcoholic
+cross_check: ok
+approved: false
+fingerprint: 4da2e3b504ca26aa

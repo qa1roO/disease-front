@@ -1,7 +1,7 @@
 import { select, zoom, zoomIdentity, type ZoomTransform } from 'd3';
 import './style.css';
 import { buildLabels, visibleLabels, type Label, type Measure } from './labels';
-import { layoutMap, WORLD, type Region } from './layout';
+import { chapterSummaries, layoutMap, WORLD, type Region } from './layout';
 import { renderPanel } from './panel';
 import { fill, FOG, FRONT, STATUS_NAME } from './status';
 import type { MapData } from './types';
@@ -31,6 +31,7 @@ function legend(el: HTMLElement) {
     row(`<span class="sw split"><i style="background:${fill(4)}"></i><i style="background:${fill(4, true)}"></i></span>`, 'Assessed | provisional (lighter)') +
     row(sw(FOG), 'Fog (not assessed)') +
     row(`<span class="sw line" style="background:${FRONT}"></span>`, 'Front line (held | contested)') +
+    row(`<span class="sw split"><i style="background:${fill(2)}"></i><i style="background:${fill(4)}"></i><i style="background:${FOG}"></i></span>`, 'Zoomed out: each chapter held | contested | fog by burden') +
     row('<span class="sw line dashed"></span>', 'Edge of fog') +
     row('<span class="sw weights"><i></i><i></i><i></i></span>', 'Borders: chapter, territory, province');
 }
@@ -49,11 +50,22 @@ async function main() {
   world.append('g').attr('class', 'provinces').selectAll('path').data(layout.provinces).join('path')
     .attr('d', d => closed(d.polygon)).attr('fill', d => fill(d.node.status, d.node.provisional))
     .on('click', (_, d) => show(d));
-  world.append('g').attr('class', 'border-territory').selectAll('path')
+  // Zoomed out, each chapter shows as one held | contested | fog summary (ADR 0003's fallback); it fades
+  // into the province detail as you zoom in.
+  const summaryColor = { held: fill(2), contested: fill(4), fog: FOG };
+  const summaries = chapterSummaries(layout, data.root);
+  const summary = world.append('g').attr('class', 'summary');
+  summary.append('g').selectAll('path').data(summaries.flatMap(s => s.pieces)).join('path')
+    .attr('d', d => closed(d.polygon)).attr('fill', d => summaryColor[d.key]);
+  summary.append('g').attr('class', 'bands').selectAll('path').data(summaries.flatMap(s => s.borders)).join('path')
+    .attr('class', d => `${d.kind} summary-line`).attr('d', d => segment(d.segment));
+  const territoryBorders = world.append('g').attr('class', 'border-territory');
+  territoryBorders.selectAll('path')
     .data(layout.territories.filter(t => t.depth > 0)).join('path').attr('d', d => closed(d.polygon));
   world.append('g').attr('class', 'border-chapter').selectAll('path')
     .data(layout.territories.filter(t => t.depth === 0)).join('path').attr('d', d => closed(d.polygon));
-  world.append('g').attr('class', 'bands').selectAll('path').data(layout.borders).join('path')
+  const detailBands = world.append('g').attr('class', 'bands');
+  detailBands.selectAll('path').data(layout.borders).join('path')
     .attr('class', d => d.kind).attr('d', d => segment(d.segment));
   const selection = world.append('path').attr('class', 'selected');
   const labelLayer = svg.append('g').attr('class', 'labels');
@@ -78,11 +90,17 @@ async function main() {
   };
 
   const fit = Math.min((innerWidth - 40) / WORLD.width, (innerHeight - 40) / WORLD.height);
+  // Summary fully shown up to 1.5× the fitted zoom, gone by 3×.
+  const summaryOpacity = (k: number) => Math.max(0, Math.min(1, (3 - k / fit) / 1.5));
   const behaviour = zoom<SVGSVGElement, unknown>()
     .scaleExtent([fit * 0.7, fit * 120])
     .on('zoom', e => {
       transform = e.transform;
       world.attr('transform', transform.toString());
+      const o = summaryOpacity(transform.k);
+      summary.attr('opacity', o).attr('display', o > 0 ? null : 'none');
+      detailBands.attr('opacity', 1 - o);
+      territoryBorders.attr('opacity', 1 - o);
       if (!pending) { pending = true; requestAnimationFrame(drawLabels); }
     });
   svg.call(behaviour).on('dblclick.zoom', null);

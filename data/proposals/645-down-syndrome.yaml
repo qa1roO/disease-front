@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Down syndrome
+gbd_cause_id: 645
+status: 5
+nuance: The extra chromosome cannot be treated; treating associated conditions (heart defects, thyroid disease)
+  and early support have raised life expectancy to about 60 years in high-income countries.
+sources:
+- url: https://medlineplus.gov/downsyndrome.html
+  title: Down Syndrome, MedlinePlus
+- url: https://www.nhs.uk/conditions/downs-syndrome/
+  title: Down's syndrome, NHS
+mesh:
+  D004314: Down Syndrome
+cross_check: ok
+approved: false
+fingerprint: 40787f80c429f07a

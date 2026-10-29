@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Other drug use disorders
+gbd_cause_id: 566
+status: 4
+nuance: A residual GBD group of other drug use disorders, treated mainly with psychosocial approaches.
+sources:
+- url: https://nida.nih.gov/research-topics/treatment
+  title: Treatment, NIDA
+mesh:
+  D019966: Substance-Related Disorders
+cross_check: ok
+approved: false
+fingerprint: 76251b8e1a0e0049

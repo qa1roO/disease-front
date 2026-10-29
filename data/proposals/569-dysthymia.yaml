@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Dysthymia
+gbd_cause_id: 569
+status: 4
+nuance: Persistent depressive disorder responds to psychotherapy and antidepressants, but it is long-lasting by
+  definition and often relapses.
+sources:
+- url: https://www.nimh.nih.gov/health/topics/depression
+  title: Depression (including persistent depressive disorder), NIMH
+mesh:
+  D019263: Dysthymic Disorder
+cross_check: ok
+approved: false
+fingerprint: bc26cff926335bf6

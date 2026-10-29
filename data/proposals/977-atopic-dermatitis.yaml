@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Atopic dermatitis
+gbd_cause_id: 977
+status: 3
+nuance: Emollients and topical steroids control most eczema; biologics and JAK inhibitors control severe disease.
+  Many children outgrow it.
+sources:
+- url: https://www.niams.nih.gov/health-topics/atopic-dermatitis
+  title: Atopic Dermatitis, NIAMS
+- url: https://www.nhs.uk/conditions/atopic-eczema/
+  title: Atopic eczema, NHS
+mesh:
+  D003876: Dermatitis, Atopic
+cross_check: ok
+approved: false
+fingerprint: 97b3dbb648f4a373

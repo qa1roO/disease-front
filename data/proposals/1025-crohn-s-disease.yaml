@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Crohn's disease
+gbd_cause_id: 1025
+status: 3
+nuance: Not curable, but immunosuppressants and biologics keep most patients in remission and leading normal lives;
+  many still need surgery at some point.
+sources:
+- url: https://www.niddk.nih.gov/health-information/digestive-diseases/crohns-disease/treatment
+  title: Treatment for Crohn's Disease, NIDDK
+- url: https://www.nhs.uk/conditions/crohns-disease/treatment/
+  title: 'Crohn''s disease: Treatment, NHS'
+mesh:
+  D003424: Crohn Disease
+cross_check: ok
+approved: false
+fingerprint: 28ed26b12f0a4f92

@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Autism spectrum disorders
+gbd_cause_id: 575
+status: 4
+nuance: Autism is lifelong and not something to cure; early developmental and behavioural support improves communication
+  and daily functioning.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders
+  title: Autism fact sheet, WHO
+- url: https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd
+  title: Autism Spectrum Disorder, NIMH
+mesh:
+  D000067877: Autism Spectrum Disorder
+cross_check: ok
+approved: false
+fingerprint: 308768c326d924c2

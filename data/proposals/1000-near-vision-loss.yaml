@@ -1,0 +1,16 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Near vision loss
+gbd_cause_id: 1000
+status: 3
+nuance: Age-related near-vision loss (presbyopia) is fully corrected by inexpensive reading glasses.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment
+  title: Blindness and vision impairment fact sheet, WHO
+- url: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/presbyopia
+  title: Presbyopia, National Eye Institute
+mesh:
+  D011305: Presbyopia
+cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D011305)'
+approved: false
+fingerprint: f7c7dcfd4fdb003d

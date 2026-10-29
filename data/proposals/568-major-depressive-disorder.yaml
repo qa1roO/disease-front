@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Major depressive disorder
+gbd_cause_id: 568
+status: 4
+nuance: Psychotherapy and antidepressants lead to remission in many patients, but about a third do not respond to
+  several treatments and relapse is common.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/depression
+  title: Depressive disorder (depression) fact sheet, WHO
+- url: https://www.nimh.nih.gov/health/topics/depression
+  title: Depression, NIMH
+mesh:
+  D003866: Depressive Disorder
+cross_check: ok
+approved: false
+fingerprint: 2caa8ddee1518171

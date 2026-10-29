@@ -1,0 +1,18 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Malignant skin melanoma
+gbd_cause_id: 459
+status: 2
+nuance: Most melanomas are found thin and localized and are cured by excision (SEER 5-year survival about 94%).
+  Immunotherapy now gives durable control in a share of metastatic cases.
+sources:
+- url: https://www.cancer.gov/types/skin/patient/melanoma-treatment-pdq
+  title: Melanoma Treatment (PDQ), NCI
+- url: https://seer.cancer.gov/statfacts/html/melan.html
+  title: 'Cancer Stat Facts: Melanoma of the Skin, SEER'
+mesh:
+  D008545: Melanoma
+  D012878: Skin Neoplasms
+cross_check: ok
+approved: false
+fingerprint: 43d5536cb951eefa

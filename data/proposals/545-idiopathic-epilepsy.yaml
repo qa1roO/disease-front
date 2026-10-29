@@ -1,0 +1,17 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Idiopathic epilepsy
+gbd_cause_id: 545
+status: 3
+nuance: About 70% of people become seizure-free on antiseizure medicines; surgery helps some of the rest. Three-quarters
+  of people in low-income countries go untreated.
+sources:
+- url: https://www.who.int/news-room/fact-sheets/detail/epilepsy
+  title: Epilepsy fact sheet, WHO
+- url: https://www.ninds.nih.gov/health-information/disorders/epilepsy-and-seizures
+  title: Epilepsy and Seizures, NINDS
+mesh:
+  D004827: Epilepsy
+cross_check: ok
+approved: false
+fingerprint: b541a91d9803783a

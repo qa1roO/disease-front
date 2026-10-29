@@ -1,0 +1,15 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Neuroblastoma and other peripheral nervous cell tumors
+gbd_cause_id: 1013
+status: 4
+nuance: Low- and intermediate-risk neuroblastoma is usually cured, but about half of patients have high-risk disease,
+  with about 50% long-term survival despite intensive therapy.
+sources:
+- url: https://www.cancer.gov/types/neuroblastoma/patient/neuroblastoma-treatment-pdq
+  title: Neuroblastoma Treatment (PDQ), NCI
+mesh:
+  D009447: Neuroblastoma
+cross_check: ok
+approved: false
+fingerprint: 30aca06f85566d2e

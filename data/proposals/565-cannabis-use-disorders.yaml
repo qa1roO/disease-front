@@ -1,0 +1,14 @@
+# Stage 6 status proposal (docs/spec/v1.md). Review it, edit freely, then set `approved: true`.
+# Re-runs never overwrite an approved or edited file. cross_check derives from ChEMBL (CC BY-SA 3.0).
+gbd_cause: Cannabis use disorders
+gbd_cause_id: 565
+status: 4
+nuance: No medicine is approved; psychotherapy helps some people stop or cut down.
+sources:
+- url: https://nida.nih.gov/research-topics/cannabis-marijuana
+  title: Cannabis (Marijuana), NIDA
+mesh:
+  D002189: Marijuana Abuse
+cross_check: ok
+approved: false
+fingerprint: 51d244cb91871784

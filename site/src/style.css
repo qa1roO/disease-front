@@ -82,3 +82,6 @@ html, body {
 #panel .tag { display: inline-block; margin-left: 6px; padding: 0 5px; border: 1px solid var(--muted); border-radius: 3px; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; vertical-align: 1px; }
 #panel .dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
 #panel .note.flag { color: #ffb86b; }
+.summary path { pointer-events: none; stroke: none; }
+.summary .bands .front { stroke: var(--front); stroke-width: 3.2; }
+.summary .bands .fog-edge { stroke: #c9d1d9; stroke-width: 1.2; }

@@ -145,7 +145,7 @@ def stage8():
     approved = proposals.load_approved(PROPOSALS) if PROPOSALS.exists() else {}
     events = json.loads(read(EVENTS)) if EVENTS.exists() else []
     updated = proposals.record_events(approved, events, datetime.date.today().isoformat())
-    if updated != events:
+    if updated != events or not EVENTS.exists():
         write_json(EVENTS, updated, indent=1)
         print(f"  {len(updated) - len(events)} status changes appended to data/events.json")
     print(f"  {len(approved)} approved GBD causes; their provinces are provisional")
