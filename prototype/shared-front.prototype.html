@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROTOTYPE · Shared front</title>
+<!--
+  PROTOTYPE — throwaway, do not build on this file.
+  Question: what map shape gives ONE shared front line across the whole map,
+  while chapters stay territories you can zoom into?
+  Three variants, switchable via ?variant=A|B|C or the bottom bar (← / → keys):
+    A  Besieged citadel — chapters are wedges around a central stronghold; the front is one closed loop
+    B  Western front    — chapters are horizontal strips; the front is one line from top to bottom
+    C  Two countries    — one held country, one contested country, one straight border; chapters appear on both sides
+  All three: scroll to zoom, drag to pan, labels appear when they fit.
+  Data is fake (real ICD-11 chapter names, invented blocks and conditions), same generator as prototype/map-layout.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #0e1621; color: #e6edf3;
+    font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden; }
+  svg { display: block; width: 100vw; height: 100vh; }
+  #panel { position: fixed; top: 12px; left: 12px; width: 300px; padding: 10px 12px;
+    background: rgba(14, 22, 33, .9); border: 1px solid #2b3a4d; border-radius: 8px; }
+  #panel h1 { font-size: 14px; margin: 0 0 4px; }
+  #panel .muted { color: #8b9bb0; }
+  #panel .row { display: flex; gap: 6px; align-items: center; margin: 2px 0; }
+  #panel .sw { width: 12px; height: 12px; border-radius: 2px; flex: none; }
+  #panel hr { border: 0; border-top: 1px solid #2b3a4d; margin: 8px 0; }
+  #hover { min-height: 60px; }
+  #switcher { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 10px; padding: 6px 10px;
+    background: #fff; color: #111; border-radius: 999px; box-shadow: 0 4px 18px rgba(0,0,0,.5);
+    font-weight: 600; user-select: none; }
+  #switcher button { border: 0; background: #111; color: #fff; width: 28px; height: 28px;
+    border-radius: 50%; cursor: pointer; font-size: 16px; }
+  #loading { position: fixed; inset: 0; display: none; place-items: center;
+    background: rgba(14, 22, 33, .7); font-size: 16px; }
+  .label { pointer-events: none; fill: #fff; paint-order: stroke; stroke: rgba(0,0,0,.75);
+    stroke-linejoin: round; text-anchor: middle; dominant-baseline: middle; }
+  .leaf { cursor: pointer; }
+  .leaf:hover { filter: brightness(1.3); }
+  .outline { pointer-events: none; vector-effect: non-scaling-stroke; fill: none; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-weighted-voronoi@1.1.3/build/d3-weighted-voronoi.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-voronoi-map@2.1.1/build/d3-voronoi-map.js"></script>
+</head>
+<body>
+<svg id="map"></svg>
+<div id="panel"></div>
+<div id="loading">Laying out the map…</div>
+<div id="switcher"><button id="prev" title="Previous variant (←)">‹</button><span id="vlabel"></span><button id="next" title="Next variant (→)">›</button></div>
+<script>
+// ---------- fake data (same generator and seed as prototype/map-layout) ----------
+function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const rng = mulberry32(42);
+const normal = () => { let u = 0; while (!u) u = rng(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rng()); };
+const hash = s => [...s].reduce((h, c) => Math.imul(h ^ c.charCodeAt(0), 16777619), 2166136261);
+
+// [ICD-11 chapter, burden scale, chance a diagnosed status is held]
+const CHAPTERS = [
+  ['Certain infectious or parasitic diseases', 9, .7], ['Neoplasms', 10, .35],
+  ['Diseases of the blood or blood-forming organs', 2, .5], ['Diseases of the immune system', 1.5, .4],
+  ['Endocrine, nutritional or metabolic diseases', 5, .6], ['Mental, behavioural or neurodevelopmental disorders', 6, .35],
+  ['Sleep-wake disorders', 1, .5], ['Diseases of the nervous system', 5, .2],
+  ['Diseases of the visual system', 2, .6], ['Diseases of the ear or mastoid process', 1, .55],
+  ['Diseases of the circulatory system', 12, .55], ['Diseases of the respiratory system', 6, .5],
+  ['Diseases of the digestive system', 4, .6], ['Diseases of the skin', 2, .55],
+  ['Diseases of the musculoskeletal system or connective tissue', 4, .3], ['Diseases of the genitourinary system', 3, .55],
+  ['Conditions related to sexual health', .5, .6], ['Pregnancy, childbirth or the puerperium', 3, .75],
+  ['Certain conditions originating in the perinatal period', 4, .5], ['Developmental anomalies', 2, .25],
+];
+const STATUS = { 1: 'Eradicated', 2: 'Curable', 3: 'Controlled', 4: 'Treatable', 5: 'Untreatable', 0: 'Fog (unassessed)' };
+const STATUS_COLOR = { 1: '#0f6b4b', 2: '#2e9e6a', 3: '#8fd1a8', 4: '#f2a65a', 5: '#d64545', 0: '#5d6673' };
+const ZONES = ['held', 'contested', 'fog'];
+const zoneOf = s => s === 0 ? 'fog' : s <= 3 ? 'held' : 'contested';
+
+function pickStatus(heldP) {
+  if (rng() < .15) return 0;
+  if (rng() < heldP) { const r = rng(); return r < .05 ? 1 : r < .55 ? 2 : 3; }
+  return rng() < .65 ? 4 : 5;
+}
+const root = { name: 'All diseases', children: CHAPTERS.map(([name, scale, heldP], c) => ({
+  name, children: d3.range(4 + Math.floor(rng() * 11)).map(b => ({
+    name: `Block ${c + 1}.${b + 1}`, children: d3.range(5 + Math.floor(rng() * 36)).map(l => ({
+      name: `Condition ${c + 1}.${b + 1}.${l + 1}`,
+      burden: Math.max(.02, Math.exp(normal() * 1.6) * scale),
+      status: pickStatus(heldP),
+    })),
+  })),
+})) };
+(function aggregate(n, parent) {
+  n.parent = parent;
+  if (!n.children) { n.agg = { total: n.burden, held: 0, contested: 0, fog: 0 }; n.agg[zoneOf(n.status)] = n.burden; return n.agg; }
+  n.agg = { total: 0, held: 0, contested: 0, fog: 0 };
+  for (const c of n.children) { const a = aggregate(c, n); for (const k in a) n.agg[k] += a[k]; }
+  return n.agg;
+})(root, null);
+const LEAF_COUNT = root.children.flatMap(c => c.children.flatMap(b => b.children)).length;
+const leavesIn = (block, zone) => block.children.filter(l => zoneOf(l.status) === zone);
+const byStatus = (a, b) => (a.status || 9) - (b.status || 9) || b.burden - a.burden;
+// "Organ-pipe" order: most-held block in the middle of its chapter, so each chapter's front is one bulge, not a saw.
+function salient(blocks) {
+  const sorted = blocks.slice().sort((a, b) => a.agg.held / a.agg.total - b.agg.held / b.agg.total), out = [];
+  sorted.forEach((b, i) => i % 2 ? out.push(b) : out.unshift(b));
+  return out;
+}
+
+// ---------- shared helpers ----------
+const W = innerWidth, H = innerHeight, LEFT = W > 900 ? 330 : 14, BOTTOM = 70;
+const line = d3.line(), closed = p => line(p) + 'Z';
+const area = p => p.length < 3 ? 0 : Math.abs(d3.polygonArea(p));
+const fmt = d3.format(',.1f'), pct = d3.format('.0%');
+
+// A world is everything the renderer needs:
+// leaves [{d, item}], blocks [d], chapters [d], front [d], fogEdge [d], labels [{x, y, text, level, w, h}]
+const emptyWorld = () => ({ leaves: [], blocks: [], chapters: [], front: [], fogEdge: [], labels: [] });
+
+// ---------- A: besieged citadel ----------
+function citadel() {
+  const w = emptyWorld();
+  const cx = (LEFT + W) / 2, cy = (H - BOTTOM) / 2 + 6, R = Math.min((W - LEFT) / 2, (H - BOTTOM) / 2) - 12, r0 = R * .07;
+  w.origin = [cx, cy];
+  const TAU = 2 * Math.PI, arc = d3.arc();
+  const pt = (r, a) => [r * Math.sin(a), -r * Math.cos(a)];
+  const radiusAt = share => Math.sqrt(r0 * r0 + share * (R * R - r0 * r0));
+  const sector = (r1, r2, a0, a1) => arc({ innerRadius: r1, outerRadius: r2, startAngle: a0, endAngle: a1 });
+  const arcPoints = (r, a0, a1) => d3.range(Math.max(2, Math.ceil((a1 - a0) / .01)) + 1).map(i => pt(r, a0 + (a1 - a0) * i / Math.max(2, Math.ceil((a1 - a0) / .01))));
+
+  // Lay out provinces inside an annular sector: rings from the centre outward, then angular cuts.
+  function polar(items, a0, a1, rin, rout) {
+    if (!items.length || rout - rin < .01) return;
+    items = items.slice().sort(byStatus);
+    const S = d3.sum(items, d => d.burden), n = items.length, depth = rout - rin, len = (a1 - a0) * (rin + rout) / 2;
+    const k = Math.max(1, Math.min(n, Math.round(Math.sqrt(n * depth / Math.max(len, 1e-6)))));
+    const rings = d3.range(k).map(() => []);
+    let cum = 0;
+    for (const d of items) { rings[Math.min(k - 1, Math.floor((cum + d.burden / 2) / S * k))].push(d); cum += d.burden; }
+    let r = rin;
+    for (const ring of rings.filter(x => x.length)) {
+      const rs = d3.sum(ring, d => d.burden), rn = Math.sqrt(r * r + rs / S * (rout * rout - rin * rin));
+      let a = a0;
+      for (const d of ring) {
+        const an = a + d.burden / rs * (a1 - a0);
+        w.leaves.push({ d: sector(r, rn, a, an), item: d });
+        const mid = (r + rn) / 2;
+        w.labels.push({ ...xy(pt(mid, (a + an) / 2)), text: d.name.replace('Condition ', ''), level: 'leaf', w: (an - a) * mid, h: rn - r });
+        a = an;
+      }
+      r = rn;
+    }
+  }
+  const xy = ([x, y]) => ({ x, y });
+
+  const front = [], fogEdge = [];
+  let a = 0;
+  for (const ch of root.children) {
+    const a0 = a, a1 = a + ch.agg.total / root.agg.total * TAU;
+    let b = a0;
+    for (const bl of salient(ch.children)) {
+      const b0 = b, b1 = b + bl.agg.total / ch.agg.total * (a1 - a0), T = bl.agg.total;
+      const rh = radiusAt(bl.agg.held / T), rc = radiusAt((bl.agg.held + bl.agg.contested) / T);
+      polar(leavesIn(bl, 'held'), b0, b1, r0, rh);
+      polar(leavesIn(bl, 'contested'), b0, b1, rh, rc);
+      polar(leavesIn(bl, 'fog'), b0, b1, rc, R);
+      w.blocks.push(sector(r0, R, b0, b1));
+      front.push(...arcPoints(rh, b0, b1));
+      fogEdge.push(...arcPoints(rc, b0, b1));
+      w.labels.push({ ...xy(pt((r0 + R) / 2, (b0 + b1) / 2)), text: bl.name, level: 'block', w: (b1 - b0) * (r0 + R) / 2, h: R - r0 });
+      b = b1;
+    }
+    w.chapters.push(sector(r0, R, a0, a1));
+    const lr = R * .62;
+    w.labels.push({ ...xy(pt(lr, (a0 + a1) / 2)), text: ch.name, level: 'chapter', w: Math.max((a1 - a0) * lr, 90), h: R * .3 });
+    a = a1;
+  }
+  w.front.push(closed(front));
+  w.fogEdge.push(closed(fogEdge));
+  w.citadel = r0;
+  return w;
+}
+
+// ---------- B: western front ----------
+function westernFront() {
+  const w = emptyWorld();
+  const x0 = LEFT, x1 = W - 14, y0 = 14, y1 = H - BOTTOM;
+  const rect = (a, b, c, d) => `M${a},${b}H${c}V${d}H${a}Z`;
+  const front = [], fogEdge = [];
+  let y = y0;
+  for (const ch of root.children) {
+    const cy0 = y, cy1 = y + ch.agg.total / root.agg.total * (y1 - y0);
+    let by = cy0;
+    for (const bl of salient(ch.children)) {
+      const b0 = by, b1 = by + bl.agg.total / ch.agg.total * (cy1 - cy0), T = bl.agg.total;
+      const xh = x0 + (x1 - x0) * bl.agg.held / T, xc = x0 + (x1 - x0) * (bl.agg.held + bl.agg.contested) / T;
+      for (const [zone, za, zb] of [['held', x0, xh], ['contested', xh, xc], ['fog', xc, x1]]) {
+        const items = leavesIn(bl, zone).sort(byStatus);
+        if (!items.length || zb - za < .01) continue;
+        const h = d3.hierarchy({ kids: items.map(ref => ({ ref })) }, d => d.kids).sum(d => d.ref ? d.ref.burden : 0);
+        d3.treemap().tile(d3.treemapSquarify).size([zb - za, b1 - b0])(h);
+        for (const l of h.leaves()) {
+          const lx0 = za + l.x0, ly0 = b0 + l.y0, lx1 = za + l.x1, ly1 = b0 + l.y1;
+          w.leaves.push({ d: rect(lx0, ly0, lx1, ly1), item: l.data.ref });
+          w.labels.push({ x: (lx0 + lx1) / 2, y: (ly0 + ly1) / 2, text: l.data.ref.name.replace('Condition ', ''), level: 'leaf', w: lx1 - lx0, h: ly1 - ly0 });
+        }
+      }
+      w.blocks.push(rect(x0, b0, x1, b1));
+      front.push([xh, b0], [xh, b1]);
+      fogEdge.push([xc, b0], [xc, b1]);
+      w.labels.push({ x: x0 + 40, y: (b0 + b1) / 2, text: bl.name, level: 'block', w: 80, h: b1 - b0 });
+      by = b1;
+    }
+    w.chapters.push(rect(x0, cy0, x1, cy1));
+    w.labels.push({ x: (x0 + x1) / 2, y: (cy0 + cy1) / 2, text: ch.name, level: 'chapter', w: x1 - x0, h: cy1 - cy0 });
+    y = cy1;
+  }
+  w.front.push(line(front));
+  w.fogEdge.push(line(fogEdge));
+  return w;
+}
+
+// ---------- C: two countries ----------
+const DIR = [Math.cos(.21), Math.sin(.21)], PERP = [-DIR[1], DIR[0]];
+const proj = p => p[0] * DIR[0] + p[1] * DIR[1];
+function clipHalf(poly, t, keepBelow) {
+  const out = [], inside = p => keepBelow ? proj(p) <= t : proj(p) >= t;
+  for (let i = 0; i < poly.length; i++) {
+    const a = poly[i], b = poly[(i + 1) % poly.length], ia = inside(a), ib = inside(b);
+    if (ia) out.push(a);
+    if (ia !== ib) { const s = (t - proj(a)) / (proj(b) - proj(a)); out.push([a[0] + s * (b[0] - a[0]), a[1] + s * (b[1] - a[1])]); }
+  }
+  return out;
+}
+function cutAt(poly, frac) {
+  const total = area(poly), ps = poly.map(proj);
+  let lo = Math.min(...ps), hi = Math.max(...ps);
+  for (let i = 0; i < 40; i++) { const mid = (lo + hi) / 2; if (area(clipHalf(poly, mid, true)) < frac * total) lo = mid; else hi = mid; }
+  return (lo + hi) / 2;
+}
+function segmentAt(poly, t) {
+  const pts = [];
+  for (let i = 0; i < poly.length; i++) {
+    const a = poly[i], b = poly[(i + 1) % poly.length], pa = proj(a) - t, pb = proj(b) - t;
+    if (pa * pb < 0) { const s = pa / (pa - pb); pts.push([a[0] + s * (b[0] - a[0]), a[1] + s * (b[1] - a[1])]); }
+  }
+  return pts.length >= 2 ? pts.slice(0, 2) : null;
+}
+// Weighted Voronoi cells inside a convex polygon. place(item, rank, frame) gives each seed's start position.
+function voronoi(poly, items, weight, place, seed) {
+  if (!items.length || area(poly) < 1) return [];
+  if (items.length === 1) return [{ item: items[0], polygon: poly }];
+  const clip = d3.polygonHull(poly), c = d3.polygonCentroid(clip);
+  const along = clip.map(proj), across = clip.map(p => p[0] * PERP[0] + p[1] * PERP[1]);
+  const frame = { c, spanA: d3.max(along) - d3.min(along), spanP: d3.max(across) - d3.min(across), n: items.length, r: mulberry32(seed) };
+  const sim = d3.voronoiMapSimulation(items).weight(weight).clip(clip).prng(frame.r)
+    .maxIterationCount(80).convergenceRatio(.02)
+    .initialPosition((d, i) => { const [a, p] = place(d, i, frame); return [c[0] + DIR[0] * a + PERP[0] * p, c[1] + DIR[1] * a + PERP[1] * p]; })
+    .stop();
+  let st = sim.state();
+  for (let i = 0; !st.ended && i < 200; i++) { sim.tick(); st = sim.state(); }
+  return st.polygons.map(p => ({ item: p.site.originalObject.data.originalData, polygon: Array.from(p) }));
+}
+function continent() {
+  const r = mulberry32(3), cx = (LEFT + W) / 2, cy = (H - BOTTOM) / 2 + 6, rx = (W - LEFT) * .47, ry = (H - BOTTOM) * .47;
+  return d3.polygonHull(d3.range(72).map(i => {
+    const a = i / 72 * 2 * Math.PI, k = 1 + (r() - .5) * .08;
+    return [cx + Math.cos(a) * rx * k, cy + Math.sin(a) * ry * k];
+  }));
+}
+function twoCountries() {
+  const w = emptyWorld(), outer = continent();
+  const zones = ZONES.filter(z => root.agg[z] > 0);
+  let cum = 0;
+  const ts = zones.slice(0, -1).map(z => cutAt(outer, (cum += root.agg[z]) / root.agg.total));
+  const centroidLabel = (poly, text, level) => { const [x, y] = d3.polygonCentroid(poly), xs = poly.map(p => p[0]), ys = poly.map(p => p[1]);
+    w.labels.push({ x, y, text, level, w: (d3.max(xs) - d3.min(xs)) * .7, h: (d3.max(ys) - d3.min(ys)) * .7 }); };
+  zones.forEach((zone, zi) => {
+    let poly = outer;
+    if (zi > 0) poly = clipHalf(poly, ts[zi - 1], false);
+    if (zi < zones.length - 1) poly = clipHalf(poly, ts[zi], true);
+    // Chapters keep the same north→south order in every country, so a chapter's pieces face each other across the border.
+    const chapters = root.children.map((ref, idx) => ({ ref, idx })).filter(c => c.ref.agg[zone] > 0);
+    const chCells = voronoi(poly, chapters, c => c.ref.agg[zone],
+      (c, i, f) => [(f.r() - .5) * f.spanA * .3, ((c.idx + .5) / root.children.length - .5) * f.spanP * .85], hash(zone));
+    for (const { item: ch, polygon: chPoly } of chCells) {
+      const blocks = ch.ref.children.filter(b => b.agg[zone] > 0);
+      const blCells = voronoi(chPoly, blocks, b => b.agg[zone], (b, i, f) => [(f.r() - .5) * f.spanA * .6, (f.r() - .5) * f.spanP * .6], hash(ch.ref.name + zone));
+      for (const { item: bl, polygon: blPoly } of blCells) {
+        const items = leavesIn(bl, zone).sort(byStatus);
+        const rank = new Map(items.map((d, i) => [d, i]));
+        const lfCells = voronoi(blPoly, items, d => d.burden,
+          (d, i, f) => [((rank.get(d) + .5) / f.n - .5) * f.spanA * .8, (f.r() - .5) * f.spanP * .6], hash(bl.name + zone));
+        for (const { item, polygon } of lfCells) {
+          w.leaves.push({ d: closed(polygon), item });
+          centroidLabel(polygon, item.name.replace('Condition ', ''), 'leaf');
+        }
+        w.blocks.push(closed(blPoly));
+        centroidLabel(blPoly, bl.name, 'block');
+      }
+      w.chapters.push(closed(chPoly));
+      centroidLabel(chPoly, ch.ref.name, 'chapter');
+    }
+  });
+  ts.forEach((t, i) => {
+    const seg = segmentAt(outer, t);
+    if (seg) (zones[i] === 'held' && zones[i + 1] === 'contested' ? w.front : w.fogEdge).push(line(seg));
+  });
+  return w;
+}
+
+// ---------- renderer (identical for all variants) ----------
+const svg = d3.select('#map');
+const LEVELS = { chapter: [0, 3.5, 13], block: [1.6, 14, 10], leaf: [4, Infinity, 9] }; // [min zoom, max zoom, font px]
+
+function showHover(n) {
+  const el = document.getElementById('hover');
+  if (!n) { el.innerHTML = '<span class="muted">Hover a province…</span>'; return; }
+  const path = []; for (let p = n.parent; p && p.parent; p = p.parent) path.unshift(p.name);
+  el.innerHTML = `<b>${n.name}</b><div class="muted">${path.join(' › ')}</div>Burden ${fmt(n.burden)}<br>` +
+    `Status: <b style="color:${STATUS_COLOR[n.status]}">${STATUS[n.status]}</b>`;
+}
+function renderWorld(w) {
+  const g = svg.append('g'), inner = g.append('g').attr('transform', w.origin ? `translate(${w.origin})` : null);
+  inner.append('g').selectAll('path').data(w.leaves).join('path').attr('class', 'leaf')
+    .attr('d', d => d.d).attr('fill', d => STATUS_COLOR[d.item.status])
+    .attr('stroke', '#0e1621').attr('stroke-width', .3)
+    .on('mouseenter', (e, d) => showHover(d.item)).on('mouseleave', () => showHover(null));
+  inner.append('g').selectAll('path').data(w.blocks).join('path').attr('class', 'outline').attr('d', d => d).attr('stroke', '#05080c').attr('stroke-width', .8);
+  inner.append('g').selectAll('path').data(w.chapters).join('path').attr('class', 'outline').attr('d', d => d).attr('stroke', '#000').attr('stroke-width', 2.4);
+  inner.append('g').selectAll('path').data(w.fogEdge).join('path').attr('class', 'outline').attr('d', d => d).attr('stroke', '#c9d1d9').attr('stroke-width', 1.2).attr('stroke-dasharray', '3 4');
+  for (const [color, width] of [['#1a0d00', 6], ['#ffe08a', 3]])
+    inner.append('g').selectAll('path').data(w.front).join('path').attr('class', 'outline').attr('d', d => d).attr('stroke', color).attr('stroke-width', width).attr('stroke-linejoin', 'round');
+  if (w.citadel) inner.append('circle').attr('r', w.citadel).attr('fill', '#e6edf3').attr('stroke', '#000').attr('stroke-width', 2);
+  const labels = inner.append('g').selectAll('text').data(w.labels).join('text').attr('class', 'label')
+    .attr('x', d => d.x).attr('y', d => d.y).text(d => d.text);
+  const zoomed = k => {
+    labels.attr('font-size', d => LEVELS[d.level][2] / k).attr('stroke-width', 3 / k)
+      .attr('display', d => {
+        const [lo, hi, px] = LEVELS[d.level];
+        const need = d.level === 'chapter' ? 60 : d.text.length * px * .55; // long chapter names may overflow a little
+        return k >= lo && k < hi && d.w * k >= need && d.h * k >= px * 1.2 ? null : 'none';
+      });
+  };
+  zoomed(1);
+  svg.call(d3.zoom().scaleExtent([.6, 60]).on('zoom', e => { g.attr('transform', e.transform); zoomed(e.transform.k); stats.k = e.transform.k; updateZoom(); }));
+}
+
+// ---------- shell: panel + switcher ----------
+const VARIANTS = {
+  A: { name: 'Besieged citadel', build: citadel, desc: 'Chapters are wedges around medicine’s stronghold. The front is one closed loop; held land is inside it.' },
+  B: { name: 'Western front', build: westernFront, desc: 'Chapters are horizontal strips. The front is one line from top to bottom; held land is west of it.' },
+  C: { name: 'Two countries', build: twoCountries, desc: 'One held country, one contested country, one straight border. Each chapter appears on both sides.' },
+};
+let variant = new URLSearchParams(location.search).get('variant');
+if (!VARIANTS[variant]) variant = 'A';
+const stats = {}, cache = {};
+
+function updateZoom() { const el = document.getElementById('zoom'); if (el) el.textContent = `zoom ×${(stats.k || 1).toFixed(1)}`; }
+function renderPanel() {
+  const v = VARIANTS[variant];
+  document.getElementById('panel').innerHTML =
+    `<h1>${variant} · ${v.name}</h1><div class="muted">${v.desc}</div>
+     <div class="muted"><span id="zoom"></span> · ${stats.cells} provinces drawn · layout ${Math.round(stats.ms)} ms</div>
+     <div class="muted">Scroll to zoom, drag to pan.</div><hr>
+     <div id="hover"></div><hr>
+     ${[1, 2, 3, 4, 5, 0].map(s => `<div class="row"><span class="sw" style="background:${STATUS_COLOR[s]}"></span>${STATUS[s]}</div>`).join('')}
+     <div class="row"><span class="sw" style="background:#ffe08a"></span>Front line (held | contested)</div>
+     <div class="row"><span class="sw" style="background:repeating-linear-gradient(90deg,#c9d1d9 0 3px,transparent 3px 6px)"></span>Edge of fog</div>`;
+  updateZoom();
+  showHover(null);
+  document.getElementById('vlabel').textContent = `${variant} (${v.name})`;
+}
+function render() {
+  const loading = document.getElementById('loading');
+  loading.style.display = 'grid';
+  setTimeout(() => {
+    svg.selectAll('*').remove(); svg.on('.zoom', null); stats.k = 1;
+    const t0 = performance.now();
+    const w = cache[variant] || (cache[variant] = VARIANTS[variant].build());
+    if (!w.ms) w.ms = performance.now() - t0;
+    stats.ms = w.ms; stats.cells = w.leaves.length;
+    renderWorld(w);
+    renderPanel();
+    loading.style.display = 'none';
+  }, 20);
+}
+function cycle(step) {
+  const keys = Object.keys(VARIANTS);
+  variant = keys[(keys.indexOf(variant) + step + keys.length) % keys.length];
+  const url = new URL(location.href); url.searchParams.set('variant', variant); history.replaceState(null, '', url);
+  render();
+}
+document.getElementById('prev').onclick = () => cycle(-1);
+document.getElementById('next').onclick = () => cycle(1);
+addEventListener('keydown', e => {
+  if (e.target.closest('input, textarea, [contenteditable]')) return;
+  if (e.key === 'ArrowLeft') cycle(-1);
+  if (e.key === 'ArrowRight') cycle(1);
+});
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROTOTYPE · Shared front v5</title>
+<!--
+  PROTOTYPE — throwaway, do not build on this file.
+  Follow-up to shared-front-v4. Question: does the owner's sketch work, i.e. one horizontal front where every
+  chapter is one region crossing it, chapters fill the width edge to edge, and small chapters nest inside big ones?
+    A  Nested arches     — every chapter owns a stretch of the line: an arch above (contested, fog on top) and
+                           one below (held). Small chapters nest at the edge of a bigger neighbour, under its arches.
+                           A taller arch reaches over its neighbour, separately above and below the line.
+                           Tune with ?pan= (map width in screens), ?width= (1 = width ∝ burden, 0.5 = ∝ √burden),
+                           ?flat= (arch flatness, 2 = round), ?over= (overhang, share of the neighbour's width)
+                           and ?wobble= (shape irregularity, 0 = smooth).
+    B  Archipelago       — from v4: islands along a meandering diagonal front (tune with ?aspect=, ?round=, ?gap=).
+    C  Chapter identity  — from v3: the v1 two-countries map with per-chapter colours and hover.
+  Switch with ?variant=A|B|C, the bottom bar, or ← / →. Scroll to zoom, drag to pan.
+  Detail levels: zoom < 2.2 chapters only, 2.2–6 blocks, ≥ 6 provinces.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #0e1621; color: #e6edf3;
+    font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden; }
+  svg { display: block; width: 100vw; height: 100vh; }
+  #panel { position: fixed; top: 12px; left: 12px; width: 300px; padding: 10px 12px;
+    background: rgba(14, 22, 33, .9); border: 1px solid #2b3a4d; border-radius: 8px; }
+  #panel h1 { font-size: 14px; margin: 0 0 4px; }
+  #panel .muted { color: #8b9bb0; }
+  #panel .row { display: flex; gap: 6px; align-items: center; margin: 2px 0; }
+  #panel .sw { width: 12px; height: 12px; border-radius: 2px; flex: none; }
+  #panel hr { border: 0; border-top: 1px solid #2b3a4d; margin: 8px 0; }
+  #hover { min-height: 60px; }
+  #switcher { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 10px; padding: 6px 10px;
+    background: #fff; color: #111; border-radius: 999px; box-shadow: 0 4px 18px rgba(0,0,0,.5);
+    font-weight: 600; user-select: none; }
+  #switcher button { border: 0; background: #111; color: #fff; width: 28px; height: 28px;
+    border-radius: 50%; cursor: pointer; font-size: 16px; }
+  #loading { position: fixed; inset: 0; display: none; place-items: center;
+    background: rgba(14, 22, 33, .7); font-size: 16px; }
+  .label { pointer-events: none; fill: #fff; paint-order: stroke; stroke: rgba(0,0,0,.75);
+    stroke-linejoin: round; text-anchor: middle; dominant-baseline: middle; }
+  .fill { cursor: pointer; }
+  .outline { pointer-events: none; vector-effect: non-scaling-stroke; fill: none; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-weighted-voronoi@1.1.3/build/d3-weighted-voronoi.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-voronoi-map@2.1.1/build/d3-voronoi-map.js"></script>
+</head>
+<body>
+<svg id="map"></svg>
+<div id="panel"></div>
+<div id="loading">Laying out the map…</div>
+<div id="switcher"><button id="prev" title="Previous variant (←)">‹</button><span id="vlabel"></span><button id="next" title="Next variant (→)">›</button></div>
+<script>
+// ---------- fake data (same generator and seed as the other prototypes) ----------
+function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const rng = mulberry32(42);
+const normal = () => { let u = 0; while (!u) u = rng(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rng()); };
+const hash = s => [...s].reduce((h, c) => Math.imul(h ^ c.charCodeAt(0), 16777619), 2166136261);
+
+// [ICD-11 chapter, burden scale, chance a diagnosed status is held]
+const CHAPTERS = [
+  ['Certain infectious or parasitic diseases', 9, .7], ['Neoplasms', 10, .35],
+  ['Diseases of the blood or blood-forming organs', 2, .5], ['Diseases of the immune system', 1.5, .4],
+  ['Endocrine, nutritional or metabolic diseases', 5, .6], ['Mental, behavioural or neurodevelopmental disorders', 6, .35],
+  ['Sleep-wake disorders', 1, .5], ['Diseases of the nervous system', 5, .2],
+  ['Diseases of the visual system', 2, .6], ['Diseases of the ear or mastoid process', 1, .55],
+  ['Diseases of the circulatory system', 12, .55], ['Diseases of the respiratory system', 6, .5],
+  ['Diseases of the digestive system', 4, .6], ['Diseases of the skin', 2, .55],
+  ['Diseases of the musculoskeletal system or connective tissue', 4, .3], ['Diseases of the genitourinary system', 3, .55],
+  ['Conditions related to sexual health', .5, .6], ['Pregnancy, childbirth or the puerperium', 3, .75],
+  ['Certain conditions originating in the perinatal period', 4, .5], ['Developmental anomalies', 2, .25],
+];
+const STATUS = { 1: 'Eradicated', 2: 'Curable', 3: 'Controlled', 4: 'Treatable', 5: 'Untreatable', 0: 'Fog (unassessed)' };
+const STATUS_COLOR = { 1: '#0f6b4b', 2: '#2e9e6a', 3: '#8fd1a8', 4: '#f2a65a', 5: '#d64545', 0: '#5d6673' };
+const AGG_COLOR = { held: '#3b9d6e', contested: '#d9644a', fog: '#5d6673' };
+const zoneOf = s => s === 0 ? 'fog' : s <= 3 ? 'held' : 'contested';
+
+function pickStatus(heldP) {
+  if (rng() < .15) return 0;
+  if (rng() < heldP) { const r = rng(); return r < .05 ? 1 : r < .55 ? 2 : 3; }
+  return rng() < .65 ? 4 : 5;
+}
+const root = { name: 'All diseases', children: CHAPTERS.map(([name, scale, heldP], c) => ({
+  name, num: String(c + 1).padStart(2, '0'), children: d3.range(4 + Math.floor(rng() * 11)).map(b => ({
+    name: `Block ${c + 1}.${b + 1}`, children: d3.range(5 + Math.floor(rng() * 36)).map(l => ({
+      name: `Condition ${c + 1}.${b + 1}.${l + 1}`,
+      burden: Math.max(.02, Math.exp(normal() * 1.6) * scale),
+      status: pickStatus(heldP),
+    })),
+  })),
+})) };
+(function aggregate(n, parent) {
+  n.parent = parent;
+  if (!n.children) { n.agg = { total: n.burden, held: 0, contested: 0, fog: 0 }; n.agg[zoneOf(n.status)] = n.burden; return n.agg; }
+  n.agg = { total: 0, held: 0, contested: 0, fog: 0 };
+  for (const c of n.children) { const a = aggregate(c, n); for (const k in a) n.agg[k] += a[k]; }
+  return n.agg;
+})(root, null);
+const LEAF_COUNT = root.children.flatMap(c => c.children.flatMap(b => b.children)).length;
+const leavesIn = (block, zone) => block.children.filter(l => zoneOf(l.status) === zone);
+const byStatus = (a, b) => (a.status || 9) - (b.status || 9) || b.burden - a.burden;
+const chapterOf = n => { while (n.parent && n.parent.parent) n = n.parent; return n; };
+const CHAPTER_HUE = new Map(root.children.map((c, i) => [c, d3.interpolateSinebow(i / root.children.length)]));
+
+// ---------- shared helpers ----------
+const W = innerWidth, H = innerHeight, LEFT = W > 900 ? 330 : 14, BOTTOM = 70;
+const line = d3.line(), closed = p => line(p) + 'Z';
+const area = p => p.length < 3 ? 0 : Math.abs(d3.polygonArea(p));
+const fmt = d3.format(',.1f'), pct = d3.format('.0%');
+const ZOOM = { block: 2.2, leaf: 6 }; // detail level thresholds
+
+// Weighted Voronoi inside a convex polygon. initPos(item, index, prng) gives each seed's start.
+// The library throws on, or loops forever over, degenerate pieces; those fall back to plain slices.
+const fallbacks = { count: 0 };
+function voronoiIn(poly, items, weight, initPos, seed) {
+  if (!items.length || poly.length < 3) return [];
+  if (items.length === 1) return [{ item: items[0], polygon: poly }];
+  const xs = poly.map(p => p[0]), ys = poly.map(p => p[1]);
+  const bw = d3.max(xs) - d3.min(xs), bh = d3.max(ys) - d3.min(ys);
+  if (area(poly) < 4 || Math.min(bw, bh) < 3 || Math.max(bw, bh) / Math.min(bw, bh) > 12) { fallbacks.count++; return sliceCells(poly, items, weight); }
+  for (const init of [initPos, null]) {
+    try {
+      const r = mulberry32(seed);
+      let sim = d3.voronoiMapSimulation(items).weight(weight).clip(d3.polygonHull(poly)).prng(r).maxIterationCount(60).convergenceRatio(.02);
+      if (init) sim = sim.initialPosition((d, i) => init(d, i, r));
+      sim.stop();
+      let st = sim.state();
+      for (let i = 0; !st.ended && i < 150; i++) { sim.tick(); st = sim.state(); }
+      if (st.polygons.length < items.length) continue; // a site was squeezed out: retry, then slice
+      return st.polygons.map(p => ({ item: p.site.originalObject.data.originalData, polygon: Array.from(p) }));
+    } catch (e) { /* retry, then slice */ }
+  }
+  fallbacks.count++;
+  return sliceCells(poly, items, weight);
+}
+// Cut a convex polygon into consecutive slices along its longer axis, one per item, by weight.
+function sliceCells(poly, items, weight) {
+  const xs = poly.map(p => p[0]), ys = poly.map(p => p[1]);
+  const dir = d3.max(xs) - d3.min(xs) >= d3.max(ys) - d3.min(ys) ? [1, 0] : [0, 1];
+  const pr = p => p[0] * dir[0] + p[1] * dir[1];
+  const total = area(poly), sum = d3.sum(items, weight), ps = poly.map(pr), lo0 = d3.min(ps), hi0 = d3.max(ps);
+  const cutAt = frac => { let lo = lo0, hi = hi0; for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2; if (area(clipBy(poly, pr, m, true)) < frac * total) lo = m; else hi = m; } return (lo + hi) / 2; };
+  let cum = 0, prev = null;
+  return items.map((d, i) => {
+    cum += weight(d);
+    const next = i < items.length - 1 ? cutAt(cum / sum) : null;
+    let p = poly;
+    if (prev !== null) p = clipBy(p, pr, prev, false);
+    if (next !== null) p = clipBy(p, pr, next, true);
+    prev = next;
+    return { item: d, polygon: p };
+  });
+}
+// Keep the part of a convex polygon where pr(p) <= t (below) or >= t.
+function clipBy(poly, pr, t, below) {
+  const out = [], inside = p => below ? pr(p) <= t : pr(p) >= t;
+  for (let i = 0; i < poly.length; i++) {
+    const a = poly[i], b = poly[(i + 1) % poly.length], ia = inside(a), ib = inside(b);
+    if (ia) out.push(a);
+    if (ia !== ib) { const s = (t - pr(a)) / (pr(b) - pr(a)); out.push([a[0] + s * (b[0] - a[0]), a[1] + s * (b[1] - a[1])]); }
+  }
+  return out;
+}
+
+// A world: layers for each detail level (fills, front, fog edge), plus outlines and labels.
+// fills [{d, fill, node, chapter, stroke}], chapters [{d, color}], labels [{x, y, text, level, w, h}]
+const layer = () => ({ fills: [], front: [], fogEdge: [] });
+const emptyWorld = () => ({ layers: { chapter: layer(), block: layer(), leaf: layer() }, chapters: [], blocks: [], labels: [] });
+
+const PARAMS = new URLSearchParams(location.search);
+// ---------- A: nested arches (from the owner's sketch) ----------
+// One horizontal front line. Every chapter owns a stretch of it and rises above it as an arch (contested,
+// with fog at the top) and hangs below it as an arch (held). Chapters fill the width edge to edge.
+// Where one chapter's arch is taller than its neighbour's, it reaches over that neighbour (overhang), decided
+// separately above and below the line. A small chapter nests at the edge of a bigger neighbour, under its arches.
+// Each region (the space between two curves) is laid out in a rectangle that maps onto it with areas preserved,
+// so the Voronoi library always gets a convex shape.
+// PAN: map width in screens. WIDTH_EXP: 1 = width ∝ burden, 0.5 = ∝ √burden. ARCH_EXP: flatness (2 = round).
+// OVER: how far a taller arch reaches over its neighbour, as a share of that neighbour's width. WOBBLE: shape irregularity.
+const ARCH_EXP = +(PARAMS.get('flat') || 3), WIDTH_EXP = +(PARAMS.get('width') || .85), PAN = +(PARAMS.get('pan') || 2.5);
+const OVER = +(PARAMS.get('over') || .4), WOBBLE = +(PARAMS.get('wobble') || 1);
+function arches() {
+  const w = emptyWorld();
+  const x0 = LEFT + 20, x1 = x0 + (W - 20 - x0) * PAN, y0 = 15, y1 = H - BOTTOM - 10;
+  const chs = root.children, idx = new Map(chs.map((c, i) => [c, i]));
+  const need = { up: c => c.agg.contested + c.agg.fog, dn: c => c.agg.held };
+  const SIDES = ['up', 'dn'];
+
+  // Irregular arch profile on t ∈ [0, 1]: a superellipse, tilted to one side and wobbling.
+  const profile = seed => {
+    const r = mulberry32(seed), k1 = .5 + r() * .7, k2 = 1.2 + r() * .8, p1 = r() * 6.28, p2 = r() * 6.28;  // low frequencies: lumps, not peaks
+    const tilt = (r() - .5) * 1.2 * WOBBLE, e = ARCH_EXP * (.7 + .6 * r());
+    return t => {
+      if (t <= 0 || t >= 1) return 0;
+      const base = Math.pow(1 - Math.pow(Math.abs(2 * t - 1), e), 1 / e);
+      const wob = 1 + WOBBLE * (.15 * Math.sin(2 * Math.PI * k1 * t + p1) + .07 * Math.sin(2 * Math.PI * k2 * t + p2));
+      return Math.max(0, base * wob * (1 + tilt * (t - .5)));
+    };
+  };
+  // An arch: span [A, B], height h, profile shp. f(x) is its top edge.
+  const archF = s => x => (x <= s.A || x >= s.B) ? 0 : s.h * s.shp((x - s.A) / (s.B - s.A));
+  const meanOf = shp => d3.mean(d3.range(400), i => shp((i + .5) / 400));
+
+  // Nesting: a chapter under 30% of its bigger neighbour's burden nests inside it, one per side at most.
+  const parentOf = new Map(), kids = new Map(chs.map(c => [c, []]));
+  chs.forEach((ch, i) => {
+    if (kids.get(ch).length) return;
+    const nb = [chs[i - 1], chs[i + 1]].filter(n => n && !parentOf.has(n) && !kids.get(n).some(k => (idx.get(k) < idx.get(n)) === (i < idx.get(n))));
+    const big = d3.greatest(nb, n => n.agg.total);
+    if (big && ch.agg.total < .3 * big.agg.total) { parentOf.set(ch, big); kids.get(big).push(ch); }
+  });
+  const top = chs.filter(c => !parentOf.has(c));
+  const withKids = (c, f) => f(c) + d3.sum(kids.get(c), f);
+
+  // Line stretches: widths ∝ burden^WIDTH_EXP, filling the (panned) width. Areas are in burden units for now.
+  const geo = new Map(), sq = top.map(c => Math.pow(withKids(c, d => d.agg.total), WIDTH_EXP));
+  let xa = x0;
+  top.forEach((c, i) => { const wd = (x1 - x0) * sq[i] / d3.sum(sq); geo.set(c, { a: xa, b: xa + wd }); xa += wd; });
+  const U = d3.sum(chs, c => c.agg.total) / ((x1 - x0) * (y1 - y0) * .5); // rough burden-per-px² so heights start near screen scale
+  for (const c of chs) {
+    const g = geo.get(c) || {};
+    g.arch = {};
+    SIDES.forEach((side, si) => { g.arch[side] = { shp: profile(hash(c.name + side)) }; });
+    geo.set(c, g);
+  }
+
+  // Kids: just inside the parent's edge on their own side, widened until their arches sit under the parent's.
+  for (const p of top) {
+    const pg = geo.get(p), pw = pg.b - pg.a;
+    for (const kd of kids.get(p)) {
+      const kg = geo.get(kd), left = idx.get(kd) < idx.get(p);
+      let frac = Math.min(.4, Math.sqrt(kd.agg.total / withKids(p, d => d.agg.total)));
+      for (let tries = 0; tries < 12; tries++, frac = Math.min(.6, frac * 1.15)) {
+        const wk = frac * pw, inset = .05 * pw;
+        kg.a = left ? pg.a + inset : pg.b - inset - wk; kg.b = kg.a + wk;
+        let fits = true;
+        for (const side of SIDES) {
+          const ka = kg.arch[side], pa = pg.arch[side];
+          ka.A = kg.a; ka.B = kg.b; ka.h = need[side](kd) / U / (wk * meanOf(ka.shp));
+          const ph = withKids(p, need[side]) / U / (pw * meanOf(pa.shp)), pf = archF({ A: pg.a, B: pg.b, h: ph, shp: pa.shp }), kf = archF(ka);
+          if (!d3.range(1, 20).every(j => { const x = kg.a + wk * j / 20; return kf(x) <= .75 * pf(x); })) fits = false;
+        }
+        if (fits) break;
+      }
+    }
+  }
+
+  // Overhang: for each pair of neighbours and each side, the taller arch (by a first estimate) reaches over the shorter.
+  for (const side of SIDES) {
+    const h0 = new Map(top.map(c => { const g = geo.get(c); return [c, withKids(c, need[side]) / U / ((g.b - g.a) * meanOf(g.arch[side].shp))]; }));
+    for (const c of top) { const g = geo.get(c); g.arch[side].A = g.a; g.arch[side].B = g.b; }
+    for (let i = 0; i < top.length - 1; i++) {
+      const L = top[i], R = top[i + 1], gl = geo.get(L), gr = geo.get(R);
+      if (h0.get(L) >= h0.get(R)) gl.arch[side].B = gl.b + OVER * (gr.b - gr.a);
+      else gr.arch[side].A = gr.a - OVER * (gl.b - gl.a);
+    }
+    // Inner edge g(x) of a top-level chapter's region: its kids' arches on its own stretch, the neighbour's arch where it overhangs.
+    for (const c of top) {
+      const g = geo.get(c), i = top.indexOf(c), lN = top[i - 1], rN = top[i + 1];
+      g.arch[side].inner = x => {
+        if (x >= g.a && x <= g.b) return d3.sum(kids.get(c), kd => archF(geo.get(kd).arch[side])(x));
+        const n = x < g.a ? lN : rN;
+        return n ? archF(geo.get(n).arch[side])(x) : 0;
+      };
+    }
+    // Solve heights shortest-first, so every overhang rests on a neighbour that is already final.
+    for (const c of top.slice().sort((p, q) => h0.get(p) - h0.get(q))) {
+      const s = geo.get(c).arch[side], target = need[side](c) / U, f = archF(s);
+      const areaAt = h => { s.h = h; const N = 240, dx = (s.B - s.A) / N; return d3.sum(d3.range(N), j => { const x = s.A + (j + .5) * dx; return Math.max(0, f(x) - s.inner(x)) * dx; }); };
+      let lo = 0, hi = h0.get(c) * 4 + 1;
+      while (areaAt(hi) < target) hi *= 2;
+      for (let j = 0; j < 40; j++) { const m = (lo + hi) / 2; if (areaAt(m) < target) lo = m; else hi = m; }
+      s.h = (lo + hi) / 2;
+    }
+  }
+  // Scale all heights so the tallest edges above and below fit the screen. Everything is linear in this scale.
+  const peak = side => d3.max(chs, c => { const s = geo.get(c).arch[side], f = archF(s), g = s.inner || (() => 0);
+    return d3.max(d3.range(61), j => { const x = s.A + (s.B - s.A) * j / 60; return Math.max(f(x), g(x)); }); });
+  const k = (y1 - y0) / (peak('up') + peak('dn')), yL = y0 + k * peak('up');
+  for (const c of chs) for (const side of SIDES) geo.get(c).arch[side].h *= k;
+  for (const c of chs) for (const side of SIDES) if (!geo.get(c).arch[side].inner) geo.get(c).arch[side].inner = () => 0;
+
+  // The region between inner edge g and outer edge max(f, g) over [a, b], on one side of the line (-1 up, +1 down).
+  // Rectangle [a, b] × [0, hbar] maps onto it with areas preserved: X follows cumulative area, Y the share of local depth.
+  function region(a, b, f, g, side) {
+    const N = 400, xs = d3.range(N + 1).map(i => a + (b - a) * i / N), dep = xs.map(x => Math.max(0, f(x) - g(x)));
+    const cum = [0];
+    for (let i = 1; i <= N; i++) cum.push(cum[i - 1] + (dep[i] + dep[i - 1]) / 2 * (b - a) / N);
+    const total = cum[N];
+    if (total < 1) return null;
+    const hbar = total / (b - a);
+    const xOf = X => {
+      const target = (X - a) * hbar, i = Math.max(0, Math.min(N - 1, d3.bisectRight(cum, target) - 1));
+      const span = cum[i + 1] - cum[i], t = span > 0 ? (target - cum[i]) / span : 0;
+      return xs[i] + Math.max(0, Math.min(1, t)) * (xs[i + 1] - xs[i]);
+    };
+    const toXY = ([X, Y]) => { const x = xOf(X), gi = g(x), fi = Math.max(gi, f(x)); return [x, yL + side * (gi + Y / hbar * (fi - gi))]; };
+    // Outline: outer edge left → right, inner edge back.
+    const ox = d3.range(0, 121).map(j => a + (b - a) * j / 120);
+    const outline = closed([...ox.map(x => [x, yL + side * Math.max(g(x), f(x))]), ...ox.slice().reverse().map(x => [x, yL + side * g(x)])]);
+    return { a, b, hbar, toXY, outline };
+  }
+  // Long edges need many points to follow the arches, so subdivide by length (about every 3 px).
+  const curve = (poly, toXY) => {
+    const pts = [];
+    poly.forEach((p, i) => {
+      const q = poly[(i + 1) % poly.length], n = Math.max(2, Math.ceil(Math.hypot(q[0] - p[0], q[1] - p[1]) / 3));
+      for (let j = 0; j < n; j++) pts.push(toXY([p[0] + (q[0] - p[0]) * j / n, p[1] + (q[1] - p[1]) * j / n]));
+    });
+    return closed(pts);
+  };
+
+  const order = top.flatMap(c => [c, ...kids.get(c)]);   // parents before kids, so kid outlines draw on top
+  for (const ch of order) {
+    const g = geo.get(ch), su = g.arch.up, sd = g.arch.dn;
+    const rUp = region(su.A, su.B, archF(su), su.inner, -1), rDn = region(sd.A, sd.B, archF(sd), sd.inner, 1);
+    const cs = need.up(ch) > 0 ? ch.agg.contested / need.up(ch) : 0;
+    const zones = [];
+    if (rDn) zones.push(['held', rDn, 0, rDn.hbar]);
+    if (rUp && cs > 0) zones.push(['contested', rUp, 0, rUp.hbar * cs]);
+    if (rUp && cs < 1) zones.push(['fog', rUp, rUp.hbar * cs, rUp.hbar]);
+    for (const [zone, R, ya, yb] of zones) {
+      const zp = [[R.a, ya], [R.b, ya], [R.b, yb], [R.a, yb]];
+      w.layers.chapter.fills.push({ d: curve(zp, R.toXY), fill: AGG_COLOR[zone], node: ch, chapter: ch });
+      // Blocks keep the same left → right order above and below, so a block's pieces roughly face each other.
+      const blocks = ch.children.filter(b => b.agg[zone] > 0), bRank = new Map(ch.children.map((b, j) => [b, j]));
+      const bCells = voronoiIn(zp, blocks, b => b.agg[zone],
+        (b, j, r) => [R.a + (R.b - R.a) * (bRank.get(b) + .5) / ch.children.length, ya + (yb - ya) * (.15 + .7 * r())], hash(ch.name + zone));
+      for (const { item: bl, polygon: bp } of bCells) {
+        w.layers.block.fills.push({ d: curve(bp, R.toXY), fill: AGG_COLOR[zone], node: bl, chapter: ch });
+        w.blocks.push(curve(bp, R.toXY));
+        const [bx, by] = R.toXY(d3.polygonCentroid(bp)), bs = Math.sqrt(area(bp));
+        w.labels.push({ x: bx, y: by, text: bl.name, level: 'block', w: bs, h: bs * .6 });
+        // Provinces ordered by status away from the line: held 3 → 1 downward, contested 4 → 5 upward.
+        const leaves = leavesIn(bl, zone).sort(byStatus), n = leaves.length, rank = new Map(leaves.map((d, j) => [d, j])), lAt = boxAt(bp);
+        const lCells = voronoiIn(bp, leaves, d => d.burden, (d, j, r) => {
+          const fr = (rank.get(d) + .5) / n;
+          return lAt(.1 + .8 * r(), zone === 'held' ? 1 - fr : zone === 'contested' ? fr : r());
+        }, hash(bl.name + zone));
+        for (const { item, polygon } of lCells) {
+          w.layers.leaf.fills.push({ d: curve(polygon, R.toXY), fill: STATUS_COLOR[item.status], node: item, chapter: ch, stroke: true });
+          const [lx, ly] = R.toXY(d3.polygonCentroid(polygon)), ls = Math.sqrt(area(polygon));
+          w.labels.push({ x: lx, y: ly, text: item.name.replace('Condition ', ''), level: 'leaf', w: ls, h: ls * .6 });
+        }
+      }
+    }
+    for (const R of [rUp, rDn]) if (R) w.chapters.push({ d: R.outline, color: CHAPTER_HUE.get(ch) });
+    if (rUp && cs > 0 && cs < 1) {
+      const fe = line(d3.range(0, 81).map(j => rUp.toXY([rUp.a + (rUp.b - rUp.a) * j / 80, rUp.hbar * cs])));
+      for (const Ly of Object.values(w.layers)) Ly.fogEdge.push(fe);
+    }
+    const big = rDn && (!rUp || need.dn(ch) >= need.up(ch)) ? rDn : rUp;
+    if (big) {
+      const [lx, ly] = big.toXY([(big.a + big.b) / 2, big.hbar / 2]);
+      w.labels.push({ x: lx, y: ly, text: `${ch.num} ${ch.name}`, level: 'chapter', w: (big.b - big.a) * .8, h: big.hbar * .8, color: CHAPTER_HUE.get(ch) });
+    }
+  }
+  for (const Ly of Object.values(w.layers)) Ly.front.push(line([[x0 - 6, yL], [x1 + 6, yL]]));
+  return w;
+}
+
+// ---------- B: archipelago ----------
+// Chapters are islands strung along one front line. Each island is cut by its own held share and slid across
+// the line until that cut sits on it: held land on the upper-left side, contested lower-right, fog at the far tip.
+// The line runs corner to corner and meanders gently. Islands have flattish sides and no sea gap,
+// so neighbours share part of their border, with bays between their outer ends.
+// Layout happens in a local frame (x across the line, u along it) and is then bent onto the line.
+// Island width:height, how square its sides are (2 = ellipse, higher = flatter sides), and the sea gap as a share of an average island's height.
+const ISLE_ASPECT = +(PARAMS.get('aspect') || 2.2), ISLE_ROUND = +(PARAMS.get('round') || 3.5), ISLE_GAP = +(PARAMS.get('gap') || 0);
+function archipelago() {
+  const w = emptyWorld();
+  const x0 = LEFT + 20, x1 = W - 20, y0 = 15, y1 = H - BOTTOM - 10;
+  const px = p => p[0];
+  const cutX = (poly, frac) => {
+    const total = area(poly), xs = poly.map(px);
+    let lo = d3.min(xs), hi = d3.max(xs);
+    for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2; if (area(clipBy(poly, px, m, true)) < frac * total) lo = m; else hi = m; }
+    return (lo + hi) / 2;
+  };
+  const segX = (poly, x) => {
+    const pts = [];
+    for (let i = 0; i < poly.length; i++) {
+      const a = poly[i], b = poly[(i + 1) % poly.length], da = a[0] - x, db = b[0] - x;
+      if (da * db < 0) { const s = da / (da - db); pts.push([x, a[1] + s * (b[1] - a[1])]); }
+    }
+    return pts.length >= 2 ? pts.slice(0, 2) : null;
+  };
+  // Island shapes in burden units: a superellipse (flat-ish sides), wobbling only across the line so that
+  // neighbours still meet along their flat sides. Kept convex for the Voronoi library.
+  const isles = root.children.map(ch => {
+    const r = mulberry32(hash(ch.name)), ph = [r() * 6.28, r() * 6.28];
+    let poly = d3.polygonHull(d3.range(72).map(k => {
+      const a = k / 72 * 2 * Math.PI, c = Math.cos(a), s = Math.sin(a), m = 1 + .08 * Math.sin(2 * a + ph[0]) + .05 * Math.sin(3 * a + ph[1]);
+      return [ISLE_ASPECT * Math.sign(c) * Math.abs(c) ** (2 / ISLE_ROUND) * m, Math.sign(s) * Math.abs(s) ** (2 / ISLE_ROUND)];
+    }));
+    const f = Math.sqrt(ch.agg.total / area(poly));
+    poly = poly.map(([x, y]) => [x * f, y * f]);
+    const A = ch.agg, xs = poly.map(px);
+    const tH = A.held > 0 ? cutX(poly, A.held / A.total) : d3.min(xs);
+    const tF = A.fog > 0 ? cutX(poly, (A.held + A.contested) / A.total) : d3.max(xs);
+    poly = poly.map(([x, y]) => [x - tH, y]);   // the front cut now sits at x = 0
+    const ys = poly.map(p => p[1]);
+    return { ch, poly, tF: tF - tH, west: -d3.min(poly.map(px)), east: d3.max(poly.map(px)), ymin: d3.min(ys), h: d3.max(ys) - d3.min(ys) };
+  });
+  const gap = ISLE_GAP * d3.mean(isles, d => d.h), total = d3.sum(isles, d => d.h) + gap * (isles.length - 1);
+  const maxW = d3.max(isles, d => d.west), maxE = d3.max(isles, d => d.east);
+  // The line runs bottom-left → top-right. Fit its length along the diagonal, and the islands' spread across it
+  // within the band the screen leaves around the diagonal.
+  const D = Math.hypot(x1 - x0, y1 - y0), T = [(x1 - x0) / D, -(y1 - y0) / D], M = [-T[1], T[0]];
+  const room = (x1 - x0) * (y1 - y0) / D;
+  const s = Math.min(D * .9 / total, room / (maxW + maxE));
+  const L = s * total, xOff = (s * maxE - s * maxW) / 2, mid = [(x0 + x1) / 2, (y0 + y1) / 2];
+  // Gentle bends only: a tight bend would squeeze islands into each other on its inner side.
+  const amp = Math.min(22, room * .05), wave = 2 * Math.PI / (D / 1.6);
+  // Local (x across, u along) → screen, along the meandering centre line.
+  const bend = ([x, u]) => {
+    const off = amp * Math.sin(wave * u), d = amp * wave * Math.cos(wave * u);
+    let tx = T[0] + d * M[0], ty = T[1] + d * M[1];
+    const n = Math.hypot(tx, ty); tx /= n; ty /= n;
+    const xx = x - xOff;
+    return [mid[0] + u * T[0] + off * M[0] - xx * ty, mid[1] + u * T[1] + off * M[1] + xx * tx];
+  };
+  // Fit the bent result to the screen: map every island outline once, then scale and centre uniformly.
+  const outlines = [];
+  { let v = -L / 2; for (const isle of isles) { outlines.push(...isle.poly.map(([x, yy]) => bend([s * x, v + s * (yy - isle.ymin)]))); v += s * (isle.h + gap); } }
+  const [bx0, bx1] = d3.extent(outlines, p => p[0]), [by0, by1] = d3.extent(outlines, p => p[1]);
+  const k = Math.min((x1 - x0) / (bx1 - bx0), (y1 - y0) / (by1 - by0));
+  const fx = x0 + ((x1 - x0) - k * (bx1 - bx0)) / 2, fy = y0 + ((y1 - y0) - k * (by1 - by0)) / 2;
+  const toXY = q => { const [x, y] = bend(q); return [fx + (x - bx0) * k, fy + (y - by0) * k]; };
+  const curve = poly => {
+    const pts = [];
+    poly.forEach((p, i) => { const q = poly[(i + 1) % poly.length]; for (let k = 0; k < 5; k++) pts.push(toXY([p[0] + (q[0] - p[0]) * k / 5, p[1] + (q[1] - p[1]) * k / 5])); });
+    return closed(pts);
+  };
+  let u = -L / 2;
+  for (const isle of isles) {
+    const { ch } = isle, P = isle.poly.map(([x, yy]) => [s * x, u + s * (yy - isle.ymin)]), xF = s * isle.tF;
+    const zones = [['held', clipBy(P, px, 0, true)], ['contested', clipBy(clipBy(P, px, 0, false), px, xF, true)], ['fog', clipBy(P, px, xF, false)]];
+    for (const [zone, zp] of zones) {
+      if (area(zp) < .5) continue;
+      w.layers.chapter.fills.push({ d: curve(zp), fill: AGG_COLOR[zone], node: ch, chapter: ch });
+      const blocks = ch.children.filter(b => b.agg[zone] > 0), bAt = boxAt(zp);
+      const bCells = voronoiIn(zp, blocks, b => b.agg[zone], (b, j, r) => bAt(.15 + .7 * r(), .15 + .7 * r()), hash(ch.name + zone));
+      for (const { item: bl, polygon: bp } of bCells) {
+        w.layers.block.fills.push({ d: curve(bp), fill: AGG_COLOR[zone], node: bl, chapter: ch });
+        w.blocks.push(curve(bp));
+        const [bx, by] = toXY(d3.polygonCentroid(bp)), bs = Math.sqrt(area(bp));
+        w.labels.push({ x: bx, y: by, text: bl.name, level: 'block', w: bs, h: bs * .6 });
+        // Provinces ordered by status across the line: held 1 → 3 up to it, contested 4 → 5 away from it.
+        const leaves = leavesIn(bl, zone).sort(byStatus), n = leaves.length, rank = new Map(leaves.map((d, j) => [d, j])), lAt = boxAt(bp);
+        const lCells = voronoiIn(bp, leaves, d => d.burden,
+          (d, j, r) => lAt(zone === 'fog' ? r() : .1 + .8 * (rank.get(d) + .5) / n, .1 + .8 * r()), hash(bl.name + zone));
+        for (const { item, polygon } of lCells) {
+          w.layers.leaf.fills.push({ d: curve(polygon), fill: STATUS_COLOR[item.status], node: item, chapter: ch, stroke: true });
+          const [lx, ly] = toXY(d3.polygonCentroid(polygon)), ls = Math.sqrt(area(polygon));
+          w.labels.push({ x: lx, y: ly, text: item.name.replace('Condition ', ''), level: 'leaf', w: ls, h: ls * .6 });
+        }
+      }
+    }
+    w.chapters.push({ d: curve(P), color: CHAPTER_HUE.get(ch) });
+    const xs = P.map(px), [lx, ly] = toXY([(d3.min(xs) + d3.max(xs)) / 2, u + s * isle.h / 2]);
+    w.labels.push({ x: lx, y: ly, text: `${ch.num} ${ch.name}`, level: 'chapter', w: (d3.max(xs) - d3.min(xs)) * .9, h: s * isle.h * .8, color: CHAPTER_HUE.get(ch) });
+    const fogSeg = ch.agg.fog > 0 ? segX(P, xF) : null;
+    if (fogSeg) for (const Ly of Object.values(w.layers)) Ly.fogEdge.push(line(d3.range(0, 9).map(k => toXY([xF, fogSeg[0][1] + (fogSeg[1][1] - fogSeg[0][1]) * k / 8]))));
+    u += s * (isle.h + gap);
+  }
+  const front = line(d3.range(-L / 2 - 8, u - s * gap + 8, 3).map(v => toXY([0, v])));
+  for (const Ly of Object.values(w.layers)) Ly.front.push(front);
+  return w;
+}
+// Position inside a polygon's bounding box, by fractions of its width and height.
+function boxAt(poly) {
+  const xs = poly.map(p => p[0]), ys = poly.map(p => p[1]), a = d3.min(xs), b = d3.max(xs), c = d3.min(ys), d = d3.max(ys);
+  return (fx, fy) => [a + (b - a) * fx, c + (d - c) * fy];
+}
+
+// ---------- C: two countries with chapter identity ----------
+const DIR = [Math.cos(.21), Math.sin(.21)], PERP = [-DIR[1], DIR[0]];
+const proj = p => p[0] * DIR[0] + p[1] * DIR[1], across = p => p[0] * PERP[0] + p[1] * PERP[1];
+function cutAt(poly, frac) {
+  const total = area(poly), ps = poly.map(proj);
+  let lo = Math.min(...ps), hi = Math.max(...ps);
+  for (let i = 0; i < 40; i++) { const mid = (lo + hi) / 2; if (area(clipBy(poly, proj, mid, true)) < frac * total) lo = mid; else hi = mid; }
+  return (lo + hi) / 2;
+}
+function segmentAt(poly, t) {
+  const pts = [];
+  for (let i = 0; i < poly.length; i++) {
+    const a = poly[i], b = poly[(i + 1) % poly.length], pa = proj(a) - t, pb = proj(b) - t;
+    if (pa * pb < 0) { const s = pa / (pa - pb); pts.push([a[0] + s * (b[0] - a[0]), a[1] + s * (b[1] - a[1])]); }
+  }
+  return pts.length >= 2 ? pts.slice(0, 2) : null;
+}
+function continent() {
+  const r = mulberry32(3), cx = (LEFT + W) / 2, cy = (H - BOTTOM) / 2 + 6, rx = (W - LEFT) * .47, ry = (H - BOTTOM) * .47;
+  return d3.polygonHull(d3.range(72).map(i => {
+    const a = i / 72 * 2 * Math.PI, k = 1 + (r() - .5) * .08;
+    return [cx + Math.cos(a) * rx * k, cy + Math.sin(a) * ry * k];
+  }));
+}
+// Position in a polygon's own frame: a along DIR from lo (0) to hi (1), p across from lo (0) to hi (1).
+function framer(poly) {
+  const al = poly.map(proj), ac = poly.map(across), a0 = d3.min(al), a1 = d3.max(al), p0 = d3.min(ac), p1 = d3.max(ac);
+  return (fa, fp) => { const a = a0 + (a1 - a0) * fa, p = p0 + (p1 - p0) * fp; return [DIR[0] * a + PERP[0] * p, DIR[1] * a + PERP[1] * p]; };
+}
+function chapterIdentity() {
+  const w = emptyWorld(), outer = continent();
+  const zones = ['held', 'contested', 'fog'].filter(z => root.agg[z] > 0);
+  let cum = 0;
+  const ts = zones.slice(0, -1).map(z => cutAt(outer, (cum += root.agg[z]) / root.agg.total));
+  const pieces = new Map(root.children.map(c => [c, []]));
+  zones.forEach((zone, zi) => {
+    let poly = outer;
+    if (zi > 0) poly = clipBy(poly, proj, ts[zi - 1], false);
+    if (zi < zones.length - 1) poly = clipBy(poly, proj, ts[zi], true);
+    const at = framer(poly), toBorder = zone === 'held' ? .85 : .15; // seeds hug the border on every side
+    // Same north→south order in every country, so a chapter's pieces face each other across the border.
+    const chapters = root.children.map((ref, idx) => ({ ref, idx })).filter(c => c.ref.agg[zone] > 0);
+    const chCells = voronoiIn(poly, chapters, c => c.ref.agg[zone],
+      (c, i, r) => at(toBorder + (r() - .5) * .1, .05 + .9 * (c.idx + .5) / root.children.length), hash(zone));
+    for (const { item: { ref: ch }, polygon: cp } of chCells) {
+      pieces.get(ch).push(cp);
+      w.layers.chapter.fills.push({ d: closed(cp), fill: AGG_COLOR[zone], node: ch, chapter: ch });
+      const blocks = ch.children.filter(b => b.agg[zone] > 0), bAt = framer(cp);
+      const bCells = voronoiIn(cp, blocks, b => b.agg[zone], (b, j, r) => bAt(.15 + .7 * r(), .15 + .7 * r()), hash(ch.name + zone));
+      for (const { item: bl, polygon: bp } of bCells) {
+        w.layers.block.fills.push({ d: closed(bp), fill: AGG_COLOR[zone], node: bl, chapter: ch });
+        w.blocks.push(closed(bp));
+        const [bx, by] = d3.polygonCentroid(bp), bs = Math.sqrt(area(bp));
+        w.labels.push({ x: bx, y: by, text: bl.name, level: 'block', w: bs, h: bs * .6 });
+        // Provinces ordered by status west → east: held 1 → 3 up to the border, contested 4 → 5 away from it.
+        const leaves = leavesIn(bl, zone).sort(byStatus), n = leaves.length, rank = new Map(leaves.map((d, j) => [d, j])), lAt = framer(bp);
+        const lCells = voronoiIn(bp, leaves, d => d.burden,
+          (d, j, r) => lAt(zone === 'fog' ? r() : .1 + .8 * (rank.get(d) + .5) / n, .1 + .8 * r()), hash(bl.name + zone));
+        for (const { item, polygon } of lCells) {
+          w.layers.leaf.fills.push({ d: closed(polygon), fill: STATUS_COLOR[item.status], node: item, chapter: ch, stroke: true });
+          const [lx, ly] = d3.polygonCentroid(polygon), ls = Math.sqrt(area(polygon));
+          w.labels.push({ x: lx, y: ly, text: item.name.replace('Condition ', ''), level: 'leaf', w: ls, h: ls * .6 });
+        }
+      }
+    }
+  });
+  // Each chapter: every piece outlined in its own colour; the full name on its largest piece, the number on the rest.
+  for (const [ch, ps] of pieces) {
+    const biggest = d3.greatest(ps, area);
+    for (const p of ps) {
+      w.chapters.push({ d: closed(p), color: CHAPTER_HUE.get(ch) });
+      const [x, y] = d3.polygonCentroid(p), xs = p.map(q => q[0]), ys = p.map(q => q[1]);
+      w.labels.push({ x, y, text: p === biggest ? `${ch.num} ${ch.name}` : ch.num, level: 'chapter',
+        w: (d3.max(xs) - d3.min(xs)) * .8, h: (d3.max(ys) - d3.min(ys)) * .7, color: CHAPTER_HUE.get(ch) });
+    }
+  }
+  ts.forEach((t, i) => {
+    const seg = segmentAt(outer, t);
+    if (!seg) return;
+    for (const Ly of Object.values(w.layers)) (zones[i] === 'held' && zones[i + 1] === 'contested' ? Ly.front : Ly.fogEdge).push(line(seg));
+  });
+  return w;
+}
+
+// ---------- renderer (identical for both variants) ----------
+const svg = d3.select('#map');
+const LEVELS = { chapter: [0, ZOOM.block * 1.6, 12], block: [ZOOM.block, 16, 10], leaf: [ZOOM.leaf, Infinity, 9] }; // [min zoom, max zoom, font px]
+
+function showHover(n) {
+  const el = document.getElementById('hover');
+  if (!n) { el.innerHTML = '<span class="muted">Hover a region…</span>'; return; }
+  const path = []; for (let p = n.parent; p && p.parent; p = p.parent) path.unshift(p.name);
+  el.innerHTML = `<b>${n.name}</b><div class="muted">${path.join(' › ') || 'Chapter'}</div>` + (n.children
+    ? `Burden ${fmt(n.agg.total)} · ${n.children.length} children<br>held ${pct(n.agg.held / n.agg.total)} · contested ${pct(n.agg.contested / n.agg.total)} · fog ${pct(n.agg.fog / n.agg.total)}`
+    : `Burden ${fmt(n.burden)}<br>Status: <b style="color:${STATUS_COLOR[n.status]}">${STATUS[n.status]}</b>`);
+}
+function renderWorld(w) {
+  const g = svg.append('g'), inner = g.append('g');
+  const fillG = {}, lineG = {};
+  let level = 'chapter';
+  // Hovering anything dims every other chapter, so all of a chapter's pieces stand out together.
+  const highlight = ch => { for (const name in fillG) fillG[name].selectAll('path').attr('opacity', d => !ch || d.chapter === ch ? 1 : .35); };
+  for (const name of ['chapter', 'block', 'leaf'])
+    fillG[name] = inner.append('g').call(sel => sel.selectAll('path').data(w.layers[name].fills).join('path').attr('class', 'fill')
+      .attr('d', d => d.d).attr('fill', d => d.fill).attr('stroke', d => d.stroke ? '#0e1621' : 'none').attr('stroke-width', .3)
+      .on('mouseenter', (e, d) => { showHover(d.node); highlight(d.chapter); }).on('mouseleave', () => { showHover(null); highlight(null); }));
+  const blockG = inner.append('g').call(sel => sel.selectAll('path').data(w.blocks).join('path').attr('class', 'outline').attr('d', d => d).attr('stroke', '#05080c').attr('stroke-width', .8));
+  inner.append('g').selectAll('path').data(w.chapters).join('path').attr('class', 'outline').attr('d', d => d.d)
+    .attr('stroke', d => d.color || '#000').attr('stroke-width', d => d.color ? 3 : 2.4);
+  for (const name of ['chapter', 'block', 'leaf']) {
+    const L = w.layers[name], lg = lineG[name] = inner.append('g');
+    lg.selectAll('.fog').data(L.fogEdge).join('path').attr('class', 'outline').attr('d', d => d).attr('stroke', '#c9d1d9').attr('stroke-width', 1.2).attr('stroke-dasharray', '3 4');
+    for (const [color, width] of [['#1a0d00', 6], ['#ffe08a', 3]])
+      lg.append('g').selectAll('path').data(L.front).join('path').attr('class', 'outline').attr('d', d => d).attr('stroke', color).attr('stroke-width', width).attr('stroke-linejoin', 'round');
+  }
+  const labels = inner.append('g').selectAll('text').data(w.labels).join('text').attr('class', 'label')
+    .attr('x', d => d.x).attr('y', d => d.y).attr('fill', d => d.color || '#fff').text(d => d.text);
+  const zoomed = k => {
+    level = k < ZOOM.block ? 'chapter' : k < ZOOM.leaf ? 'block' : 'leaf';
+    for (const name in fillG) { fillG[name].attr('display', name === level ? null : 'none'); lineG[name].attr('display', name === level ? null : 'none'); }
+    blockG.attr('display', level === 'chapter' ? 'none' : null);
+    labels.attr('font-size', d => LEVELS[d.level][2] / k).attr('stroke-width', 3 / k)
+      .attr('display', d => {
+        const [lo, hi, px] = LEVELS[d.level], need = d.level === 'chapter' ? Math.min(d.text.length, 14) * px * .55 : d.text.length * px * .55;
+        return k >= lo && k < hi && d.w * k >= need && d.h * k >= px * 1.2 ? null : 'none';
+      });
+    stats.level = level;
+  };
+  zoomed(1);
+  svg.call(d3.zoom().scaleExtent([.6, 60]).on('zoom', e => { g.attr('transform', e.transform); stats.k = e.transform.k; zoomed(e.transform.k); updateZoom(); }));
+}
+
+// ---------- shell: panel + switcher ----------
+const VARIANTS = {
+  A: { name: 'Nested arches', build: arches, desc: 'One horizontal front. Every chapter is one region crossing it: contested arch above (fog on top), held arch below. Taller arches reach over their neighbours; small chapters nest inside a bigger one. The map is wider than the screen: drag to pan.' },
+  B: { name: 'Archipelago', build: archipelago, desc: 'Every chapter is one island. All islands cross one meandering diagonal front: upper-left is held, lower-right is contested, the grey tip is fog.' },
+  C: { name: 'Chapter identity', build: chapterIdentity, desc: 'The v1 map: one straight border, each chapter in pieces on both sides. Each chapter has its own outline colour; hover one to light up all its pieces.' },
+};
+let variant = new URLSearchParams(location.search).get('variant');
+if (!VARIANTS[variant]) variant = 'A';
+const stats = {}, cache = {};
+
+function updateZoom() { const el = document.getElementById('zoom'); if (el) el.textContent = `zoom ×${(stats.k || 1).toFixed(1)} · showing ${stats.level}s`; }
+function renderPanel() {
+  const v = VARIANTS[variant];
+  document.getElementById('panel').innerHTML =
+    `<h1>${variant} · ${v.name}</h1><div class="muted">${v.desc}</div>
+     <div class="muted"><span id="zoom"></span></div>
+     <div class="muted">${stats.cells} / ${LEAF_COUNT} provinces laid out · layout ${Math.round(stats.ms)} ms · ${stats.fallbacks} pieces sliced instead of Voronoi</div>
+     <div class="muted">Scroll to zoom: chapters → blocks (×${ZOOM.block}) → provinces (×${ZOOM.leaf}).</div><hr>
+     <div id="hover"></div><hr>
+     ${[1, 2, 3, 4, 5, 0].map(s => `<div class="row"><span class="sw" style="background:${STATUS_COLOR[s]}"></span>${STATUS[s]}</div>`).join('')}
+     <div class="row"><span class="sw" style="background:${AGG_COLOR.held}"></span><span class="sw" style="background:${AGG_COLOR.contested}"></span>Held / contested share (zoomed out)</div>
+     <div class="row"><span class="sw" style="background:#ffe08a"></span>Front line (held | contested)</div>
+     <div class="row"><span class="sw" style="background:repeating-linear-gradient(90deg,#c9d1d9 0 3px,transparent 3px 6px)"></span>Edge of fog</div>`;
+  updateZoom();
+  showHover(null);
+  document.getElementById('vlabel').textContent = `${variant} (${v.name})`;
+}
+function render() {
+  const loading = document.getElementById('loading');
+  loading.style.display = 'grid';
+  setTimeout(() => {
+    svg.selectAll('*').remove(); svg.on('.zoom', null); stats.k = 1;
+    const t0 = performance.now(), f0 = fallbacks.count;
+    const w = cache[variant] || (cache[variant] = VARIANTS[variant].build());
+    if (!w.ms) { w.ms = performance.now() - t0; w.fallbacks = fallbacks.count - f0; }
+    stats.ms = w.ms; stats.fallbacks = w.fallbacks; stats.cells = w.layers.leaf.fills.length;
+    renderWorld(w);
+    renderPanel();
+    loading.style.display = 'none';
+  }, 20);
+}
+function cycle(step) {
+  const keys = Object.keys(VARIANTS);
+  variant = keys[(keys.indexOf(variant) + step + keys.length) % keys.length];
+  const url = new URL(location.href); url.searchParams.set('variant', variant); history.replaceState(null, '', url);
+  render();
+}
+document.getElementById('prev').onclick = () => cycle(-1);
+document.getElementById('next').onclick = () => cycle(1);
+addEventListener('keydown', e => {
+  if (e.target.closest('input, textarea, [contenteditable]')) return;
+  if (e.key === 'ArrowLeft') cycle(-1);
+  if (e.key === 'ArrowRight') cycle(1);
+});
+render();
+</script>
+</body>
+</html>
