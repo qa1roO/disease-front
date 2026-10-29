@@ -26,3 +26,17 @@ Inside each block, the polygon is first cut into held | contested | fog bands by
 - Full layout of ~4,100 provinces took ~0.8 s in the browser. That's fine, and the real pipeline could precompute it.
 - Zoomed out, the front line is many short segments, one per block, not one line per chapter. If that reads badly on real data, a fix is to switch zoomed-out territories to a two-band summary view (as in variant A).
 - Within a band, status shades are not yet graded smoothly west → east.
+
+## Alternatives explored: one shared front line
+
+A follow-up asked whether the whole map could share **one** front line instead of one per block, with every chapter still a single territory. Prototypes are on the `prototype/shared-front` branch (`prototype/shared-front*.prototype.html`, v1–v5):
+
+- **Besieged citadel** (radial, front as one loop), **western front** (horizontal strips) and **two countries** (one straight border, chapters in pieces on both sides).
+- **Citadel redesigned**, and **two countries with united chapters** (each chapter one band across the border).
+- **River front** (chapters strung along a winding river) and **chapter identity** (two countries with per-chapter colours and hover).
+- **Archipelago** (each chapter an island across one meandering diagonal line).
+- **Nested arches** (the owner's sketch: one horizontal line, each chapter an irregular arch above and below it, taller arches overhanging neighbours, small chapters nested in big ones).
+
+The constraint they all ran into: if one line must cross every chapter, each chapter gets only a short stretch of it, so chapters come out thin (rays, bands, fingers), or the map must become much longer than the screen, or chapters split into pieces.
+
+Outcome, 2026-10-29: stay with the continuous world for now. The shared front, most likely nested arches, may be revisited later.
