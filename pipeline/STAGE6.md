@@ -37,6 +37,16 @@ Every non-communicable GBD cause with at least one province on the map, biggest 
    It prints any draft it rejects, with the reason: a dead URL, an unknown MeSH heading, a status outside 1–5, or `no draft`. Fix those drafts and run it again.
 4. **Re-runs** keep every existing proposal. After changing drafts, `python -m pipeline 6 --refresh` rewrites only the proposals that are neither approved nor edited by hand.
 
+## Second opinion (optional, cheap)
+
+A reviewer who isn't a clinician can still narrow the list:
+
+1. Have a cheap model (Haiku) assign a status to every cause **blind**. It sees only the cause names (`<id><TAB><name>`) and the scale above, never the proposals, and does no web search.
+2. Save its answers as `data/raw/second-opinion-haiku.tsv`, one line per cause: `id, status, confidence, reason`.
+3. Compare its answers with the proposals in `data/proposals/SECOND-OPINION.md`, listing the disagreements biggest burden first.
+
+On 2026-10-29 the two agreed on 138 of 173 causes (79% of the burden). This is a consistency check between two AI models, not a clinical review; the site says statuses are AI-proposed.
+
 ## Review
 
 - Start with the **FLAG** rows in `data/proposals/INDEX.md`. The cross-check flags a status that disagrees with ChEMBL's approved-drug data: Curable or Controlled with no approved drug, or Untreatable with one.

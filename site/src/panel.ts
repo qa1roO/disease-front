@@ -76,7 +76,8 @@ function provinceStatus(node: MapNode, meta: MapData['meta']): string {
     : NO_DATA;
   return `
       <dt>Status</dt><dd><span class="dot" style="background:${fill(status, node.provisional)}"></span>${STATUS_NAME[status]}${tag}
-        <span class="note">${side}${node.provisional ? ', assessed for the whole GBD cause' : ''}</span>${nuance}${flag}</dd>
+        <span class="note">${side}${node.provisional ? ', assessed for the whole GBD cause' : ''}</span>${nuance}${flag}
+        <span class="note">Proposed by AI from the sources below; not reviewed by a clinician.</span></dd>
       <dt>Sources</dt><dd>${sources}</dd>`;
 }
 
