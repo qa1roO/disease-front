@@ -8,8 +8,8 @@ Ticket: [01 · Verify data sources and real province count](../../.scratch/v1/is
 |---|---|---|---|---|
 | 1 | WHO ICD-11 MMS tabulation | 2026-01 (released 16 Feb 2026) | No | Allowed (CC BY-ND 3.0 IGO, verbatim, with attribution). We still git-ignore it. |
 | 2 | WHO ICD-10 ↔ ICD-11 mapping tables | 2026-01 | No | Allowed as above, **but building our own crosswalk needs a WHO agreement** (see below) |
-| 3 | GBD cause hierarchy + cause → ICD-10 map | GBD 2023 (Oct 2025) | **Yes, IHME** | **No** |
-| 4 | GBD global DALYs | GBD 2023, year 2023 | **Yes, IHME** | **No** (derived results only) |
+| 3 | GBD cause hierarchy + cause → ICD-10 map | GBD 2023 (Oct 2025) | **Yes, IHME** (GHDx files or the IHME GBD MCP) | **No** |
+| 4 | GBD global DALYs | GBD 2023, year 2023 | **Yes, IHME** (Results Tool or the IHME GBD MCP) | **No** (derived results only) |
 | 5 | ClinicalTrials.gov API v2 | API 2.0.5, data refreshed daily | No | Allowed, with attribution and processing date |
 | 6 | ChEMBL drug indications | ChEMBL 37 (2026-05-01) | No | Allowed (CC BY-SA 3.0); derived data must stay CC BY-SA |
 
@@ -17,8 +17,10 @@ Ticket: [01 · Verify data sources and real province count](../../.scratch/v1/is
 
 The two findings that matter most:
 
-1. **IHME forbids rehosting GBD data.** Raw GBD files must never be committed, and whether the derived per-province DALYs in `map.json` may sit in a public repo is a judgement call for the owner.
+1. **IHME forbids rehosting GBD data.** Raw GBD files must never be committed. Derived per-province DALYs in `map.json` count as published "Results", which the agreement allows.
 2. **The ICD-11 licence carves out crosswalks.** It says mapping ICD-11 to other classifications "[is] not covered by the Classifications License and [is] subject to a separate written agreement from WHO" (§1.2.4). Our ICD-11 → GBD cause file is such a crosswalk.
+
+The owner has decided not to ask WHO or IHME for permission. See [Licence decisions](#licence-decisions).
 
 ---
 
@@ -68,13 +70,27 @@ The two findings that matter most:
   - §8: the agreement lasts five years and IHME may end it at any time.
 - **Public repo:** **raw GBD files must not be committed.** `data/raw/gbd/` stays git-ignored.
 
+### Alternative: the IHME GBD 2023 MCP connector
+
+IHME publishes a Claude connector for GBD 2023 ([Explore GBD 2023 study estimates with Claude](https://www.healthdata.org/explore-gbd-2023-study-estimates-claude)). It's "free for non-commercial use" and needs a free IHME account, which you create when you connect. It's connected in this project's Claude sessions. Tested 2026-10-29:
+
+- **Cause hierarchy:** `list_children(cause_name="All causes", recursive=True, fmt="csv")` returns every GBD 2023 Reporting cause with `cause_id`, `acause`, `level`, `parent_id`, `sort_order` and `most_detailed`.
+  - It confirms that most leaves are at level 3: "131 of 176 level-3 causes have no level-4 children".
+  - Five rows are flagged `most_detailed` but are overlapping totals (1026–1029 and 1059: total cancers, total hepatitis B/C, total NAFLD burden). **Stage 2 must drop them**, or their burden gets counted twice.
+- **Cause → ICD map:** `get_supplementary_data(dataset="icd_codes", cause_name=…)` returns the ICD-10 and ICD-9 ranges per cause, in both variants (`cod` and `nonfatal`). Example: motor neuron disease → `G12-G12.9`.
+- **DALYs:** `get_cause_burden(cause_name=…, measure="dalys", fmt="csv")` returns Global, 2023, all ages by default, with counts, rates and 95% uncertainty intervals by sex. `fmt="csv"` is unrounded. Example: motor neuron disease, 1,218,518 DALYs. It takes one call per cause, so ~360 calls in all.
+- **Limits:** 50,000 rows per 24 hours (the hierarchy plus one ICD lookup used 379). It works **only inside Claude**, so a Python script can't call it. Stage 2 becomes a Claude-run step that writes the same files into `data/raw/gbd/`.
+- **Terms:** the same IHME account and non-commercial terms. The FAQ calls it a complement to the GBD Results Tool and says to defer to the Results Tool if the two disagree. The FAQ asks you to cite MCP results "the way you would normally cite GBD 2023 estimates".
+
+**Recommendation:** use the MCP for the hierarchy and the cause → ICD map, since that's a few calls and no manual downloads. For DALYs, either loop the MCP over the most-detailed causes or download one Results Tool CSV. The CSV is the canonical source and only one download.
+
 ## 4. GBD global DALYs
 
 - **Where:** GBD Results Tool, [vizhub.healthdata.org/gbd-results](https://vizhub.healthdata.org/gbd-results/). Its [info page](https://www.healthdata.org/data-tools-practices/interactive-visuals/gbd-results) was updated 12 Oct 2025 and covers GBD 2023: 375 diseases and injuries, years 1990–2023, downloaded as CSV. "We require all users to create an account in order to search and download GBD data."
 - **Query to run:** GBD Estimate = Cause of death or injury; Measure = DALYs; Metric = Number; Cause = all causes (or just the most-detailed ones); Location = Global; Age = All ages; Sex = Both; Year = 2023. Then download the CSV.
-- **"Level-4 cause" is not quite right.** GBD's leaves (most-detailed causes) sit at level 3 *or* level 4. Many level-3 causes have no level-4 children, for example ischaemic heart disease. Stage 2 must take every most-detailed cause from the hierarchy file, not filter on `level == 4`. (Confirm against the hierarchy's most-detailed flag once it's downloaded.)
+- **"Level-4 cause" is not quite right.** GBD's leaves (most-detailed causes) sit at level 3 *or* level 4. Many level-3 causes have no level-4 children, for example ischaemic heart disease. Stage 2 must take every most-detailed cause from the hierarchy file, not filter on `level == 4`. Confirmed through the MCP: 131 of 176 level-3 causes are leaves.
 - **Licence:** same IHME agreement as above.
-- **Public repo:** no raw CSV. `burden.json` and `map.json` hold *derived* per-province DALYs (cause totals split equally among provinces). That fits §2's "Results … for publication in … websites". However, publishing the whole JSON in a public repo makes per-cause totals easy to recover, which is close to the "ability to download IHME Data Sets". **This is an owner decision.**
+- **Public repo:** no raw CSV. `burden.json` and `map.json` hold *derived* per-province DALYs (cause totals split equally among provinces). That fits §2's "Results … for publication in … websites". The owner has decided they may be committed; see [Licence decisions](#licence-decisions).
 
 ## 5. ClinicalTrials.gov API v2
 
@@ -156,22 +172,22 @@ Notes:
 8. **Layout "chapters → blocks → provinces"**: territories nest up to 7 levels and include non-leaf categories, and 532 parents mix provinces with sub-territories. Spec now says territories nest to any depth. How to band a territory with mixed children is listed as an open question in the spec's risks.
 9. **"Real province count could be over 10,000"**: it's 6,633. The browser-layout plan stands. The risk item is marked resolved.
 
+## Licence decisions
+
+Decided by the owner on 2026-10-29: **no permission will be requested from WHO or IHME.** The project is a non-commercial pet project. What that means for each source:
+
+- **WHO crosswalk clause (ICD-11 §1.2.4):** no written agreement will be sought. Strictly, §1.2.4 applies whether or not the use is commercial, so this is an accepted risk rather than an exemption. For a non-commercial hobby site that cites its sources, it's a small one. To soften it:
+  - `crosswalk.json` and the site say the mapping is the project's own work, built from WHO's published ICD-11 → ICD-10 table and IHME's cause → ICD list, not a WHO product (§1.2.5);
+  - every entry keeps its ICD-11 code, title and URI.
+- **IHME:** no extra permission is needed. Non-commercial use and publishing Results on a website are what the agreement already grants (§1–2). Derived `burden.json` and `map.json` may be committed. Raw GBD files and MCP outputs stay in git-ignored `data/raw/gbd/`. The site shows the §6 source line.
+- **ChEMBL and ClinicalTrials.gov:** neither needs permission, only attribution, as listed in the spec.
+- **Still to do before the repo goes public:** a short `data/LICENSE` note. Our own files and ChEMBL-derived files are CC BY-SA; ICD-11 content stays CC BY-ND 3.0 IGO; GBD-derived numbers are IHME's, used under its non-commercial agreement. This is a licensing note, not a permission request.
+
 ## Steps for the owner
 
 These need you personally; none were attempted.
 
-1. **Create an IHME account** at [healthdata.org](https://www.healthdata.org/) and accept the Free-of-Charge Non-Commercial User Agreement. Check that the §1 declaration fits you: not a commercial entity, nor acting as its employee or agent for this use.
-2. **Download the GBD 2023 files** into `data/raw/gbd/` (git-ignored):
-   - both *GBD 2023 Cause-ICD Codes Map* XLSX files from the [GHDx ICD map record](https://ghdx.healthdata.org/record/ihme-data/gbd-2023-cause-icd-code-mappings);
-   - the *GBD 2023 Cause, REI, and Location Hierarchies* XLSX from its [GHDx record](https://ghdx.healthdata.org/record/gbd-2023-cause-rei-and-location-hierarchies);
-   - a GBD Results Tool CSV: DALYs, Number, all causes, Global, All ages, Both sexes, 2023.
-
-   Stage 2 can't be automated past the login, so it reads these files from disk.
-3. **Decide on the ICD-11 crosswalk clause (§1.2.4).** Either ask WHO for written permission (via the permissions route on [who.int/copyright](https://www.who.int/copyright)) before the repo or site goes public, or accept the risk for a non-commercial pet project. Asking costs an email.
-4. **Decide whether derived DALYs may be public.** Committing `burden.json` and `map.json`, and serving them on GitHub Pages, publishes per-province DALYs from which per-cause totals can be recovered. Options:
-   - accept it as "Results for publication on a website" (§2);
-   - ask IHME;
-   - keep `burden.json` out of git and ship only `map.json`.
-
-   Either way, show the §6 source line on the site.
-5. **Pick a licence for committed data files.** Anything derived from ChEMBL must be CC BY-SA 3.0-compatible, and ICD-11 content stays CC BY-ND 3.0 IGO.
+1. **IHME account:** you already have one through the MCP connector. That means the Free-of-Charge Non-Commercial User Agreement applies, including its §1 declaration: you're not a commercial entity, nor acting as its employee or agent for this use.
+2. **GBD data:** nothing to download by hand for the hierarchy or the ICD map, since a Claude session can pull both through the MCP during stage 2. Only if you choose the Results Tool route for DALYs do you need one manual download into `data/raw/gbd/`: DALYs, Number, all causes, Global, All ages, Both sexes, 2023. The GHDx XLSX files remain a fallback:
+   - both *GBD 2023 Cause-ICD Codes Map* files from the [GHDx ICD map record](https://ghdx.healthdata.org/record/ihme-data/gbd-2023-cause-icd-code-mappings);
+   - the hierarchies file from its [GHDx record](https://ghdx.healthdata.org/record/gbd-2023-cause-rei-and-location-hierarchies).
