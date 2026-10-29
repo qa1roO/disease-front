@@ -1,4 +1,5 @@
-// The pipeline bar for a province (pipeline stages 7-8): its GBD cause's furthest trial phase, or Approved.
+// The pipeline bar for a province (pipeline stages 7-8): its GBD cause's furthest phase among trials still running,
+// or Approved when the province is held.
 import type { MapData, MapNode, Phase } from './types';
 
 export const STEPS: Record<Phase, { step: number; label: string }> = {
@@ -25,10 +26,9 @@ export function pipelineView(node: MapNode, meta: MapData['meta']): PipelineView
   const { step } = STEPS[node.pipeline];
   let { label } = STEPS[node.pipeline];
   const ct = meta.clinicaltrials;
-  const trials = bar ? `${bar.trials.toLocaleString('en')} interventional trial${bar.trials === 1 ? '' : 's'} first posted since ${ct?.registeredSince}` : '';
+  const trials = bar ? `${bar.trials.toLocaleString('en')} interventional trial${bar.trials === 1 ? '' : 's'} still running (recruiting or active), first posted since ${ct?.registeredSince}` : '';
   let note: string;
-  if (node.pipeline === 'approved' && bar?.phase !== 'approved') note = 'held: a treatment cures or controls it';
-  else if (node.pipeline === 'approved') note = `ChEMBL (${ct?.chembl}) lists an approved drug for this cause`;
+  if (node.pipeline === 'approved') note = 'held: a treatment cures or controls it';
   else if (node.pipeline === 'none' && bar?.trials) {
     // Phase "NA" trials count toward the total but set no phase.
     label = 'No phased trial';

@@ -22,18 +22,16 @@ export interface MapNode {
   pipeline?: Phase;
 }
 
-/** No registered trial, Phase 1-3 (ClinicalTrials.gov), Approved (ChEMBL, or a held status). */
+/** No registered trial, Phase 1-3 (running ClinicalTrials.gov trials), Approved (held provinces only). */
 export type Phase = 'none' | 'phase1' | 'phase2' | 'phase3' | 'approved';
 
 /** A GBD cause's pipeline bar (pipeline stage 7). */
 export interface PipelineBar {
-  phase: Phase;
-  /** Interventional trials, recruiting / active / completed, first posted since meta.clinicaltrials.registeredSince. */
+  phase: Exclude<Phase, 'approved'>;
+  /** Interventional trials still running (recruiting or active), first posted since meta.clinicaltrials.registeredSince. */
   trials: number;
   /** The same search on ClinicalTrials.gov. */
   url: string;
-  /** Approved only: MeSH ID -> ChEMBL molecules with an approved indication. */
-  approved?: Record<string, string[]>;
 }
 
 /** How a province got its size (pipeline stage 4). */
@@ -81,7 +79,7 @@ export interface MapData {
     crosswalk: string;
     gbdCauses: Record<string, GbdCause>;
     /** Present once stage 7 has run: the API's data date ("data as of") and the trial window. */
-    clinicaltrials?: { apiVersion: string; dataTimestamp: string; registeredSince: string; chembl: string };
+    clinicaltrials?: { apiVersion: string; dataTimestamp: string; registeredSince: string; statuses: string[] };
   };
   root: MapNode;
 }

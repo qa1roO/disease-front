@@ -11,6 +11,8 @@ A blind second opinion, generated 2026-10-29: Claude Haiku 5.5 saw only each GBD
 
 Each group is sorted by burden, biggest first. Bars show the phase, with the matching trial count in brackets. 'Approved' comes from ChEMBL.
 
+The bars here use the rule at the time of the comparison: active or completed trials, plus ChEMBL's Approved. Later the same day the owner changed stage 7 to count running trials only and dropped ChEMBL's Approved (see `docs/spec/v1.md`). The term comparison still stands; only the bar column is out of date.
+
 ## 1. Haiku's headings aren't MeSH headings (11)
 
 Haiku named headings that don't exist in MeSH, such as 'Hypertensive Heart Disease' and 'Sepsis, Neonatal'. Its version would find no trials, so these aren't real alternatives. The `mesh.yaml` terms stand unless you see a problem with them.

@@ -147,9 +147,6 @@ def stage5():
 
 def stage7():
     terms = mesh.reviewed_terms(mesh.read(MESH))
-    if not INDICATIONS.exists():
-        chembl.fetch(RAW_CHEMBL)
-    indications = json.loads(read(INDICATIONS))
     get = bars.Polite(bars.get_json)
     version = get(bars.API + "version")
     since = bars.since(version["dataTimestamp"])
@@ -158,10 +155,10 @@ def stage7():
                             save=lambda data: write_json(CTGOV_CACHE, data))
     print(f"  {len(terms)} GBD causes with reviewed MeSH terms; ClinicalTrials.gov data as of "
           f"{version['dataTimestamp']}, trials first posted since {since}")
-    causes = bars.run(terms, count, proposals.approved_drugs(indications["rows"]), since, log=print)
+    causes = bars.run(terms, count, since, log=print)
     write_json(BARS, {"note": bars.NOTE,
                       "source": {"apiVersion": version["apiVersion"], "dataTimestamp": version["dataTimestamp"],
-                                 "registeredSince": since, "chembl": indications["release"]},
+                                 "registeredSince": since, "statuses": bars.STATUSES.split("|")},
                       "causes": causes}, indent=1)
     phases = {}
     for b in causes.values():
@@ -230,7 +227,7 @@ STAGES = {
     "5": ("MeSH terms", stage5, [BURDEN, MESH_DRAFTS, *sorted(MESH_DRAFTS.glob("*.yaml")), PKG / "mesh.py"], [MESH]),
     "6": ("status proposals", stage6, [BURDEN, INDICATIONS, DRAFTS, *sorted(DRAFTS.glob("*.yaml")),
                                         PKG / "proposals.py"], [PROPOSALS / "INDEX.md", ASSESSMENTS / "INDEX.md"]),
-    "7": ("pipeline bars", stage7, [MESH, INDICATIONS, PKG / "bars.py"], [BARS]),
+    "7": ("pipeline bars", stage7, [MESH, PKG / "bars.py"], [BARS]),
     "8": ("build site data", stage8,
           [TREE, CROSSWALK, BURDEN, BARS, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), *sorted(ASSESSMENTS.glob("*.yaml")),
            PKG / "site_data.py",

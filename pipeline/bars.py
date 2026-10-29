@@ -1,14 +1,19 @@
 """Stage 7: the pipeline bar per GBD cause (docs/spec/v1.md, "Pipeline bar (stage 7)").
 
 For each cause with reviewed MeSH terms (stage 5), ClinicalTrials.gov API v2 is asked how many interventional
-trials that are recruiting, enrolling by invitation, active or completed, and were first posted in the 10 years
-before the API's data date, have one of those terms as a condition. The bar is the furthest phase among them:
+trials that are still running (recruiting, not yet recruiting, enrolling by invitation, or active and not
+recruiting), and were first posted in the 10 years before the API's data date, have one of those terms as a
+condition. Completed trials don't count: the bar shows the progress still being made against the cause. It is the
+furthest phase among those trials:
 
-- Approved, when ChEMBL has an approved indication (max_phase_for_ind = 4) for one of the terms;
 - Phase 3 (Phase 4 post-approval trials count here: the drug got past Phase 3), Phase 2, Phase 1 (Early Phase 1
   counts as Phase 1);
 - "none" (No registered trial) otherwise. Phase "NA" trials (devices, behavioural) count as trials but set no
   phase, and the registry can't show preclinical work.
+
+The bar is never Approved here. Approved belongs to held provinces (status 1-3), set in stage 8. The owner decided
+this on 2026-10-29: ChEMBL's approved-drug data made most contested causes read Approved, which said nothing about
+progress.
 
 Each cause costs one request for the trial count, plus one per phase, highest first, until one has trials.
 Requests are spaced 1 s apart (no limit is published; third-party guides report ~50/min) and back off on HTTP 429
@@ -24,17 +29,18 @@ import urllib.request
 
 API = "https://clinicaltrials.gov/api/v2/"
 WEBSITE = "https://clinicaltrials.gov/search"
-STATUSES = "RECRUITING|ENROLLING_BY_INVITATION|ACTIVE_NOT_RECRUITING|COMPLETED"
-WEBSITE_STATUSES = "rec enr act com"  # the website's codes for the same four statuses
+STATUSES = "RECRUITING|NOT_YET_RECRUITING|ENROLLING_BY_INVITATION|ACTIVE_NOT_RECRUITING"
+WEBSITE_STATUSES = "rec not enr act"  # the website's codes for the same four statuses
 TIERS = [("phase3", "(PHASE3 OR PHASE4)"), ("phase2", "PHASE2"), ("phase1", "(PHASE1 OR EARLY_PHASE1)")]
 YEARS = 10
 # The MeSH year whose labels ClinicalTrials.gov indexes conditions under (checked 2026-10-29: "Depressive
 # Disorder, Major" finds 2,966 trials, its 2026 label "Major Depressive Disorder" 5).
 CTGOV_MESH_YEAR = 2025
-NOTE = ("Pipeline bar per GBD cause: the furthest phase among interventional ClinicalTrials.gov trials (recruiting, "
-        "enrolling by invitation, active or completed, first posted since registeredSince) whose conditions include "
-        "one of the cause's reviewed MeSH terms (data/mesh.yaml); Approved when ChEMBL has an approved indication for "
-        "one of the terms. Derived from ClinicalTrials.gov and ChEMBL (CC BY-SA 3.0).")
+NOTE = ("Pipeline bar per GBD cause: the furthest phase among interventional ClinicalTrials.gov trials still running "
+        "(recruiting, not yet recruiting, enrolling by invitation, or active and not recruiting; completed trials don't "
+        "count), first posted since registeredSince, whose conditions include one of the cause's reviewed MeSH terms "
+        "(data/mesh.yaml). Phase 4 counts as Phase 3. Held provinces (status 1-3) show Approved instead, set in stage 8. "
+        "Derived from ClinicalTrials.gov.")
 
 
 def since(data_timestamp):
@@ -65,22 +71,19 @@ def search_url(terms, since_date):
     return WEBSITE + "?" + urllib.parse.urlencode(query, quote_via=urllib.parse.quote)
 
 
-def bar(terms, count, approved, since_date):
-    """{phase, trials, url[, approved: {MeSH ID: ChEMBL IDs}]} for one cause. count(params) -> totalCount."""
+def bar(terms, count, since_date):
+    """{phase, trials, url} for one cause. count(params) -> totalCount."""
     out = {"phase": "none", "trials": count(params(terms, since_date)), "url": search_url(terms, since_date)}
-    hits = {m: sorted(approved[m]) for m in terms if m in approved}
-    if hits:
-        out["phase"], out["approved"] = "approved", hits
-    elif out["trials"]:
+    if out["trials"]:
         out["phase"] = next((name for name, phase in TIERS if count(params(terms, since_date, phase))), "none")
     return out
 
 
-def run(cause_terms, count, approved, since_date, log=lambda line: None):
+def run(cause_terms, count, since_date, log=lambda line: None):
     """cause id -> {cause's reviewed terms}, to {str(cause id): bar}."""
     out = {}
     for cid, terms in cause_terms.items():
-        out[str(cid)] = bar(terms, count, approved, since_date)
+        out[str(cid)] = bar(terms, count, since_date)
         log(f"  {cid}: {out[str(cid)]['phase']}, {out[str(cid)]['trials']} trials")
     return out
 
