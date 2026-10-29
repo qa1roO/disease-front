@@ -13,19 +13,16 @@ html, body {
   background: var(--sea); color: var(--ink);
   font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-#map { display: block; width: 100vw; height: 100vh; cursor: grab; }
+/* The map is drawn on #world (canvas.ts); the SVG on top takes pan, zoom and clicks and holds the labels. */
+#world, #map { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+#map { cursor: grab; }
+#map.over-province { cursor: pointer; }
 #map:active { cursor: grabbing; }
 
 /* Map strokes stay the same on screen at every zoom. */
-#map path { vector-effect: non-scaling-stroke; }
-.provinces path { stroke: var(--sea); stroke-width: 0.35; cursor: pointer; }
-.provinces path:hover { filter: brightness(1.35); }
-.border-territory path { fill: none; stroke: #05080c; stroke-width: 1; pointer-events: none; }
-.border-chapter path { fill: none; stroke: #000; stroke-width: 2.6; pointer-events: none; }
-.bands path { fill: none; pointer-events: none; stroke-linecap: round; }
-.bands .front { stroke: var(--front); stroke-width: 2.2; }
-.bands .fog-edge { stroke: #c9d1d9; stroke-width: 0.8; stroke-dasharray: 3 4; }
-.selected { fill: none; stroke: #fff; stroke-width: 2; pointer-events: none; }
+#map path { vector-effect: non-scaling-stroke; pointer-events: none; }
+.hover { fill: rgba(255, 255, 255, 0.22); stroke: none; }
+.selected { fill: none; stroke: #fff; stroke-width: 2; }
 
 .labels { pointer-events: none; }
 .label {
@@ -52,6 +49,7 @@ html, body {
 #panel dl { display: grid; grid-template-columns: 96px 1fr; gap: 4px 8px; margin: 0 0 10px; }
 #panel dt { color: var(--muted); }
 #panel dd { margin: 0; overflow-wrap: anywhere; }
+#panel .as-of span { display: block; }
 #panel a { color: var(--link); }
 .no-data { color: var(--muted); font-style: italic; }
 #panel .note { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
@@ -78,6 +76,7 @@ html, body {
 .sw.weights i:nth-child(3) { height: 0.6px; }
 
 #attribution { left: 12px; right: 12px; bottom: 8px; padding: 4px 10px; font-size: 11px; color: var(--muted); }
+#attribution a { color: inherit; }
 
 @media (max-width: 700px) {
   #panel { left: 12px; width: auto; top: auto; bottom: 44px; max-height: 50vh; }
@@ -87,6 +86,3 @@ html, body {
 #panel .tag { display: inline-block; margin-left: 6px; padding: 0 5px; border: 1px solid var(--muted); border-radius: 3px; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; vertical-align: 1px; }
 #panel .dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
 #panel .note.flag { color: #ffb86b; }
-.summary path { pointer-events: none; stroke: none; }
-.summary .bands .front { stroke: var(--front); stroke-width: 3.2; }
-.summary .bands .fog-edge { stroke: #c9d1d9; stroke-width: 1.2; }

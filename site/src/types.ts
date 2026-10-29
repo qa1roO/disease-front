@@ -80,6 +80,8 @@ export interface MapData {
     gbdCauses: Record<string, GbdCause>;
     /** Present once stage 7 has run: the API's data date ("data as of") and the trial window. */
     clinicaltrials?: { apiVersion: string; dataTimestamp: string; registeredSince: string; statuses: string[] };
+    /** The ChEMBL release the status cross-check used (pipeline stage 6), e.g. "ChEMBL_37". */
+    chembl?: { release: string; releaseDate: string; fetched: string; citation: string };
   };
   root: MapNode;
 }
