@@ -51,6 +51,14 @@ describe('pipelineView', () => {
     expect([v.step, v.label, v.trials]).toEqual([0, 'No registered trial', 0]);
   });
 
+  it('trials that set no phase (devices, behavioural) read No phased trial', () => {
+    const m = { ...meta, gbdCauses: { '1': { name: 'x', dalys: 1, provinces: 1, bar: { phase: 'none', trials: 1, url: 'u' } } } } as unknown as MapData['meta'];
+    expect(pipelineView(province(1, { pipeline: 'none' }), m)).toEqual({
+      step: 0, label: 'No phased trial', trials: 1, url: 'u',
+      note: '1 interventional trial first posted since 2016-10-29, none in Phase 1-4 (e.g. device or behavioural studies)',
+    });
+  });
+
   it('is no data when the province has no bar', () => {
     expect(pipelineView(province(999), meta)).toBeNull();
     expect(pipelineView(province(null), meta)).toBeNull();

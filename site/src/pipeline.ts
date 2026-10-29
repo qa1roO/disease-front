@@ -22,11 +22,17 @@ export interface PipelineView {
 export function pipelineView(node: MapNode, meta: MapData['meta']): PipelineView | null {
   if (!node.pipeline) return null;
   const bar = node.burden ? meta.gbdCauses[String(node.burden.cause)]?.bar : undefined;
-  const { step, label } = STEPS[node.pipeline];
+  const { step } = STEPS[node.pipeline];
+  let { label } = STEPS[node.pipeline];
   const ct = meta.clinicaltrials;
+  const trials = bar ? `${bar.trials.toLocaleString('en')} interventional trial${bar.trials === 1 ? '' : 's'} first posted since ${ct?.registeredSince}` : '';
   let note: string;
   if (node.pipeline === 'approved' && bar?.phase !== 'approved') note = 'held: a treatment cures or controls it';
   else if (node.pipeline === 'approved') note = `ChEMBL (${ct?.chembl}) lists an approved drug for this cause`;
-  else note = `furthest phase among ${bar?.trials.toLocaleString('en')} interventional trials first posted since ${ct?.registeredSince}`;
+  else if (node.pipeline === 'none' && bar?.trials) {
+    // Phase "NA" trials count toward the total but set no phase.
+    label = 'No phased trial';
+    note = `${trials}, none in Phase 1-4 (e.g. device or behavioural studies)`;
+  } else note = `furthest phase among ${trials}`;
   return bar ? { step, label, trials: bar.trials, url: bar.url, note } : { step, label, note };
 }

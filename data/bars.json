@@ -6,5 +6,5735 @@
   "registeredSince": "2016-10-29",
   "chembl": "ChEMBL_37"
  },
- "causes": {}
+ "causes": {
+  "493": {
+   "phase": "approved",
+   "trials": 1566,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Myocardial%20Ischemia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Coronary%20Artery%20Disease%22%20OR%20AREA%5BConditionMeshTerm%5D%22Coronary%20Disease%22%20OR%20AREA%5BConditionMeshTerm%5D%22Myocardial%20Infarction%22%20OR%20AREA%5BConditionMeshTerm%5D%22Angina%20Pectoris%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003324": [
+     "CHEMBL1064",
+     "CHEMBL1144",
+     "CHEMBL1160819",
+     "CHEMBL1168",
+     "CHEMBL1311",
+     "CHEMBL1487",
+     "CHEMBL1491",
+     "CHEMBL1496",
+     "CHEMBL1581",
+     "CHEMBL198362",
+     "CHEMBL2109540",
+     "CHEMBL2110557",
+     "CHEMBL2364655",
+     "CHEMBL24",
+     "CHEMBL25",
+     "CHEMBL27",
+     "CHEMBL3545313",
+     "CHEMBL398435",
+     "CHEMBL4302512",
+     "CHEMBL503",
+     "CHEMBL573",
+     "CHEMBL6069485",
+     "CHEMBL6622",
+     "CHEMBL730",
+     "CHEMBL932"
+    ],
+    "D003327": [
+     "CHEMBL1064",
+     "CHEMBL1144",
+     "CHEMBL457",
+     "CHEMBL503"
+    ],
+    "D009203": [
+     "CHEMBL1014",
+     "CHEMBL1017",
+     "CHEMBL1064",
+     "CHEMBL1069",
+     "CHEMBL1095097",
+     "CHEMBL1144",
+     "CHEMBL1148",
+     "CHEMBL1168",
+     "CHEMBL1174",
+     "CHEMBL1200692",
+     "CHEMBL1201202",
+     "CHEMBL1201476",
+     "CHEMBL1201593",
+     "CHEMBL1201772",
+     "CHEMBL1237",
+     "CHEMBL13",
+     "CHEMBL1393",
+     "CHEMBL1422",
+     "CHEMBL1464",
+     "CHEMBL1487",
+     "CHEMBL1491",
+     "CHEMBL1519",
+     "CHEMBL1560",
+     "CHEMBL1581",
+     "CHEMBL1771",
+     "CHEMBL2107885",
+     "CHEMBL2108791",
+     "CHEMBL2364655",
+     "CHEMBL24",
+     "CHEMBL25",
+     "CHEMBL334966",
+     "CHEMBL398435",
+     "CHEMBL4302512",
+     "CHEMBL435",
+     "CHEMBL493982",
+     "CHEMBL521606",
+     "CHEMBL573",
+     "CHEMBL59",
+     "CHEMBL707",
+     "CHEMBL723",
+     "CHEMBL730",
+     "CHEMBL916"
+    ],
+    "D000787": [
+     "CHEMBL1014",
+     "CHEMBL1055",
+     "CHEMBL13",
+     "CHEMBL1311",
+     "CHEMBL1404",
+     "CHEMBL1487",
+     "CHEMBL1491",
+     "CHEMBL23",
+     "CHEMBL24",
+     "CHEMBL27",
+     "CHEMBL435",
+     "CHEMBL471737",
+     "CHEMBL521606",
+     "CHEMBL6622",
+     "CHEMBL730"
+    ]
+   }
+  },
+  "322": {
+   "phase": "approved",
+   "trials": 1515,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pneumonia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pneumonia%2C%20Bacterial%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pneumonia%2C%20Viral%22%20OR%20AREA%5BConditionMeshTerm%5D%22Bronchiolitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Influenza%2C%20Human%22%20OR%20AREA%5BConditionMeshTerm%5D%22Respiratory%20Syncytial%20Virus%20Infections%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D011014": [
+     "CHEMBL1082",
+     "CHEMBL1136",
+     "CHEMBL1200558",
+     "CHEMBL1201302",
+     "CHEMBL126",
+     "CHEMBL131",
+     "CHEMBL137",
+     "CHEMBL1433",
+     "CHEMBL1436",
+     "CHEMBL148",
+     "CHEMBL158",
+     "CHEMBL1650",
+     "CHEMBL1730",
+     "CHEMBL1741",
+     "CHEMBL1753",
+     "CHEMBL186",
+     "CHEMBL196",
+     "CHEMBL3184512",
+     "CHEMBL32",
+     "CHEMBL33",
+     "CHEMBL372795",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL404",
+     "CHEMBL44354",
+     "CHEMBL501122",
+     "CHEMBL529",
+     "CHEMBL55",
+     "CHEMBL635",
+     "CHEMBL650",
+     "CHEMBL666",
+     "CHEMBL680",
+     "CHEMBL702",
+     "CHEMBL766",
+     "CHEMBL777",
+     "CHEMBL927",
+     "CHEMBL996"
+    ],
+    "D018410": [
+     "CHEMBL1136",
+     "CHEMBL1359",
+     "CHEMBL1689772",
+     "CHEMBL3291398",
+     "CHEMBL3989974",
+     "CHEMBL491571",
+     "CHEMBL501122",
+     "CHEMBL507870"
+    ],
+    "D007251": [
+     "CHEMBL112",
+     "CHEMBL1229",
+     "CHEMBL139367",
+     "CHEMBL1590",
+     "CHEMBL222813",
+     "CHEMBL4297503",
+     "CHEMBL521",
+     "CHEMBL6068360",
+     "CHEMBL6068361",
+     "CHEMBL6068362",
+     "CHEMBL6068363",
+     "CHEMBL6068369",
+     "CHEMBL6068377",
+     "CHEMBL6068384",
+     "CHEMBL6068385",
+     "CHEMBL6068386",
+     "CHEMBL6068387",
+     "CHEMBL6068388",
+     "CHEMBL660",
+     "CHEMBL959"
+    ],
+    "D018357": [
+     "CHEMBL1201586",
+     "CHEMBL6068489",
+     "CHEMBL6068496"
+    ]
+   }
+  },
+  "976": {
+   "phase": "approved",
+   "trials": 2896,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Diabetes%20Mellitus%2C%20Type%202%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003924": [
+     "CHEMBL1073",
+     "CHEMBL1200711",
+     "CHEMBL1201497",
+     "CHEMBL1201631",
+     "CHEMBL121",
+     "CHEMBL1272",
+     "CHEMBL1364",
+     "CHEMBL1422",
+     "CHEMBL142703",
+     "CHEMBL1431",
+     "CHEMBL1481",
+     "CHEMBL1513",
+     "CHEMBL1561",
+     "CHEMBL1622",
+     "CHEMBL1770248",
+     "CHEMBL1808388",
+     "CHEMBL2048484",
+     "CHEMBL2104391",
+     "CHEMBL2107830",
+     "CHEMBL2107841",
+     "CHEMBL2108027",
+     "CHEMBL2108336",
+     "CHEMBL2108724",
+     "CHEMBL2110563",
+     "CHEMBL2181927",
+     "CHEMBL237500",
+     "CHEMBL3039507",
+     "CHEMBL376359",
+     "CHEMBL385517",
+     "CHEMBL398435",
+     "CHEMBL404271",
+     "CHEMBL4084119",
+     "CHEMBL414357",
+     "CHEMBL4297839",
+     "CHEMBL429910",
+     "CHEMBL4594581",
+     "CHEMBL472",
+     "CHEMBL493",
+     "CHEMBL498",
+     "CHEMBL595",
+     "CHEMBL6068331",
+     "CHEMBL672",
+     "CHEMBL782",
+     "CHEMBL783",
+     "CHEMBL817",
+     "CHEMBL857",
+     "CHEMBL925",
+     "CHEMBL981"
+    ]
+   }
+  },
+  "496": {
+   "phase": "phase3",
+   "trials": 158,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cerebral%20Hemorrhage%22%20OR%20AREA%5BConditionMeshTerm%5D%22Intracranial%20Hemorrhages%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "509": {
+   "phase": "approved",
+   "trials": 1214,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pulmonary%20Disease%2C%20Chronic%20Obstructive%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D029424": [
+     "CHEMBL1095777",
+     "CHEMBL1187833",
+     "CHEMBL1194325",
+     "CHEMBL1198857",
+     "CHEMBL1201231",
+     "CHEMBL1201335",
+     "CHEMBL1256786",
+     "CHEMBL1263",
+     "CHEMBL1363",
+     "CHEMBL1370",
+     "CHEMBL1473",
+     "CHEMBL1621597",
+     "CHEMBL1676",
+     "CHEMBL1900528",
+     "CHEMBL193240",
+     "CHEMBL3833319",
+     "CHEMBL4594287",
+     "CHEMBL529",
+     "CHEMBL605846",
+     "CHEMBL714"
+    ]
+   }
+  },
+  "630": {
+   "phase": "phase3",
+   "trials": 930,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Low%20Back%20Pain%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "381": {
+   "phase": "approved",
+   "trials": 1248,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Infant%2C%20Premature%2C%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Premature%20Birth%22%20OR%20AREA%5BConditionMeshTerm%5D%22Respiratory%20Distress%20Syndrome%2C%20Newborn%22%20OR%20AREA%5BConditionMeshTerm%5D%22Bronchopulmonary%20Dysplasia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Enterocolitis%2C%20Necrotizing%22%20OR%20AREA%5BConditionMeshTerm%5D%22Retinopathy%20of%20Prematurity%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D047928": [
+     "CHEMBL1200848",
+     "CHEMBL382301"
+    ],
+    "D012127": [
+     "CHEMBL1200737",
+     "CHEMBL1201447",
+     "CHEMBL1201622",
+     "CHEMBL1201624"
+    ],
+    "D001997": [
+     "CHEMBL1201586"
+    ]
+   }
+  },
+  "495": {
+   "phase": "approved",
+   "trials": 3381,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Ischemic%20Stroke%22%20OR%20AREA%5BConditionMeshTerm%5D%22Stroke%22%20OR%20AREA%5BConditionMeshTerm%5D%22Brain%20Ischemia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000083242": [
+     "CHEMBL1771"
+    ],
+    "D020521": [
+     "CHEMBL1014",
+     "CHEMBL1017",
+     "CHEMBL1064",
+     "CHEMBL1069",
+     "CHEMBL1095097",
+     "CHEMBL1148",
+     "CHEMBL1168",
+     "CHEMBL118",
+     "CHEMBL1200692",
+     "CHEMBL1201288",
+     "CHEMBL1201593",
+     "CHEMBL1237",
+     "CHEMBL1269025",
+     "CHEMBL13",
+     "CHEMBL1422",
+     "CHEMBL1464",
+     "CHEMBL1487",
+     "CHEMBL1491",
+     "CHEMBL1592",
+     "CHEMBL1639",
+     "CHEMBL1771",
+     "CHEMBL191",
+     "CHEMBL198362",
+     "CHEMBL2028661",
+     "CHEMBL231779",
+     "CHEMBL2364655",
+     "CHEMBL24",
+     "CHEMBL25",
+     "CHEMBL27",
+     "CHEMBL398435",
+     "CHEMBL434394",
+     "CHEMBL493982",
+     "CHEMBL521606",
+     "CHEMBL539697",
+     "CHEMBL833",
+     "CHEMBL838",
+     "CHEMBL932"
+    ]
+   }
+  },
+  "302": {
+   "phase": "approved",
+   "trials": 225,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Diarrhea%22%20OR%20AREA%5BConditionMeshTerm%5D%22Dysentery%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cholera%22%20OR%20AREA%5BConditionMeshTerm%5D%22Rotavirus%20Infections%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003967": [
+     "CHEMBL1120",
+     "CHEMBL1255800",
+     "CHEMBL1401",
+     "CHEMBL1617",
+     "CHEMBL2105695",
+     "CHEMBL2108184",
+     "CHEMBL2159122",
+     "CHEMBL262777",
+     "CHEMBL437765",
+     "CHEMBL841"
+    ],
+    "D002771": [
+     "CHEMBL1433",
+     "CHEMBL2108939",
+     "CHEMBL6068352",
+     "CHEMBL6068353"
+    ],
+    "D012400": [
+     "CHEMBL6068351",
+     "CHEMBL6068358"
+    ]
+   }
+  },
+  "571": {
+   "phase": "approved",
+   "trials": 3859,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Anxiety%20Disorders%22%20OR%20AREA%5BConditionMeshTerm%5D%22Panic%20Disorder%22%20OR%20AREA%5BConditionMeshTerm%5D%22Phobia%2C%20Social%22%20OR%20AREA%5BConditionMeshTerm%5D%22Agoraphobia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001008": [
+     "CHEMBL1059",
+     "CHEMBL1175",
+     "CHEMBL12",
+     "CHEMBL1213252",
+     "CHEMBL1508",
+     "CHEMBL451",
+     "CHEMBL49",
+     "CHEMBL490",
+     "CHEMBL568",
+     "CHEMBL580",
+     "CHEMBL637",
+     "CHEMBL661",
+     "CHEMBL979"
+    ],
+    "D016584": [
+     "CHEMBL452",
+     "CHEMBL490",
+     "CHEMBL637",
+     "CHEMBL661"
+    ],
+    "D000072861": [
+     "CHEMBL490",
+     "CHEMBL637",
+     "CHEMBL809"
+    ]
+   }
+  },
+  "382": {
+   "phase": "phase3",
+   "trials": 104,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hypoxia-Ischemia%2C%20Brain%22%20OR%20AREA%5BConditionMeshTerm%5D%22Asphyxia%20Neonatorum%22%20OR%20AREA%5BConditionMeshTerm%5D%22Birth%20Injuries%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "674": {
+   "phase": "phase3",
+   "trials": 522,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hearing%20Loss%22%20OR%20AREA%5BConditionMeshTerm%5D%22Presbycusis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hearing%20Loss%2C%20Sensorineural%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "345": {
+   "phase": "approved",
+   "trials": 300,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Malaria%22%20OR%20AREA%5BConditionMeshTerm%5D%22Malaria%2C%20Falciparum%22%20OR%20AREA%5BConditionMeshTerm%5D%22Malaria%2C%20Vivax%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008288": [
+     "CHEMBL1107",
+     "CHEMBL1294",
+     "CHEMBL1377",
+     "CHEMBL1433",
+     "CHEMBL1450",
+     "CHEMBL1535",
+     "CHEMBL170",
+     "CHEMBL269671",
+     "CHEMBL298470",
+     "CHEMBL301267",
+     "CHEMBL307261",
+     "CHEMBL36",
+     "CHEMBL361497",
+     "CHEMBL38827",
+     "CHEMBL416956",
+     "CHEMBL439",
+     "CHEMBL506",
+     "CHEMBL566534",
+     "CHEMBL682",
+     "CHEMBL76"
+    ],
+    "D016778": [
+     "CHEMBL170",
+     "CHEMBL416956"
+    ],
+    "D016780": [
+     "CHEMBL298470",
+     "CHEMBL416956"
+    ]
+   }
+  },
+  "568": {
+   "phase": "approved",
+   "trials": 4205,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Depressive%20Disorder%2C%20Major%22%20OR%20AREA%5BConditionMeshTerm%5D%22Depressive%20Disorder%22%20OR%20AREA%5BConditionMeshTerm%5D%22Depressive%20Disorder%2C%20Treatment-Resistant%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003865": [
+     "CHEMBL10878",
+     "CHEMBL109",
+     "CHEMBL1112",
+     "CHEMBL1118",
+     "CHEMBL1175",
+     "CHEMBL1201168",
+     "CHEMBL1508",
+     "CHEMBL2104993",
+     "CHEMBL2105760",
+     "CHEMBL284092",
+     "CHEMBL395091",
+     "CHEMBL3989843",
+     "CHEMBL41",
+     "CHEMBL439849",
+     "CHEMBL490",
+     "CHEMBL549",
+     "CHEMBL621",
+     "CHEMBL623",
+     "CHEMBL637",
+     "CHEMBL654",
+     "CHEMBL715",
+     "CHEMBL716",
+     "CHEMBL72",
+     "CHEMBL809",
+     "CHEMBL894",
+     "CHEMBL972",
+     "CHEMBL99946"
+    ],
+    "D003866": [
+     "CHEMBL10878",
+     "CHEMBL1089",
+     "CHEMBL11",
+     "CHEMBL1112",
+     "CHEMBL1113",
+     "CHEMBL1118",
+     "CHEMBL1200826",
+     "CHEMBL1201168",
+     "CHEMBL1256841",
+     "CHEMBL126224",
+     "CHEMBL1355",
+     "CHEMBL14370",
+     "CHEMBL1442422",
+     "CHEMBL1492500",
+     "CHEMBL1508",
+     "CHEMBL1622",
+     "CHEMBL1628227",
+     "CHEMBL18116",
+     "CHEMBL207538",
+     "CHEMBL2110816",
+     "CHEMBL21731",
+     "CHEMBL259209",
+     "CHEMBL273575",
+     "CHEMBL278819",
+     "CHEMBL350221",
+     "CHEMBL37744",
+     "CHEMBL395091",
+     "CHEMBL3989843",
+     "CHEMBL4105630",
+     "CHEMBL415",
+     "CHEMBL418995",
+     "CHEMBL439849",
+     "CHEMBL445",
+     "CHEMBL49",
+     "CHEMBL490",
+     "CHEMBL549",
+     "CHEMBL54976",
+     "CHEMBL621",
+     "CHEMBL623",
+     "CHEMBL629",
+     "CHEMBL637",
+     "CHEMBL6437",
+     "CHEMBL644",
+     "CHEMBL654",
+     "CHEMBL668",
+     "CHEMBL72",
+     "CHEMBL741",
+     "CHEMBL809",
+     "CHEMBL814",
+     "CHEMBL85231",
+     "CHEMBL86304",
+     "CHEMBL87708",
+     "CHEMBL894",
+     "CHEMBL92401",
+     "CHEMBL95889",
+     "CHEMBL99946"
+    ]
+   }
+  },
+  "426": {
+   "phase": "approved",
+   "trials": 3084,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Lung%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Non-Small-Cell%20Lung%22%20OR%20AREA%5BConditionMeshTerm%5D%22Small%20Cell%20Lung%20Carcinoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008175": [
+     "CHEMBL2103875",
+     "CHEMBL34259",
+     "CHEMBL3707227",
+     "CHEMBL4297723",
+     "CHEMBL44657"
+    ],
+    "D002289": [
+     "CHEMBL1173655",
+     "CHEMBL1201583",
+     "CHEMBL1738797",
+     "CHEMBL1743047",
+     "CHEMBL1743062",
+     "CHEMBL1789844",
+     "CHEMBL1983268",
+     "CHEMBL2108658",
+     "CHEMBL2108738",
+     "CHEMBL2110732",
+     "CHEMBL225072",
+     "CHEMBL2403108",
+     "CHEMBL3137343",
+     "CHEMBL3188267",
+     "CHEMBL3286830",
+     "CHEMBL3301587",
+     "CHEMBL3353410",
+     "CHEMBL3402762",
+     "CHEMBL3545311",
+     "CHEMBL3707227",
+     "CHEMBL428647",
+     "CHEMBL4297774",
+     "CHEMBL4297840",
+     "CHEMBL4298025",
+     "CHEMBL4535757",
+     "CHEMBL4558324",
+     "CHEMBL4559134",
+     "CHEMBL4582651",
+     "CHEMBL4594350",
+     "CHEMBL4594535",
+     "CHEMBL4650319",
+     "CHEMBL502835",
+     "CHEMBL553",
+     "CHEMBL601719",
+     "CHEMBL888",
+     "CHEMBL92",
+     "CHEMBL939"
+    ],
+    "D055752": [
+     "CHEMBL3301587",
+     "CHEMBL3707227",
+     "CHEMBL3894860",
+     "CHEMBL4297516",
+     "CHEMBL44657",
+     "CHEMBL5095292",
+     "CHEMBL84"
+    ]
+   }
+  },
+  "639": {
+   "phase": "approved",
+   "trials": 802,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Musculoskeletal%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Lupus%20Erythematosus%2C%20Systemic%22%20OR%20AREA%5BConditionMeshTerm%5D%22Spondylitis%2C%20Ankylosing%22%20OR%20AREA%5BConditionMeshTerm%5D%22Polymyalgia%20Rheumatica%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008180": [
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1650",
+     "CHEMBL1789843",
+     "CHEMBL2364653",
+     "CHEMBL384467",
+     "CHEMBL635"
+    ],
+    "D013167": [
+     "CHEMBL118",
+     "CHEMBL1201302",
+     "CHEMBL1201320",
+     "CHEMBL1201572",
+     "CHEMBL1201580",
+     "CHEMBL1201581",
+     "CHEMBL1201831",
+     "CHEMBL1201833",
+     "CHEMBL131",
+     "CHEMBL154",
+     "CHEMBL1743068",
+     "CHEMBL384467",
+     "CHEMBL582",
+     "CHEMBL6",
+     "CHEMBL635"
+    ]
+   }
+  },
+  "547": {
+   "phase": "approved",
+   "trials": 496,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Migraine%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008881": [
+     "CHEMBL1065",
+     "CHEMBL109",
+     "CHEMBL112",
+     "CHEMBL113",
+     "CHEMBL118",
+     "CHEMBL1185",
+     "CHEMBL1278",
+     "CHEMBL1279",
+     "CHEMBL128",
+     "CHEMBL134",
+     "CHEMBL139",
+     "CHEMBL1505",
+     "CHEMBL1510",
+     "CHEMBL154",
+     "CHEMBL157138",
+     "CHEMBL1590",
+     "CHEMBL1697841",
+     "CHEMBL1732",
+     "CHEMBL2178422",
+     "CHEMBL220492",
+     "CHEMBL2364638",
+     "CHEMBL2397415",
+     "CHEMBL25",
+     "CHEMBL27",
+     "CHEMBL3039520",
+     "CHEMBL346977",
+     "CHEMBL3707328",
+     "CHEMBL3833320",
+     "CHEMBL3833329",
+     "CHEMBL3991065",
+     "CHEMBL4297756",
+     "CHEMBL4297862",
+     "CHEMBL442",
+     "CHEMBL454",
+     "CHEMBL485",
+     "CHEMBL521",
+     "CHEMBL596",
+     "CHEMBL905"
+    ]
+   }
+  },
+  "521": {
+   "phase": "approved",
+   "trials": 1368,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Cirrhosis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Liver%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hepatitis%20B%2C%20Chronic%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hepatitis%20C%2C%20Chronic%22%20OR%20AREA%5BConditionMeshTerm%5D%22Liver%20Cirrhosis%2C%20Alcoholic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008103": [
+     "CHEMBL1393",
+     "CHEMBL1643",
+     "CHEMBL35",
+     "CHEMBL435",
+     "CHEMBL585"
+    ],
+    "D008107": [
+     "CHEMBL1538",
+     "CHEMBL205596",
+     "CHEMBL2103883",
+     "CHEMBL2107857",
+     "CHEMBL2221312",
+     "CHEMBL713",
+     "CHEMBL863"
+    ],
+    "D019694": [
+     "CHEMBL1201558",
+     "CHEMBL1201560",
+     "CHEMBL141",
+     "CHEMBL1538",
+     "CHEMBL2107825",
+     "CHEMBL2108512",
+     "CHEMBL374731",
+     "CHEMBL4297973",
+     "CHEMBL713",
+     "CHEMBL922"
+    ],
+    "D019698": [
+     "CHEMBL1201557",
+     "CHEMBL1201558",
+     "CHEMBL1201560",
+     "CHEMBL1201561",
+     "CHEMBL1259059",
+     "CHEMBL163",
+     "CHEMBL1643",
+     "CHEMBL2023898",
+     "CHEMBL2063090",
+     "CHEMBL218394",
+     "CHEMBL231813",
+     "CHEMBL2374220",
+     "CHEMBL3039514",
+     "CHEMBL3127326",
+     "CHEMBL3137312",
+     "CHEMBL3391662",
+     "CHEMBL3545062",
+     "CHEMBL3545123",
+     "CHEMBL3545363",
+     "CHEMBL3707372",
+     "CHEMBL461101",
+     "CHEMBL501849"
+    ]
+   }
+  },
+  "543": {
+   "phase": "approved",
+   "trials": 1894,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Alzheimer%20Disease%22%20OR%20AREA%5BConditionMeshTerm%5D%22Dementia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000544": [
+     "CHEMBL1908906",
+     "CHEMBL1908919",
+     "CHEMBL1945778",
+     "CHEMBL3039540",
+     "CHEMBL3546271",
+     "CHEMBL3833321",
+     "CHEMBL4297245",
+     "CHEMBL502",
+     "CHEMBL579205",
+     "CHEMBL636",
+     "CHEMBL659",
+     "CHEMBL807"
+    ],
+    "D003704": [
+     "CHEMBL1945778",
+     "CHEMBL2108466",
+     "CHEMBL3039540",
+     "CHEMBL3833321",
+     "CHEMBL4297245",
+     "CHEMBL502",
+     "CHEMBL5095056",
+     "CHEMBL636",
+     "CHEMBL659",
+     "CHEMBL807",
+     "CHEMBL95"
+    ]
+   }
+  },
+  "934": {
+   "phase": "approved",
+   "trials": 370,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Tuberculosis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Tuberculosis%2C%20Pulmonary%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014376": [
+     "CHEMBL1169",
+     "CHEMBL1378024",
+     "CHEMBL1441",
+     "CHEMBL1660",
+     "CHEMBL218650",
+     "CHEMBL2221250",
+     "CHEMBL227875",
+     "CHEMBL372795",
+     "CHEMBL374478",
+     "CHEMBL376488",
+     "CHEMBL437765",
+     "CHEMBL444633",
+     "CHEMBL44884",
+     "CHEMBL614",
+     "CHEMBL64",
+     "CHEMBL771"
+    ],
+    "D014397": [
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1504",
+     "CHEMBL1650",
+     "CHEMBL227875",
+     "CHEMBL374478",
+     "CHEMBL384467",
+     "CHEMBL44884",
+     "CHEMBL614",
+     "CHEMBL635",
+     "CHEMBL64"
+    ]
+   }
+  },
+  "390": {
+   "phase": "approved",
+   "trials": 272,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Anemia%2C%20Iron-Deficiency%22%20OR%20AREA%5BConditionMeshTerm%5D%22Iron%20Deficiencies%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D018798": [
+     "CHEMBL1042",
+     "CHEMBL1140",
+     "CHEMBL1200557",
+     "CHEMBL1200572",
+     "CHEMBL1200640",
+     "CHEMBL1200823",
+     "CHEMBL1200929",
+     "CHEMBL1201544",
+     "CHEMBL1231574",
+     "CHEMBL1364",
+     "CHEMBL1477036",
+     "CHEMBL1534",
+     "CHEMBL1547",
+     "CHEMBL1622",
+     "CHEMBL196",
+     "CHEMBL2021423",
+     "CHEMBL2108597",
+     "CHEMBL2110563",
+     "CHEMBL3988900",
+     "CHEMBL4298110",
+     "CHEMBL4298187",
+     "CHEMBL573",
+     "CHEMBL591665",
+     "CHEMBL604",
+     "CHEMBL857"
+    ]
+   }
+  },
+  "300": {
+   "phase": "approved",
+   "trials": 1328,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22HIV%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Acquired%20Immunodeficiency%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015658": [
+     "CHEMBL114",
+     "CHEMBL115",
+     "CHEMBL116",
+     "CHEMBL1163",
+     "CHEMBL1201565",
+     "CHEMBL1201621",
+     "CHEMBL1201688",
+     "CHEMBL1229211",
+     "CHEMBL129",
+     "CHEMBL1323",
+     "CHEMBL1380",
+     "CHEMBL141",
+     "CHEMBL1460",
+     "CHEMBL1538",
+     "CHEMBL163",
+     "CHEMBL1664",
+     "CHEMBL1743029",
+     "CHEMBL175691",
+     "CHEMBL182",
+     "CHEMBL204656",
+     "CHEMBL2095208",
+     "CHEMBL2107825",
+     "CHEMBL222559",
+     "CHEMBL223228",
+     "CHEMBL2364608",
+     "CHEMBL2403238",
+     "CHEMBL254316",
+     "CHEMBL256907",
+     "CHEMBL308954",
+     "CHEMBL3301594",
+     "CHEMBL3989866",
+     "CHEMBL444633",
+     "CHEMBL4594438",
+     "CHEMBL525076",
+     "CHEMBL529",
+     "CHEMBL57",
+     "CHEMBL584",
+     "CHEMBL64",
+     "CHEMBL729",
+     "CHEMBL885",
+     "CHEMBL991"
+    ],
+    "D000163": [
+     "CHEMBL1201139",
+     "CHEMBL1201314",
+     "CHEMBL182"
+    ]
+   }
+  },
+  "1048": {
+   "phase": "approved",
+   "trials": 2777,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22COVID-19%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000086382": [
+     "CHEMBL1201570",
+     "CHEMBL1237022",
+     "CHEMBL4065616",
+     "CHEMBL4650429",
+     "CHEMBL4650462",
+     "CHEMBL4650491",
+     "CHEMBL4650524",
+     "CHEMBL5314796",
+     "CHEMBL6068380",
+     "CHEMBL6068381",
+     "CHEMBL6068382",
+     "CHEMBL6068383"
+    ]
+   }
+  },
+  "498": {
+   "phase": "approved",
+   "trials": 2372,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hypertension%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hypertrophy%2C%20Left%20Ventricular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006973": [
+     "CHEMBL1014",
+     "CHEMBL1017",
+     "CHEMBL1051",
+     "CHEMBL1055",
+     "CHEMBL1069",
+     "CHEMBL1095097",
+     "CHEMBL1111",
+     "CHEMBL1148",
+     "CHEMBL1159",
+     "CHEMBL1165",
+     "CHEMBL1168",
+     "CHEMBL1200515",
+     "CHEMBL1200692",
+     "CHEMBL1200862",
+     "CHEMBL1201260",
+     "CHEMBL1201329",
+     "CHEMBL1201531",
+     "CHEMBL1237",
+     "CHEMBL13",
+     "CHEMBL134",
+     "CHEMBL1393",
+     "CHEMBL1480",
+     "CHEMBL1484",
+     "CHEMBL1487",
+     "CHEMBL1491",
+     "CHEMBL1513",
+     "CHEMBL1519",
+     "CHEMBL1560",
+     "CHEMBL1581",
+     "CHEMBL1592",
+     "CHEMBL1639",
+     "CHEMBL1648",
+     "CHEMBL1668",
+     "CHEMBL1684",
+     "CHEMBL169901",
+     "CHEMBL1726",
+     "CHEMBL1743073",
+     "CHEMBL181",
+     "CHEMBL191",
+     "CHEMBL19236",
+     "CHEMBL193",
+     "CHEMBL2",
+     "CHEMBL2028661",
+     "CHEMBL2097081",
+     "CHEMBL2103873",
+     "CHEMBL2107834",
+     "CHEMBL2111097",
+     "CHEMBL2165326",
+     "CHEMBL23",
+     "CHEMBL24",
+     "CHEMBL267936",
+     "CHEMBL27",
+     "CHEMBL276832",
+     "CHEMBL279516",
+     "CHEMBL282724",
+     "CHEMBL289480",
+     "CHEMBL3039598",
+     "CHEMBL35",
+     "CHEMBL3559672",
+     "CHEMBL406",
+     "CHEMBL423",
+     "CHEMBL429",
+     "CHEMBL434394",
+     "CHEMBL435",
+     "CHEMBL459",
+     "CHEMBL51",
+     "CHEMBL521606",
+     "CHEMBL578",
+     "CHEMBL585",
+     "CHEMBL588",
+     "CHEMBL642",
+     "CHEMBL645",
+     "CHEMBL673",
+     "CHEMBL6966",
+     "CHEMBL707",
+     "CHEMBL723",
+     "CHEMBL730",
+     "CHEMBL765",
+     "CHEMBL768",
+     "CHEMBL772",
+     "CHEMBL802",
+     "CHEMBL813",
+     "CHEMBL838",
+     "CHEMBL842",
+     "CHEMBL844",
+     "CHEMBL862",
+     "CHEMBL878",
+     "CHEMBL945",
+     "CHEMBL957"
+    ]
+   }
+  },
+  "643": {
+   "phase": "approved",
+   "trials": 203,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Heart%20Defects%2C%20Congenital%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006330": [
+     "CHEMBL957"
+    ]
+   }
+  },
+  "441": {
+   "phase": "approved",
+   "trials": 2383,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Colorectal%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Colonic%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Rectal%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015179": [
+     "CHEMBL1129",
+     "CHEMBL1201577",
+     "CHEMBL1201583",
+     "CHEMBL1201827",
+     "CHEMBL1742982",
+     "CHEMBL1773",
+     "CHEMBL1789844",
+     "CHEMBL1908841",
+     "CHEMBL191083",
+     "CHEMBL1946170",
+     "CHEMBL2108157",
+     "CHEMBL2108253",
+     "CHEMBL2108738",
+     "CHEMBL235668",
+     "CHEMBL3301612",
+     "CHEMBL3989868",
+     "CHEMBL4303214"
+    ],
+    "D003110": [
+     "CHEMBL1201583",
+     "CHEMBL1773"
+    ]
+   }
+  },
+  "515": {
+   "phase": "approved",
+   "trials": 844,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Asthma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001249": [
+     "CHEMBL1094966",
+     "CHEMBL1161",
+     "CHEMBL1198857",
+     "CHEMBL1200500",
+     "CHEMBL1200538",
+     "CHEMBL1201231",
+     "CHEMBL1201265",
+     "CHEMBL1201302",
+     "CHEMBL1201589",
+     "CHEMBL1256786",
+     "CHEMBL1263",
+     "CHEMBL131",
+     "CHEMBL1364144",
+     "CHEMBL1370",
+     "CHEMBL1473",
+     "CHEMBL1504",
+     "CHEMBL1512",
+     "CHEMBL1650",
+     "CHEMBL1676",
+     "CHEMBL1742991",
+     "CHEMBL1760",
+     "CHEMBL190",
+     "CHEMBL1900528",
+     "CHEMBL2040682",
+     "CHEMBL2107884",
+     "CHEMBL2108429",
+     "CHEMBL2108675",
+     "CHEMBL211456",
+     "CHEMBL256087",
+     "CHEMBL3707229",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL428880",
+     "CHEMBL603",
+     "CHEMBL635",
+     "CHEMBL650",
+     "CHEMBL679",
+     "CHEMBL714",
+     "CHEMBL776",
+     "CHEMBL787",
+     "CHEMBL93",
+     "CHEMBL977",
+     "CHEMBL978"
+    ]
+   }
+  },
+  "429": {
+   "phase": "approved",
+   "trials": 4001,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Breast%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001943": [
+     "CHEMBL1200374",
+     "CHEMBL1201247",
+     "CHEMBL1201468",
+     "CHEMBL1201529",
+     "CHEMBL1201583",
+     "CHEMBL1201585",
+     "CHEMBL1201649",
+     "CHEMBL1201752",
+     "CHEMBL1237023",
+     "CHEMBL135",
+     "CHEMBL1358",
+     "CHEMBL1395",
+     "CHEMBL1399",
+     "CHEMBL1444",
+     "CHEMBL1627367",
+     "CHEMBL1655",
+     "CHEMBL1683590",
+     "CHEMBL1738",
+     "CHEMBL1743082",
+     "CHEMBL1773",
+     "CHEMBL180022",
+     "CHEMBL189963",
+     "CHEMBL1908360",
+     "CHEMBL2007641",
+     "CHEMBL2108726",
+     "CHEMBL2325741",
+     "CHEMBL2364649",
+     "CHEMBL2396661",
+     "CHEMBL3137320",
+     "CHEMBL3301610",
+     "CHEMBL34259",
+     "CHEMBL3545110",
+     "CHEMBL3545262",
+     "CHEMBL3707227",
+     "CHEMBL3989868",
+     "CHEMBL417",
+     "CHEMBL428647",
+     "CHEMBL4297509",
+     "CHEMBL4297844",
+     "CHEMBL4650215",
+     "CHEMBL521686",
+     "CHEMBL53463",
+     "CHEMBL554",
+     "CHEMBL81",
+     "CHEMBL83",
+     "CHEMBL88",
+     "CHEMBL888",
+     "CHEMBL92",
+     "CHEMBL997"
+    ]
+   }
+  },
+  "383": {
+   "phase": "phase3",
+   "trials": 46,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Neonatal%20Sepsis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "414": {
+   "phase": "approved",
+   "trials": 806,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Stomach%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013274": [
+     "CHEMBL1201585",
+     "CHEMBL1743062",
+     "CHEMBL1773",
+     "CHEMBL4297840",
+     "CHEMBL92"
+    ]
+   }
+  },
+  "631": {
+   "phase": "phase3",
+   "trials": 580,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Neck%20Pain%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "560": {
+   "phase": "approved",
+   "trials": 610,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Alcoholism%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000437": [
+     "CHEMBL1201293",
+     "CHEMBL1628227",
+     "CHEMBL19019",
+     "CHEMBL451",
+     "CHEMBL964",
+     "CHEMBL982"
+    ]
+   }
+  },
+  "385": {
+   "phase": "phase3",
+   "trials": 54,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Infant%2C%20Newborn%2C%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "332": {
+   "phase": "approved",
+   "trials": 75,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Meningitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Meningitis%2C%20Bacterial%22%20OR%20AREA%5BConditionMeshTerm%5D%22Meningitis%2C%20Meningococcal%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008581": [
+     "CHEMBL127",
+     "CHEMBL1463",
+     "CHEMBL161",
+     "CHEMBL174",
+     "CHEMBL177",
+     "CHEMBL6068499",
+     "CHEMBL615"
+    ],
+    "D016920": [
+     "CHEMBL127",
+     "CHEMBL174"
+    ],
+    "D008585": [
+     "CHEMBL6068368",
+     "CHEMBL6068370",
+     "CHEMBL6068371",
+     "CHEMBL6068372",
+     "CHEMBL6068498",
+     "CHEMBL6068499"
+    ]
+   }
+  },
+  "612": {
+   "phase": "approved",
+   "trials": 82,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Genital%20Diseases%2C%20Female%22%20OR%20AREA%5BConditionMeshTerm%5D%22Menstruation%20Disturbances%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D005831": [
+     "CHEMBL3184512"
+    ]
+   }
+  },
+  "559": {
+   "phase": "approved",
+   "trials": 846,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Schizophrenia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012559": [
+     "CHEMBL1112",
+     "CHEMBL1200986",
+     "CHEMBL1201",
+     "CHEMBL1237021",
+     "CHEMBL14376",
+     "CHEMBL1621",
+     "CHEMBL2028019",
+     "CHEMBL2105760",
+     "CHEMBL2107360",
+     "CHEMBL2219425",
+     "CHEMBL3187365",
+     "CHEMBL3306803",
+     "CHEMBL42",
+     "CHEMBL422",
+     "CHEMBL426084",
+     "CHEMBL460",
+     "CHEMBL54",
+     "CHEMBL567",
+     "CHEMBL708",
+     "CHEMBL71",
+     "CHEMBL715",
+     "CHEMBL716",
+     "CHEMBL728",
+     "CHEMBL831",
+     "CHEMBL85"
+    ]
+   }
+  },
+  "593": {
+   "phase": "approved",
+   "trials": 886,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Renal%20Insufficiency%2C%20Chronic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D051436": [
+     "CHEMBL1040",
+     "CHEMBL1200622",
+     "CHEMBL1200810",
+     "CHEMBL1200823",
+     "CHEMBL1201284",
+     "CHEMBL1201492",
+     "CHEMBL1201565",
+     "CHEMBL1201566",
+     "CHEMBL1201621",
+     "CHEMBL2107830",
+     "CHEMBL2181927",
+     "CHEMBL3039507",
+     "CHEMBL3544988",
+     "CHEMBL3545184",
+     "CHEMBL3646221",
+     "CHEMBL3707314",
+     "CHEMBL3833317",
+     "CHEMBL3989915",
+     "CHEMBL429910",
+     "CHEMBL4802224",
+     "CHEMBL5314349"
+    ]
+   }
+  },
+  "545": {
+   "phase": "approved",
+   "trials": 571,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Epilepsy%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D004827": [
+     "CHEMBL1027",
+     "CHEMBL1059",
+     "CHEMBL1068",
+     "CHEMBL108",
+     "CHEMBL109",
+     "CHEMBL1094",
+     "CHEMBL1095",
+     "CHEMBL1100",
+     "CHEMBL12",
+     "CHEMBL1201336",
+     "CHEMBL1201754",
+     "CHEMBL1214124",
+     "CHEMBL1286",
+     "CHEMBL1568698",
+     "CHEMBL16",
+     "CHEMBL190461",
+     "CHEMBL1983350",
+     "CHEMBL20",
+     "CHEMBL2107062",
+     "CHEMBL220492",
+     "CHEMBL315985",
+     "CHEMBL328560",
+     "CHEMBL3833301",
+     "CHEMBL3989949",
+     "CHEMBL40",
+     "CHEMBL41355",
+     "CHEMBL450",
+     "CHEMBL45029",
+     "CHEMBL452",
+     "CHEMBL58323",
+     "CHEMBL607400",
+     "CHEMBL64195",
+     "CHEMBL655",
+     "CHEMBL695",
+     "CHEMBL696",
+     "CHEMBL697",
+     "CHEMBL741",
+     "CHEMBL750",
+     "CHEMBL797",
+     "CHEMBL856",
+     "CHEMBL861",
+     "CHEMBL87493",
+     "CHEMBL87992",
+     "CHEMBL89598",
+     "CHEMBL918",
+     "CHEMBL940"
+    ]
+   }
+  },
+  "492": {
+   "phase": "phase3",
+   "trials": 12,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Rheumatic%20Heart%20Disease%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "387": {
+   "phase": "phase3",
+   "trials": 53,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Protein-Energy%20Malnutrition%22%20OR%20AREA%5BConditionMeshTerm%5D%22Severe%20Acute%20Malnutrition%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "411": {
+   "phase": "approved",
+   "trials": 455,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Esophageal%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D004938": [
+     "CHEMBL4297840"
+    ]
+   }
+  },
+  "417": {
+   "phase": "approved",
+   "trials": 970,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Hepatocellular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006528": [
+     "CHEMBL1336",
+     "CHEMBL2105717",
+     "CHEMBL2108658"
+    ]
+   }
+  },
+  "432": {
+   "phase": "approved",
+   "trials": 678,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Uterine%20Cervical%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002583": [
+     "CHEMBL1201583",
+     "CHEMBL4297841",
+     "CHEMBL84"
+    ]
+   }
+  },
+  "522": {
+   "phase": "approved",
+   "trials": 206,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hepatitis%20B%2C%20Chronic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D019694": [
+     "CHEMBL1201558",
+     "CHEMBL1201560",
+     "CHEMBL141",
+     "CHEMBL1538",
+     "CHEMBL2107825",
+     "CHEMBL2108512",
+     "CHEMBL374731",
+     "CHEMBL4297973",
+     "CHEMBL713",
+     "CHEMBL922"
+    ]
+   }
+  },
+  "562": {
+   "phase": "approved",
+   "trials": 664,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Opioid-Related%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009293": [
+     "CHEMBL1186579",
+     "CHEMBL1514",
+     "CHEMBL2219418",
+     "CHEMBL511142",
+     "CHEMBL651",
+     "CHEMBL80"
+    ]
+   }
+  },
+  "1015": {
+   "phase": "phase3",
+   "trials": 1298,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Osteoarthritis%2C%20Knee%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "341": {
+   "phase": "approved",
+   "trials": 18,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Measles%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008457": [
+     "CHEMBL6068354"
+    ]
+   }
+  },
+  "456": {
+   "phase": "approved",
+   "trials": 936,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pancreatic%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010190": [
+     "CHEMBL1908360",
+     "CHEMBL428647",
+     "CHEMBL4298025",
+     "CHEMBL481",
+     "CHEMBL521686",
+     "CHEMBL553",
+     "CHEMBL888"
+    ]
+   }
+  },
+  "507": {
+   "phase": "approved",
+   "trials": 1209,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cardiovascular%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002318": [
+     "CHEMBL1008",
+     "CHEMBL1017",
+     "CHEMBL1054",
+     "CHEMBL1055",
+     "CHEMBL1064",
+     "CHEMBL1069",
+     "CHEMBL1072",
+     "CHEMBL1095097",
+     "CHEMBL1138",
+     "CHEMBL1144",
+     "CHEMBL1148",
+     "CHEMBL1165",
+     "CHEMBL1165342",
+     "CHEMBL1168",
+     "CHEMBL1200692",
+     "CHEMBL1200711",
+     "CHEMBL1200943",
+     "CHEMBL1201212",
+     "CHEMBL1201234",
+     "CHEMBL1201251",
+     "CHEMBL1201319",
+     "CHEMBL1201474",
+     "CHEMBL1201625",
+     "CHEMBL1201668",
+     "CHEMBL1201753",
+     "CHEMBL1215",
+     "CHEMBL1237",
+     "CHEMBL1237132",
+     "CHEMBL12856",
+     "CHEMBL1290",
+     "CHEMBL13",
+     "CHEMBL1311",
+     "CHEMBL1329455",
+     "CHEMBL1372950",
+     "CHEMBL1373254",
+     "CHEMBL1393",
+     "CHEMBL1404",
+     "CHEMBL1428",
+     "CHEMBL1437",
+     "CHEMBL1463345",
+     "CHEMBL1477",
+     "CHEMBL1480",
+     "CHEMBL1480987",
+     "CHEMBL1484",
+     "CHEMBL1487",
+     "CHEMBL1491",
+     "CHEMBL1496",
+     "CHEMBL1513",
+     "CHEMBL1519",
+     "CHEMBL1532",
+     "CHEMBL1560",
+     "CHEMBL15768",
+     "CHEMBL1577",
+     "CHEMBL1581",
+     "CHEMBL1587",
+     "CHEMBL1592",
+     "CHEMBL159226",
+     "CHEMBL1614",
+     "CHEMBL1616951",
+     "CHEMBL1624126",
+     "CHEMBL1639",
+     "CHEMBL1648",
+     "CHEMBL1684",
+     "CHEMBL1697760",
+     "CHEMBL1697843",
+     "CHEMBL1697844",
+     "CHEMBL1726",
+     "CHEMBL1751",
+     "CHEMBL1755",
+     "CHEMBL1763",
+     "CHEMBL1874750",
+     "CHEMBL188921",
+     "CHEMBL189",
+     "CHEMBL1908307",
+     "CHEMBL191",
+     "CHEMBL193",
+     "CHEMBL1987462",
+     "CHEMBL203266",
+     "CHEMBL2103827",
+     "CHEMBL2105131",
+     "CHEMBL2106794",
+     "CHEMBL2108304",
+     "CHEMBL2109067",
+     "CHEMBL2109540",
+     "CHEMBL2111097",
+     "CHEMBL211456",
+     "CHEMBL2181927",
+     "CHEMBL2219536",
+     "CHEMBL2220442",
+     "CHEMBL222863",
+     "CHEMBL23",
+     "CHEMBL231884",
+     "CHEMBL232201",
+     "CHEMBL2364655",
+     "CHEMBL2364968",
+     "CHEMBL24",
+     "CHEMBL24072",
+     "CHEMBL247951",
+     "CHEMBL249856",
+     "CHEMBL250270",
+     "CHEMBL254219",
+     "CHEMBL264374",
+     "CHEMBL267744",
+     "CHEMBL27",
+     "CHEMBL27810",
+     "CHEMBL284906",
+     "CHEMBL3039598",
+     "CHEMBL305187",
+     "CHEMBL317052",
+     "CHEMBL317094",
+     "CHEMBL3182320",
+     "CHEMBL344159",
+     "CHEMBL345714",
+     "CHEMBL349803",
+     "CHEMBL35",
+     "CHEMBL3544994",
+     "CHEMBL3545057",
+     "CHEMBL3545191",
+     "CHEMBL3545313",
+     "CHEMBL3707352",
+     "CHEMBL404849",
+     "CHEMBL406",
+     "CHEMBL4066936",
+     "CHEMBL408403",
+     "CHEMBL423",
+     "CHEMBL429",
+     "CHEMBL4297517",
+     "CHEMBL4298199",
+     "CHEMBL431",
+     "CHEMBL434",
+     "CHEMBL434200",
+     "CHEMBL434394",
+     "CHEMBL435",
+     "CHEMBL456",
+     "CHEMBL457",
+     "CHEMBL45816",
+     "CHEMBL460291",
+     "CHEMBL466659",
+     "CHEMBL471",
+     "CHEMBL471737",
+     "CHEMBL475534",
+     "CHEMBL477",
+     "CHEMBL495",
+     "CHEMBL499",
+     "CHEMBL500",
+     "CHEMBL503",
+     "CHEMBL506569",
+     "CHEMBL515606",
+     "CHEMBL517199",
+     "CHEMBL521",
+     "CHEMBL521606",
+     "CHEMBL524",
+     "CHEMBL546",
+     "CHEMBL557555",
+     "CHEMBL559",
+     "CHEMBL565",
+     "CHEMBL573",
+     "CHEMBL578",
+     "CHEMBL585",
+     "CHEMBL588",
+     "CHEMBL59",
+     "CHEMBL597",
+     "CHEMBL6",
+     "CHEMBL600325",
+     "CHEMBL6068331",
+     "CHEMBL608",
+     "CHEMBL61593",
+     "CHEMBL628",
+     "CHEMBL642",
+     "CHEMBL645",
+     "CHEMBL6622",
+     "CHEMBL672",
+     "CHEMBL679",
+     "CHEMBL6966",
+     "CHEMBL6995",
+     "CHEMBL723",
+     "CHEMBL730",
+     "CHEMBL753",
+     "CHEMBL75753",
+     "CHEMBL75880",
+     "CHEMBL768",
+     "CHEMBL770",
+     "CHEMBL77622",
+     "CHEMBL813",
+     "CHEMBL838",
+     "CHEMBL839",
+     "CHEMBL842",
+     "CHEMBL86882",
+     "CHEMBL878",
+     "CHEMBL926",
+     "CHEMBL92870",
+     "CHEMBL945",
+     "CHEMBL981"
+    ]
+   }
+  },
+  "497": {
+   "phase": "phase3",
+   "trials": 141,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Subarachnoid%20Hemorrhage%22%20OR%20AREA%5BConditionMeshTerm%5D%22Intracranial%20Aneurysm%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "977": {
+   "phase": "approved",
+   "trials": 603,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dermatitis%2C%20Atopic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003876": [
+     "CHEMBL1200686",
+     "CHEMBL1201109",
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1473",
+     "CHEMBL1621597",
+     "CHEMBL1628227",
+     "CHEMBL1650",
+     "CHEMBL1683",
+     "CHEMBL1743035",
+     "CHEMBL1743081",
+     "CHEMBL2108675",
+     "CHEMBL269732",
+     "CHEMBL3655081",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL484785",
+     "CHEMBL635",
+     "CHEMBL643",
+     "CHEMBL650",
+     "CHEMBL989"
+    ]
+   }
+  },
+  "523": {
+   "phase": "approved",
+   "trials": 64,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hepatitis%20C%2C%20Chronic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D019698": [
+     "CHEMBL1201557",
+     "CHEMBL1201558",
+     "CHEMBL1201560",
+     "CHEMBL1201561",
+     "CHEMBL1259059",
+     "CHEMBL163",
+     "CHEMBL1643",
+     "CHEMBL2023898",
+     "CHEMBL2063090",
+     "CHEMBL218394",
+     "CHEMBL231813",
+     "CHEMBL2374220",
+     "CHEMBL3039514",
+     "CHEMBL3127326",
+     "CHEMBL3137312",
+     "CHEMBL3391662",
+     "CHEMBL3545062",
+     "CHEMBL3545123",
+     "CHEMBL3545363",
+     "CHEMBL3707372",
+     "CHEMBL461101",
+     "CHEMBL501849"
+    ]
+   }
+  },
+  "339": {
+   "phase": "approved",
+   "trials": 39,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Whooping%20Cough%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014917": [
+     "CHEMBL1200688",
+     "CHEMBL4297973",
+     "CHEMBL532",
+     "CHEMBL6068348",
+     "CHEMBL6068349",
+     "CHEMBL6068350"
+    ]
+   }
+  },
+  "684": {
+   "phase": "phase3",
+   "trials": 107,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mouth%2C%20Edentulous%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "948": {
+   "phase": "approved",
+   "trials": 1647,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22HIV%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Tuberculosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015658": [
+     "CHEMBL114",
+     "CHEMBL115",
+     "CHEMBL116",
+     "CHEMBL1163",
+     "CHEMBL1201565",
+     "CHEMBL1201621",
+     "CHEMBL1201688",
+     "CHEMBL1229211",
+     "CHEMBL129",
+     "CHEMBL1323",
+     "CHEMBL1380",
+     "CHEMBL141",
+     "CHEMBL1460",
+     "CHEMBL1538",
+     "CHEMBL163",
+     "CHEMBL1664",
+     "CHEMBL1743029",
+     "CHEMBL175691",
+     "CHEMBL182",
+     "CHEMBL204656",
+     "CHEMBL2095208",
+     "CHEMBL2107825",
+     "CHEMBL222559",
+     "CHEMBL223228",
+     "CHEMBL2364608",
+     "CHEMBL2403238",
+     "CHEMBL254316",
+     "CHEMBL256907",
+     "CHEMBL308954",
+     "CHEMBL3301594",
+     "CHEMBL3989866",
+     "CHEMBL444633",
+     "CHEMBL4594438",
+     "CHEMBL525076",
+     "CHEMBL529",
+     "CHEMBL57",
+     "CHEMBL584",
+     "CHEMBL64",
+     "CHEMBL729",
+     "CHEMBL885",
+     "CHEMBL991"
+    ],
+    "D014376": [
+     "CHEMBL1169",
+     "CHEMBL1378024",
+     "CHEMBL1441",
+     "CHEMBL1660",
+     "CHEMBL218650",
+     "CHEMBL2221250",
+     "CHEMBL227875",
+     "CHEMBL372795",
+     "CHEMBL374478",
+     "CHEMBL376488",
+     "CHEMBL437765",
+     "CHEMBL444633",
+     "CHEMBL44884",
+     "CHEMBL614",
+     "CHEMBL64",
+     "CHEMBL771"
+    ]
+   }
+  },
+  "575": {
+   "phase": "phase3",
+   "trials": 815,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Autism%20Spectrum%20Disorder%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "524": {
+   "phase": "phase3",
+   "trials": 7,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Cirrhosis%2C%20Alcoholic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "998": {
+   "phase": "approved",
+   "trials": 111,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Diabetic%20Nephropathies%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003928": [
+     "CHEMBL1513",
+     "CHEMBL1560"
+    ]
+   }
+  },
+  "591": {
+   "phase": "phase3",
+   "trials": 4,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hypertension%2C%20Renal%22%20OR%20AREA%5BConditionMeshTerm%5D%22Nephrosclerosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "558": {
+   "phase": "approved",
+   "trials": 679,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mental%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001523": [
+     "CHEMBL12",
+     "CHEMBL568",
+     "CHEMBL708",
+     "CHEMBL715",
+     "CHEMBL831"
+    ]
+   }
+  },
+  "585": {
+   "phase": "approved",
+   "trials": 850,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mental%20Disorders%22%20OR%20AREA%5BConditionMeshTerm%5D%22Personality%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001523": [
+     "CHEMBL12",
+     "CHEMBL568",
+     "CHEMBL708",
+     "CHEMBL715",
+     "CHEMBL831"
+    ]
+   }
+  },
+  "500": {
+   "phase": "approved",
+   "trials": 939,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Atrial%20Fibrillation%22%20OR%20AREA%5BConditionMeshTerm%5D%22Atrial%20Flutter%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001281": [
+     "CHEMBL1201657",
+     "CHEMBL1269025",
+     "CHEMBL1464",
+     "CHEMBL1742466",
+     "CHEMBL1751",
+     "CHEMBL1771",
+     "CHEMBL184412",
+     "CHEMBL198362",
+     "CHEMBL2111112",
+     "CHEMBL23",
+     "CHEMBL231779",
+     "CHEMBL473",
+     "CHEMBL539697",
+     "CHEMBL631"
+    ],
+    "D001282": [
+     "CHEMBL1742466",
+     "CHEMBL473"
+    ]
+   }
+  },
+  "408": {
+   "phase": "approved",
+   "trials": 3436,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Communicable%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007239": [
+     "CHEMBL104",
+     "CHEMBL1082",
+     "CHEMBL1095930",
+     "CHEMBL1136",
+     "CHEMBL1163",
+     "CHEMBL1200384",
+     "CHEMBL1200558",
+     "CHEMBL1200656",
+     "CHEMBL1200688",
+     "CHEMBL1201186",
+     "CHEMBL1201270",
+     "CHEMBL1201281",
+     "CHEMBL1201289",
+     "CHEMBL1201567",
+     "CHEMBL1201568",
+     "CHEMBL1201724",
+     "CHEMBL1241951",
+     "CHEMBL1255800",
+     "CHEMBL126",
+     "CHEMBL127",
+     "CHEMBL1323",
+     "CHEMBL1359",
+     "CHEMBL137",
+     "CHEMBL141",
+     "CHEMBL1433",
+     "CHEMBL1434",
+     "CHEMBL1435",
+     "CHEMBL1436",
+     "CHEMBL1440",
+     "CHEMBL1443",
+     "CHEMBL144673",
+     "CHEMBL1447",
+     "CHEMBL1449",
+     "CHEMBL1463",
+     "CHEMBL148",
+     "CHEMBL1483",
+     "CHEMBL1503",
+     "CHEMBL1517",
+     "CHEMBL1538",
+     "CHEMBL1541",
+     "CHEMBL158",
+     "CHEMBL1591",
+     "CHEMBL161",
+     "CHEMBL1617",
+     "CHEMBL1628385",
+     "CHEMBL1644",
+     "CHEMBL1688530",
+     "CHEMBL1727",
+     "CHEMBL1730",
+     "CHEMBL174",
+     "CHEMBL1741",
+     "CHEMBL1747",
+     "CHEMBL1753",
+     "CHEMBL177",
+     "CHEMBL186",
+     "CHEMBL1951095",
+     "CHEMBL2095208",
+     "CHEMBL2108535",
+     "CHEMBL22",
+     "CHEMBL223228",
+     "CHEMBL2364632",
+     "CHEMBL262777",
+     "CHEMBL267345",
+     "CHEMBL276568",
+     "CHEMBL29",
+     "CHEMBL31",
+     "CHEMBL3184512",
+     "CHEMBL32",
+     "CHEMBL33",
+     "CHEMBL3301669",
+     "CHEMBL370143",
+     "CHEMBL3707334",
+     "CHEMBL372795",
+     "CHEMBL376140",
+     "CHEMBL384467",
+     "CHEMBL387675",
+     "CHEMBL3989751",
+     "CHEMBL4",
+     "CHEMBL403",
+     "CHEMBL404520",
+     "CHEMBL443",
+     "CHEMBL44354",
+     "CHEMBL454446",
+     "CHEMBL455",
+     "CHEMBL4594388",
+     "CHEMBL474579",
+     "CHEMBL504",
+     "CHEMBL507870",
+     "CHEMBL529",
+     "CHEMBL5314354",
+     "CHEMBL532",
+     "CHEMBL545",
+     "CHEMBL5465559",
+     "CHEMBL562",
+     "CHEMBL582",
+     "CHEMBL6067483",
+     "CHEMBL6067485",
+     "CHEMBL615",
+     "CHEMBL638",
+     "CHEMBL660",
+     "CHEMBL680",
+     "CHEMBL71595",
+     "CHEMBL719",
+     "CHEMBL766",
+     "CHEMBL777",
+     "CHEMBL790",
+     "CHEMBL8",
+     "CHEMBL819",
+     "CHEMBL83668",
+     "CHEMBL893",
+     "CHEMBL91",
+     "CHEMBL927",
+     "CHEMBL959",
+     "CHEMBL976",
+     "CHEMBL985",
+     "CHEMBL989",
+     "CHEMBL996"
+    ],
+    "D003141": [
+     "CHEMBL1364144",
+     "CHEMBL159",
+     "CHEMBL34259"
+    ]
+   }
+  },
+  "944": {
+   "phase": "approved",
+   "trials": 1557,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cardiomyopathies%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cardiomyopathy%2C%20Dilated%22%20OR%20AREA%5BConditionMeshTerm%5D%22Heart%20Failure%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009202": [
+     "CHEMBL1738",
+     "CHEMBL2103837",
+     "CHEMBL3940890"
+    ],
+    "D006333": [
+     "CHEMBL1014",
+     "CHEMBL1055",
+     "CHEMBL1069",
+     "CHEMBL1072",
+     "CHEMBL1095097",
+     "CHEMBL1148",
+     "CHEMBL1168",
+     "CHEMBL1200574",
+     "CHEMBL1200692",
+     "CHEMBL1201593",
+     "CHEMBL1237",
+     "CHEMBL13",
+     "CHEMBL1393",
+     "CHEMBL1487",
+     "CHEMBL1491",
+     "CHEMBL1519",
+     "CHEMBL1560",
+     "CHEMBL1592",
+     "CHEMBL1751",
+     "CHEMBL1755",
+     "CHEMBL189",
+     "CHEMBL20",
+     "CHEMBL2097081",
+     "CHEMBL2107830",
+     "CHEMBL2107885",
+     "CHEMBL3039507",
+     "CHEMBL3039598",
+     "CHEMBL3137301",
+     "CHEMBL344159",
+     "CHEMBL35",
+     "CHEMBL406",
+     "CHEMBL4066936",
+     "CHEMBL429910",
+     "CHEMBL434",
+     "CHEMBL435",
+     "CHEMBL456",
+     "CHEMBL471737",
+     "CHEMBL53463",
+     "CHEMBL578",
+     "CHEMBL585",
+     "CHEMBL59",
+     "CHEMBL723",
+     "CHEMBL730",
+     "CHEMBL842",
+     "CHEMBL878",
+     "CHEMBL926",
+     "CHEMBL945"
+    ]
+   }
+  },
+  "477": {
+   "phase": "approved",
+   "trials": 1080,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Brain%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Glioblastoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Central%20Nervous%20System%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001932": [
+     "CHEMBL1364144",
+     "CHEMBL514",
+     "CHEMBL635"
+    ],
+    "D005909": [
+     "CHEMBL1201583",
+     "CHEMBL2103875",
+     "CHEMBL513",
+     "CHEMBL810"
+    ]
+   }
+  },
+  "438": {
+   "phase": "approved",
+   "trials": 1792,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Prostatic%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D011471": [
+     "CHEMBL1082407",
+     "CHEMBL1200969",
+     "CHEMBL1201199",
+     "CHEMBL1201255",
+     "CHEMBL1201334",
+     "CHEMBL1201748",
+     "CHEMBL1274",
+     "CHEMBL1800159",
+     "CHEMBL1908917",
+     "CHEMBL2111187",
+     "CHEMBL271227",
+     "CHEMBL3183409",
+     "CHEMBL415606",
+     "CHEMBL4297185",
+     "CHEMBL4299851",
+     "CHEMBL4594284",
+     "CHEMBL5315067",
+     "CHEMBL58",
+     "CHEMBL582",
+     "CHEMBL710",
+     "CHEMBL79",
+     "CHEMBL806",
+     "CHEMBL836",
+     "CHEMBL92",
+     "CHEMBL920",
+     "CHEMBL924"
+    ]
+   }
+  },
+  "569": {
+   "phase": "phase2",
+   "trials": 7,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dysthymic%20Disorder%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "609": {
+   "phase": "phase3",
+   "trials": 88,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Premenstrual%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "534": {
+   "phase": "phase3",
+   "trials": 166,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Gallstones%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cholecystitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cholelithiasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "544": {
+   "phase": "approved",
+   "trials": 1650,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Parkinson%20Disease%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010300": [
+     "CHEMBL1009",
+     "CHEMBL1089318",
+     "CHEMBL1101",
+     "CHEMBL1201087",
+     "CHEMBL1201203",
+     "CHEMBL1201236",
+     "CHEMBL1201342",
+     "CHEMBL1206",
+     "CHEMBL1303",
+     "CHEMBL1324",
+     "CHEMBL1371770",
+     "CHEMBL1490",
+     "CHEMBL1945778",
+     "CHEMBL2111101",
+     "CHEMBL301265",
+     "CHEMBL396778",
+     "CHEMBL431770",
+     "CHEMBL493",
+     "CHEMBL517712",
+     "CHEMBL53",
+     "CHEMBL531",
+     "CHEMBL589",
+     "CHEMBL636",
+     "CHEMBL660",
+     "CHEMBL86715",
+     "CHEMBL887",
+     "CHEMBL900",
+     "CHEMBL953",
+     "CHEMBL972"
+    ]
+   }
+  },
+  "1007": {
+   "phase": "approved",
+   "trials": 1093,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Lymphoma%2C%20Non-Hodgkin%22%20OR%20AREA%5BConditionMeshTerm%5D%22Lymphoma%2C%20Large%20B-Cell%2C%20Diffuse%22%20OR%20AREA%5BConditionMeshTerm%5D%22Lymphoma%2C%20Follicular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008228": [
+     "CHEMBL1201576",
+     "CHEMBL167731",
+     "CHEMBL1742994",
+     "CHEMBL18442",
+     "CHEMBL2216870",
+     "CHEMBL34259",
+     "CHEMBL487253",
+     "CHEMBL513",
+     "CHEMBL53463",
+     "CHEMBL852"
+    ],
+    "D016403": [
+     "CHEMBL159",
+     "CHEMBL3301574",
+     "CHEMBL3301582",
+     "CHEMBL3545185",
+     "CHEMBL3989989",
+     "CHEMBL4297778",
+     "CHEMBL4298047",
+     "CHEMBL4298092",
+     "CHEMBL4650393"
+    ],
+    "D008224": [
+     "CHEMBL1201558",
+     "CHEMBL1743048",
+     "CHEMBL2108667",
+     "CHEMBL3039502",
+     "CHEMBL3218576",
+     "CHEMBL3414621",
+     "CHEMBL3948730",
+     "CHEMBL3989989",
+     "CHEMBL4297788",
+     "CHEMBL4650393",
+     "CHEMBL848"
+    ]
+   }
+  },
+  "652": {
+   "phase": "phase3",
+   "trials": 221,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Congenital%20Abnormalities%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "570": {
+   "phase": "approved",
+   "trials": 376,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Bipolar%20Disorder%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001714": [
+     "CHEMBL108",
+     "CHEMBL109",
+     "CHEMBL1112",
+     "CHEMBL1200826",
+     "CHEMBL1201170",
+     "CHEMBL1237021",
+     "CHEMBL1628227",
+     "CHEMBL2028019",
+     "CHEMBL3187365",
+     "CHEMBL41",
+     "CHEMBL426084",
+     "CHEMBL708",
+     "CHEMBL715",
+     "CHEMBL716",
+     "CHEMBL741",
+     "CHEMBL831",
+     "CHEMBL85"
+    ]
+   }
+  },
+  "592": {
+   "phase": "approved",
+   "trials": 155,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Glomerulonephritis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Glomerulonephritis%2C%20IGA%22%20OR%20AREA%5BConditionMeshTerm%5D%22Glomerulonephritis%2C%20Membranous%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D005921": [
+     "CHEMBL1055",
+     "CHEMBL435",
+     "CHEMBL842"
+    ],
+    "D005922": [
+     "CHEMBL1370",
+     "CHEMBL4594448",
+     "CHEMBL539423"
+    ]
+   }
+  },
+  "625": {
+   "phase": "approved",
+   "trials": 465,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Endocrine%20System%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Metabolic%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D004700": [
+     "CHEMBL389621",
+     "CHEMBL635",
+     "CHEMBL650"
+    ]
+   }
+  },
+  "1032": {
+   "phase": "approved",
+   "trials": 382,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Thyroid%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hypothyroidism%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hyperthyroidism%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013959": [
+     "CHEMBL1200696",
+     "CHEMBL1491306",
+     "CHEMBL1515",
+     "CHEMBL1518",
+     "CHEMBL508102"
+    ],
+    "D007037": [
+     "CHEMBL1200711",
+     "CHEMBL1201625",
+     "CHEMBL1201716",
+     "CHEMBL1544",
+     "CHEMBL1624",
+     "CHEMBL672"
+    ],
+    "D006980": [
+     "CHEMBL1515",
+     "CHEMBL1518",
+     "CHEMBL1644695"
+    ]
+   }
+  },
+  "530": {
+   "phase": "phase3",
+   "trials": 29,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Intestinal%20Obstruction%22%20OR%20AREA%5BConditionMeshTerm%5D%22Intestinal%20Pseudo-Obstruction%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "671": {
+   "phase": "approved",
+   "trials": 404,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cataract%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002386": [
+     "CHEMBL1021",
+     "CHEMBL1077",
+     "CHEMBL139",
+     "CHEMBL469",
+     "CHEMBL667",
+     "CHEMBL965"
+    ]
+   }
+  },
+  "683": {
+   "phase": "approved",
+   "trials": 946,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Periodontal%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Periodontitis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010518": [
+     "CHEMBL1433",
+     "CHEMBL1434",
+     "CHEMBL1908359",
+     "CHEMBL790"
+    ]
+   }
+  },
+  "394": {
+   "phase": "phase3",
+   "trials": 38,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Syphilis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Syphilis%2C%20Congenital%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "489": {
+   "phase": "approved",
+   "trials": 17989,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009369": [
+     "CHEMBL1023",
+     "CHEMBL1024",
+     "CHEMBL105",
+     "CHEMBL1082407",
+     "CHEMBL1094636",
+     "CHEMBL1096562",
+     "CHEMBL1096882",
+     "CHEMBL1096885",
+     "CHEMBL1117",
+     "CHEMBL1129",
+     "CHEMBL11359",
+     "CHEMBL1173055",
+     "CHEMBL118",
+     "CHEMBL1189679",
+     "CHEMBL1199324",
+     "CHEMBL1200335",
+     "CHEMBL1200374",
+     "CHEMBL1200598",
+     "CHEMBL1201101",
+     "CHEMBL1201112",
+     "CHEMBL1201129",
+     "CHEMBL1201139",
+     "CHEMBL1201182",
+     "CHEMBL1201199",
+     "CHEMBL1201247",
+     "CHEMBL1201255",
+     "CHEMBL1201334",
+     "CHEMBL1201438",
+     "CHEMBL1201458",
+     "CHEMBL1201477",
+     "CHEMBL1201481",
+     "CHEMBL1201506",
+     "CHEMBL1201507",
+     "CHEMBL1201514",
+     "CHEMBL1201529",
+     "CHEMBL1201550",
+     "CHEMBL1201557",
+     "CHEMBL1201558",
+     "CHEMBL1201560",
+     "CHEMBL1201561",
+     "CHEMBL1201562",
+     "CHEMBL1201563",
+     "CHEMBL1201564",
+     "CHEMBL1201566",
+     "CHEMBL1201567",
+     "CHEMBL1201568",
+     "CHEMBL1201573",
+     "CHEMBL1201576",
+     "CHEMBL1201577",
+     "CHEMBL1201583",
+     "CHEMBL1201585",
+     "CHEMBL1201670",
+     "CHEMBL1201746",
+     "CHEMBL1201748",
+     "CHEMBL1201752",
+     "CHEMBL1201827",
+     "CHEMBL1201836",
+     "CHEMBL1229517",
+     "CHEMBL1237024",
+     "CHEMBL1237054",
+     "CHEMBL1252",
+     "CHEMBL1274",
+     "CHEMBL1287853",
+     "CHEMBL1289601",
+     "CHEMBL1289926",
+     "CHEMBL1321",
+     "CHEMBL132530",
+     "CHEMBL134",
+     "CHEMBL1351",
+     "CHEMBL1358",
+     "CHEMBL1399",
+     "CHEMBL1421",
+     "CHEMBL1425",
+     "CHEMBL1444",
+     "CHEMBL1445",
+     "CHEMBL1455",
+     "CHEMBL1467",
+     "CHEMBL1471",
+     "CHEMBL1488",
+     "CHEMBL1489",
+     "CHEMBL1554",
+     "CHEMBL1580",
+     "CHEMBL1585",
+     "CHEMBL159",
+     "CHEMBL1614701",
+     "CHEMBL1619",
+     "CHEMBL1670",
+     "CHEMBL167731",
+     "CHEMBL1680",
+     "CHEMBL1683590",
+     "CHEMBL1738797",
+     "CHEMBL1742982",
+     "CHEMBL1742992",
+     "CHEMBL1742994",
+     "CHEMBL1743007",
+     "CHEMBL1743010",
+     "CHEMBL1743041",
+     "CHEMBL1743043",
+     "CHEMBL1743047",
+     "CHEMBL1743048",
+     "CHEMBL1743049",
+     "CHEMBL1743062",
+     "CHEMBL1743082",
+     "CHEMBL1750",
+     "CHEMBL1773",
+     "CHEMBL178",
+     "CHEMBL1789844",
+     "CHEMBL1789941",
+     "CHEMBL1800159",
+     "CHEMBL18442",
+     "CHEMBL185",
+     "CHEMBL1852688",
+     "CHEMBL1873475",
+     "CHEMBL189963",
+     "CHEMBL1908360",
+     "CHEMBL1908391",
+     "CHEMBL1946170",
+     "CHEMBL1977579",
+     "CHEMBL1983268",
+     "CHEMBL2007641",
+     "CHEMBL2028663",
+     "CHEMBL2035187",
+     "CHEMBL2043437",
+     "CHEMBL20883",
+     "CHEMBL2103875",
+     "CHEMBL2105717",
+     "CHEMBL2105737",
+     "CHEMBL2107067",
+     "CHEMBL2107891",
+     "CHEMBL2108506",
+     "CHEMBL2108508",
+     "CHEMBL2108510",
+     "CHEMBL2108546",
+     "CHEMBL2108581",
+     "CHEMBL2108611",
+     "CHEMBL2108658",
+     "CHEMBL2108677",
+     "CHEMBL2108728",
+     "CHEMBL2108738",
+     "CHEMBL2108989",
+     "CHEMBL2109128",
+     "CHEMBL2109134",
+     "CHEMBL2109427",
+     "CHEMBL2110732",
+     "CHEMBL2110824",
+     "CHEMBL2111100",
+     "CHEMBL2141296",
+     "CHEMBL2146883",
+     "CHEMBL2216870",
+     "CHEMBL2218896",
+     "CHEMBL225071",
+     "CHEMBL225072",
+     "CHEMBL2325741",
+     "CHEMBL2364649",
+     "CHEMBL2368925",
+     "CHEMBL238071",
+     "CHEMBL2396661",
+     "CHEMBL2403108",
+     "CHEMBL24828",
+     "CHEMBL254328",
+     "CHEMBL289469",
+     "CHEMBL3039502",
+     "CHEMBL3137309",
+     "CHEMBL3137342",
+     "CHEMBL3137343",
+     "CHEMBL313972",
+     "CHEMBL3183409",
+     "CHEMBL3187723",
+     "CHEMBL3188267",
+     "CHEMBL3218576",
+     "CHEMBL325041",
+     "CHEMBL3286830",
+     "CHEMBL3301582",
+     "CHEMBL3301587",
+     "CHEMBL3301589",
+     "CHEMBL3301610",
+     "CHEMBL3301612",
+     "CHEMBL3301622",
+     "CHEMBL3353410",
+     "CHEMBL3402762",
+     "CHEMBL3414621",
+     "CHEMBL34259",
+     "CHEMBL343448",
+     "CHEMBL354077",
+     "CHEMBL3545110",
+     "CHEMBL3545131",
+     "CHEMBL3545132",
+     "CHEMBL3545185",
+     "CHEMBL3545262",
+     "CHEMBL3545311",
+     "CHEMBL3545376",
+     "CHEMBL3701238",
+     "CHEMBL3707227",
+     "CHEMBL3707348",
+     "CHEMBL3786343",
+     "CHEMBL38",
+     "CHEMBL3813873",
+     "CHEMBL3833373",
+     "CHEMBL3833384",
+     "CHEMBL384467",
+     "CHEMBL386630",
+     "CHEMBL3889654",
+     "CHEMBL389621",
+     "CHEMBL3936761",
+     "CHEMBL3948730",
+     "CHEMBL3988900",
+     "CHEMBL3989868",
+     "CHEMBL3990026",
+     "CHEMBL408513",
+     "CHEMBL409",
+     "CHEMBL411",
+     "CHEMBL413",
+     "CHEMBL414804",
+     "CHEMBL417",
+     "CHEMBL4204794",
+     "CHEMBL4208229",
+     "CHEMBL4216467",
+     "CHEMBL427",
+     "CHEMBL428647",
+     "CHEMBL4297185",
+     "CHEMBL4297516",
+     "CHEMBL4297522",
+     "CHEMBL4297573",
+     "CHEMBL4297723",
+     "CHEMBL4297774",
+     "CHEMBL4297778",
+     "CHEMBL4297788",
+     "CHEMBL4297809",
+     "CHEMBL4297819",
+     "CHEMBL4297840",
+     "CHEMBL4297841",
+     "CHEMBL4297843",
+     "CHEMBL4297844",
+     "CHEMBL4297950",
+     "CHEMBL4297984",
+     "CHEMBL4297990",
+     "CHEMBL4298037",
+     "CHEMBL4298047",
+     "CHEMBL4298092",
+     "CHEMBL4298124",
+     "CHEMBL4298138",
+     "CHEMBL4298199",
+     "CHEMBL4298209",
+     "CHEMBL43",
+     "CHEMBL4303060",
+     "CHEMBL4303214",
+     "CHEMBL44657",
+     "CHEMBL447629",
+     "CHEMBL450449",
+     "CHEMBL451887",
+     "CHEMBL452231",
+     "CHEMBL4535757",
+     "CHEMBL455186",
+     "CHEMBL4559134",
+     "CHEMBL4582651",
+     "CHEMBL4585668",
+     "CHEMBL4594230",
+     "CHEMBL4594284",
+     "CHEMBL4594350",
+     "CHEMBL4594503",
+     "CHEMBL4594505",
+     "CHEMBL4594535",
+     "CHEMBL46",
+     "CHEMBL460287",
+     "CHEMBL46286",
+     "CHEMBL465",
+     "CHEMBL4650256",
+     "CHEMBL4650319",
+     "CHEMBL4650393",
+     "CHEMBL4650485",
+     "CHEMBL467",
+     "CHEMBL473417",
+     "CHEMBL476",
+     "CHEMBL481",
+     "CHEMBL483254",
+     "CHEMBL487253",
+     "CHEMBL488",
+     "CHEMBL500576",
+     "CHEMBL5095292",
+     "CHEMBL513",
+     "CHEMBL514",
+     "CHEMBL515",
+     "CHEMBL518924",
+     "CHEMBL521686",
+     "CHEMBL53463",
+     "CHEMBL535",
+     "CHEMBL5483015",
+     "CHEMBL553025",
+     "CHEMBL58",
+     "CHEMBL596",
+     "CHEMBL601",
+     "CHEMBL601719",
+     "CHEMBL6067492",
+     "CHEMBL608533",
+     "CHEMBL635",
+     "CHEMBL671",
+     "CHEMBL691",
+     "CHEMBL70",
+     "CHEMBL705",
+     "CHEMBL717",
+     "CHEMBL727",
+     "CHEMBL760",
+     "CHEMBL803",
+     "CHEMBL806",
+     "CHEMBL810",
+     "CHEMBL820",
+     "CHEMBL83",
+     "CHEMBL852",
+     "CHEMBL86",
+     "CHEMBL88",
+     "CHEMBL888",
+     "CHEMBL90",
+     "CHEMBL90555",
+     "CHEMBL917",
+     "CHEMBL92",
+     "CHEMBL939",
+     "CHEMBL98"
+    ]
+   }
+  },
+  "525": {
+   "phase": "approved",
+   "trials": 353,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Cirrhosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008103": [
+     "CHEMBL1393",
+     "CHEMBL1643",
+     "CHEMBL35",
+     "CHEMBL435",
+     "CHEMBL585"
+    ]
+   }
+  },
+  "1016": {
+   "phase": "approved",
+   "trials": 1822,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Osteoarthritis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010003": [
+     "CHEMBL1020",
+     "CHEMBL1070",
+     "CHEMBL1071",
+     "CHEMBL118",
+     "CHEMBL1200878",
+     "CHEMBL1201302",
+     "CHEMBL1201320",
+     "CHEMBL1297",
+     "CHEMBL131",
+     "CHEMBL1364144",
+     "CHEMBL139",
+     "CHEMBL1491",
+     "CHEMBL1504",
+     "CHEMBL154",
+     "CHEMBL15770",
+     "CHEMBL1650",
+     "CHEMBL256087",
+     "CHEMBL294199",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL509",
+     "CHEMBL521",
+     "CHEMBL527",
+     "CHEMBL571",
+     "CHEMBL599",
+     "CHEMBL6",
+     "CHEMBL606",
+     "CHEMBL622",
+     "CHEMBL635",
+     "CHEMBL650",
+     "CHEMBL79",
+     "CHEMBL865",
+     "CHEMBL898",
+     "CHEMBL902",
+     "CHEMBL90593",
+     "CHEMBL93645"
+    ]
+   }
+  },
+  "465": {
+   "phase": "approved",
+   "trials": 947,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Ovarian%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010051": [
+     "CHEMBL1006",
+     "CHEMBL1094636",
+     "CHEMBL1173055",
+     "CHEMBL1201583",
+     "CHEMBL1351",
+     "CHEMBL2109036",
+     "CHEMBL428647",
+     "CHEMBL450449",
+     "CHEMBL521686",
+     "CHEMBL53463",
+     "CHEMBL84",
+     "CHEMBL852",
+     "CHEMBL888"
+    ]
+   }
+  },
+  "444": {
+   "phase": "phase3",
+   "trials": 149,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mouth%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Lip%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "536": {
+   "phase": "approved",
+   "trials": 260,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Gastroesophageal%20Reflux%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D005764": [
+     "CHEMBL1201186",
+     "CHEMBL1201320",
+     "CHEMBL1201863",
+     "CHEMBL1219",
+     "CHEMBL1353",
+     "CHEMBL1502",
+     "CHEMBL1503",
+     "CHEMBL1790041",
+     "CHEMBL2079130",
+     "CHEMBL30",
+     "CHEMBL316561",
+     "CHEMBL3183075",
+     "CHEMBL480",
+     "CHEMBL499915",
+     "CHEMBL606",
+     "CHEMBL6067980",
+     "CHEMBL902",
+     "CHEMBL9967"
+    ]
+   }
+  },
+  "328": {
+   "phase": "approved",
+   "trials": 213,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Common%20Cold%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pharyngitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Sinusitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Tonsillitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Laryngitis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003139": [
+     "CHEMBL112",
+     "CHEMBL1200574",
+     "CHEMBL1215",
+     "CHEMBL154",
+     "CHEMBL15768",
+     "CHEMBL1590",
+     "CHEMBL1621597",
+     "CHEMBL1626",
+     "CHEMBL211456",
+     "CHEMBL25",
+     "CHEMBL256087",
+     "CHEMBL505",
+     "CHEMBL521",
+     "CHEMBL52440",
+     "CHEMBL657",
+     "CHEMBL761",
+     "CHEMBL762",
+     "CHEMBL811",
+     "CHEMBL855"
+    ],
+    "D010612": [
+     "CHEMBL1082",
+     "CHEMBL1095930",
+     "CHEMBL112",
+     "CHEMBL1136",
+     "CHEMBL1541",
+     "CHEMBL1644",
+     "CHEMBL1741",
+     "CHEMBL256087",
+     "CHEMBL276568",
+     "CHEMBL278172",
+     "CHEMBL454446",
+     "CHEMBL505",
+     "CHEMBL521",
+     "CHEMBL529",
+     "CHEMBL657",
+     "CHEMBL680",
+     "CHEMBL71595",
+     "CHEMBL790",
+     "CHEMBL927"
+    ],
+    "D012852": [
+     "CHEMBL1082",
+     "CHEMBL1095930",
+     "CHEMBL1136",
+     "CHEMBL1215",
+     "CHEMBL1590",
+     "CHEMBL1741",
+     "CHEMBL2108675",
+     "CHEMBL276568",
+     "CHEMBL32",
+     "CHEMBL33",
+     "CHEMBL505",
+     "CHEMBL52440",
+     "CHEMBL529",
+     "CHEMBL679",
+     "CHEMBL73234",
+     "CHEMBL761",
+     "CHEMBL762",
+     "CHEMBL777",
+     "CHEMBL8",
+     "CHEMBL811",
+     "CHEMBL980"
+    ],
+    "D014069": [
+     "CHEMBL1082",
+     "CHEMBL1095930",
+     "CHEMBL1136",
+     "CHEMBL1541",
+     "CHEMBL1741",
+     "CHEMBL276568",
+     "CHEMBL454446",
+     "CHEMBL529",
+     "CHEMBL680",
+     "CHEMBL927"
+    ]
+   }
+  },
+  "595": {
+   "phase": "approved",
+   "trials": 203,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Urinary%20Tract%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Nephritis%2C%20Interstitial%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pyelonephritis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014552": [
+     "CHEMBL106",
+     "CHEMBL1082",
+     "CHEMBL1095930",
+     "CHEMBL1201270",
+     "CHEMBL127",
+     "CHEMBL1331216",
+     "CHEMBL1368",
+     "CHEMBL148",
+     "CHEMBL1493",
+     "CHEMBL1541",
+     "CHEMBL158",
+     "CHEMBL161",
+     "CHEMBL1650559",
+     "CHEMBL1650818",
+     "CHEMBL1689063",
+     "CHEMBL1757",
+     "CHEMBL177",
+     "CHEMBL186",
+     "CHEMBL191083",
+     "CHEMBL2103872",
+     "CHEMBL22",
+     "CHEMBL3112741",
+     "CHEMBL33",
+     "CHEMBL3317857",
+     "CHEMBL372795",
+     "CHEMBL3989974",
+     "CHEMBL404",
+     "CHEMBL443",
+     "CHEMBL44354",
+     "CHEMBL491571",
+     "CHEMBL541",
+     "CHEMBL572",
+     "CHEMBL680",
+     "CHEMBL734",
+     "CHEMBL766",
+     "CHEMBL777",
+     "CHEMBL8"
+    ],
+    "D011704": [
+     "CHEMBL158",
+     "CHEMBL1650559",
+     "CHEMBL1689063",
+     "CHEMBL186",
+     "CHEMBL3112741",
+     "CHEMBL44354",
+     "CHEMBL491571",
+     "CHEMBL8"
+    ]
+   }
+  },
+  "651": {
+   "phase": "phase3",
+   "trials": 22,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Digestive%20System%20Abnormalities%22%20OR%20AREA%5BConditionMeshTerm%5D%22Esophageal%20Atresia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hirschsprung%20Disease%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "418": {
+   "phase": "approved",
+   "trials": 970,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Hepatocellular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006528": [
+     "CHEMBL1336",
+     "CHEMBL2105717",
+     "CHEMBL2108658"
+    ]
+   }
+  },
+  "527": {
+   "phase": "approved",
+   "trials": 66,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Peptic%20Ulcer%22%20OR%20AREA%5BConditionMeshTerm%5D%22Stomach%20Ulcer%22%20OR%20AREA%5BConditionMeshTerm%5D%22Duodenal%20Ulcer%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010437": [
+     "CHEMBL118",
+     "CHEMBL1180725",
+     "CHEMBL1201186",
+     "CHEMBL1201302",
+     "CHEMBL1201335",
+     "CHEMBL1201863",
+     "CHEMBL1219",
+     "CHEMBL131",
+     "CHEMBL1503",
+     "CHEMBL1650",
+     "CHEMBL1790041",
+     "CHEMBL2079130",
+     "CHEMBL30",
+     "CHEMBL316561",
+     "CHEMBL3183075",
+     "CHEMBL384467",
+     "CHEMBL480",
+     "CHEMBL499915",
+     "CHEMBL517712",
+     "CHEMBL606",
+     "CHEMBL6067980",
+     "CHEMBL635",
+     "CHEMBL902",
+     "CHEMBL9967"
+    ],
+    "D013276": [
+     "CHEMBL1201320",
+     "CHEMBL1503",
+     "CHEMBL154",
+     "CHEMBL1790041",
+     "CHEMBL480",
+     "CHEMBL606",
+     "CHEMBL902"
+    ],
+    "D004381": [
+     "CHEMBL1082",
+     "CHEMBL1201186",
+     "CHEMBL1201320",
+     "CHEMBL1219",
+     "CHEMBL137",
+     "CHEMBL139",
+     "CHEMBL1440",
+     "CHEMBL1503",
+     "CHEMBL1741",
+     "CHEMBL1790041",
+     "CHEMBL30",
+     "CHEMBL3183075",
+     "CHEMBL480",
+     "CHEMBL606",
+     "CHEMBL6067980",
+     "CHEMBL902"
+    ]
+   }
+  },
+  "557": {
+   "phase": "approved",
+   "trials": 548,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Nervous%20System%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009422": [
+     "CHEMBL354077"
+    ]
+   }
+  },
+  "959": {
+   "phase": "phase2",
+   "trials": 6,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Salmonella%20Infections%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "1000": {
+   "phase": "phase3",
+   "trials": 151,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Presbyopia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "319": {
+   "phase": "approved",
+   "trials": 26,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Typhoid%20Fever%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014435": [
+     "CHEMBL8"
+    ]
+   }
+  },
+  "999": {
+   "phase": "phase3",
+   "trials": 490,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Refractive%20Errors%22%20OR%20AREA%5BConditionMeshTerm%5D%22Myopia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "365": {
+   "phase": "approved",
+   "trials": 22,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Neglected%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Strongyloidiasis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Mycetoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Yaws%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013322": [
+     "CHEMBL6067487"
+    ]
+   }
+  },
+  "664": {
+   "phase": "approved",
+   "trials": 92,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Urticaria%22%20OR%20AREA%5BConditionMeshTerm%5D%22Chronic%20Urticaria%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014581": [
+     "CHEMBL1000",
+     "CHEMBL1172",
+     "CHEMBL1201191",
+     "CHEMBL1201353",
+     "CHEMBL1201589",
+     "CHEMBL1626",
+     "CHEMBL428880",
+     "CHEMBL516",
+     "CHEMBL643",
+     "CHEMBL679",
+     "CHEMBL864",
+     "CHEMBL896",
+     "CHEMBL914",
+     "CHEMBL998"
+    ]
+   }
+  },
+  "579": {
+   "phase": "approved",
+   "trials": 47,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Conduct%20Disorder%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D019955": [
+     "CHEMBL54",
+     "CHEMBL71"
+    ]
+   }
+  },
+  "384": {
+   "phase": "phase3",
+   "trials": 39,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Jaundice%2C%20Neonatal%22%20OR%20AREA%5BConditionMeshTerm%5D%22Erythroblastosis%2C%20Fetal%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "548": {
+   "phase": "phase3",
+   "trials": 39,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Tension-Type%20Headache%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "474": {
+   "phase": "approved",
+   "trials": 565,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Urinary%20Bladder%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001749": [
+     "CHEMBL3545376"
+    ]
+   }
+  },
+  "1162": {
+   "phase": "phase3",
+   "trials": 92,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Vision%2C%20Low%22%20OR%20AREA%5BConditionMeshTerm%5D%22Blindness%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "618": {
+   "phase": "approved",
+   "trials": 69,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Anemia%2C%20Hemolytic%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hemoglobinopathies%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000743": [
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1650",
+     "CHEMBL384467",
+     "CHEMBL4101807",
+     "CHEMBL4299940",
+     "CHEMBL635"
+    ]
+   }
+  },
+  "516": {
+   "phase": "approved",
+   "trials": 369,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Lung%20Diseases%2C%20Interstitial%22%20OR%20AREA%5BConditionMeshTerm%5D%22Idiopathic%20Pulmonary%20Fibrosis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Sarcoidosis%2C%20Pulmonary%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D017563": [
+     "CHEMBL502835"
+    ],
+    "D054990": [
+     "CHEMBL1201231",
+     "CHEMBL1256391",
+     "CHEMBL502835"
+    ]
+   }
+  },
+  "685": {
+   "phase": "phase3",
+   "trials": 44,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mouth%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "845": {
+   "phase": "approved",
+   "trials": 588,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Precursor%20Cell%20Lymphoblastic%20Leukemia-Lymphoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D054198": [
+     "CHEMBL1171837",
+     "CHEMBL1201576",
+     "CHEMBL1421",
+     "CHEMBL1425",
+     "CHEMBL1742992",
+     "CHEMBL1750",
+     "CHEMBL1863514",
+     "CHEMBL2108546",
+     "CHEMBL2108611",
+     "CHEMBL2108728",
+     "CHEMBL2108931",
+     "CHEMBL2108989",
+     "CHEMBL34259",
+     "CHEMBL515",
+     "CHEMBL803",
+     "CHEMBL852",
+     "CHEMBL941"
+    ]
+   }
+  },
+  "615": {
+   "phase": "approved",
+   "trials": 325,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Anemia%2C%20Sickle%20Cell%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000755": [
+     "CHEMBL4101807",
+     "CHEMBL4297734",
+     "CHEMBL4650269",
+     "CHEMBL467",
+     "CHEMBL5095474",
+     "CHEMBL70927",
+     "CHEMBL930"
+    ]
+   }
+  },
+  "337": {
+   "phase": "phase3",
+   "trials": 36,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Encephalitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Encephalitis%2C%20Viral%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "847": {
+   "phase": "approved",
+   "trials": 895,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leukemia%2C%20Myeloid%2C%20Acute%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015470": [
+     "CHEMBL1117",
+     "CHEMBL1201506",
+     "CHEMBL1201670",
+     "CHEMBL1489",
+     "CHEMBL178",
+     "CHEMBL2043437",
+     "CHEMBL3301622",
+     "CHEMBL3989908",
+     "CHEMBL3989958",
+     "CHEMBL4297573",
+     "CHEMBL4297610",
+     "CHEMBL576982",
+     "CHEMBL608533",
+     "CHEMBL803",
+     "CHEMBL852",
+     "CHEMBL90"
+    ]
+   }
+  },
+  "535": {
+   "phase": "approved",
+   "trials": 159,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pancreatitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pancreatitis%2C%20Chronic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010195": [
+     "CHEMBL2095209"
+    ]
+   }
+  },
+  "471": {
+   "phase": "approved",
+   "trials": 605,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Kidney%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Renal%20Cell%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002292": [
+     "CHEMBL1201182",
+     "CHEMBL1201583",
+     "CHEMBL1289494",
+     "CHEMBL1289601",
+     "CHEMBL1289926",
+     "CHEMBL1336",
+     "CHEMBL1789844",
+     "CHEMBL1908360",
+     "CHEMBL2105717",
+     "CHEMBL2108738",
+     "CHEMBL3137343",
+     "CHEMBL4585668",
+     "CHEMBL477772",
+     "CHEMBL535",
+     "CHEMBL717"
+    ]
+   }
+  },
+  "642": {
+   "phase": "phase3",
+   "trials": 55,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Neural%20Tube%20Defects%22%20OR%20AREA%5BConditionMeshTerm%5D%22Spinal%20Dysraphism%22%20OR%20AREA%5BConditionMeshTerm%5D%22Anencephaly%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "453": {
+   "phase": "approved",
+   "trials": 440,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Gallbladder%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Biliary%20Tract%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cholangiocarcinoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001661": [
+     "CHEMBL4650256"
+    ],
+    "D018281": [
+     "CHEMBL1852688",
+     "CHEMBL3701238",
+     "CHEMBL3989958",
+     "CHEMBL4297522"
+    ]
+   }
+  },
+  "978": {
+   "phase": "approved",
+   "trials": 35,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dermatitis%2C%20Contact%22%20OR%20AREA%5BConditionMeshTerm%5D%22Dermatitis%2C%20Allergic%20Contact%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003877": [
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1650",
+     "CHEMBL384467",
+     "CHEMBL635"
+    ]
+   }
+  },
+  "578": {
+   "phase": "approved",
+   "trials": 544,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Attention%20Deficit%20Disorder%20with%20Hyperactivity%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001289": [
+     "CHEMBL113",
+     "CHEMBL1177",
+     "CHEMBL1201192",
+     "CHEMBL1201201",
+     "CHEMBL1201222",
+     "CHEMBL134",
+     "CHEMBL1373",
+     "CHEMBL1697733",
+     "CHEMBL2142890",
+     "CHEMBL252556",
+     "CHEMBL254857",
+     "CHEMBL306700",
+     "CHEMBL36715",
+     "CHEMBL405",
+     "CHEMBL4297620",
+     "CHEMBL4301162",
+     "CHEMBL488093",
+     "CHEMBL612",
+     "CHEMBL641",
+     "CHEMBL71752",
+     "CHEMBL796",
+     "CHEMBL827",
+     "CHEMBL862"
+    ]
+   }
+  },
+  "946": {
+   "phase": "approved",
+   "trials": 35,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Tuberculosis%2C%20Multidrug-Resistant%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D018088": [
+     "CHEMBL218650",
+     "CHEMBL227875",
+     "CHEMBL376488"
+    ]
+   }
+  },
+  "520": {
+   "phase": "approved",
+   "trials": 1718,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Respiratory%20Tract%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Lung%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Bronchiectasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012140": [
+     "CHEMBL1183717",
+     "CHEMBL1200689",
+     "CHEMBL1200737",
+     "CHEMBL1201586",
+     "CHEMBL1229908",
+     "CHEMBL1256391",
+     "CHEMBL1754",
+     "CHEMBL2010601",
+     "CHEMBL2104607"
+    ],
+    "D008171": [
+     "CHEMBL1256391",
+     "CHEMBL1754",
+     "CHEMBL177",
+     "CHEMBL4297879",
+     "CHEMBL64391"
+    ]
+   }
+  },
+  "582": {
+   "phase": "phase3",
+   "trials": 150,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Intellectual%20Disability%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "423": {
+   "phase": "phase3",
+   "trials": 67,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Laryngeal%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "649": {
+   "phase": "phase3",
+   "trials": 28,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Musculoskeletal%20Abnormalities%22%20OR%20AREA%5BConditionMeshTerm%5D%22Clubfoot%22%20OR%20AREA%5BConditionMeshTerm%5D%22Limb%20Deformities%2C%20Congenital%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "1161": {
+   "phase": "approved",
+   "trials": 482,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Digestive%20System%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Diverticulitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Irritable%20Bowel%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D004066": [
+     "CHEMBL1110",
+     "CHEMBL1123",
+     "CHEMBL1187724",
+     "CHEMBL1201232",
+     "CHEMBL1201235",
+     "CHEMBL1201264",
+     "CHEMBL1201286",
+     "CHEMBL1201325",
+     "CHEMBL1201335",
+     "CHEMBL1201340",
+     "CHEMBL1201354",
+     "CHEMBL1331216",
+     "CHEMBL1495",
+     "CHEMBL1618102",
+     "CHEMBL1619528",
+     "CHEMBL1623992",
+     "CHEMBL1697841",
+     "CHEMBL1729",
+     "CHEMBL1909324",
+     "CHEMBL19224",
+     "CHEMBL205596",
+     "CHEMBL2110948",
+     "CHEMBL219916",
+     "CHEMBL282121",
+     "CHEMBL325109",
+     "CHEMBL3304486",
+     "CHEMBL473159",
+     "CHEMBL517712",
+     "CHEMBL524004",
+     "CHEMBL620",
+     "CHEMBL86"
+    ],
+    "D043183": [
+     "CHEMBL1110",
+     "CHEMBL1123",
+     "CHEMBL1201134",
+     "CHEMBL2159122",
+     "CHEMBL3184512",
+     "CHEMBL3301675",
+     "CHEMBL3304485",
+     "CHEMBL76370"
+    ]
+   }
+  },
+  "501": {
+   "phase": "phase3",
+   "trials": 122,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Aortic%20Aneurysm%22%20OR%20AREA%5BConditionMeshTerm%5D%22Aortic%20Aneurysm%2C%20Abdominal%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "419": {
+   "phase": "approved",
+   "trials": 970,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Hepatocellular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006528": [
+     "CHEMBL1336",
+     "CHEMBL2105717",
+     "CHEMBL2108658"
+    ]
+   }
+  },
+  "627": {
+   "phase": "approved",
+   "trials": 577,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Arthritis%2C%20Rheumatoid%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001172": [
+     "CHEMBL1020",
+     "CHEMBL1070",
+     "CHEMBL1071",
+     "CHEMBL118",
+     "CHEMBL1201265",
+     "CHEMBL1201302",
+     "CHEMBL1201320",
+     "CHEMBL1201570",
+     "CHEMBL1201572",
+     "CHEMBL1201576",
+     "CHEMBL1201580",
+     "CHEMBL1201581",
+     "CHEMBL1201823",
+     "CHEMBL1201831",
+     "CHEMBL1201833",
+     "CHEMBL1237022",
+     "CHEMBL1297",
+     "CHEMBL131",
+     "CHEMBL1364144",
+     "CHEMBL1366",
+     "CHEMBL139",
+     "CHEMBL1430",
+     "CHEMBL1504",
+     "CHEMBL1535",
+     "CHEMBL154",
+     "CHEMBL1542",
+     "CHEMBL15770",
+     "CHEMBL160",
+     "CHEMBL1650",
+     "CHEMBL2105759",
+     "CHEMBL2108730",
+     "CHEMBL221959",
+     "CHEMBL3301607",
+     "CHEMBL34259",
+     "CHEMBL3622821",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL421",
+     "CHEMBL509",
+     "CHEMBL521",
+     "CHEMBL527",
+     "CHEMBL571",
+     "CHEMBL582",
+     "CHEMBL599",
+     "CHEMBL6",
+     "CHEMBL609",
+     "CHEMBL622",
+     "CHEMBL635",
+     "CHEMBL650",
+     "CHEMBL865",
+     "CHEMBL898",
+     "CHEMBL902",
+     "CHEMBL90593",
+     "CHEMBL93645",
+     "CHEMBL960"
+    ]
+   }
+  },
+  "450": {
+   "phase": "phase3",
+   "trials": 148,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Oropharyngeal%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hypopharyngeal%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pharyngeal%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "658": {
+   "phase": "approved",
+   "trials": 22,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Scabies%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012532": [
+     "CHEMBL6067975"
+    ]
+   }
+  },
+  "367": {
+   "phase": "approved",
+   "trials": 183,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Postpartum%20Hemorrhage%22%20OR%20AREA%5BConditionMeshTerm%5D%22Obstetric%20Labor%20Complications%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006473": [
+     "CHEMBL1237122"
+    ]
+   }
+  },
+  "975": {
+   "phase": "approved",
+   "trials": 1093,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Diabetes%20Mellitus%2C%20Type%201%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003922": [
+     "CHEMBL1201497",
+     "CHEMBL1743078",
+     "CHEMBL2104391",
+     "CHEMBL3039507",
+     "CHEMBL4594581",
+     "CHEMBL4650274"
+    ]
+   }
+  },
+  "369": {
+   "phase": "approved",
+   "trials": 253,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pre-Eclampsia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hypertension%2C%20Pregnancy-Induced%22%20OR%20AREA%5BConditionMeshTerm%5D%22Eclampsia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D011225": [
+     "CHEMBL2021423"
+    ],
+    "D004461": [
+     "CHEMBL2021423"
+    ]
+   }
+  },
+  "997": {
+   "phase": "approved",
+   "trials": 111,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Diabetic%20Nephropathies%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003928": [
+     "CHEMBL1513",
+     "CHEMBL1560"
+    ]
+   }
+  },
+  "1012": {
+   "phase": "approved",
+   "trials": 219,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Bone%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Osteosarcoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Sarcoma%2C%20Ewing%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012516": [
+     "CHEMBL1679",
+     "CHEMBL1908841",
+     "CHEMBL2111100",
+     "CHEMBL53463"
+    ]
+   }
+  },
+  "357": {
+   "phase": "approved",
+   "trials": 74,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dengue%22%20OR%20AREA%5BConditionMeshTerm%5D%22Severe%20Dengue%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003715": [
+     "CHEMBL6068374",
+     "CHEMBL6068376"
+    ]
+   }
+  },
+  "679": {
+   "phase": "approved",
+   "trials": 222,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Eye%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Ear%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D005128": [
+     "CHEMBL1021",
+     "CHEMBL1076903",
+     "CHEMBL1077",
+     "CHEMBL1089221",
+     "CHEMBL1141",
+     "CHEMBL1200574",
+     "CHEMBL1200600",
+     "CHEMBL1200617",
+     "CHEMBL1200865",
+     "CHEMBL1200979",
+     "CHEMBL1200989",
+     "CHEMBL1201109",
+     "CHEMBL1201173",
+     "CHEMBL1201593",
+     "CHEMBL1201749",
+     "CHEMBL1228",
+     "CHEMBL131",
+     "CHEMBL139",
+     "CHEMBL1451",
+     "CHEMBL1534",
+     "CHEMBL160",
+     "CHEMBL1650",
+     "CHEMBL1749",
+     "CHEMBL196",
+     "CHEMBL2048028",
+     "CHEMBL2095222",
+     "CHEMBL3707275",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL413",
+     "CHEMBL424",
+     "CHEMBL4297852",
+     "CHEMBL4298211",
+     "CHEMBL4650299",
+     "CHEMBL469",
+     "CHEMBL527",
+     "CHEMBL563",
+     "CHEMBL6",
+     "CHEMBL600",
+     "CHEMBL602",
+     "CHEMBL632",
+     "CHEMBL986",
+     "CHEMBL989"
+    ]
+   }
+  },
+  "574": {
+   "phase": "phase2",
+   "trials": 104,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Bulimia%20Nervosa%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "528": {
+   "phase": "phase3",
+   "trials": 25,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Gastritis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Duodenitis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "435": {
+   "phase": "approved",
+   "trials": 516,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Endometrial%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Uterine%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D016889": [
+     "CHEMBL3137343",
+     "CHEMBL4298124"
+    ]
+   }
+  },
+  "486": {
+   "phase": "approved",
+   "trials": 926,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Multiple%20Myeloma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009101": [
+     "CHEMBL1201558",
+     "CHEMBL1530428",
+     "CHEMBL1743007",
+     "CHEMBL1743010",
+     "CHEMBL18442",
+     "CHEMBL325041",
+     "CHEMBL3545131",
+     "CHEMBL3545185",
+     "CHEMBL3545432",
+     "CHEMBL4297809",
+     "CHEMBL4298199",
+     "CHEMBL4298209",
+     "CHEMBL4303060",
+     "CHEMBL43452",
+     "CHEMBL451887",
+     "CHEMBL4594503",
+     "CHEMBL4594505",
+     "CHEMBL468",
+     "CHEMBL4802263",
+     "CHEMBL483254",
+     "CHEMBL5095449",
+     "CHEMBL513",
+     "CHEMBL53463",
+     "CHEMBL848",
+     "CHEMBL852",
+     "CHEMBL88",
+     "CHEMBL924"
+    ]
+   }
+  },
+  "655": {
+   "phase": "approved",
+   "trials": 404,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Psoriasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D011565": [
+     "CHEMBL1131",
+     "CHEMBL1159650",
+     "CHEMBL1200384",
+     "CHEMBL1200666",
+     "CHEMBL1200908",
+     "CHEMBL1201302",
+     "CHEMBL1201572",
+     "CHEMBL1201575",
+     "CHEMBL1201580",
+     "CHEMBL1201581",
+     "CHEMBL1201835",
+     "CHEMBL131",
+     "CHEMBL1475",
+     "CHEMBL160",
+     "CHEMBL1657",
+     "CHEMBL1742996",
+     "CHEMBL1743034",
+     "CHEMBL1743068",
+     "CHEMBL1766",
+     "CHEMBL193240",
+     "CHEMBL2105611",
+     "CHEMBL2107333",
+     "CHEMBL2108232",
+     "CHEMBL2108681",
+     "CHEMBL2364648",
+     "CHEMBL24171",
+     "CHEMBL259571",
+     "CHEMBL34259",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL3988900",
+     "CHEMBL3990029",
+     "CHEMBL416",
+     "CHEMBL424",
+     "CHEMBL4297700",
+     "CHEMBL4297911",
+     "CHEMBL4596392",
+     "CHEMBL464",
+     "CHEMBL46469",
+     "CHEMBL503160",
+     "CHEMBL514800",
+     "CHEMBL582",
+     "CHEMBL635",
+     "CHEMBL846",
+     "CHEMBL989"
+    ]
+   }
+  },
+  "447": {
+   "phase": "approved",
+   "trials": 240,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Nasopharyngeal%20Carcinoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Nasopharyngeal%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000077274": [
+     "CHEMBL4297843"
+    ]
+   }
+  },
+  "402": {
+   "phase": "approved",
+   "trials": 335,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hepatitis%20B%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006509": [
+     "CHEMBL1201560",
+     "CHEMBL141",
+     "CHEMBL1538",
+     "CHEMBL2107825",
+     "CHEMBL2108512",
+     "CHEMBL4297973",
+     "CHEMBL6068346",
+     "CHEMBL713"
+    ]
+   }
+  },
+  "971": {
+   "phase": "approved",
+   "trials": 612,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Non-alcoholic%20Fatty%20Liver%20Disease%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D065626": [
+     "CHEMBL3261331"
+    ]
+   }
+  },
+  "329": {
+   "phase": "approved",
+   "trials": 56,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Otitis%20Media%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010033": [
+     "CHEMBL1082",
+     "CHEMBL1095930",
+     "CHEMBL1201016",
+     "CHEMBL1541",
+     "CHEMBL1605",
+     "CHEMBL161",
+     "CHEMBL1727",
+     "CHEMBL1741",
+     "CHEMBL22",
+     "CHEMBL276568",
+     "CHEMBL529",
+     "CHEMBL680",
+     "CHEMBL777",
+     "CHEMBL927"
+    ]
+   }
+  },
+  "1160": {
+   "phase": "phase3",
+   "trials": 401,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pregnancy%20Complications%22%20OR%20AREA%5BConditionMeshTerm%5D%22Obstetric%20Labor%20Complications%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hyperemesis%20Gravidarum%22%20OR%20AREA%5BConditionMeshTerm%5D%22Diabetes%2C%20Gestational%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "420": {
+   "phase": "approved",
+   "trials": 970,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Hepatocellular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006528": [
+     "CHEMBL1336",
+     "CHEMBL2105717",
+     "CHEMBL2108658"
+    ]
+   }
+  },
+  "645": {
+   "phase": "phase3",
+   "trials": 181,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Down%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "531": {
+   "phase": "phase3",
+   "trials": 184,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hernia%2C%20Inguinal%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hernia%2C%20Femoral%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hernia%2C%20Abdominal%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "597": {
+   "phase": "approved",
+   "trials": 212,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Prostatic%20Hyperplasia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D011470": [
+     "CHEMBL1200969",
+     "CHEMBL24778",
+     "CHEMBL611",
+     "CHEMBL707",
+     "CHEMBL709",
+     "CHEMBL710",
+     "CHEMBL779",
+     "CHEMBL836"
+    ]
+   }
+  },
+  "648": {
+   "phase": "phase3",
+   "trials": 9,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Chromosome%20Disorders%22%20OR%20AREA%5BConditionMeshTerm%5D%22Trisomy%2018%20Syndrome%22%20OR%20AREA%5BConditionMeshTerm%5D%22Trisomy%2013%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "838": {
+   "phase": "phase3",
+   "trials": 16,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Sickle%20Cell%20Trait%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "968": {
+   "phase": "phase3",
+   "trials": 229,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Aortic%20Valve%20Stenosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "503": {
+   "phase": "approved",
+   "trials": 37,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Endocarditis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Endocarditis%2C%20Bacterial%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D004696": [
+     "CHEMBL1435",
+     "CHEMBL148",
+     "CHEMBL174",
+     "CHEMBL262777",
+     "CHEMBL387675",
+     "CHEMBL766"
+    ],
+    "D004697": [
+     "CHEMBL387675",
+     "CHEMBL615"
+    ]
+   }
+  },
+  "401": {
+   "phase": "approved",
+   "trials": 667,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hepatitis%20A%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006506": [
+     "CHEMBL4297973"
+    ]
+   }
+  },
+  "686": {
+   "phase": "phase3",
+   "trials": 22,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Sudden%20Infant%20Death%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "388": {
+   "phase": "none",
+   "trials": 0,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Goiter%2C%20Endemic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "1011": {
+   "phase": "approved",
+   "trials": 583,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Sarcoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Soft%20Tissue%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012509": [
+     "CHEMBL1743049",
+     "CHEMBL2107891",
+     "CHEMBL3414621",
+     "CHEMBL450449",
+     "CHEMBL477772",
+     "CHEMBL53463"
+    ]
+   }
+  },
+  "682": {
+   "phase": "approved",
+   "trials": 386,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dental%20Caries%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003731": [
+     "CHEMBL1528",
+     "CHEMBL1908359",
+     "CHEMBL1909079"
+    ]
+   }
+  },
+  "938": {
+   "phase": "none",
+   "trials": 0,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cardiomyopathy%2C%20Alcoholic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "1164": {
+   "phase": "approved",
+   "trials": 194,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Carcinoma%20in%20Situ%22%20OR%20AREA%5BConditionMeshTerm%5D%22Meningioma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hemangioma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Lipoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Neurofibroma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006391": [
+     "CHEMBL27"
+    ]
+   }
+  },
+  "837": {
+   "phase": "approved",
+   "trials": 107,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Thalassemia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013789": [
+     "CHEMBL70927"
+    ]
+   }
+  },
+  "602": {
+   "phase": "approved",
+   "trials": 667,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Urologic%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Urinary%20Incontinence%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014549": [
+     "CHEMBL1078261",
+     "CHEMBL1201764",
+     "CHEMBL1231",
+     "CHEMBL1346",
+     "CHEMBL1382",
+     "CHEMBL1734",
+     "CHEMBL1888176",
+     "CHEMBL2095212",
+     "CHEMBL2107826",
+     "CHEMBL2110805",
+     "CHEMBL363295"
+    ]
+   }
+  },
+  "1017": {
+   "phase": "approved",
+   "trials": 1822,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Osteoarthritis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D010003": [
+     "CHEMBL1020",
+     "CHEMBL1070",
+     "CHEMBL1071",
+     "CHEMBL118",
+     "CHEMBL1200878",
+     "CHEMBL1201302",
+     "CHEMBL1201320",
+     "CHEMBL1297",
+     "CHEMBL131",
+     "CHEMBL1364144",
+     "CHEMBL139",
+     "CHEMBL1491",
+     "CHEMBL1504",
+     "CHEMBL154",
+     "CHEMBL15770",
+     "CHEMBL1650",
+     "CHEMBL256087",
+     "CHEMBL294199",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL509",
+     "CHEMBL521",
+     "CHEMBL527",
+     "CHEMBL571",
+     "CHEMBL599",
+     "CHEMBL6",
+     "CHEMBL606",
+     "CHEMBL622",
+     "CHEMBL635",
+     "CHEMBL650",
+     "CHEMBL79",
+     "CHEMBL865",
+     "CHEMBL898",
+     "CHEMBL902",
+     "CHEMBL90593",
+     "CHEMBL93645"
+    ]
+   }
+  },
+  "351": {
+   "phase": "approved",
+   "trials": 20,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Schistosomiasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012552": [
+     "CHEMBL976"
+    ]
+   }
+  },
+  "659": {
+   "phase": "approved",
+   "trials": 44,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dermatomycoses%22%20OR%20AREA%5BConditionMeshTerm%5D%22Tinea%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014005": [
+     "CHEMBL104",
+     "CHEMBL1200680",
+     "CHEMBL1262",
+     "CHEMBL157101",
+     "CHEMBL2105689",
+     "CHEMBL562",
+     "CHEMBL822",
+     "CHEMBL83668",
+     "CHEMBL91",
+     "CHEMBL990"
+    ]
+   }
+  },
+  "607": {
+   "phase": "approved",
+   "trials": 250,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Endometriosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D004715": [
+     "CHEMBL1201146",
+     "CHEMBL1201309",
+     "CHEMBL1208155",
+     "CHEMBL1479",
+     "CHEMBL717"
+    ]
+   }
+  },
+  "502": {
+   "phase": "approved",
+   "trials": 370,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Peripheral%20Arterial%20Disease%22%20OR%20AREA%5BConditionMeshTerm%5D%22Intermittent%20Claudication%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D058729": [
+     "CHEMBL1771",
+     "CHEMBL198362",
+     "CHEMBL493982"
+    ]
+   }
+  },
+  "459": {
+   "phase": "approved",
+   "trials": 927,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Melanoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Skin%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008545": [
+     "CHEMBL1201438",
+     "CHEMBL1201529",
+     "CHEMBL1201558",
+     "CHEMBL1201561",
+     "CHEMBL1229517",
+     "CHEMBL1789844",
+     "CHEMBL2028663",
+     "CHEMBL2103875",
+     "CHEMBL2108727",
+     "CHEMBL2108738",
+     "CHEMBL2146883",
+     "CHEMBL3137343",
+     "CHEMBL3187723",
+     "CHEMBL3301612",
+     "CHEMBL4297990",
+     "CHEMBL4298200",
+     "CHEMBL467",
+     "CHEMBL476"
+    ],
+    "D012878": [
+     "CHEMBL1200522",
+     "CHEMBL1201136",
+     "CHEMBL2108200",
+     "CHEMBL3183184",
+     "CHEMBL3988900",
+     "CHEMBL424"
+    ]
+   }
+  },
+  "660": {
+   "phase": "approved",
+   "trials": 58,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Warts%22%20OR%20AREA%5BConditionMeshTerm%5D%22Molluscum%20Contagiosum%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014860": [
+     "CHEMBL424"
+    ],
+    "D008976": [
+     "CHEMBL4298064",
+     "CHEMBL48449"
+    ]
+   }
+  },
+  "943": {
+   "phase": "approved",
+   "trials": 1980,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leukemia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007938": [
+     "CHEMBL1201231",
+     "CHEMBL1201265",
+     "CHEMBL1201302",
+     "CHEMBL1201594",
+     "CHEMBL131",
+     "CHEMBL1364144",
+     "CHEMBL1467",
+     "CHEMBL1650",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL4650827",
+     "CHEMBL635",
+     "CHEMBL820"
+    ]
+   }
+  },
+  "657": {
+   "phase": "approved",
+   "trials": 16,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pyoderma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Impetigo%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007169": [
+     "CHEMBL1658",
+     "CHEMBL3990047",
+     "CHEMBL719"
+    ]
+   }
+  },
+  "632": {
+   "phase": "approved",
+   "trials": 110,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Gout%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006073": [
+     "CHEMBL107",
+     "CHEMBL1164729",
+     "CHEMBL119423",
+     "CHEMBL1201594",
+     "CHEMBL1237025",
+     "CHEMBL1467",
+     "CHEMBL154",
+     "CHEMBL2105720",
+     "CHEMBL348000",
+     "CHEMBL388590",
+     "CHEMBL832",
+     "CHEMBL897"
+    ]
+   }
+  },
+  "564": {
+   "phase": "phase2",
+   "trials": 5,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Amphetamine-Related%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "533": {
+   "phase": "phase3",
+   "trials": 9,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mesenteric%20Ischemia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Colitis%2C%20Ischemic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "391": {
+   "phase": "phase3",
+   "trials": 238,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Deficiency%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Vitamin%20D%20Deficiency%22%20OR%20AREA%5BConditionMeshTerm%5D%22Vitamin%20B%2012%20Deficiency%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "368": {
+   "phase": "phase3",
+   "trials": 7,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Puerperal%20Infection%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pregnancy%20Complications%2C%20Infectious%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "480": {
+   "phase": "approved",
+   "trials": 218,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Thyroid%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013964": [
+     "CHEMBL1201533",
+     "CHEMBL1289601",
+     "CHEMBL1336",
+     "CHEMBL1544",
+     "CHEMBL1624",
+     "CHEMBL1644695",
+     "CHEMBL2105717",
+     "CHEMBL24828",
+     "CHEMBL4559134"
+    ]
+   }
+  },
+  "650": {
+   "phase": "phase3",
+   "trials": 50,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Urogenital%20Abnormalities%22%20OR%20AREA%5BConditionMeshTerm%5D%22Hypospadias%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cryptorchidism%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "354": {
+   "phase": "phase3",
+   "trials": 9,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Elephantiasis%2C%20Filarial%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "529": {
+   "phase": "approved",
+   "trials": 94,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Appendicitis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D001064": [
+     "CHEMBL404",
+     "CHEMBL702"
+    ]
+   }
+  },
+  "563": {
+   "phase": "phase2",
+   "trials": 37,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cocaine-Related%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "375": {
+   "phase": "phase3",
+   "trials": 128,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pregnancy%20Complications%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "668": {
+   "phase": "approved",
+   "trials": 230,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Skin%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012871": [
+     "CHEMBL1091",
+     "CHEMBL1159650",
+     "CHEMBL1161",
+     "CHEMBL1200384",
+     "CHEMBL1200386",
+     "CHEMBL1200545",
+     "CHEMBL1200845",
+     "CHEMBL1200908",
+     "CHEMBL1200953",
+     "CHEMBL1200989",
+     "CHEMBL1201012",
+     "CHEMBL1201109",
+     "CHEMBL1451",
+     "CHEMBL1473",
+     "CHEMBL1497",
+     "CHEMBL1501",
+     "CHEMBL1504",
+     "CHEMBL1683",
+     "CHEMBL1766",
+     "CHEMBL262777",
+     "CHEMBL389621",
+     "CHEMBL424",
+     "CHEMBL844",
+     "CHEMBL896",
+     "CHEMBL989"
+    ]
+   }
+  },
+  "849": {
+   "phase": "approved",
+   "trials": 1160,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Squamous%20Cell%22%20OR%20AREA%5BConditionMeshTerm%5D%22Skin%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002294": [
+     "CHEMBL1201577",
+     "CHEMBL2108726",
+     "CHEMBL3137343",
+     "CHEMBL4297723",
+     "CHEMBL4297729",
+     "CHEMBL4298037",
+     "CHEMBL467",
+     "CHEMBL500576",
+     "CHEMBL6067492",
+     "CHEMBL61"
+    ],
+    "D012878": [
+     "CHEMBL1200522",
+     "CHEMBL1201136",
+     "CHEMBL2108200",
+     "CHEMBL3183184",
+     "CHEMBL3988900",
+     "CHEMBL424"
+    ]
+   }
+  },
+  "995": {
+   "phase": "phase3",
+   "trials": 52,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Abortion%2C%20Spontaneous%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "340": {
+   "phase": "approved",
+   "trials": 45,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Tetanus%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013742": [
+     "CHEMBL2108875",
+     "CHEMBL2109121",
+     "CHEMBL4297973"
+    ]
+   }
+  },
+  "964": {
+   "phase": "approved",
+   "trials": 599,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Myelodysplastic%20Syndromes%22%20OR%20AREA%5BConditionMeshTerm%5D%22Myeloproliferative%20Disorders%22%20OR%20AREA%5BConditionMeshTerm%5D%22Polycythemia%20Vera%22%20OR%20AREA%5BConditionMeshTerm%5D%22Thrombocythemia%2C%20Essential%22%20OR%20AREA%5BConditionMeshTerm%5D%22Primary%20Myelofibrosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009190": [
+     "CHEMBL1201129",
+     "CHEMBL1201565",
+     "CHEMBL1489",
+     "CHEMBL3039545",
+     "CHEMBL3237547",
+     "CHEMBL550348",
+     "CHEMBL848"
+    ],
+    "D009196": [
+     "CHEMBL1078178",
+     "CHEMBL1287853",
+     "CHEMBL1789941",
+     "CHEMBL760"
+    ],
+    "D011087": [
+     "CHEMBL1078178",
+     "CHEMBL1789941",
+     "CHEMBL2035187",
+     "CHEMBL4297819"
+    ],
+    "D013920": [
+     "CHEMBL1078178",
+     "CHEMBL760"
+    ],
+    "D055728": [
+     "CHEMBL1078178",
+     "CHEMBL1287853",
+     "CHEMBL1789941",
+     "CHEMBL2035187"
+    ]
+   }
+  },
+  "554": {
+   "phase": "approved",
+   "trials": 311,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Motor%20Neuron%20Disease%22%20OR%20AREA%5BConditionMeshTerm%5D%22Amyotrophic%20Lateral%20Sclerosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000690": [
+     "CHEMBL290916",
+     "CHEMBL3833346",
+     "CHEMBL744"
+    ]
+   }
+  },
+  "1024": {
+   "phase": "approved",
+   "trials": 456,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Colitis%2C%20Ulcerative%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003093": [
+     "CHEMBL1200538",
+     "CHEMBL1201207",
+     "CHEMBL1201302",
+     "CHEMBL1201346",
+     "CHEMBL1201580",
+     "CHEMBL1201581",
+     "CHEMBL1201833",
+     "CHEMBL1201835",
+     "CHEMBL131",
+     "CHEMBL1370",
+     "CHEMBL1550",
+     "CHEMBL1743087",
+     "CHEMBL3358920",
+     "CHEMBL3707247",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL3990014",
+     "CHEMBL421",
+     "CHEMBL425",
+     "CHEMBL582",
+     "CHEMBL635",
+     "CHEMBL650",
+     "CHEMBL704"
+    ]
+   }
+  },
+  "1014": {
+   "phase": "phase3",
+   "trials": 222,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Osteoarthritis%2C%20Hip%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "484": {
+   "phase": "approved",
+   "trials": 172,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hodgkin%20Disease%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006689": [
+     "CHEMBL159",
+     "CHEMBL1742994",
+     "CHEMBL2108738",
+     "CHEMBL3137343",
+     "CHEMBL476",
+     "CHEMBL513",
+     "CHEMBL514",
+     "CHEMBL515",
+     "CHEMBL53463",
+     "CHEMBL6067492",
+     "CHEMBL671",
+     "CHEMBL852",
+     "CHEMBL88"
+    ]
+   }
+  },
+  "352": {
+   "phase": "approved",
+   "trials": 2,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Neurocysticercosis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cysticercosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D020019": [
+     "CHEMBL1483"
+    ]
+   }
+  },
+  "661": {
+   "phase": "approved",
+   "trials": 232,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Acne%20Vulgaris%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000152": [
+     "CHEMBL1043",
+     "CHEMBL1140",
+     "CHEMBL1200370",
+     "CHEMBL1200600",
+     "CHEMBL1200934",
+     "CHEMBL1201146",
+     "CHEMBL1231574",
+     "CHEMBL1235452",
+     "CHEMBL1238",
+     "CHEMBL1265",
+     "CHEMBL130",
+     "CHEMBL1433",
+     "CHEMBL1434",
+     "CHEMBL1509",
+     "CHEMBL1622",
+     "CHEMBL1657",
+     "CHEMBL1753",
+     "CHEMBL2103737",
+     "CHEMBL2364632",
+     "CHEMBL24147",
+     "CHEMBL290106",
+     "CHEMBL3184512",
+     "CHEMBL3590187",
+     "CHEMBL3707313",
+     "CHEMBL38",
+     "CHEMBL3833401",
+     "CHEMBL384467",
+     "CHEMBL4",
+     "CHEMBL424",
+     "CHEMBL455",
+     "CHEMBL4594252",
+     "CHEMBL532",
+     "CHEMBL547",
+     "CHEMBL573",
+     "CHEMBL650",
+     "CHEMBL691",
+     "CHEMBL986"
+    ]
+   }
+  },
+  "656": {
+   "phase": "approved",
+   "trials": 29,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cellulitis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002481": [
+     "CHEMBL404",
+     "CHEMBL702"
+    ]
+   }
+  },
+  "370": {
+   "phase": "phase3",
+   "trials": 54,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dystocia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Uterine%20Rupture%22%20OR%20AREA%5BConditionMeshTerm%5D%22Obstetric%20Labor%20Complications%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "665": {
+   "phase": "approved",
+   "trials": 185,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pressure%20Ulcer%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003668": [
+     "CHEMBL692"
+    ]
+   }
+  },
+  "389": {
+   "phase": "phase3",
+   "trials": 29,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Vitamin%20A%20Deficiency%22%20OR%20AREA%5BConditionMeshTerm%5D%22Xerophthalmia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "546": {
+   "phase": "approved",
+   "trials": 1024,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Multiple%20Sclerosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009103": [
+     "CHEMBL1096146",
+     "CHEMBL1152",
+     "CHEMBL1201231",
+     "CHEMBL1201265",
+     "CHEMBL1201288",
+     "CHEMBL1201507",
+     "CHEMBL1201562",
+     "CHEMBL1201563",
+     "CHEMBL1201587",
+     "CHEMBL1201605",
+     "CHEMBL1201607",
+     "CHEMBL1201610",
+     "CHEMBL1201836",
+     "CHEMBL131",
+     "CHEMBL1447",
+     "CHEMBL1504",
+     "CHEMBL1619",
+     "CHEMBL2107333",
+     "CHEMBL2108041",
+     "CHEMBL2108677",
+     "CHEMBL2336071",
+     "CHEMBL284348",
+     "CHEMBL314854",
+     "CHEMBL3707247",
+     "CHEMBL384467",
+     "CHEMBL3989944",
+     "CHEMBL58",
+     "CHEMBL589586",
+     "CHEMBL635",
+     "CHEMBL650",
+     "CHEMBL701",
+     "CHEMBL866",
+     "CHEMBL973"
+    ]
+   }
+  },
+  "996": {
+   "phase": "approved",
+   "trials": 970,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Hepatocellular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006528": [
+     "CHEMBL1336",
+     "CHEMBL2105717",
+     "CHEMBL2108658"
+    ]
+   }
+  },
+  "364": {
+   "phase": "approved",
+   "trials": 10,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Trematode%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Fascioliasis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Clonorchiasis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Opisthorchiasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D005211": [
+     "CHEMBL1086440"
+    ],
+    "D009889": [
+     "CHEMBL976"
+    ]
+   }
+  },
+  "969": {
+   "phase": "phase3",
+   "trials": 106,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mitral%20Valve%20Insufficiency%22%20OR%20AREA%5BConditionMeshTerm%5D%22Mitral%20Valve%20Prolapse%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "614": {
+   "phase": "approved",
+   "trials": 107,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Thalassemia%22%20OR%20AREA%5BConditionMeshTerm%5D%22beta-Thalassemia%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013789": [
+     "CHEMBL70927"
+    ],
+    "D017086": [
+     "CHEMBL3039545",
+     "CHEMBL4594311",
+     "CHEMBL5095474",
+     "CHEMBL550348",
+     "CHEMBL70927"
+    ]
+   }
+  },
+  "298": {
+   "phase": "approved",
+   "trials": 1328,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22HIV%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Acquired%20Immunodeficiency%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015658": [
+     "CHEMBL114",
+     "CHEMBL115",
+     "CHEMBL116",
+     "CHEMBL1163",
+     "CHEMBL1201565",
+     "CHEMBL1201621",
+     "CHEMBL1201688",
+     "CHEMBL1229211",
+     "CHEMBL129",
+     "CHEMBL1323",
+     "CHEMBL1380",
+     "CHEMBL141",
+     "CHEMBL1460",
+     "CHEMBL1538",
+     "CHEMBL163",
+     "CHEMBL1664",
+     "CHEMBL1743029",
+     "CHEMBL175691",
+     "CHEMBL182",
+     "CHEMBL204656",
+     "CHEMBL2095208",
+     "CHEMBL2107825",
+     "CHEMBL222559",
+     "CHEMBL223228",
+     "CHEMBL2364608",
+     "CHEMBL2403238",
+     "CHEMBL254316",
+     "CHEMBL256907",
+     "CHEMBL308954",
+     "CHEMBL3301594",
+     "CHEMBL3989866",
+     "CHEMBL444633",
+     "CHEMBL4594438",
+     "CHEMBL525076",
+     "CHEMBL529",
+     "CHEMBL57",
+     "CHEMBL584",
+     "CHEMBL64",
+     "CHEMBL729",
+     "CHEMBL885",
+     "CHEMBL991"
+    ],
+    "D000163": [
+     "CHEMBL1201139",
+     "CHEMBL1201314",
+     "CHEMBL182"
+    ]
+   }
+  },
+  "596": {
+   "phase": "phase3",
+   "trials": 329,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Urolithiasis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Kidney%20Calculi%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "846": {
+   "phase": "approved",
+   "trials": 345,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leukemia%2C%20Lymphocytic%2C%20Chronic%2C%20B-Cell%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015451": [
+     "CHEMBL1096882",
+     "CHEMBL1201576",
+     "CHEMBL1201587",
+     "CHEMBL1201836",
+     "CHEMBL1743048",
+     "CHEMBL1873475",
+     "CHEMBL2216870",
+     "CHEMBL3039502",
+     "CHEMBL3137309",
+     "CHEMBL3707348",
+     "CHEMBL487253"
+    ]
+   }
+  },
+  "949": {
+   "phase": "approved",
+   "trials": 1360,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22HIV%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Tuberculosis%2C%20Multidrug-Resistant%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015658": [
+     "CHEMBL114",
+     "CHEMBL115",
+     "CHEMBL116",
+     "CHEMBL1163",
+     "CHEMBL1201565",
+     "CHEMBL1201621",
+     "CHEMBL1201688",
+     "CHEMBL1229211",
+     "CHEMBL129",
+     "CHEMBL1323",
+     "CHEMBL1380",
+     "CHEMBL141",
+     "CHEMBL1460",
+     "CHEMBL1538",
+     "CHEMBL163",
+     "CHEMBL1664",
+     "CHEMBL1743029",
+     "CHEMBL175691",
+     "CHEMBL182",
+     "CHEMBL204656",
+     "CHEMBL2095208",
+     "CHEMBL2107825",
+     "CHEMBL222559",
+     "CHEMBL223228",
+     "CHEMBL2364608",
+     "CHEMBL2403238",
+     "CHEMBL254316",
+     "CHEMBL256907",
+     "CHEMBL308954",
+     "CHEMBL3301594",
+     "CHEMBL3989866",
+     "CHEMBL444633",
+     "CHEMBL4594438",
+     "CHEMBL525076",
+     "CHEMBL529",
+     "CHEMBL57",
+     "CHEMBL584",
+     "CHEMBL64",
+     "CHEMBL729",
+     "CHEMBL885",
+     "CHEMBL991"
+    ],
+    "D018088": [
+     "CHEMBL218650",
+     "CHEMBL227875",
+     "CHEMBL376488"
+    ]
+   }
+  },
+  "566": {
+   "phase": "approved",
+   "trials": 789,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Substance-Related%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D019966": [
+     "CHEMBL1201222",
+     "CHEMBL1237044",
+     "CHEMBL1457",
+     "CHEMBL1514",
+     "CHEMBL17860",
+     "CHEMBL33986",
+     "CHEMBL398707",
+     "CHEMBL459324",
+     "CHEMBL485",
+     "CHEMBL511142",
+     "CHEMBL607",
+     "CHEMBL612",
+     "CHEMBL651",
+     "CHEMBL656",
+     "CHEMBL70"
+    ]
+   }
+  },
+  "355": {
+   "phase": "approved",
+   "trials": 16,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Onchocerciasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009855": [
+     "CHEMBL2104415",
+     "CHEMBL6067487"
+    ]
+   }
+  },
+  "359": {
+   "phase": "phase3",
+   "trials": 28,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Rabies%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "573": {
+   "phase": "phase3",
+   "trials": 139,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Anorexia%20Nervosa%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "342": {
+   "phase": "approved",
+   "trials": 123,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Chickenpox%22%20OR%20AREA%5BConditionMeshTerm%5D%22Herpes%20Zoster%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002644": [
+     "CHEMBL1349",
+     "CHEMBL184",
+     "CHEMBL6068357"
+    ],
+    "D006562": [
+     "CHEMBL1349",
+     "CHEMBL184",
+     "CHEMBL4297975",
+     "CHEMBL880"
+    ]
+   }
+  },
+  "320": {
+   "phase": "phase1",
+   "trials": 1,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Paratyphoid%20Fever%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "361": {
+   "phase": "phase3",
+   "trials": 4,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Ascariasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "848": {
+   "phase": "approved",
+   "trials": 116,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leukemia%2C%20Myelogenous%2C%20Chronic%2C%20BCR-ABL%20Positive%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015464": [
+     "CHEMBL1171837",
+     "CHEMBL1201558",
+     "CHEMBL1421",
+     "CHEMBL255863",
+     "CHEMBL288441",
+     "CHEMBL4208229",
+     "CHEMBL467",
+     "CHEMBL820",
+     "CHEMBL941"
+    ]
+   }
+  },
+  "374": {
+   "phase": "phase3",
+   "trials": 15,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pregnancy%2C%20Ectopic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "349": {
+   "phase": "approved",
+   "trials": 25,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leishmaniasis%2C%20Cutaneous%22%20OR%20AREA%5BConditionMeshTerm%5D%22Leishmaniasis%2C%20Mucocutaneous%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D016773": [
+     "CHEMBL125"
+    ],
+    "D007897": [
+     "CHEMBL125"
+    ]
+   }
+  },
+  "421": {
+   "phase": "approved",
+   "trials": 970,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Liver%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Hepatocellular%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006528": [
+     "CHEMBL1336",
+     "CHEMBL2105717",
+     "CHEMBL2108658"
+    ]
+   }
+  },
+  "1004": {
+   "phase": "approved",
+   "trials": 181,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pulmonary%20Arterial%20Hypertension%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000081029": [
+     "CHEMBL1111",
+     "CHEMBL1139",
+     "CHEMBL1237119",
+     "CHEMBL1743073",
+     "CHEMBL192",
+     "CHEMBL238804",
+     "CHEMBL494",
+     "CHEMBL779",
+     "CHEMBL957"
+    ]
+   }
+  },
+  "670": {
+   "phase": "approved",
+   "trials": 492,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Glaucoma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Glaucoma%2C%20Open-Angle%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D005901": [
+     "CHEMBL1025",
+     "CHEMBL105",
+     "CHEMBL1051",
+     "CHEMBL1200799",
+     "CHEMBL1200963",
+     "CHEMBL1201216",
+     "CHEMBL1201222",
+     "CHEMBL1201229",
+     "CHEMBL1201237",
+     "CHEMBL1201262",
+     "CHEMBL1201341",
+     "CHEMBL1291",
+     "CHEMBL134",
+     "CHEMBL17",
+     "CHEMBL19",
+     "CHEMBL1963683",
+     "CHEMBL20",
+     "CHEMBL218490",
+     "CHEMBL220491",
+     "CHEMBL2364612",
+     "CHEMBL278020",
+     "CHEMBL423",
+     "CHEMBL499",
+     "CHEMBL550",
+     "CHEMBL647",
+     "CHEMBL667",
+     "CHEMBL679",
+     "CHEMBL765",
+     "CHEMBL839",
+     "CHEMBL844",
+     "CHEMBL94",
+     "CHEMBL965"
+    ],
+    "D005902": [
+     "CHEMBL1051",
+     "CHEMBL1200799",
+     "CHEMBL1200963",
+     "CHEMBL1201216",
+     "CHEMBL19",
+     "CHEMBL1963683",
+     "CHEMBL218490",
+     "CHEMBL220491",
+     "CHEMBL2364612",
+     "CHEMBL423",
+     "CHEMBL4297666",
+     "CHEMBL4594250",
+     "CHEMBL499",
+     "CHEMBL550",
+     "CHEMBL839",
+     "CHEMBL844"
+    ]
+   }
+  },
+  "605": {
+   "phase": "approved",
+   "trials": 280,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Polycystic%20Ovary%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D011085": [
+     "CHEMBL2355051"
+    ]
+   }
+  },
+  "942": {
+   "phase": "approved",
+   "trials": 26,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Myocarditis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009205": [
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL384467",
+     "CHEMBL635"
+    ]
+   }
+  },
+  "565": {
+   "phase": "phase3",
+   "trials": 205,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Marijuana%20Abuse%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "606": {
+   "phase": "approved",
+   "trials": 196,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Infertility%2C%20Female%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007247": [
+     "CHEMBL1201419",
+     "CHEMBL1201464",
+     "CHEMBL1201692",
+     "CHEMBL1251"
+    ]
+   }
+  },
+  "483": {
+   "phase": "approved",
+   "trials": 154,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Mesothelioma%2C%20Malignant%22%20OR%20AREA%5BConditionMeshTerm%5D%22Mesothelioma%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pleural%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000086002": [
+     "CHEMBL1789844",
+     "CHEMBL225072"
+    ],
+    "D008654": [
+     "CHEMBL2108738",
+     "CHEMBL225072"
+    ]
+   }
+  },
+  "468": {
+   "phase": "approved",
+   "trials": 91,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Testicular%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Neoplasms%2C%20Germ%20Cell%20and%20Embryonal%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D013736": [
+     "CHEMBL1024"
+    ]
+   }
+  },
+  "644": {
+   "phase": "phase3",
+   "trials": 67,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Cleft%20Lip%22%20OR%20AREA%5BConditionMeshTerm%5D%22Cleft%20Palate%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "616": {
+   "phase": "phase3",
+   "trials": 10,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Glucosephosphate%20Dehydrogenase%20Deficiency%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "672": {
+   "phase": "approved",
+   "trials": 282,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Macular%20Degeneration%22%20OR%20AREA%5BConditionMeshTerm%5D%22Wet%20Macular%20Degeneration%22%20OR%20AREA%5BConditionMeshTerm%5D%22Geographic%20Atrophy%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D008268": [
+     "CHEMBL5314346"
+    ],
+    "D057135": [
+     "CHEMBL1201421",
+     "CHEMBL1201825",
+     "CHEMBL1742982",
+     "CHEMBL3707357",
+     "CHEMBL4297750",
+     "CHEMBL5314346",
+     "CHEMBL5314727"
+    ],
+    "D057092": [
+     "CHEMBL4297889"
+    ]
+   }
+  },
+  "376": {
+   "phase": "phase3",
+   "trials": 149,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pregnancy%20Complications%22%20OR%20AREA%5BConditionMeshTerm%5D%22Puerperal%20Disorders%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "399": {
+   "phase": "phase3",
+   "trials": 171,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Sexually%20Transmitted%20Diseases%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "363": {
+   "phase": "phase3",
+   "trials": 16,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hookworm%20Infections%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "608": {
+   "phase": "phase3",
+   "trials": 166,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pelvic%20Organ%20Prolapse%22%20OR%20AREA%5BConditionMeshTerm%5D%22Uterine%20Prolapse%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "1025": {
+   "phase": "approved",
+   "trials": 418,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Crohn%20Disease%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003424": [
+     "CHEMBL1201302",
+     "CHEMBL1201580",
+     "CHEMBL1201581",
+     "CHEMBL1201607",
+     "CHEMBL1201831",
+     "CHEMBL1201835",
+     "CHEMBL131",
+     "CHEMBL1370",
+     "CHEMBL1743087",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL3990014",
+     "CHEMBL635",
+     "CHEMBL650"
+    ]
+   }
+  },
+  "1006": {
+   "phase": "phase3",
+   "trials": 160,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Burkitt%20Lymphoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "979": {
+   "phase": "approved",
+   "trials": 18,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dermatitis%2C%20Seborrheic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012628": [
+     "CHEMBL1200680",
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1413",
+     "CHEMBL157101",
+     "CHEMBL1650",
+     "CHEMBL1683",
+     "CHEMBL2108232",
+     "CHEMBL384467",
+     "CHEMBL389621",
+     "CHEMBL424",
+     "CHEMBL635",
+     "CHEMBL989"
+    ]
+   }
+  },
+  "404": {
+   "phase": "phase3",
+   "trials": 9,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hepatitis%20E%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "511": {
+   "phase": "approved",
+   "trials": 1,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Silicosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D012829": [
+     "CHEMBL64"
+    ]
+   }
+  },
+  "1013": {
+   "phase": "approved",
+   "trials": 132,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Neuroblastoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D009447": [
+     "CHEMBL3137342",
+     "CHEMBL4297984",
+     "CHEMBL5315068",
+     "CHEMBL818",
+     "CHEMBL852"
+    ]
+   }
+  },
+  "348": {
+   "phase": "approved",
+   "trials": 8,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leishmaniasis%2C%20Visceral%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007898": [
+     "CHEMBL125",
+     "CHEMBL267345"
+    ]
+   }
+  },
+  "338": {
+   "phase": "approved",
+   "trials": 34,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Diphtheria%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D004165": [
+     "CHEMBL4297973"
+    ]
+   }
+  },
+  "598": {
+   "phase": "approved",
+   "trials": 93,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Infertility%2C%20Male%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007248": [
+     "CHEMBL4297955"
+    ]
+   }
+  },
+  "588": {
+   "phase": "approved",
+   "trials": 155,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Glomerulonephritis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D005921": [
+     "CHEMBL1055",
+     "CHEMBL435",
+     "CHEMBL842"
+    ]
+   }
+  },
+  "403": {
+   "phase": "approved",
+   "trials": 252,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hepatitis%20C%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006526": [
+     "CHEMBL1259059",
+     "CHEMBL163",
+     "CHEMBL2374220",
+     "CHEMBL3127326",
+     "CHEMBL3137312",
+     "CHEMBL3391662"
+    ]
+   }
+  },
+  "358": {
+   "phase": "phase3",
+   "trials": 21,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Yellow%20Fever%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "1005": {
+   "phase": "phase3",
+   "trials": 33,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hepatoblastoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "346": {
+   "phase": "approved",
+   "trials": 16,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Chagas%20Disease%22%20OR%20AREA%5BConditionMeshTerm%5D%22Chagas%20Cardiomyopathy%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014355": [
+     "CHEMBL110",
+     "CHEMBL290960"
+    ]
+   }
+  },
+  "1009": {
+   "phase": "phase3",
+   "trials": 20,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Retinoblastoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "362": {
+   "phase": "phase3",
+   "trials": 18,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Trichuriasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "297": {
+   "phase": "approved",
+   "trials": 370,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Tuberculosis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Tuberculosis%2C%20Pulmonary%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014376": [
+     "CHEMBL1169",
+     "CHEMBL1378024",
+     "CHEMBL1441",
+     "CHEMBL1660",
+     "CHEMBL218650",
+     "CHEMBL2221250",
+     "CHEMBL227875",
+     "CHEMBL372795",
+     "CHEMBL374478",
+     "CHEMBL376488",
+     "CHEMBL437765",
+     "CHEMBL444633",
+     "CHEMBL44884",
+     "CHEMBL614",
+     "CHEMBL64",
+     "CHEMBL771"
+    ],
+    "D014397": [
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1504",
+     "CHEMBL1650",
+     "CHEMBL227875",
+     "CHEMBL374478",
+     "CHEMBL384467",
+     "CHEMBL44884",
+     "CHEMBL614",
+     "CHEMBL635",
+     "CHEMBL64"
+    ]
+   }
+  },
+  "947": {
+   "phase": "phase3",
+   "trials": 7,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Extensively%20Drug-Resistant%20Tuberculosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "397": {
+   "phase": "approved",
+   "trials": 16,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Trichomonas%20Vaginitis%22%20OR%20AREA%5BConditionMeshTerm%5D%22Trichomonas%20Infections%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014245": [
+     "CHEMBL1220",
+     "CHEMBL137",
+     "CHEMBL498847"
+    ]
+   }
+  },
+  "604": {
+   "phase": "approved",
+   "trials": 100,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leiomyoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007889": [
+     "CHEMBL260538",
+     "CHEMBL3668014"
+    ]
+   }
+  },
+  "398": {
+   "phase": "approved",
+   "trials": 9,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Herpes%20Genitalis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006558": [
+     "CHEMBL1349",
+     "CHEMBL184",
+     "CHEMBL880"
+    ]
+   }
+  },
+  "1010": {
+   "phase": "approved",
+   "trials": 13,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Eye%20Neoplasms%22%20OR%20AREA%5BConditionMeshTerm%5D%22Uveal%20Neoplasms%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014604": [
+     "CHEMBL4297990"
+    ]
+   }
+  },
+  "640": {
+   "phase": "approved",
+   "trials": 275,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Chronic%20Disease%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002908": [
+     "CHEMBL2108429"
+    ]
+   }
+  },
+  "681": {
+   "phase": "approved",
+   "trials": 386,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dental%20Caries%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D003731": [
+     "CHEMBL1528",
+     "CHEMBL1908359",
+     "CHEMBL1909079"
+    ]
+   }
+  },
+  "395": {
+   "phase": "phase3",
+   "trials": 35,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Chlamydia%20Infections%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "356": {
+   "phase": "phase3",
+   "trials": 9,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Trachoma%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "662": {
+   "phase": "approved",
+   "trials": 272,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Alopecia%20Areata%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000506": [
+     "CHEMBL1789941",
+     "CHEMBL4085457"
+    ]
+   }
+  },
+  "663": {
+   "phase": "approved",
+   "trials": 178,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pruritus%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D011537": [
+     "CHEMBL1000",
+     "CHEMBL104",
+     "CHEMBL1086",
+     "CHEMBL1091",
+     "CHEMBL1189432",
+     "CHEMBL1193",
+     "CHEMBL1198",
+     "CHEMBL1200",
+     "CHEMBL1200680",
+     "CHEMBL1201758",
+     "CHEMBL1215",
+     "CHEMBL1235452",
+     "CHEMBL1241",
+     "CHEMBL14060",
+     "CHEMBL15768",
+     "CHEMBL1626",
+     "CHEMBL1628227",
+     "CHEMBL2105458",
+     "CHEMBL2108200",
+     "CHEMBL2108232",
+     "CHEMBL2108698",
+     "CHEMBL2110774",
+     "CHEMBL256087",
+     "CHEMBL278172",
+     "CHEMBL363392",
+     "CHEMBL389621",
+     "CHEMBL3988900",
+     "CHEMBL3989915",
+     "CHEMBL424",
+     "CHEMBL4297588",
+     "CHEMBL511",
+     "CHEMBL643",
+     "CHEMBL657",
+     "CHEMBL698",
+     "CHEMBL79",
+     "CHEMBL83668",
+     "CHEMBL896",
+     "CHEMBL91",
+     "CHEMBL998"
+    ]
+   }
+  },
+  "353": {
+   "phase": "phase2",
+   "trials": 6,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Echinococcosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "741": {
+   "phase": "approved",
+   "trials": 1333,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22HIV%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Pregnancy%20Complications%2C%20Infectious%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015658": [
+     "CHEMBL114",
+     "CHEMBL115",
+     "CHEMBL116",
+     "CHEMBL1163",
+     "CHEMBL1201565",
+     "CHEMBL1201621",
+     "CHEMBL1201688",
+     "CHEMBL1229211",
+     "CHEMBL129",
+     "CHEMBL1323",
+     "CHEMBL1380",
+     "CHEMBL141",
+     "CHEMBL1460",
+     "CHEMBL1538",
+     "CHEMBL163",
+     "CHEMBL1664",
+     "CHEMBL1743029",
+     "CHEMBL175691",
+     "CHEMBL182",
+     "CHEMBL204656",
+     "CHEMBL2095208",
+     "CHEMBL2107825",
+     "CHEMBL222559",
+     "CHEMBL223228",
+     "CHEMBL2364608",
+     "CHEMBL2403238",
+     "CHEMBL254316",
+     "CHEMBL256907",
+     "CHEMBL308954",
+     "CHEMBL3301594",
+     "CHEMBL3989866",
+     "CHEMBL444633",
+     "CHEMBL4594438",
+     "CHEMBL525076",
+     "CHEMBL529",
+     "CHEMBL57",
+     "CHEMBL584",
+     "CHEMBL64",
+     "CHEMBL729",
+     "CHEMBL885",
+     "CHEMBL991"
+    ]
+   }
+  },
+  "321": {
+   "phase": "phase3",
+   "trials": 33,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Intestinal%20Diseases%2C%20Parasitic%22%20OR%20AREA%5BConditionMeshTerm%5D%22Gastroenteritis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "350": {
+   "phase": "approved",
+   "trials": 11,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Trypanosomiasis%2C%20African%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014353": [
+     "CHEMBL1631694"
+    ]
+   }
+  },
+  "396": {
+   "phase": "approved",
+   "trials": 63,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Gonorrhea%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D006069": [
+     "CHEMBL1082",
+     "CHEMBL1433",
+     "CHEMBL1541",
+     "CHEMBL161",
+     "CHEMBL1730",
+     "CHEMBL174",
+     "CHEMBL8"
+    ]
+   }
+  },
+  "514": {
+   "phase": "phase3",
+   "trials": 3,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Pneumoconiosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "513": {
+   "phase": "phase2",
+   "trials": 1,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Anthracosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "512": {
+   "phase": "none",
+   "trials": 1,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Asbestosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "970": {
+   "phase": "phase3",
+   "trials": 181,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Heart%20Valve%20Diseases%22%20OR%20AREA%5BConditionMeshTerm%5D%22Tricuspid%20Valve%20Insufficiency%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "950": {
+   "phase": "approved",
+   "trials": 1335,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22HIV%20Infections%22%20OR%20AREA%5BConditionMeshTerm%5D%22Extensively%20Drug-Resistant%20Tuberculosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D015658": [
+     "CHEMBL114",
+     "CHEMBL115",
+     "CHEMBL116",
+     "CHEMBL1163",
+     "CHEMBL1201565",
+     "CHEMBL1201621",
+     "CHEMBL1201688",
+     "CHEMBL1229211",
+     "CHEMBL129",
+     "CHEMBL1323",
+     "CHEMBL1380",
+     "CHEMBL141",
+     "CHEMBL1460",
+     "CHEMBL1538",
+     "CHEMBL163",
+     "CHEMBL1664",
+     "CHEMBL1743029",
+     "CHEMBL175691",
+     "CHEMBL182",
+     "CHEMBL204656",
+     "CHEMBL2095208",
+     "CHEMBL2107825",
+     "CHEMBL222559",
+     "CHEMBL223228",
+     "CHEMBL2364608",
+     "CHEMBL2403238",
+     "CHEMBL254316",
+     "CHEMBL256907",
+     "CHEMBL308954",
+     "CHEMBL3301594",
+     "CHEMBL3989866",
+     "CHEMBL444633",
+     "CHEMBL4594438",
+     "CHEMBL525076",
+     "CHEMBL529",
+     "CHEMBL57",
+     "CHEMBL584",
+     "CHEMBL64",
+     "CHEMBL729",
+     "CHEMBL885",
+     "CHEMBL991"
+    ]
+   }
+  },
+  "405": {
+   "phase": "approved",
+   "trials": 18,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Leprosy%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007918": [
+     "CHEMBL1043",
+     "CHEMBL1292",
+     "CHEMBL1570"
+    ]
+   }
+  },
+  "613": {
+   "phase": "approved",
+   "trials": 69,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hemoglobinopathies%22%20OR%20AREA%5BConditionMeshTerm%5D%22Anemia%2C%20Hemolytic%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D000743": [
+     "CHEMBL1201302",
+     "CHEMBL131",
+     "CHEMBL1650",
+     "CHEMBL384467",
+     "CHEMBL4101807",
+     "CHEMBL4299940",
+     "CHEMBL635"
+    ]
+   }
+  },
+  "839": {
+   "phase": "phase3",
+   "trials": 10,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Glucosephosphate%20Dehydrogenase%20Deficiency%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "646": {
+   "phase": "approved",
+   "trials": 17,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Turner%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D014424": [
+     "CHEMBL1201621"
+    ]
+   }
+  },
+  "647": {
+   "phase": "approved",
+   "trials": 6,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Klinefelter%20Syndrome%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D007713": [
+     "CHEMBL2107067",
+     "CHEMBL386630"
+    ]
+   }
+  },
+  "850": {
+   "phase": "approved",
+   "trials": 94,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Carcinoma%2C%20Basal%20Cell%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D002280": [
+     "CHEMBL1282",
+     "CHEMBL185",
+     "CHEMBL2105737",
+     "CHEMBL4297723",
+     "CHEMBL473417",
+     "CHEMBL601"
+    ]
+   }
+  },
+  "935": {
+   "phase": "phase3",
+   "trials": 33,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Zika%20Virus%20Infection%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "843": {
+   "phase": "approved",
+   "trials": 24,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Hemorrhagic%20Fever%2C%20Ebola%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_",
+   "approved": {
+    "D019142": [
+     "CHEMBL4298183",
+     "CHEMBL4298184",
+     "CHEMBL4298188",
+     "CHEMBL4594388",
+     "CHEMBL6068375",
+     "CHEMBL6068378",
+     "CHEMBL6068379"
+    ]
+   }
+  },
+  "936": {
+   "phase": "none",
+   "trials": 0,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Dracunculiasis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "954": {
+   "phase": "phase3",
+   "trials": 50,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Latent%20Tuberculosis%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "965": {
+   "phase": "phase3",
+   "trials": 134,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Colonic%20Polyps%22%20OR%20AREA%5BConditionMeshTerm%5D%22Intestinal%20Polyps%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  },
+  "966": {
+   "phase": "phase3",
+   "trials": 84,
+   "url": "https://clinicaltrials.gov/search?cond=AREA%5BConditionMeshTerm%5D%22Uterine%20Cervical%20Dysplasia%22%20OR%20AREA%5BConditionMeshTerm%5D%22Squamous%20Intraepithelial%20Lesions%20of%20the%20Cervix%22&aggFilters=status%3Arec%20enr%20act%20com%2CstudyType%3Aint&firstPost=2016-10-29_"
+  }
+ }
 }
