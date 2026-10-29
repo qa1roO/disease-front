@@ -5,13 +5,14 @@ Stages: 1 (fetch ICD-11), 2 (check the GBD files; fetched from a Claude session,
 Each stage skips itself when its outputs are newer than its inputs.
 """
 import argparse
+import datetime
 import json
 import sys
 from pathlib import Path
 
 import yaml
 
-from pipeline import crosswalk, fetch_icd11, gbd, icd11, site_data, tree
+from pipeline import chembl, crosswalk, fetch_icd11, gbd, icd11, proposals, site_data, tree
 from pipeline.freshness import is_up_to_date
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -26,6 +27,10 @@ CROSSWALK = ROOT / "data" / "crosswalk.json"
 REVIEW = ROOT / "data" / "crosswalk-review.yaml"
 EXTRA_CODES = ROOT / "data" / "gbd-extra-codes.yaml"
 BURDEN = ROOT / "data" / "burden.json"
+RAW_CHEMBL = ROOT / "data" / "raw" / "chembl"
+INDICATIONS = RAW_CHEMBL / "drug_indication.json"
+PROPOSALS = ROOT / "data" / "proposals"
+EVENTS = ROOT / "data" / "events.json"
 MAP = ROOT / "site" / "public" / "map.json"
 PKG = Path(__file__).resolve().parent
 
@@ -115,7 +120,15 @@ def stage4():
 
 
 def stage8():
-    write_json(MAP, site_data.build_map(json.loads(read(TREE)), json.loads(read(CROSSWALK)), json.loads(read(BURDEN))))
+    approved = proposals.load_approved(PROPOSALS) if PROPOSALS.exists() else {}
+    events = json.loads(read(EVENTS)) if EVENTS.exists() else []
+    updated = proposals.record_events(approved, events, datetime.date.today().isoformat())
+    if updated != events:
+        write_json(EVENTS, updated, indent=1)
+        print(f"  {len(updated) - len(events)} status changes appended to data/events.json")
+    print(f"  {len(approved)} approved GBD causes; their provinces are provisional")
+    write_json(MAP, site_data.build_map(json.loads(read(TREE)), json.loads(read(CROSSWALK)), json.loads(read(BURDEN)),
+                                        approved))
 
 
 # number -> (name, run, inputs, outputs). A stage's own code counts as an input.
@@ -126,7 +139,9 @@ STAGES = {
     "4": ("cross-walk and burden", stage4,
           [TREE, MAPPING, ICD10_CODES, *GBD_FILES, EXTRA_CODES, REVIEW, PKG / "crosswalk.py", PKG / "gbd.py"],
           [CROSSWALK, BURDEN]),
-    "8": ("build site data", stage8, [TREE, CROSSWALK, BURDEN, PKG / "site_data.py"], [MAP]),
+    "8": ("build site data", stage8,
+          [TREE, CROSSWALK, BURDEN, PROPOSALS, *sorted(PROPOSALS.glob("*.yaml")), PKG / "site_data.py",
+           PKG / "proposals.py"], [MAP]),
 }
 
 

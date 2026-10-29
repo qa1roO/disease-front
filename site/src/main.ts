@@ -47,7 +47,7 @@ async function main() {
 
   const world = svg.append('g').attr('class', 'world');
   world.append('g').attr('class', 'provinces').selectAll('path').data(layout.provinces).join('path')
-    .attr('d', d => closed(d.polygon)).attr('fill', d => fill(d.node.status))
+    .attr('d', d => closed(d.polygon)).attr('fill', d => fill(d.node.status, d.node.provisional))
     .on('click', (_, d) => show(d));
   world.append('g').attr('class', 'border-territory').selectAll('path')
     .data(layout.territories.filter(t => t.depth > 0)).join('path').attr('d', d => closed(d.polygon));

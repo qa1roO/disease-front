@@ -1,7 +1,7 @@
 // The info panel: what's known about the clicked province or territory. Missing data reads "no data".
 import { ancestry, type Region } from './layout';
 import { sideOf, type MapData, type MapNode } from './types';
-import { STATUS_NAME } from './status';
+import { fill, STATUS_NAME } from './status';
 
 const NO_DATA = '<span class="no-data">no data</span>';
 
@@ -57,6 +57,29 @@ function provinceBurden(node: MapNode, meta: MapData['meta']): string {
       <dt>GBD data</dt><dd>${esc(asOf)}</dd>`;
 }
 
+function provinceStatus(node: MapNode, meta: MapData['meta']): string {
+  const status = node.status;
+  if (status == null) {
+    const why = node.burden ? 'its GBD cause has no approved assessment yet' : 'no GBD cause covers this disease';
+    return `<dt>Status</dt><dd>Fog (not assessed) <span class="note">${why}</span></dd>`;
+  }
+  const a = node.burden ? meta.gbdCauses[String(node.burden.cause)]?.assessment : undefined;
+  const tag = node.provisional
+    ? ` <span class="tag" title="Inherited from the province's GBD cause, not assessed for this disease itself">provisional</span>`
+    : '';
+  const side = status <= 3 ? 'held' : 'contested';
+  const nuance = a?.nuance ? `<span class="note">${esc(a.nuance)}</span>` : '';
+  const flag = a && a.crossCheck !== 'ok'
+    ? `<span class="note flag">Cross-check: ${esc(a.crossCheck.replace(/^flag:\s*/, ''))} (ChEMBL)</span>` : '';
+  const sources = a?.sources.length
+    ? a.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.url)}</a>`).join('<br>')
+    : NO_DATA;
+  return `
+      <dt>Status</dt><dd><span class="dot" style="background:${fill(status, node.provisional)}"></span>${STATUS_NAME[status]}${tag}
+        <span class="note">${side}${node.provisional ? ', assessed for the whole GBD cause' : ''}</span>${nuance}${flag}</dd>
+      <dt>Sources</dt><dd>${sources}</dd>`;
+}
+
 export function renderPanel(el: HTMLElement, region: Region, meta: MapData['meta'], select: (r: Region) => void) {
   const { node } = region;
   const path = ancestry(region);
@@ -72,9 +95,8 @@ export function renderPanel(el: HTMLElement, region: Region, meta: MapData['meta
       <dt>ICD-11 URI</dt><dd><a href="${esc(browserUrl(uri, meta.icd11.release))}" target="_blank" rel="noopener">${esc(uri)}</a></dd>`;
   let body: string;
   if (region.isProvince) {
-    const status = node.status;
     body = `
-      <dt>Status</dt><dd>${status == null ? 'Fog (not assessed)' : STATUS_NAME[status]}</dd>
+      ${provinceStatus(node, meta)}
       ${provinceBurden(node, meta)}
     </dl>
     ${bar('Pipeline')}${bar('Activity')}${bar('Access')}`;
