@@ -176,16 +176,17 @@ def draft_proposer(drafts, mesh_id):
 
 
 class MeshLookup:
-    """MeSH heading -> descriptor ID via NLM's lookup API (exact label match), cached in a JSON file."""
+    """MeSH heading -> descriptor ID via NLM's lookup API (exact label match), cached in a JSON file. year (e.g.
+    2025) looks the label up in that year's MeSH instead of the current one."""
 
-    def __init__(self, cache_path):
-        self.path = cache_path
+    def __init__(self, cache_path, year=None):
+        self.path, self.year = cache_path, year
         self.cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
 
     def __call__(self, heading):
         if heading not in self.cache:
             url = ("https://id.nlm.nih.gov/mesh/lookup/descriptor?match=exact&limit=1&label="
-                   + urllib.parse.quote(heading))
+                   + urllib.parse.quote(heading) + (f"&year={self.year}" if self.year else ""))
             with urllib.request.urlopen(url, timeout=30) as r:
                 hits = json.load(r)
             self.cache[heading] = hits[0]["resource"].rsplit("/", 1)[1] if hits else None

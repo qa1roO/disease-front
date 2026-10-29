@@ -57,6 +57,11 @@ html, body {
 #panel .note { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
 .bar { display: grid; grid-template-columns: 96px 1fr auto; gap: 8px; align-items: center; margin: 4px 0; }
 .bar .track { height: 6px; border-radius: 3px; background: #2b3440; }
+.bar .track.steps { display: flex; gap: 2px; background: none; }
+.bar .track.steps i { flex: 1; background: #2b3440; border-radius: 2px; }
+.bar .track.steps i.on { background: var(--link); }
+.bar b { font-weight: 600; font-size: 12px; }
+#panel .bar-note { margin: -2px 0 6px 104px; }
 
 #legend-box { left: 12px; bottom: 44px; padding: 6px 10px; }
 #legend-box summary { cursor: pointer; color: var(--muted); }

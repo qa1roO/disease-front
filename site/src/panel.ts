@@ -2,6 +2,7 @@
 import { ancestry, type Region } from './layout';
 import { sideOf, type MapData, type MapNode } from './types';
 import { fill, STATUS_NAME } from './status';
+import { pipelineView, STEPS } from './pipeline';
 
 const NO_DATA = '<span class="no-data">no data</span>';
 
@@ -31,6 +32,21 @@ const METHOD: Record<string, string> = {
 
 function bar(name: string) {
   return `<div class="bar"><span>${name}</span><div class="track off"></div>${NO_DATA}</div>`;
+}
+
+/** The pipeline bar: five steps, No registered trial → Approved, with the trial count and search link. */
+function pipelineBar(node: MapNode, meta: MapData['meta']): string {
+  const v = pipelineView(node, meta);
+  if (!v) return `<div class="bar"><span>Pipeline</span><div class="track off"></div>${NO_DATA}</div>
+    <span class="note bar-note">${node.burden ? "its GBD cause's search terms aren't reviewed yet" : 'no GBD cause covers this disease'}</span>`;
+  const steps = Object.values(STEPS).map(s =>
+    `<i class="${s.step <= v.step ? 'on' : ''}" title="${esc(s.label)}"></i>`).join('');
+  const trials = v.url
+    ? `<a href="${esc(v.url)}" target="_blank" rel="noopener">${v.trials!.toLocaleString('en')} trial${v.trials === 1 ? '' : 's'} on ClinicalTrials.gov</a>`
+    : '';
+  const asOf = meta.clinicaltrials ? `ClinicalTrials.gov data as of ${meta.clinicaltrials.dataTimestamp.slice(0, 10)}` : '';
+  return `<div class="bar"><span>Pipeline</span><div class="track steps">${steps}</div><b>${esc(v.label)}</b></div>
+    <span class="note bar-note">${trials}${trials ? '<br>' : ''}${esc(v.note)}${v.url && asOf ? `<br>${esc(asOf)}` : ''}</span>`;
 }
 
 function provinceBurden(node: MapNode, meta: MapData['meta']): string {
@@ -101,7 +117,7 @@ export function renderPanel(el: HTMLElement, region: Region, meta: MapData['meta
       ${provinceStatus(node, meta)}
       ${provinceBurden(node, meta)}
     </dl>
-    ${bar('Pipeline')}${bar('Activity')}${bar('Access')}`;
+    ${pipelineBar(node, meta)}${bar('Activity')}${bar('Access')}`;
   } else {
     const provinces: MapNode[] = [];
     (function collect(n: MapNode) { if (n.children) n.children.forEach(collect); else provinces.push(n); })(node);

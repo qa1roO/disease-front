@@ -15,7 +15,7 @@ cd site && npm install && npm run dev
 
 Each stage skips itself when its outputs are newer than its inputs; add `--force` to rerun. `data/raw/` is git-ignored.
 
-Stage 2 (GBD data) runs from a Claude session with the IHME GBD connector, not from Python: see [pipeline/STAGE2.md](pipeline/STAGE2.md). Stage 4 prints a coverage report and writes `data/crosswalk-review.yaml`, whose tie resolutions you edit by hand.
+Stage 2 (GBD data) runs from a Claude session with the IHME GBD connector, not from Python: see [pipeline/STAGE2.md](pipeline/STAGE2.md). Stages 5 (MeSH search terms) and 6 (status proposals) check drafts written by a Claude session: see [pipeline/STAGE5.md](pipeline/STAGE5.md) and [pipeline/STAGE6.md](pipeline/STAGE6.md). Stage 7 queries ClinicalTrials.gov for the causes whose MeSH terms you've marked `reviewed: true` in `data/mesh.yaml`. Stage 4 prints a coverage report and writes `data/crosswalk-review.yaml`, whose tie resolutions you edit by hand.
 
 Province sizes: GBD 2023 DALYs. Source: Institute for Health Metrics and Evaluation. Used with permission. All rights reserved. The ICD-11 → GBD cause cross-walk (`data/crosswalk.json`, `data/gbd-extra-codes.yaml`) is this project's own work, not a WHO or IHME product.
 

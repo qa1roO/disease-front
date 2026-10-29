@@ -1,0 +1,1601 @@
+# Stage 5 MeSH search terms per GBD cause (docs/spec/v1.md), drafted by a Claude session (pipeline/STAGE5.md).
+# Review each entry: edit `terms` (descriptor ID: exact MeSH heading), then set `reviewed: true`.
+# Stage 7 searches ClinicalTrials.gov with reviewed entries only. Re-runs of stage 5 keep reviewed entries and
+# rewrite the rest from the drafts, so mark an entry reviewed to keep your edits.
+493:
+  cause: Ischemic heart disease
+  terms:
+    D017202: Myocardial Ischemia
+    D003324: Coronary Artery Disease
+    D003327: Coronary Disease
+    D009203: Myocardial Infarction
+    D000787: Angina Pectoris
+  reviewed: true
+322:
+  cause: Lower respiratory infections
+  terms:
+    D011014: Pneumonia
+    D018410: Pneumonia, Bacterial
+    D011024: Pneumonia, Viral
+    D001988: Bronchiolitis
+    D007251: Influenza, Human
+    D018357: Respiratory Syncytial Virus Infections
+  reviewed: true
+976:
+  cause: Diabetes mellitus type 2
+  terms:
+    D003924: Diabetes Mellitus, Type 2
+  reviewed: true
+496:
+  cause: Intracerebral hemorrhage
+  terms:
+    D002543: Cerebral Hemorrhage
+    D020300: Intracranial Hemorrhages
+  reviewed: true
+509:
+  cause: Chronic obstructive pulmonary disease
+  terms:
+    D029424: Pulmonary Disease, Chronic Obstructive
+  reviewed: true
+630:
+  cause: Low back pain
+  terms:
+    D017116: Low Back Pain
+  reviewed: true
+381:
+  cause: Neonatal preterm birth
+  terms:
+    D007235: Infant, Premature, Diseases
+    D047928: Premature Birth
+    D012127: Respiratory Distress Syndrome, Newborn
+    D001997: Bronchopulmonary Dysplasia
+    D020345: Enterocolitis, Necrotizing
+    D012178: Retinopathy of Prematurity
+  reviewed: true
+495:
+  cause: Ischemic stroke
+  terms:
+    D000083242: Ischemic Stroke
+    D020521: Stroke
+    D002545: Brain Ischemia
+  reviewed: true
+302:
+  cause: Diarrheal diseases
+  terms:
+    D003967: Diarrhea
+    D004403: Dysentery
+    D002771: Cholera
+    D012400: Rotavirus Infections
+  reviewed: true
+571:
+  cause: Anxiety disorders
+  terms:
+    D001008: Anxiety Disorders
+    D016584: Panic Disorder
+    D000072861: Phobia, Social
+    D000379: Agoraphobia
+  reviewed: true
+382:
+  cause: Neonatal encephalopathy due to birth asphyxia and trauma
+  terms:
+    D020925: Hypoxia-Ischemia, Brain
+    D001238: Asphyxia Neonatorum
+    D001720: Birth Injuries
+  reviewed: true
+674:
+  cause: Age-related and other hearing loss
+  terms:
+    D034381: Hearing Loss
+    D011304: Presbycusis
+    D006319: Hearing Loss, Sensorineural
+  reviewed: true
+345:
+  cause: Malaria
+  terms:
+    D008288: Malaria
+    D016778: Malaria, Falciparum
+    D016780: Malaria, Vivax
+  reviewed: true
+568:
+  cause: Major depressive disorder
+  terms:
+    D003865: Depressive Disorder, Major
+    D003866: Depressive Disorder
+    D061218: Depressive Disorder, Treatment-Resistant
+  reviewed: true
+426:
+  cause: Tracheal, bronchus, and lung cancer
+  terms:
+    D008175: Lung Neoplasms
+    D002289: Carcinoma, Non-Small-Cell Lung
+    D055752: Small Cell Lung Carcinoma
+  reviewed: true
+639:
+  cause: Other musculoskeletal disorders
+  terms:
+    D009140: Musculoskeletal Diseases
+    D008180: Lupus Erythematosus, Systemic
+    D013167: Spondylitis, Ankylosing
+    D011111: Polymyalgia Rheumatica
+  reviewed: true
+547:
+  cause: Migraine
+  terms:
+    D008881: Migraine Disorders
+  reviewed: true
+521:
+  cause: Cirrhosis and other chronic liver diseases
+  terms:
+    D008103: Liver Cirrhosis
+    D008107: Liver Diseases
+    D019694: Hepatitis B, Chronic
+    D019698: Hepatitis C, Chronic
+    D008104: Liver Cirrhosis, Alcoholic
+  reviewed: true
+543:
+  cause: Alzheimer's disease and other dementias
+  terms:
+    D000544: Alzheimer Disease
+    D003704: Dementia
+  reviewed: true
+934:
+  cause: Drug-susceptible tuberculosis
+  terms:
+    D014376: Tuberculosis
+    D014397: Tuberculosis, Pulmonary
+  reviewed: true
+390:
+  cause: Dietary iron deficiency
+  terms:
+    D018798: Anemia, Iron-Deficiency
+    D000090463: Iron Deficiencies
+  reviewed: true
+300:
+  cause: HIV/AIDS resulting in other diseases
+  terms:
+    D015658: HIV Infections
+    D000163: Acquired Immunodeficiency Syndrome
+  reviewed: true
+1048:
+  cause: COVID-19
+  terms:
+    D000086382: COVID-19
+  reviewed: true
+498:
+  cause: Hypertensive heart disease
+  terms:
+    D006973: Hypertension
+    D017379: Hypertrophy, Left Ventricular
+  reviewed: true
+643:
+  cause: Congenital heart anomalies
+  terms:
+    D006330: Heart Defects, Congenital
+  reviewed: true
+441:
+  cause: Colon and rectum cancer
+  terms:
+    D015179: Colorectal Neoplasms
+    D003110: Colonic Neoplasms
+    D012004: Rectal Neoplasms
+  reviewed: true
+515:
+  cause: Asthma
+  terms:
+    D001249: Asthma
+  reviewed: true
+429:
+  cause: Breast cancer
+  terms:
+    D001943: Breast Neoplasms
+  reviewed: true
+383:
+  cause: Neonatal sepsis and other neonatal infections
+  terms:
+    D000071074: Neonatal Sepsis
+  reviewed: true
+414:
+  cause: Stomach cancer
+  terms:
+    D013274: Stomach Neoplasms
+  reviewed: true
+631:
+  cause: Neck pain
+  terms:
+    D019547: Neck Pain
+  reviewed: true
+560:
+  cause: Alcohol use disorders
+  terms:
+    D000437: Alcoholism
+  reviewed: true
+385:
+  cause: Other neonatal disorders
+  terms:
+    D007232: Infant, Newborn, Diseases
+  reviewed: true
+332:
+  cause: Meningitis
+  terms:
+    D008581: Meningitis
+    D016920: Meningitis, Bacterial
+    D008585: Meningitis, Meningococcal
+  reviewed: true
+612:
+  cause: Other gynecological diseases
+  terms:
+    D005831: Genital Diseases, Female
+    D008599: Menstruation Disturbances
+  reviewed: true
+559:
+  cause: Schizophrenia
+  terms:
+    D012559: Schizophrenia
+  reviewed: true
+593:
+  cause: Chronic kidney disease due to other and unspecified causes
+  terms:
+    D051436: Renal Insufficiency, Chronic
+  reviewed: true
+545:
+  cause: Idiopathic epilepsy
+  terms:
+    D004827: Epilepsy
+  reviewed: true
+492:
+  cause: Rheumatic heart disease
+  terms:
+    D012214: Rheumatic Heart Disease
+  reviewed: true
+387:
+  cause: Protein-energy malnutrition
+  terms:
+    D011502: Protein-Energy Malnutrition
+    D000067011: Severe Acute Malnutrition
+  reviewed: true
+411:
+  cause: Esophageal cancer
+  terms:
+    D004938: Esophageal Neoplasms
+  reviewed: true
+417:
+  cause: Liver cancer
+  terms:
+    D008113: Liver Neoplasms
+    D006528: Carcinoma, Hepatocellular
+  reviewed: true
+432:
+  cause: Cervical cancer
+  terms:
+    D002583: Uterine Cervical Neoplasms
+  reviewed: true
+522:
+  cause: Chronic hepatitis B including cirrhosis
+  terms:
+    D019694: Hepatitis B, Chronic
+  reviewed: true
+562:
+  cause: Opioid use disorders
+  terms:
+    D009293: Opioid-Related Disorders
+  reviewed: true
+1015:
+  cause: Osteoarthritis knee
+  terms:
+    D020370: Osteoarthritis, Knee
+  reviewed: true
+341:
+  cause: Measles
+  terms:
+    D008457: Measles
+  reviewed: true
+456:
+  cause: Pancreatic cancer
+  terms:
+    D010190: Pancreatic Neoplasms
+  reviewed: true
+507:
+  cause: Other cardiovascular and circulatory diseases
+  terms:
+    D002318: Cardiovascular Diseases
+  reviewed: true
+497:
+  cause: Subarachnoid hemorrhage
+  terms:
+    D013345: Subarachnoid Hemorrhage
+    D002532: Intracranial Aneurysm
+  reviewed: true
+977:
+  cause: Atopic dermatitis
+  terms:
+    D003876: Dermatitis, Atopic
+  reviewed: true
+523:
+  cause: Chronic hepatitis C including cirrhosis
+  terms:
+    D019698: Hepatitis C, Chronic
+  reviewed: true
+339:
+  cause: Pertussis
+  terms:
+    D014917: Whooping Cough
+  reviewed: true
+684:
+  cause: Edentulism
+  terms:
+    D009066: Mouth, Edentulous
+  reviewed: true
+948:
+  cause: HIV/AIDS - Drug-susceptible Tuberculosis
+  terms:
+    D015658: HIV Infections
+    D014376: Tuberculosis
+  reviewed: true
+575:
+  cause: Autism spectrum disorders
+  terms:
+    D000067877: Autism Spectrum Disorder
+  reviewed: true
+524:
+  cause: Cirrhosis due to alcohol
+  terms:
+    D008104: Liver Cirrhosis, Alcoholic
+  reviewed: true
+998:
+  cause: Chronic kidney disease due to diabetes mellitus type 2
+  terms:
+    D003928: Diabetic Nephropathies
+  reviewed: true
+591:
+  cause: Chronic kidney disease due to hypertension
+  terms:
+    D006977: Hypertension, Renal
+    D009400: Nephrosclerosis
+  reviewed: true
+558:
+  cause: Mental disorders
+  terms:
+    D001523: Mental Disorders
+  reviewed: true
+585:
+  cause: Other mental disorders
+  terms:
+    D001523: Mental Disorders
+    D010554: Personality Disorders
+  reviewed: true
+500:
+  cause: Atrial fibrillation and flutter
+  terms:
+    D001281: Atrial Fibrillation
+    D001282: Atrial Flutter
+  reviewed: true
+408:
+  cause: Other unspecified infectious diseases
+  terms:
+    D007239: Infections
+    D003141: Communicable Diseases
+  reviewed: true
+944:
+  cause: Other cardiomyopathy
+  terms:
+    D009202: Cardiomyopathies
+    D002311: Cardiomyopathy, Dilated
+    D006333: Heart Failure
+  reviewed: true
+477:
+  cause: Brain and central nervous system cancer
+  terms:
+    D001932: Brain Neoplasms
+    D005909: Glioblastoma
+    D016543: Central Nervous System Neoplasms
+  reviewed: true
+438:
+  cause: Prostate cancer
+  terms:
+    D011471: Prostatic Neoplasms
+  reviewed: true
+569:
+  cause: Dysthymia
+  terms:
+    D019263: Dysthymic Disorder
+  reviewed: true
+609:
+  cause: Premenstrual syndrome
+  terms:
+    D011293: Premenstrual Syndrome
+  reviewed: true
+534:
+  cause: Gallbladder and biliary diseases
+  terms:
+    D042882: Gallstones
+    D002764: Cholecystitis
+    D002769: Cholelithiasis
+  reviewed: true
+544:
+  cause: Parkinson's disease
+  terms:
+    D010300: Parkinson Disease
+  reviewed: true
+1007:
+  cause: Other non-Hodgkin lymphoma
+  terms:
+    D008228: Lymphoma, Non-Hodgkin
+    D016403: Lymphoma, Large B-Cell, Diffuse
+    D008224: Lymphoma, Follicular
+  reviewed: true
+652:
+  cause: Other congenital birth defects
+  terms:
+    D000013: Congenital Abnormalities
+  reviewed: true
+570:
+  cause: Bipolar disorder
+  terms:
+    D001714: Bipolar Disorder
+  reviewed: true
+592:
+  cause: Chronic kidney disease due to glomerulonephritis
+  terms:
+    D005921: Glomerulonephritis
+    D005922: Glomerulonephritis, IGA
+    D015433: Glomerulonephritis, Membranous
+  reviewed: true
+625:
+  cause: Other endocrine, metabolic, blood, and immune disorders
+  terms:
+    D004700: Endocrine System Diseases
+    D008659: Metabolic Diseases
+  reviewed: true
+1032:
+  cause: Thyroid diseases
+  terms:
+    D013959: Thyroid Diseases
+    D007037: Hypothyroidism
+    D006980: Hyperthyroidism
+  reviewed: true
+530:
+  cause: Paralytic ileus and intestinal obstruction
+  terms:
+    D007415: Intestinal Obstruction
+    D007418: Intestinal Pseudo-Obstruction
+  reviewed: true
+671:
+  cause: Cataract
+  terms:
+    D002386: Cataract
+  reviewed: true
+683:
+  cause: Periodontal diseases
+  terms:
+    D010510: Periodontal Diseases
+    D010518: Periodontitis
+  reviewed: true
+394:
+  cause: Syphilis
+  terms:
+    D013587: Syphilis
+    D013590: Syphilis, Congenital
+  reviewed: true
+489:
+  cause: Other malignant neoplasms
+  terms:
+    D009369: Neoplasms
+  reviewed: true
+525:
+  cause: Cirrhosis due to other causes
+  terms:
+    D008103: Liver Cirrhosis
+  reviewed: true
+1016:
+  cause: Osteoarthritis hand
+  terms:
+    D010003: Osteoarthritis
+  reviewed: true
+465:
+  cause: Ovarian cancer
+  terms:
+    D010051: Ovarian Neoplasms
+  reviewed: true
+444:
+  cause: Lip and oral cavity cancer
+  terms:
+    D009062: Mouth Neoplasms
+    D008048: Lip Neoplasms
+  reviewed: true
+536:
+  cause: Gastroesophageal reflux disease
+  terms:
+    D005764: Gastroesophageal Reflux
+  reviewed: true
+328:
+  cause: Upper respiratory infections
+  terms:
+    D003139: Common Cold
+    D010612: Pharyngitis
+    D012852: Sinusitis
+    D014069: Tonsillitis
+    D007827: Laryngitis
+  reviewed: true
+595:
+  cause: Urinary tract infections and interstitial nephritis
+  terms:
+    D014552: Urinary Tract Infections
+    D009395: Nephritis, Interstitial
+    D011704: Pyelonephritis
+  reviewed: true
+651:
+  cause: Digestive congenital anomalies
+  terms:
+    D004065: Digestive System Abnormalities
+    D004933: Esophageal Atresia
+    D006627: Hirschsprung Disease
+  reviewed: true
+418:
+  cause: Liver cancer due to hepatitis B
+  terms:
+    D008113: Liver Neoplasms
+    D006528: Carcinoma, Hepatocellular
+  reviewed: true
+527:
+  cause: Peptic ulcer disease
+  terms:
+    D010437: Peptic Ulcer
+    D013276: Stomach Ulcer
+    D004381: Duodenal Ulcer
+  reviewed: true
+557:
+  cause: Other neurological disorders
+  terms:
+    D009422: Nervous System Diseases
+  reviewed: true
+959:
+  cause: Invasive Non-typhoidal Salmonella (iNTS)
+  terms:
+    D012480: Salmonella Infections
+  reviewed: true
+1000:
+  cause: Near vision loss
+  terms:
+    D011305: Presbyopia
+  reviewed: true
+319:
+  cause: Typhoid fever
+  terms:
+    D014435: Typhoid Fever
+  reviewed: true
+999:
+  cause: Refraction disorders
+  terms:
+    D012030: Refractive Errors
+    D009216: Myopia
+  reviewed: true
+365:
+  cause: Other neglected tropical diseases
+  terms:
+    D058069: Neglected Diseases
+    D013322: Strongyloidiasis
+    D008271: Mycetoma
+    D015001: Yaws
+  reviewed: true
+664:
+  cause: Urticaria
+  terms:
+    D014581: Urticaria
+    D000080223: Chronic Urticaria
+  reviewed: true
+579:
+  cause: Conduct disorder
+  terms:
+    D019955: Conduct Disorder
+  reviewed: true
+384:
+  cause: Hemolytic disease and other neonatal jaundice
+  terms:
+    D007567: Jaundice, Neonatal
+    D004899: Erythroblastosis, Fetal
+  reviewed: true
+548:
+  cause: Tension-type headache
+  terms:
+    D018781: Tension-Type Headache
+  reviewed: true
+474:
+  cause: Bladder cancer
+  terms:
+    D001749: Urinary Bladder Neoplasms
+  reviewed: true
+1162:
+  cause: Other vision loss
+  terms:
+    D015354: Vision, Low
+    D001766: Blindness
+  reviewed: true
+618:
+  cause: Other hemoglobinopathies and hemolytic anemias
+  terms:
+    D000743: Anemia, Hemolytic
+    D006453: Hemoglobinopathies
+  reviewed: true
+516:
+  cause: Interstitial lung disease and pulmonary sarcoidosis
+  terms:
+    D017563: Lung Diseases, Interstitial
+    D054990: Idiopathic Pulmonary Fibrosis
+    D017565: Sarcoidosis, Pulmonary
+  reviewed: true
+685:
+  cause: Other oral disorders
+  terms:
+    D009059: Mouth Diseases
+  reviewed: true
+845:
+  cause: Acute lymphoid leukemia
+  terms:
+    D054198: Precursor Cell Lymphoblastic Leukemia-Lymphoma
+  reviewed: true
+615:
+  cause: Sickle cell disorders
+  terms:
+    D000755: Anemia, Sickle Cell
+  reviewed: true
+337:
+  cause: Encephalitis
+  terms:
+    D004660: Encephalitis
+    D018792: Encephalitis, Viral
+  reviewed: true
+847:
+  cause: Acute myeloid leukemia
+  terms:
+    D015470: Leukemia, Myeloid, Acute
+  reviewed: true
+535:
+  cause: Pancreatitis
+  terms:
+    D010195: Pancreatitis
+    D050500: Pancreatitis, Chronic
+  reviewed: true
+471:
+  cause: Kidney cancer
+  terms:
+    D007680: Kidney Neoplasms
+    D002292: Carcinoma, Renal Cell
+  reviewed: true
+642:
+  cause: Neural tube defects
+  terms:
+    D009436: Neural Tube Defects
+    D016135: Spinal Dysraphism
+    D000757: Anencephaly
+  reviewed: true
+453:
+  cause: Gallbladder and biliary tract cancer
+  terms:
+    D005706: Gallbladder Neoplasms
+    D001661: Biliary Tract Neoplasms
+    D018281: Cholangiocarcinoma
+  reviewed: true
+978:
+  cause: Contact dermatitis
+  terms:
+    D003877: Dermatitis, Contact
+    D017449: Dermatitis, Allergic Contact
+  reviewed: true
+578:
+  cause: Attention-deficit/hyperactivity disorder
+  terms:
+    D001289: Attention Deficit Disorder with Hyperactivity
+  reviewed: true
+946:
+  cause: Multidrug-resistant tuberculosis without extensive drug resistance
+  terms:
+    D018088: Tuberculosis, Multidrug-Resistant
+  reviewed: true
+520:
+  cause: Other chronic respiratory diseases
+  terms:
+    D012140: Respiratory Tract Diseases
+    D008171: Lung Diseases
+    D001987: Bronchiectasis
+  reviewed: true
+582:
+  cause: Idiopathic developmental intellectual disability
+  terms:
+    D008607: Intellectual Disability
+  reviewed: true
+423:
+  cause: Larynx cancer
+  terms:
+    D007822: Laryngeal Neoplasms
+  reviewed: true
+649:
+  cause: Congenital musculoskeletal and limb anomalies
+  terms:
+    D009139: Musculoskeletal Abnormalities
+    D003025: Clubfoot
+    D017880: Limb Deformities, Congenital
+  reviewed: true
+1161:
+  cause: Other digestive diseases
+  terms:
+    D004066: Digestive System Diseases
+    D004238: Diverticulitis
+    D043183: Irritable Bowel Syndrome
+  reviewed: true
+501:
+  cause: Aortic aneurysm
+  terms:
+    D001014: Aortic Aneurysm
+    D017544: Aortic Aneurysm, Abdominal
+  reviewed: true
+419:
+  cause: Liver cancer due to hepatitis C
+  terms:
+    D008113: Liver Neoplasms
+    D006528: Carcinoma, Hepatocellular
+  reviewed: true
+627:
+  cause: Rheumatoid arthritis
+  terms:
+    D001172: Arthritis, Rheumatoid
+  reviewed: true
+450:
+  cause: Other pharynx cancer
+  terms:
+    D009959: Oropharyngeal Neoplasms
+    D007012: Hypopharyngeal Neoplasms
+    D010610: Pharyngeal Neoplasms
+  reviewed: true
+658:
+  cause: Scabies
+  terms:
+    D012532: Scabies
+  reviewed: true
+367:
+  cause: Maternal hemorrhage
+  terms:
+    D006473: Postpartum Hemorrhage
+    D007744: Obstetric Labor Complications
+  reviewed: true
+975:
+  cause: Diabetes mellitus type 1
+  terms:
+    D003922: Diabetes Mellitus, Type 1
+  reviewed: true
+369:
+  cause: Maternal hypertensive disorders
+  terms:
+    D011225: Pre-Eclampsia
+    D046110: Hypertension, Pregnancy-Induced
+    D004461: Eclampsia
+  reviewed: true
+997:
+  cause: Chronic kidney disease due to diabetes mellitus type 1
+  terms:
+    D003928: Diabetic Nephropathies
+  reviewed: true
+1012:
+  cause: Malignant neoplasm of bone and articular cartilage
+  terms:
+    D001859: Bone Neoplasms
+    D012516: Osteosarcoma
+    D012512: Sarcoma, Ewing
+  reviewed: true
+357:
+  cause: Dengue
+  terms:
+    D003715: Dengue
+    D019595: Severe Dengue
+  reviewed: true
+679:
+  cause: Other sense organ diseases
+  terms:
+    D005128: Eye Diseases
+    D004427: Ear Diseases
+  reviewed: true
+574:
+  cause: Bulimia nervosa
+  terms:
+    D052018: Bulimia Nervosa
+  reviewed: true
+528:
+  cause: Gastritis and duodenitis
+  terms:
+    D005756: Gastritis
+    D004382: Duodenitis
+  reviewed: true
+435:
+  cause: Uterine cancer
+  terms:
+    D016889: Endometrial Neoplasms
+    D014594: Uterine Neoplasms
+  reviewed: true
+486:
+  cause: Multiple myeloma
+  terms:
+    D009101: Multiple Myeloma
+  reviewed: true
+655:
+  cause: Psoriasis
+  terms:
+    D011565: Psoriasis
+  reviewed: true
+447:
+  cause: Nasopharynx cancer
+  terms:
+    D000077274: Nasopharyngeal Carcinoma
+    D009303: Nasopharyngeal Neoplasms
+  reviewed: true
+402:
+  cause: Acute hepatitis B
+  terms:
+    D006509: Hepatitis B
+  reviewed: true
+971:
+  cause: Nonalcoholic fatty liver disease including cirrhosis
+  terms:
+    D065626: Non-alcoholic Fatty Liver Disease
+  reviewed: true
+329:
+  cause: Otitis media
+  terms:
+    D010033: Otitis Media
+  reviewed: true
+1160:
+  cause: Other direct maternal disorders
+  terms:
+    D011248: Pregnancy Complications
+    D007744: Obstetric Labor Complications
+    D006939: Hyperemesis Gravidarum
+    D016640: Diabetes, Gestational
+  reviewed: true
+420:
+  cause: Liver cancer due to alcohol use
+  terms:
+    D008113: Liver Neoplasms
+    D006528: Carcinoma, Hepatocellular
+  reviewed: true
+645:
+  cause: Down syndrome
+  terms:
+    D004314: Down Syndrome
+  reviewed: true
+531:
+  cause: Inguinal, femoral, and abdominal hernia
+  terms:
+    D006552: Hernia, Inguinal
+    D006550: Hernia, Femoral
+    D046449: Hernia, Abdominal
+  reviewed: true
+597:
+  cause: Benign prostatic hyperplasia
+  terms:
+    D011470: Prostatic Hyperplasia
+  reviewed: true
+648:
+  cause: Other chromosomal abnormalities
+  terms:
+    D025063: Chromosome Disorders
+    D000073842: Trisomy 18 Syndrome
+    D000073839: Trisomy 13 Syndrome
+  reviewed: true
+838:
+  cause: Sickle cell trait
+  terms:
+    D012805: Sickle Cell Trait
+  reviewed: true
+968:
+  cause: Non-rheumatic calcific aortic valve disease
+  terms:
+    D001024: Aortic Valve Stenosis
+  reviewed: true
+503:
+  cause: Endocarditis
+  terms:
+    D004696: Endocarditis
+    D004697: Endocarditis, Bacterial
+  reviewed: true
+401:
+  cause: Acute hepatitis A
+  terms:
+    D006506: Hepatitis A
+  reviewed: true
+686:
+  cause: Sudden infant death syndrome
+  terms:
+    D013398: Sudden Infant Death
+  reviewed: true
+388:
+  cause: Iodine deficiency
+  terms:
+    D006043: Goiter, Endemic
+  reviewed: true
+1011:
+  cause: Soft tissue and other extraosseous sarcomas
+  terms:
+    D012509: Sarcoma
+    D012983: Soft Tissue Neoplasms
+  reviewed: true
+682:
+  cause: Caries of permanent teeth
+  terms:
+    D003731: Dental Caries
+  reviewed: true
+938:
+  cause: Alcoholic cardiomyopathy
+  terms:
+    D002310: Cardiomyopathy, Alcoholic
+  reviewed: true
+1164:
+  cause: Other benign and in situ neoplasms
+  terms:
+    D002278: Carcinoma in Situ
+    D008579: Meningioma
+    D006391: Hemangioma
+    D008067: Lipoma
+    D009455: Neurofibroma
+  reviewed: true
+837:
+  cause: Thalassemias trait
+  terms:
+    D013789: Thalassemia
+  reviewed: true
+602:
+  cause: Other urinary diseases
+  terms:
+    D014570: Urologic Diseases
+    D014549: Urinary Incontinence
+  reviewed: true
+1017:
+  cause: Osteoarthritis other
+  terms:
+    D010003: Osteoarthritis
+  reviewed: true
+351:
+  cause: Schistosomiasis
+  terms:
+    D012552: Schistosomiasis
+  reviewed: true
+659:
+  cause: Fungal skin diseases
+  terms:
+    D003881: Dermatomycoses
+    D014005: Tinea
+  reviewed: true
+607:
+  cause: Endometriosis
+  terms:
+    D004715: Endometriosis
+  reviewed: true
+502:
+  cause: Lower extremity peripheral arterial disease
+  terms:
+    D058729: Peripheral Arterial Disease
+    D007383: Intermittent Claudication
+  reviewed: true
+459:
+  cause: Malignant skin melanoma
+  terms:
+    D008545: Melanoma
+    D012878: Skin Neoplasms
+  reviewed: true
+660:
+  cause: Viral skin diseases
+  terms:
+    D014860: Warts
+    D008976: Molluscum Contagiosum
+  reviewed: true
+943:
+  cause: Other leukemia
+  terms:
+    D007938: Leukemia
+  reviewed: true
+657:
+  cause: Pyoderma
+  terms:
+    D011711: Pyoderma
+    D007169: Impetigo
+  reviewed: true
+632:
+  cause: Gout
+  terms:
+    D006073: Gout
+  reviewed: true
+564:
+  cause: Amphetamine use disorders
+  terms:
+    D019969: Amphetamine-Related Disorders
+  reviewed: true
+533:
+  cause: Vascular intestinal disorders
+  terms:
+    D065666: Mesenteric Ischemia
+    D017091: Colitis, Ischemic
+  reviewed: true
+391:
+  cause: Other nutritional deficiencies
+  terms:
+    D003677: Deficiency Diseases
+    D014808: Vitamin D Deficiency
+    D014806: Vitamin B 12 Deficiency
+  reviewed: true
+368:
+  cause: Maternal sepsis and other maternal infections
+  terms:
+    D011645: Puerperal Infection
+    D011251: Pregnancy Complications, Infectious
+  reviewed: true
+480:
+  cause: Thyroid cancer
+  terms:
+    D013964: Thyroid Neoplasms
+  reviewed: true
+650:
+  cause: Urogenital congenital anomalies
+  terms:
+    D014564: Urogenital Abnormalities
+    D007021: Hypospadias
+    D003456: Cryptorchidism
+  reviewed: true
+354:
+  cause: Lymphatic filariasis
+  terms:
+    D004605: Elephantiasis, Filarial
+  reviewed: true
+529:
+  cause: Appendicitis
+  terms:
+    D001064: Appendicitis
+  reviewed: true
+563:
+  cause: Cocaine use disorders
+  terms:
+    D019970: Cocaine-Related Disorders
+  reviewed: true
+375:
+  cause: Indirect maternal deaths
+  terms:
+    D011248: Pregnancy Complications
+  reviewed: true
+668:
+  cause: Other skin and subcutaneous diseases
+  terms:
+    D012871: Skin Diseases
+  reviewed: true
+849:
+  cause: Non-melanoma skin cancer (squamous-cell carcinoma)
+  terms:
+    D002294: Carcinoma, Squamous Cell
+    D012878: Skin Neoplasms
+  reviewed: true
+995:
+  cause: Maternal abortion and miscarriage
+  terms:
+    D000022: Abortion, Spontaneous
+  reviewed: true
+340:
+  cause: Tetanus
+  terms:
+    D013742: Tetanus
+  reviewed: true
+964:
+  cause: Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms
+  terms:
+    D009190: Myelodysplastic Syndromes
+    D009196: Myeloproliferative Disorders
+    D011087: Polycythemia Vera
+    D013920: Thrombocythemia, Essential
+    D055728: Primary Myelofibrosis
+  reviewed: true
+554:
+  cause: Motor neuron disease
+  terms:
+    D016472: Motor Neuron Disease
+    D000690: Amyotrophic Lateral Sclerosis
+  reviewed: true
+1024:
+  cause: Ulcerative colitis
+  terms:
+    D003093: Colitis, Ulcerative
+  reviewed: true
+1014:
+  cause: Osteoarthritis hip
+  terms:
+    D015207: Osteoarthritis, Hip
+  reviewed: true
+484:
+  cause: Hodgkin lymphoma
+  terms:
+    D006689: Hodgkin Disease
+  reviewed: true
+352:
+  cause: Cysticercosis
+  terms:
+    D020019: Neurocysticercosis
+    D003551: Cysticercosis
+  reviewed: true
+661:
+  cause: Acne vulgaris
+  terms:
+    D000152: Acne Vulgaris
+  reviewed: true
+656:
+  cause: Cellulitis
+  terms:
+    D002481: Cellulitis
+  reviewed: true
+370:
+  cause: Maternal obstructed labor and uterine rupture
+  terms:
+    D004420: Dystocia
+    D014597: Uterine Rupture
+    D007744: Obstetric Labor Complications
+  reviewed: true
+665:
+  cause: Decubitus ulcer
+  terms:
+    D003668: Pressure Ulcer
+  reviewed: true
+389:
+  cause: Vitamin A deficiency
+  terms:
+    D014802: Vitamin A Deficiency
+    D014985: Xerophthalmia
+  reviewed: true
+546:
+  cause: Multiple sclerosis
+  terms:
+    D009103: Multiple Sclerosis
+  reviewed: true
+996:
+  cause: Liver cancer due to NASH
+  terms:
+    D008113: Liver Neoplasms
+    D006528: Carcinoma, Hepatocellular
+  reviewed: true
+364:
+  cause: Food-borne trematodiases
+  terms:
+    D014201: Trematode Infections
+    D005211: Fascioliasis
+    D003003: Clonorchiasis
+    D009889: Opisthorchiasis
+  reviewed: true
+969:
+  cause: Non-rheumatic degenerative mitral valve disease
+  terms:
+    D008944: Mitral Valve Insufficiency
+    D008945: Mitral Valve Prolapse
+  reviewed: true
+614:
+  cause: Thalassemias
+  terms:
+    D013789: Thalassemia
+    D017086: beta-Thalassemia
+  reviewed: true
+298:
+  cause: HIV/AIDS
+  terms:
+    D015658: HIV Infections
+    D000163: Acquired Immunodeficiency Syndrome
+  reviewed: true
+596:
+  cause: Urolithiasis
+  terms:
+    D052878: Urolithiasis
+    D007669: Kidney Calculi
+  reviewed: true
+846:
+  cause: Chronic lymphoid leukemia
+  terms:
+    D015451: Leukemia, Lymphocytic, Chronic, B-Cell
+  reviewed: true
+949:
+  cause: HIV/AIDS - Multidrug-resistant Tuberculosis without extensive drug resistance
+  terms:
+    D015658: HIV Infections
+    D018088: Tuberculosis, Multidrug-Resistant
+  reviewed: true
+566:
+  cause: Other drug use disorders
+  terms:
+    D019966: Substance-Related Disorders
+  reviewed: true
+355:
+  cause: Onchocerciasis
+  terms:
+    D009855: Onchocerciasis
+  reviewed: true
+359:
+  cause: Rabies
+  terms:
+    D011818: Rabies
+  reviewed: true
+573:
+  cause: Anorexia nervosa
+  terms:
+    D000856: Anorexia Nervosa
+  reviewed: true
+342:
+  cause: Varicella and herpes zoster
+  terms:
+    D002644: Chickenpox
+    D006562: Herpes Zoster
+  reviewed: true
+320:
+  cause: Paratyphoid fever
+  terms:
+    D010284: Paratyphoid Fever
+  reviewed: true
+361:
+  cause: Ascariasis
+  terms:
+    D001196: Ascariasis
+  reviewed: true
+848:
+  cause: Chronic myeloid leukemia
+  terms:
+    D015464: Leukemia, Myelogenous, Chronic, BCR-ABL Positive
+  reviewed: true
+374:
+  cause: Ectopic pregnancy
+  terms:
+    D011271: Pregnancy, Ectopic
+  reviewed: true
+349:
+  cause: Cutaneous and mucocutaneous leishmaniasis
+  terms:
+    D016773: Leishmaniasis, Cutaneous
+    D007897: Leishmaniasis, Mucocutaneous
+  reviewed: true
+421:
+  cause: Liver cancer due to other causes
+  terms:
+    D008113: Liver Neoplasms
+    D006528: Carcinoma, Hepatocellular
+  reviewed: true
+1004:
+  cause: Pulmonary Arterial Hypertension
+  terms:
+    D000081029: Pulmonary Arterial Hypertension
+  reviewed: true
+670:
+  cause: Glaucoma
+  terms:
+    D005901: Glaucoma
+    D005902: Glaucoma, Open-Angle
+  reviewed: true
+605:
+  cause: Polycystic ovarian syndrome
+  terms:
+    D011085: Polycystic Ovary Syndrome
+  reviewed: true
+942:
+  cause: Myocarditis
+  terms:
+    D009205: Myocarditis
+  reviewed: true
+565:
+  cause: Cannabis use disorders
+  terms:
+    D002189: Marijuana Abuse
+  reviewed: true
+606:
+  cause: Female infertility
+  terms:
+    D007247: Infertility, Female
+  reviewed: true
+483:
+  cause: Mesothelioma
+  terms:
+    D000086002: Mesothelioma, Malignant
+    D008654: Mesothelioma
+    D010997: Pleural Neoplasms
+  reviewed: true
+468:
+  cause: Testicular cancer
+  terms:
+    D013736: Testicular Neoplasms
+    D009373: Neoplasms, Germ Cell and Embryonal
+  reviewed: true
+644:
+  cause: Orofacial clefts
+  terms:
+    D002971: Cleft Lip
+    D002972: Cleft Palate
+  reviewed: true
+616:
+  cause: G6PD deficiency
+  terms:
+    D005955: Glucosephosphate Dehydrogenase Deficiency
+  reviewed: true
+672:
+  cause: Age-related macular degeneration
+  terms:
+    D008268: Macular Degeneration
+    D057135: Wet Macular Degeneration
+    D057092: Geographic Atrophy
+  reviewed: true
+376:
+  cause: Late maternal deaths
+  terms:
+    D011248: Pregnancy Complications
+    D011644: Puerperal Disorders
+  reviewed: true
+399:
+  cause: Other sexually transmitted infections
+  terms:
+    D012749: Sexually Transmitted Diseases
+  reviewed: true
+363:
+  cause: Hookworm disease
+  terms:
+    D006725: Hookworm Infections
+  reviewed: true
+608:
+  cause: Genital prolapse
+  terms:
+    D056887: Pelvic Organ Prolapse
+    D014596: Uterine Prolapse
+  reviewed: true
+1025:
+  cause: Crohn's disease
+  terms:
+    D003424: Crohn Disease
+  reviewed: true
+1006:
+  cause: Burkitt lymphoma
+  terms:
+    D002051: Burkitt Lymphoma
+  reviewed: true
+979:
+  cause: Seborrhoeic dermatitis
+  terms:
+    D012628: Dermatitis, Seborrheic
+  reviewed: true
+404:
+  cause: Acute hepatitis E
+  terms:
+    D016751: Hepatitis E
+  reviewed: true
+511:
+  cause: Silicosis
+  terms:
+    D012829: Silicosis
+  reviewed: true
+1013:
+  cause: Neuroblastoma and other peripheral nervous cell tumors
+  terms:
+    D009447: Neuroblastoma
+  reviewed: true
+348:
+  cause: Visceral leishmaniasis
+  terms:
+    D007898: Leishmaniasis, Visceral
+  reviewed: true
+338:
+  cause: Diphtheria
+  terms:
+    D004165: Diphtheria
+  reviewed: true
+598:
+  cause: Male infertility
+  terms:
+    D007248: Infertility, Male
+  reviewed: true
+588:
+  cause: Acute glomerulonephritis
+  terms:
+    D005921: Glomerulonephritis
+  reviewed: true
+403:
+  cause: Acute hepatitis C
+  terms:
+    D006526: Hepatitis C
+  reviewed: true
+358:
+  cause: Yellow fever
+  terms:
+    D015004: Yellow Fever
+  reviewed: true
+1005:
+  cause: Hepatoblastoma
+  terms:
+    D018197: Hepatoblastoma
+  reviewed: true
+346:
+  cause: Chagas disease
+  terms:
+    D014355: Chagas Disease
+    D002598: Chagas Cardiomyopathy
+  reviewed: true
+1009:
+  cause: Retinoblastoma
+  terms:
+    D012175: Retinoblastoma
+  reviewed: true
+362:
+  cause: Trichuriasis
+  terms:
+    D014257: Trichuriasis
+  reviewed: true
+297:
+  cause: Tuberculosis
+  terms:
+    D014376: Tuberculosis
+    D014397: Tuberculosis, Pulmonary
+  reviewed: true
+947:
+  cause: Extensively drug-resistant tuberculosis
+  terms:
+    D054908: Extensively Drug-Resistant Tuberculosis
+  reviewed: true
+397:
+  cause: Trichomoniasis
+  terms:
+    D014247: Trichomonas Vaginitis
+    D014245: Trichomonas Infections
+  reviewed: true
+604:
+  cause: Uterine fibroids
+  terms:
+    D007889: Leiomyoma
+  reviewed: true
+398:
+  cause: Genital herpes
+  terms:
+    D006558: Herpes Genitalis
+  reviewed: true
+1010:
+  cause: Other eye cancers
+  terms:
+    D005134: Eye Neoplasms
+    D014604: Uveal Neoplasms
+  reviewed: true
+640:
+  cause: Other non-communicable diseases
+  terms:
+    D002908: Chronic Disease
+  reviewed: true
+681:
+  cause: Caries of deciduous teeth
+  terms:
+    D003731: Dental Caries
+  reviewed: true
+395:
+  cause: Chlamydial infection
+  terms:
+    D002690: Chlamydia Infections
+  reviewed: true
+356:
+  cause: Trachoma
+  terms:
+    D014141: Trachoma
+  reviewed: true
+662:
+  cause: Alopecia areata
+  terms:
+    D000506: Alopecia Areata
+  reviewed: true
+663:
+  cause: Pruritus
+  terms:
+    D011537: Pruritus
+  reviewed: true
+353:
+  cause: Cystic echinococcosis
+  terms:
+    D004443: Echinococcosis
+  reviewed: true
+741:
+  cause: Maternal deaths aggravated by HIV/AIDS
+  terms:
+    D015658: HIV Infections
+    D011251: Pregnancy Complications, Infectious
+  reviewed: true
+321:
+  cause: Other intestinal infectious diseases
+  terms:
+    D007411: Intestinal Diseases, Parasitic
+    D005759: Gastroenteritis
+  reviewed: true
+350:
+  cause: African trypanosomiasis
+  terms:
+    D014353: Trypanosomiasis, African
+  reviewed: true
+396:
+  cause: Gonococcal infection
+  terms:
+    D006069: Gonorrhea
+  reviewed: true
+514:
+  cause: Other pneumoconiosis
+  terms:
+    D011009: Pneumoconiosis
+  reviewed: true
+513:
+  cause: Coal workers pneumoconiosis
+  terms:
+    D055008: Anthracosis
+  reviewed: true
+512:
+  cause: Asbestosis
+  terms:
+    D001195: Asbestosis
+  reviewed: true
+970:
+  cause: Other non-rheumatic valve diseases
+  terms:
+    D006349: Heart Valve Diseases
+    D014262: Tricuspid Valve Insufficiency
+  reviewed: true
+950:
+  cause: HIV/AIDS - Extensively drug-resistant Tuberculosis
+  terms:
+    D015658: HIV Infections
+    D054908: Extensively Drug-Resistant Tuberculosis
+  reviewed: true
+405:
+  cause: Leprosy
+  terms:
+    D007918: Leprosy
+  reviewed: true
+613:
+  cause: Hemoglobinopathies and hemolytic anemias
+  terms:
+    D006453: Hemoglobinopathies
+    D000743: Anemia, Hemolytic
+  reviewed: true
+839:
+  cause: G6PD trait
+  terms:
+    D005955: Glucosephosphate Dehydrogenase Deficiency
+  reviewed: true
+646:
+  cause: Turner syndrome
+  terms:
+    D014424: Turner Syndrome
+  reviewed: true
+647:
+  cause: Klinefelter syndrome
+  terms:
+    D007713: Klinefelter Syndrome
+  reviewed: true
+850:
+  cause: Non-melanoma skin cancer (basal-cell carcinoma)
+  terms:
+    D002280: Carcinoma, Basal Cell
+  reviewed: true
+935:
+  cause: Zika virus
+  terms:
+    D000071243: Zika Virus Infection
+  reviewed: true
+843:
+  cause: Ebola
+  terms:
+    D019142: Hemorrhagic Fever, Ebola
+  reviewed: true
+936:
+  cause: Guinea worm disease
+  terms:
+    D004320: Dracunculiasis
+  reviewed: true
+954:
+  cause: Latent tuberculosis infection
+  terms:
+    D055985: Latent Tuberculosis
+  reviewed: true
+965:
+  cause: Benign and in situ intestinal neoplasms
+  terms:
+    D003111: Colonic Polyps
+    D007417: Intestinal Polyps
+  reviewed: true
+966:
+  cause: Benign and in situ cervical and uterine neoplasms
+  terms:
+    D002578: Uterine Cervical Dysplasia
+    D065310: Squamous Intraepithelial Lesions of the Cervix
+  reviewed: true

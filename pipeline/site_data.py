@@ -5,11 +5,15 @@ the minimum size). A province under a GBD cause with an approved stage-6 proposa
 provisional; every other province is fog (status null). The cause's assessment (status, nuance, sources,
 cross-check) sits once in meta.gbdCauses. A directly assessed province (approved, keyed by ICD-11 URI) takes its
 own status instead, not provisional, with its assessment inline; that works for provinces with no GBD cause too.
+
+The pipeline bar (stage 7) sits once per cause in meta.gbdCauses[cause].bar; each province carries its phase as
+`pipeline`, inherited from its cause, or "approved" when the province is held (status 1-3).
 """
 
 
-def build_map(tree, crosswalk, burden, approved=None, assessed=None):
+def build_map(tree, crosswalk, burden, approved=None, assessed=None, bars=None):
     approved, assessed = approved or {}, assessed or {}
+    cause_bars = (bars or {}).get("causes", {})
     table, sizes = crosswalk["provinces"], burden["provinces"]
     on_map = {str(b["cause"]) for b in sizes.values()}
 
@@ -43,16 +47,23 @@ def build_map(tree, crosswalk, burden, approved=None, assessed=None):
                              "method": entry["method"], "icd10": entry["icd10"]}
             if entry["method"] == "review":
                 out["burden"]["reviewed"] = entry["reviewed"]
+        if out["status"] is not None and out["status"] <= 3:
+            out["pipeline"] = "approved"
+        elif b and str(b["cause"]) in cause_bars:
+            out["pipeline"] = cause_bars[str(b["cause"])]["phase"]
         return out
 
+    meta_bars = {"clinicaltrials": bars["source"]} if bars else {}
     return {
         "meta": {
             "icd11": tree["icd11"],
             "counts": tree["counts"],
             "gbd": burden["gbd"],
             "crosswalk": crosswalk["note"],
-            "gbdCauses": {c: {**cause(v), **({"assessment": assessment(approved[int(c)])} if int(c) in approved else {})}
+            "gbdCauses": {c: {**cause(v), **({"assessment": assessment(approved[int(c)])} if int(c) in approved else {}),
+                              **({"bar": cause_bars[c]} if c in cause_bars else {})}
                           for c, v in burden["causes"].items() if c in on_map},
+            **meta_bars,
         },
         "root": {"kind": "root", "title": "All diseases", "children": [node(c) for c in tree["chapters"]]},
     }
