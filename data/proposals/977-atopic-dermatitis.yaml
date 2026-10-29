@@ -13,5 +13,5 @@ sources:
 mesh:
   D003876: Dermatitis, Atopic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 97b3dbb648f4a373

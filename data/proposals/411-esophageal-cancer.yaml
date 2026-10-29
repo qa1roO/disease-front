@@ -12,5 +12,5 @@ sources:
 mesh:
   D004938: Esophageal Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 536dbe2b05f9467a

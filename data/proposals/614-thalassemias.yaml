@@ -14,5 +14,5 @@ mesh:
   D013789: Thalassemia
   D017086: beta-Thalassemia
 cross_check: ok
-approved: false
+approved: true
 fingerprint: bf15ea1b2b7810cf

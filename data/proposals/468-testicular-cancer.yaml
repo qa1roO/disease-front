@@ -14,5 +14,5 @@ mesh:
   D013736: Testicular Neoplasms
   D009373: Neoplasms, Germ Cell and Embryonal
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 0eb97440a73bf6b3

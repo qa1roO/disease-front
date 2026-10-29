@@ -12,5 +12,5 @@ sources:
 mesh:
   D013274: Stomach Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a134984421f1e48c

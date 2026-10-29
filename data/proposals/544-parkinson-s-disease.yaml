@@ -13,5 +13,5 @@ sources:
 mesh:
   D010300: Parkinson Disease
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 64a308fc810c3bcc

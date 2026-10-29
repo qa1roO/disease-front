@@ -10,5 +10,5 @@ sources:
 mesh:
   D009066: Mouth, Edentulous
 cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D009066)'
-approved: false
+approved: true
 fingerprint: cbd3c246a5dd4dae

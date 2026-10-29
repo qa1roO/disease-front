@@ -11,5 +11,5 @@ sources:
 mesh:
   D012175: Retinoblastoma
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D012175)'
-approved: false
+approved: true
 fingerprint: 70250592a66271fd

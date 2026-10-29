@@ -15,5 +15,5 @@ mesh:
   D011304: Presbycusis
   D006319: Hearing Loss, Sensorineural
 cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D034381, D011304, D006319)'
-approved: false
+approved: true
 fingerprint: 366a5da995695371

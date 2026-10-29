@@ -13,5 +13,5 @@ sources:
 mesh:
   D009101: Multiple Myeloma
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 9ae50f5d88596353

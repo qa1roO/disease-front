@@ -12,5 +12,5 @@ mesh:
   D006349: Heart Valve Diseases
   D014262: Tricuspid Valve Insufficiency
 cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D006349, D014262)'
-approved: false
+approved: true
 fingerprint: 5156409ee82e041e

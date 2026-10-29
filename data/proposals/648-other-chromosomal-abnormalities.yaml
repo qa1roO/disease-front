@@ -15,5 +15,5 @@ mesh:
   D000073842: Trisomy 18 Syndrome
   D000073839: Trisomy 13 Syndrome
 cross_check: ok
-approved: false
+approved: true
 fingerprint: c96a247070d85e94

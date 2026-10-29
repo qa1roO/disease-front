@@ -14,5 +14,5 @@ mesh:
   D052878: Urolithiasis
   D007669: Kidney Calculi
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D052878, D007669)'
-approved: false
+approved: true
 fingerprint: f8f5a3a8a34ff9a4

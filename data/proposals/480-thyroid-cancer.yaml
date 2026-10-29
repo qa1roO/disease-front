@@ -13,5 +13,5 @@ sources:
 mesh:
   D013964: Thyroid Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 0bc34d221abcc377

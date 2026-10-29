@@ -13,5 +13,5 @@ sources:
 mesh:
   D011009: Pneumoconiosis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: ebbbf05ce17e3034

@@ -13,5 +13,5 @@ mesh:
   D004238: Diverticulitis
   D043183: Irritable Bowel Syndrome
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 798b1b31b0aa54ed

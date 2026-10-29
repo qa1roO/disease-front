@@ -11,5 +11,5 @@ mesh:
   D005128: Eye Diseases
   D004427: Ear Diseases
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 6e1748e02672bcbb

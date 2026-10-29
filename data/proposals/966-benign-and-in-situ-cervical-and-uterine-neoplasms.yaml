@@ -11,5 +11,5 @@ mesh:
   D002578: Uterine Cervical Dysplasia
   D065310: Squamous Intraepithelial Lesions of the Cervix
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D002578, D065310)'
-approved: false
+approved: true
 fingerprint: 94f6f8fc01aec7ed

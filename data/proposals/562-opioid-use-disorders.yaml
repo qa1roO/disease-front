@@ -13,5 +13,5 @@ sources:
 mesh:
   D009293: Opioid-Related Disorders
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 41fccc8153167a34

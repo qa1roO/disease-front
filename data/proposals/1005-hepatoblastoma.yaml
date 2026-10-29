@@ -10,5 +10,5 @@ sources:
 mesh:
   D018197: Hepatoblastoma
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D018197)'
-approved: false
+approved: true
 fingerprint: 989cba4c19c839db

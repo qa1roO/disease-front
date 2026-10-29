@@ -14,5 +14,5 @@ mesh:
   D012509: Sarcoma
   D012983: Soft Tissue Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 1625baed30c23c5f

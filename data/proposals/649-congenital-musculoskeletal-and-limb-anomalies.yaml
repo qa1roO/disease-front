@@ -15,5 +15,5 @@ mesh:
   D003025: Clubfoot
   D017880: Limb Deformities, Congenital
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a7a0fd7ae188c602

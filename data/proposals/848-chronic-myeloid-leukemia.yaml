@@ -11,5 +11,5 @@ sources:
 mesh:
   D015464: Leukemia, Myelogenous, Chronic, BCR-ABL Positive
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 257372ea37e0ca59

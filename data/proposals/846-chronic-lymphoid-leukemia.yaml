@@ -13,5 +13,5 @@ sources:
 mesh:
   D015451: Leukemia, Lymphocytic, Chronic, B-Cell
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a1e3feab6eb1a97a

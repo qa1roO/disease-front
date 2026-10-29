@@ -15,5 +15,5 @@ mesh:
   D003110: Colonic Neoplasms
   D012004: Rectal Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 7b36b30706d226b2

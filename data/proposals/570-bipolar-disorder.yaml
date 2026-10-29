@@ -13,5 +13,5 @@ sources:
 mesh:
   D001714: Bipolar Disorder
 cross_check: ok
-approved: false
+approved: true
 fingerprint: db9333375a0b4023

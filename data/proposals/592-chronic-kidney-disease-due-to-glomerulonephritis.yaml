@@ -13,5 +13,5 @@ mesh:
   D005922: Glomerulonephritis, IGA
   D015433: Glomerulonephritis, Membranous
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 2bd561eb87562cac

@@ -14,5 +14,5 @@ mesh:
   D008944: Mitral Valve Insufficiency
   D008945: Mitral Valve Prolapse
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D008944, D008945)'
-approved: false
+approved: true
 fingerprint: 531782804f553058

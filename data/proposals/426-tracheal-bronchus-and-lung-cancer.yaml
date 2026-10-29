@@ -15,5 +15,5 @@ mesh:
   D002289: Carcinoma, Non-Small-Cell Lung
   D055752: Small Cell Lung Carcinoma
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 93f298691345aa98

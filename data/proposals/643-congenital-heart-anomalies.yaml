@@ -14,5 +14,5 @@ sources:
 mesh:
   D006330: Heart Defects, Congenital
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 95206d066fca4530

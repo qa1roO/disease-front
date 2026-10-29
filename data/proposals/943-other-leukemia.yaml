@@ -10,5 +10,5 @@ sources:
 mesh:
   D007938: Leukemia
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a7ac0ee945d534c2

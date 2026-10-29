@@ -14,5 +14,5 @@ mesh:
   D003881: Dermatomycoses
   D014005: Tinea
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a1455ddec27226f0

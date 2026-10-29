@@ -13,5 +13,5 @@ sources:
 mesh:
   D003093: Colitis, Ulcerative
 cross_check: ok
-approved: false
+approved: true
 fingerprint: c563565e6b9006f3

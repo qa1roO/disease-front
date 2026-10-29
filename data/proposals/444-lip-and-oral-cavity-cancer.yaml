@@ -14,5 +14,5 @@ mesh:
   D009062: Mouth Neoplasms
   D008048: Lip Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 61d62d73ca231b77

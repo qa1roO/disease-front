@@ -10,5 +10,5 @@ sources:
 mesh:
   D019966: Substance-Related Disorders
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 76251b8e1a0e0049

@@ -12,5 +12,5 @@ sources:
 mesh:
   D011305: Presbyopia
 cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D011305)'
-approved: false
+approved: true
 fingerprint: f7c7dcfd4fdb003d

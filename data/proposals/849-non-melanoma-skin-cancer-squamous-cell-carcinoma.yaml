@@ -12,5 +12,5 @@ mesh:
   D002294: Carcinoma, Squamous Cell
   D012878: Skin Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 0b696f2930a7c6c6

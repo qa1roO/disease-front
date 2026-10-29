@@ -14,5 +14,5 @@ mesh:
   D016889: Endometrial Neoplasms
   D014594: Uterine Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 9bdff5407f47ec85

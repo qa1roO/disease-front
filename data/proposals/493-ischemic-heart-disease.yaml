@@ -17,5 +17,5 @@ mesh:
   D009203: Myocardial Infarction
   D000787: Angina Pectoris
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 841b420d6493ce81

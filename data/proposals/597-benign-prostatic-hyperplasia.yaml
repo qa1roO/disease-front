@@ -13,5 +13,5 @@ sources:
 mesh:
   D011470: Prostatic Hyperplasia
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a6a3fb71d5a70612

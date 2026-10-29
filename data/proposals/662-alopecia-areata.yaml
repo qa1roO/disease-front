@@ -11,5 +11,5 @@ sources:
 mesh:
   D000506: Alopecia Areata
 cross_check: ok
-approved: false
+approved: true
 fingerprint: e8113ec460a75705

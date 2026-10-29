@@ -14,5 +14,5 @@ mesh:
   D001661: Biliary Tract Neoplasms
   D018281: Cholangiocarcinoma
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 72c070d4d0102b28

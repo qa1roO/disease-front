@@ -13,5 +13,5 @@ sources:
 mesh:
   D007247: Infertility, Female
 cross_check: ok
-approved: false
+approved: true
 fingerprint: c823979860630b3e

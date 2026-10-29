@@ -14,5 +14,5 @@ mesh:
   D000544: Alzheimer Disease
   D003704: Dementia
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 809aaca15588783e

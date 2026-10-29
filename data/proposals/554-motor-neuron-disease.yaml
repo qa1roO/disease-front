@@ -14,5 +14,5 @@ mesh:
   D016472: Motor Neuron Disease
   D000690: Amyotrophic Lateral Sclerosis
 cross_check: 'flag: claims Untreatable but ChEMBL has 3 approved drugs for D000690'
-approved: false
+approved: true
 fingerprint: c316031d6439d741

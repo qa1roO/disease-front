@@ -15,5 +15,5 @@ mesh:
   D004933: Esophageal Atresia
   D006627: Hirschsprung Disease
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D004065, D004933, D006627)'
-approved: false
+approved: true
 fingerprint: 41808828aa29a211

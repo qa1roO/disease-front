@@ -12,5 +12,5 @@ mesh:
   D007415: Intestinal Obstruction
   D007418: Intestinal Pseudo-Obstruction
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D007415, D007418)'
-approved: false
+approved: true
 fingerprint: d71b0349dc73b8bb

@@ -11,5 +11,5 @@ mesh:
   D004700: Endocrine System Diseases
   D008659: Metabolic Diseases
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 2f9086d3c7b990ef

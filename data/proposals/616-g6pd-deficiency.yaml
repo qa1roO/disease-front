@@ -11,5 +11,5 @@ sources:
 mesh:
   D005955: Glucosephosphate Dehydrogenase Deficiency
 cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D005955)'
-approved: false
+approved: true
 fingerprint: 4ab33f0a8857d876

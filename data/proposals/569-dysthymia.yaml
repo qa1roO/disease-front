@@ -11,5 +11,5 @@ sources:
 mesh:
   D019263: Dysthymic Disorder
 cross_check: ok
-approved: false
+approved: true
 fingerprint: bc26cff926335bf6

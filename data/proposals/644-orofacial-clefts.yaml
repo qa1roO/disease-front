@@ -14,5 +14,5 @@ mesh:
   D002971: Cleft Lip
   D002972: Cleft Palate
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D002971, D002972)'
-approved: false
+approved: true
 fingerprint: 5b47c257d9418c94

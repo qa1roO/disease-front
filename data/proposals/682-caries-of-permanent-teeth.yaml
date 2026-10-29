@@ -13,5 +13,5 @@ sources:
 mesh:
   D003731: Dental Caries
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 87400de880718c4b

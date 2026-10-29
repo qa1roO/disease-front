@@ -16,5 +16,5 @@ sources:
 mesh:
   D001943: Breast Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a74e7109d296a4ef

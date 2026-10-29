@@ -13,5 +13,5 @@ sources:
 mesh:
   D003866: Depressive Disorder
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 2caa8ddee1518171

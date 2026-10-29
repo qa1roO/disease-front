@@ -13,5 +13,5 @@ sources:
 mesh:
   D008881: Migraine Disorders
 cross_check: ok
-approved: false
+approved: true
 fingerprint: bcb71522eaa9854f

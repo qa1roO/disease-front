@@ -13,5 +13,5 @@ sources:
 mesh:
   D012532: Scabies
 cross_check: ok
-approved: false
+approved: true
 fingerprint: d018ad8edd96013f

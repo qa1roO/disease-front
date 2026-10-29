@@ -12,5 +12,5 @@ mesh:
   D000743: Anemia, Hemolytic
   D006453: Hemoglobinopathies
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 000510c2992dcb13

@@ -15,5 +15,5 @@ mesh:
   D005909: Glioblastoma
   D016543: Central Nervous System Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: ded82adb17ca753b

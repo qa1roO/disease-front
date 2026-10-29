@@ -13,5 +13,5 @@ sources:
 mesh:
   D001249: Asthma
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 91d0fb2548d83ba7

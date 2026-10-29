@@ -13,5 +13,5 @@ sources:
 mesh:
   D007822: Laryngeal Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: cccddbcc4f415612

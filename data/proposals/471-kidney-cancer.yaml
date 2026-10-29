@@ -14,5 +14,5 @@ mesh:
   D007680: Kidney Neoplasms
   D002292: Carcinoma, Renal Cell
 cross_check: ok
-approved: false
+approved: true
 fingerprint: d467aaca54b01698

@@ -12,5 +12,5 @@ sources:
 mesh:
   D011537: Pruritus
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 567129179b35af9e

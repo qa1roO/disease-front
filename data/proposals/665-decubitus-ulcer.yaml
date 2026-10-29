@@ -13,5 +13,5 @@ sources:
 mesh:
   D003668: Pressure Ulcer
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 8831dbd780532172

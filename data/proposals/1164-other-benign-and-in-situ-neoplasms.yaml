@@ -10,5 +10,5 @@ sources:
 mesh:
   D009369: Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 9138d1d5747cdb55

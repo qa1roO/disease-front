@@ -12,5 +12,5 @@ sources:
 mesh:
   D054198: Precursor Cell Lymphoblastic Leukemia-Lymphoma
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b7a73db57423d948

@@ -1,1 +1,1213 @@
-[]
+[
+ {
+  "date": "2026-10-29",
+  "cause": 411,
+  "name": "Esophageal cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 414,
+  "name": "Stomach cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 417,
+  "name": "Liver cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 423,
+  "name": "Larynx cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 426,
+  "name": "Tracheal, bronchus, and lung cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 429,
+  "name": "Breast cancer",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 432,
+  "name": "Cervical cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 435,
+  "name": "Uterine cancer",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 438,
+  "name": "Prostate cancer",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 441,
+  "name": "Colon and rectum cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 444,
+  "name": "Lip and oral cavity cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 447,
+  "name": "Nasopharynx cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 450,
+  "name": "Other pharynx cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 453,
+  "name": "Gallbladder and biliary tract cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 456,
+  "name": "Pancreatic cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 459,
+  "name": "Malignant skin melanoma",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 465,
+  "name": "Ovarian cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 468,
+  "name": "Testicular cancer",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 471,
+  "name": "Kidney cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 474,
+  "name": "Bladder cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 477,
+  "name": "Brain and central nervous system cancer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 480,
+  "name": "Thyroid cancer",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 483,
+  "name": "Mesothelioma",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 484,
+  "name": "Hodgkin lymphoma",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 486,
+  "name": "Multiple myeloma",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 489,
+  "name": "Other malignant neoplasms",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 492,
+  "name": "Rheumatic heart disease",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 493,
+  "name": "Ischemic heart disease",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 495,
+  "name": "Ischemic stroke",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 496,
+  "name": "Intracerebral hemorrhage",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 497,
+  "name": "Subarachnoid hemorrhage",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 498,
+  "name": "Hypertensive heart disease",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 500,
+  "name": "Atrial fibrillation and flutter",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 501,
+  "name": "Aortic aneurysm",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 502,
+  "name": "Lower extremity peripheral arterial disease",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 503,
+  "name": "Endocarditis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 507,
+  "name": "Other cardiovascular and circulatory diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 509,
+  "name": "Chronic obstructive pulmonary disease",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 511,
+  "name": "Silicosis",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 512,
+  "name": "Asbestosis",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 513,
+  "name": "Coal workers pneumoconiosis",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 514,
+  "name": "Other pneumoconiosis",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 515,
+  "name": "Asthma",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 516,
+  "name": "Interstitial lung disease and pulmonary sarcoidosis",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 520,
+  "name": "Other chronic respiratory diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 521,
+  "name": "Cirrhosis and other chronic liver diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 527,
+  "name": "Peptic ulcer disease",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 528,
+  "name": "Gastritis and duodenitis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 529,
+  "name": "Appendicitis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 530,
+  "name": "Paralytic ileus and intestinal obstruction",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 531,
+  "name": "Inguinal, femoral, and abdominal hernia",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 533,
+  "name": "Vascular intestinal disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 534,
+  "name": "Gallbladder and biliary diseases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 535,
+  "name": "Pancreatitis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 536,
+  "name": "Gastroesophageal reflux disease",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 543,
+  "name": "Alzheimer's disease and other dementias",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 544,
+  "name": "Parkinson's disease",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 545,
+  "name": "Idiopathic epilepsy",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 546,
+  "name": "Multiple sclerosis",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 547,
+  "name": "Migraine",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 548,
+  "name": "Tension-type headache",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 554,
+  "name": "Motor neuron disease",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 557,
+  "name": "Other neurological disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 559,
+  "name": "Schizophrenia",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 560,
+  "name": "Alcohol use disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 562,
+  "name": "Opioid use disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 563,
+  "name": "Cocaine use disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 564,
+  "name": "Amphetamine use disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 565,
+  "name": "Cannabis use disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 566,
+  "name": "Other drug use disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 568,
+  "name": "Major depressive disorder",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 569,
+  "name": "Dysthymia",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 570,
+  "name": "Bipolar disorder",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 571,
+  "name": "Anxiety disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 573,
+  "name": "Anorexia nervosa",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 575,
+  "name": "Autism spectrum disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 579,
+  "name": "Conduct disorder",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 582,
+  "name": "Idiopathic developmental intellectual disability",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 591,
+  "name": "Chronic kidney disease due to hypertension",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 592,
+  "name": "Chronic kidney disease due to glomerulonephritis",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 593,
+  "name": "Chronic kidney disease due to other and unspecified causes",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 595,
+  "name": "Urinary tract infections and interstitial nephritis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 596,
+  "name": "Urolithiasis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 597,
+  "name": "Benign prostatic hyperplasia",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 598,
+  "name": "Male infertility",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 602,
+  "name": "Other urinary diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 604,
+  "name": "Uterine fibroids",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 605,
+  "name": "Polycystic ovarian syndrome",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 606,
+  "name": "Female infertility",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 607,
+  "name": "Endometriosis",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 608,
+  "name": "Genital prolapse",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 609,
+  "name": "Premenstrual syndrome",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 612,
+  "name": "Other gynecological diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 614,
+  "name": "Thalassemias",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 615,
+  "name": "Sickle cell disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 616,
+  "name": "G6PD deficiency",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 618,
+  "name": "Other hemoglobinopathies and hemolytic anemias",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 625,
+  "name": "Other endocrine, metabolic, blood, and immune disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 627,
+  "name": "Rheumatoid arthritis",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 630,
+  "name": "Low back pain",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 631,
+  "name": "Neck pain",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 632,
+  "name": "Gout",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 639,
+  "name": "Other musculoskeletal disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 642,
+  "name": "Neural tube defects",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 643,
+  "name": "Congenital heart anomalies",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 644,
+  "name": "Orofacial clefts",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 645,
+  "name": "Down syndrome",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 646,
+  "name": "Turner syndrome",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 647,
+  "name": "Klinefelter syndrome",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 648,
+  "name": "Other chromosomal abnormalities",
+  "from": null,
+  "to": 5
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 649,
+  "name": "Congenital musculoskeletal and limb anomalies",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 650,
+  "name": "Urogenital congenital anomalies",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 651,
+  "name": "Digestive congenital anomalies",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 652,
+  "name": "Other congenital birth defects",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 655,
+  "name": "Psoriasis",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 656,
+  "name": "Cellulitis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 657,
+  "name": "Pyoderma",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 658,
+  "name": "Scabies",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 659,
+  "name": "Fungal skin diseases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 660,
+  "name": "Viral skin diseases",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 661,
+  "name": "Acne vulgaris",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 662,
+  "name": "Alopecia areata",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 663,
+  "name": "Pruritus",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 664,
+  "name": "Urticaria",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 665,
+  "name": "Decubitus ulcer",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 668,
+  "name": "Other skin and subcutaneous diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 670,
+  "name": "Glaucoma",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 671,
+  "name": "Cataract",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 672,
+  "name": "Age-related macular degeneration",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 674,
+  "name": "Age-related and other hearing loss",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 679,
+  "name": "Other sense organ diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 682,
+  "name": "Caries of permanent teeth",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 684,
+  "name": "Edentulism",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 685,
+  "name": "Other oral disorders",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 838,
+  "name": "Sickle cell trait",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 845,
+  "name": "Acute lymphoid leukemia",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 846,
+  "name": "Chronic lymphoid leukemia",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 847,
+  "name": "Acute myeloid leukemia",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 848,
+  "name": "Chronic myeloid leukemia",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 849,
+  "name": "Non-melanoma skin cancer (squamous-cell carcinoma)",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 942,
+  "name": "Myocarditis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 943,
+  "name": "Other leukemia",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 944,
+  "name": "Other cardiomyopathy",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 964,
+  "name": "Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 965,
+  "name": "Benign and in situ intestinal neoplasms",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 966,
+  "name": "Benign and in situ cervical and uterine neoplasms",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 968,
+  "name": "Non-rheumatic calcific aortic valve disease",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 969,
+  "name": "Non-rheumatic degenerative mitral valve disease",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 970,
+  "name": "Other non-rheumatic valve diseases",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 971,
+  "name": "Nonalcoholic fatty liver disease including cirrhosis",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 975,
+  "name": "Diabetes mellitus type 1",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 976,
+  "name": "Diabetes mellitus type 2",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 977,
+  "name": "Atopic dermatitis",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 978,
+  "name": "Contact dermatitis",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 979,
+  "name": "Seborrhoeic dermatitis",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 999,
+  "name": "Refraction disorders",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1000,
+  "name": "Near vision loss",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1005,
+  "name": "Hepatoblastoma",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1006,
+  "name": "Burkitt lymphoma",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1007,
+  "name": "Other non-Hodgkin lymphoma",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1009,
+  "name": "Retinoblastoma",
+  "from": null,
+  "to": 2
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1010,
+  "name": "Other eye cancers",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1011,
+  "name": "Soft tissue and other extraosseous sarcomas",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1012,
+  "name": "Malignant neoplasm of bone and articular cartilage",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1013,
+  "name": "Neuroblastoma and other peripheral nervous cell tumors",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1014,
+  "name": "Osteoarthritis hip",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1015,
+  "name": "Osteoarthritis knee",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1016,
+  "name": "Osteoarthritis hand",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1024,
+  "name": "Ulcerative colitis",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1025,
+  "name": "Crohn's disease",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1032,
+  "name": "Thyroid diseases",
+  "from": null,
+  "to": 3
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1161,
+  "name": "Other digestive diseases",
+  "from": null,
+  "to": 4
+ },
+ {
+  "date": "2026-10-29",
+  "cause": 1164,
+  "name": "Other benign and in situ neoplasms",
+  "from": null,
+  "to": 2
+ }
+]

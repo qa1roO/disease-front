@@ -15,5 +15,5 @@ mesh:
   D016135: Spinal Dysraphism
   D000757: Anencephaly
 cross_check: ok
-approved: false
+approved: true
 fingerprint: aaf73effdd024e3f

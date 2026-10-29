@@ -11,5 +11,5 @@ sources:
 mesh:
   D002318: Cardiovascular Diseases
 cross_check: ok
-approved: false
+approved: true
 fingerprint: c8cda950965a1fe4

@@ -13,5 +13,5 @@ sources:
 mesh:
   D020370: Osteoarthritis, Knee
 cross_check: ok
-approved: false
+approved: true
 fingerprint: bb74f483455fb0ff

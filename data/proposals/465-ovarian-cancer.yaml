@@ -13,5 +13,5 @@ sources:
 mesh:
   D010051: Ovarian Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 5462960d4e470736

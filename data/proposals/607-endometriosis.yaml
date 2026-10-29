@@ -13,5 +13,5 @@ sources:
 mesh:
   D004715: Endometriosis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: f6a368bc32e9f9e2

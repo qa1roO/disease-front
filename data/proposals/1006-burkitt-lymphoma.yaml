@@ -11,5 +11,5 @@ sources:
 mesh:
   D002051: Burkitt Lymphoma
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D002051)'
-approved: false
+approved: true
 fingerprint: f199da55a7be8241

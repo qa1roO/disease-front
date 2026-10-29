@@ -12,5 +12,5 @@ mesh:
   D013345: Subarachnoid Hemorrhage
   D002532: Intracranial Aneurysm
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 60a824539423a3a6

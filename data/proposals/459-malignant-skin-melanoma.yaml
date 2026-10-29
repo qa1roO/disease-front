@@ -14,5 +14,5 @@ mesh:
   D008545: Melanoma
   D012878: Skin Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 43d5536cb951eefa

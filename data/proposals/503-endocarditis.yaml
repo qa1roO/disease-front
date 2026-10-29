@@ -14,5 +14,5 @@ mesh:
   D004696: Endocarditis
   D004697: Endocarditis, Bacterial
 cross_check: ok
-approved: false
+approved: true
 fingerprint: c785b0ff6b0139b0

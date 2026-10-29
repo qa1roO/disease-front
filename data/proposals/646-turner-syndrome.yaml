@@ -13,5 +13,5 @@ sources:
 mesh:
   D014424: Turner Syndrome
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 06d6dd7e05ef6479

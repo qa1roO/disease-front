@@ -17,5 +17,5 @@ mesh:
   D013920: Thrombocythemia, Essential
   D055728: Primary Myelofibrosis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: cf9a31111dbfc309

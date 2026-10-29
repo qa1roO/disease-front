@@ -13,5 +13,5 @@ sources:
 mesh:
   D004827: Epilepsy
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b541a91d9803783a

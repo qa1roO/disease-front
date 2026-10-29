@@ -14,5 +14,5 @@ mesh:
   D013276: Stomach Ulcer
   D004381: Duodenal Ulcer
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 146fc95cace9af48

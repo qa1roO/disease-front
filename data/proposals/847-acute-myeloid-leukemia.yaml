@@ -13,5 +13,5 @@ sources:
 mesh:
   D015470: Leukemia, Myeloid, Acute
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 654cfc067881d852

@@ -11,5 +11,5 @@ mesh:
   D009059: Mouth Diseases
   D009057: Stomatognathic Diseases
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b7cb51b90387f446

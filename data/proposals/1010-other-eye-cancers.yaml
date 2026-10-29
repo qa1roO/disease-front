@@ -12,5 +12,5 @@ mesh:
   D005134: Eye Neoplasms
   D014604: Uveal Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: eee0abaf72705d5d

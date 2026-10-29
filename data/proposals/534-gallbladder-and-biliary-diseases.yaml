@@ -14,5 +14,5 @@ mesh:
   D002764: Cholecystitis
   D002769: Cholelithiasis
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D042882, D002764, D002769)'
-approved: false
+approved: true
 fingerprint: 5b1519e2e0b1ec43

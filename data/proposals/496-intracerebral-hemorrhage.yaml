@@ -12,5 +12,5 @@ mesh:
   D002543: Cerebral Hemorrhage
   D020300: Intracranial Hemorrhages
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 716242c35f7a4bec

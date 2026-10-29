@@ -13,5 +13,5 @@ sources:
 mesh:
   D017116: Low Back Pain
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 4243e22dbbefdba8

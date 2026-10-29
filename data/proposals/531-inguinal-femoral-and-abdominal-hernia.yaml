@@ -14,5 +14,5 @@ mesh:
   D006550: Hernia, Femoral
   D046449: Hernia, Abdominal
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D006552, D006550, D046449)'
-approved: false
+approved: true
 fingerprint: 374d2ba95aaca30e

@@ -13,5 +13,5 @@ sources:
 mesh:
   D004314: Down Syndrome
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 40787f80c429f07a

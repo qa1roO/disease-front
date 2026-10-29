@@ -10,5 +10,5 @@ sources:
 mesh:
   D012628: Dermatitis, Seborrheic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 96b7e4c0bf1f4e53

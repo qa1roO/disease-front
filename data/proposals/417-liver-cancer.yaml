@@ -14,5 +14,5 @@ mesh:
   D008113: Liver Neoplasms
   D006528: Carcinoma, Hepatocellular
 cross_check: ok
-approved: false
+approved: true
 fingerprint: bf84d4838d0c0cb3

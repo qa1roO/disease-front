@@ -12,5 +12,5 @@ mesh:
   D065666: Mesenteric Ischemia
   D017091: Colitis, Ischemic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 33cb271fd9457e3f

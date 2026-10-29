@@ -15,5 +15,5 @@ mesh:
   D016403: Lymphoma, Large B-Cell, Diffuse
   D008224: Lymphoma, Follicular
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b3e49aaa0b806a80

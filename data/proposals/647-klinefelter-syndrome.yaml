@@ -13,5 +13,5 @@ sources:
 mesh:
   D007713: Klinefelter Syndrome
 cross_check: ok
-approved: false
+approved: true
 fingerprint: ab0eba2d180a50ac

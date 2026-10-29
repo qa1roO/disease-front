@@ -14,5 +14,5 @@ mesh:
   D005901: Glaucoma
   D005902: Glaucoma, Open-Angle
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 98d0c886271f59a4

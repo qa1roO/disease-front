@@ -13,5 +13,5 @@ sources:
 mesh:
   D029424: Pulmonary Disease, Chronic Obstructive
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 97e8bd962e7fd37f

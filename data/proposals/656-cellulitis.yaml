@@ -12,5 +12,5 @@ sources:
 mesh:
   D002481: Cellulitis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: caf8776411f7f8f3

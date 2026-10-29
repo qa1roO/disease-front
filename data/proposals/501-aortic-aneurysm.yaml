@@ -14,5 +14,5 @@ mesh:
   D001014: Aortic Aneurysm
   D017544: Aortic Aneurysm, Abdominal
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D001014, D017544)'
-approved: false
+approved: true
 fingerprint: 24636f9b6021ec41

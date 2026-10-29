@@ -13,5 +13,5 @@ sources:
 mesh:
   D003424: Crohn Disease
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 28ed26b12f0a4f92

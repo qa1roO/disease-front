@@ -12,5 +12,5 @@ mesh:
   D006977: Hypertension, Renal
   D051436: Renal Insufficiency, Chronic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 5bd5d295294ab148

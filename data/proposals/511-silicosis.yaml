@@ -13,5 +13,5 @@ sources:
 mesh:
   D012829: Silicosis
 cross_check: 'flag: claims Untreatable but ChEMBL has 1 approved drug for D012829'
-approved: false
+approved: true
 fingerprint: 2468d38bb7cf1ae9

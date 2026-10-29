@@ -13,5 +13,5 @@ sources:
 mesh:
   D000437: Alcoholism
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 1c5b6e30ac484618

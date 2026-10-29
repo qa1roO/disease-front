@@ -14,5 +14,5 @@ mesh:
   D001281: Atrial Fibrillation
   D001282: Atrial Flutter
 cross_check: ok
-approved: false
+approved: true
 fingerprint: e3765ce4b9d7dea4

@@ -14,5 +14,5 @@ mesh:
   D058729: Peripheral Arterial Disease
   D007383: Intermittent Claudication
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 40cb53c453594ae4

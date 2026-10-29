@@ -17,5 +17,5 @@ mesh:
   D019698: Hepatitis C, Chronic
   D008104: Liver Cirrhosis, Alcoholic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 4da2e3b504ca26aa

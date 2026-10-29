@@ -11,5 +11,5 @@ sources:
 mesh:
   D065626: Non-alcoholic Fatty Liver Disease
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 95109c8c23a30824

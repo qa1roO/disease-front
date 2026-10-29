@@ -11,5 +11,5 @@ sources:
 mesh:
   D012214: Rheumatic Heart Disease
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 80fdfb979d44faad

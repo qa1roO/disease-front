@@ -15,5 +15,5 @@ mesh:
   D054990: Idiopathic Pulmonary Fibrosis
   D017565: Sarcoidosis, Pulmonary
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 996fabe893f5934f

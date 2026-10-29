@@ -13,5 +13,5 @@ mesh:
   D003877: Dermatitis, Contact
   D017449: Dermatitis, Allergic Contact
 cross_check: ok
-approved: false
+approved: true
 fingerprint: b54f2f43753250ab

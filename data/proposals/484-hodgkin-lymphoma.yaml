@@ -12,5 +12,5 @@ sources:
 mesh:
   D006689: Hodgkin Disease
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 50c582a807b51529

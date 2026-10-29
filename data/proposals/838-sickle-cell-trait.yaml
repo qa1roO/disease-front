@@ -11,5 +11,5 @@ sources:
 mesh:
   D012805: Sickle Cell Trait
 cross_check: 'flag: claims Controlled but ChEMBL has no approved drug (D012805)'
-approved: false
+approved: true
 fingerprint: e0c8eece01504600

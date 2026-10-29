@@ -15,5 +15,5 @@ mesh:
   D007021: Hypospadias
   D003456: Cryptorchidism
 cross_check: 'flag: claims Curable but ChEMBL has no approved drug (D014564, D007021, D003456)'
-approved: false
+approved: true
 fingerprint: 9950c4bc7482d072

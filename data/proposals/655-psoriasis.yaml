@@ -12,5 +12,5 @@ sources:
 mesh:
   D011565: Psoriasis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 7afa4e416f4f496f

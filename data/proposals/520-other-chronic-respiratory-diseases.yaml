@@ -11,5 +11,5 @@ mesh:
   D012140: Respiratory Tract Diseases
   D008171: Lung Diseases
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 28da9e7c23c6b1f4

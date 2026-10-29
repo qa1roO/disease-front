@@ -14,5 +14,5 @@ mesh:
   D006973: Hypertension
   D006333: Heart Failure
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 0397eb60474b678a

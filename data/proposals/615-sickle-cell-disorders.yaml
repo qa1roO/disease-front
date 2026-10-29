@@ -14,5 +14,5 @@ sources:
 mesh:
   D000755: Anemia, Sickle Cell
 cross_check: ok
-approved: false
+approved: true
 fingerprint: dfd637205cc44519

@@ -13,5 +13,5 @@ mesh:
   D002311: Cardiomyopathy, Dilated
   D006333: Heart Failure
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 39adf9f44e41525b

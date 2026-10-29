@@ -12,5 +12,5 @@ sources:
 mesh:
   D001064: Appendicitis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: ff3d3b978b116d67

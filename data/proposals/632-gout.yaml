@@ -13,5 +13,5 @@ sources:
 mesh:
   D006073: Gout
 cross_check: ok
-approved: false
+approved: true
 fingerprint: da32e5b0d51a1d4a

@@ -13,5 +13,5 @@ sources:
 mesh:
   D003922: Diabetes Mellitus, Type 1
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 2e38ce54e672b457

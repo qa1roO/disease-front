@@ -14,5 +14,5 @@ mesh:
   D010195: Pancreatitis
   D050500: Pancreatitis, Chronic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: a795672ae2d9cccf

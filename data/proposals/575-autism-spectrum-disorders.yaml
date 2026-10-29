@@ -13,5 +13,5 @@ sources:
 mesh:
   D000067877: Autism Spectrum Disorder
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 308768c326d924c2

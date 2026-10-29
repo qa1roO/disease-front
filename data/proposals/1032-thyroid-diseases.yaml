@@ -15,5 +15,5 @@ mesh:
   D007037: Hypothyroidism
   D006980: Hyperthyroidism
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 40b4c619c988b653

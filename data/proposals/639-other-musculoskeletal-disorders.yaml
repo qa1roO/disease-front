@@ -12,5 +12,5 @@ mesh:
   D009140: Musculoskeletal Diseases
   D008180: Lupus Erythematosus, Systemic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 07e218f1340946ba

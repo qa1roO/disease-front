@@ -12,5 +12,5 @@ sources:
 mesh:
   D051436: Renal Insufficiency, Chronic
 cross_check: ok
-approved: false
+approved: true
 fingerprint: ce2860c73d44a2f8

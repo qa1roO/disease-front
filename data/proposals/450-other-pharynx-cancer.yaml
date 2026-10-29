@@ -15,5 +15,5 @@ mesh:
   D007012: Hypopharyngeal Neoplasms
   D010610: Pharyngeal Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 4e7a3fd0e294731a

@@ -15,5 +15,5 @@ mesh:
   D012516: Osteosarcoma
   D012512: Sarcoma, Ewing
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 6eb4914686135992

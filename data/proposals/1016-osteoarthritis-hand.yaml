@@ -12,5 +12,5 @@ sources:
 mesh:
   D010003: Osteoarthritis
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 5cb1ba361e4929e2

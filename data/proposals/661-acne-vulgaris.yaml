@@ -13,5 +13,5 @@ sources:
 mesh:
   D000152: Acne Vulgaris
 cross_check: ok
-approved: false
+approved: true
 fingerprint: cde8178054a5ef73

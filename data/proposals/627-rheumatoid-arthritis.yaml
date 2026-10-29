@@ -13,5 +13,5 @@ sources:
 mesh:
   D001172: Arthritis, Rheumatoid
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 75cd221ce9c7695f

@@ -12,5 +12,5 @@ mesh:
   D008654: Mesothelioma
   D010997: Pleural Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 945ba1b41089cd37

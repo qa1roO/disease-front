@@ -13,5 +13,5 @@ sources:
 mesh:
   D011085: Polycystic Ovary Syndrome
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 0d29101f96bad8b3

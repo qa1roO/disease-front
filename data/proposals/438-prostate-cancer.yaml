@@ -14,5 +14,5 @@ sources:
 mesh:
   D011471: Prostatic Neoplasms
 cross_check: ok
-approved: false
+approved: true
 fingerprint: 90b5ea98ff30f471
